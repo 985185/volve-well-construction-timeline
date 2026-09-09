@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository or the accompanying paper, please cite as below."
+type: software
+title: "volve-well-construction-timeline"
+authors:
+  - given-names: Tejaswy
+    family-names: Appalla
+date-released: "2026-09-09"
+license: Apache-2.0
+repository-code: "https://github.com/985185/volve-well-construction-timeline"
+preferred-citation:
+  type: conference-paper
+  title: "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: The Equinor Volve Dataset"
+  authors:
+    - given-names: Tejaswy
+      family-names: Appalla
+  conference:
+    name: "International Petroleum Technology Conference 2027"
+  year: 2027
+  identifiers:
+    - type: other
+      value: "IPTC-25544-MS"

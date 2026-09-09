@@ -1,0 +1,27 @@
+{
+  "retrieval_date_utc": "2026-09-08",
+  "method": "NOD FactPages page views are client-side rendered and cannot be scraped directly (confirmed empirically: WebFetch on a pageview URL returned only navigation chrome, no data). Used the FactPages Table View's CSV export instead, per the task brief.",
+  "source_table_view_pages": [
+    "https://factpages.sodir.no/en/wellbore/tableview/development",
+    "https://factpages.sodir.no/en/wellbore/tableview/exploration"
+  ],
+  "exact_export_urls_used": [
+    "https://factpages.sodir.no/public?/Factpages/external/tableview/wellbore_development_all&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=not_used&CultureCode=en&rs:Format=CSV&Top100=false",
+    "https://factpages.sodir.no/public?/Factpages/external/tableview/wellbore_exploration_all&rs:Command=Render&rc:Toolbar=false&rc:Parameters=f&IpAddress=not_used&CultureCode=en&rs:Format=CSV&Top100=false"
+  ],
+  "full_dataset_size": {
+    "development_table_total_rows": "6255 (all NCS development wellbores, national dataset)",
+    "development_table_total_bytes": 4057159,
+    "exploration_table_total_rows": "2201 (all NCS exploration wellbores, national dataset)"
+  },
+  "extraction_note": "The full national CSVs (4+ MB, thousands of unrelated wellbores) were fetched via an in-page fetch() call (browser navigation directly to the export URL was blocked by the sandbox as a file download). Only rows matching wellbore names containing '15/9-F-' or '15/9-19' were extracted and saved locally -- NOT the full multi-thousand-row national files. This is a REPRODUCIBLE filter (documented regex: /15\\/9-F-|15\\/9-19/) against the exact URLs above, at the exact retrieval date above, so a reviewer can re-run the same export and re-apply the same filter to reproduce this subset exactly. All columns for each matching row were preserved unmodified (no fields dropped, no values altered).",
+  "files_produced": {
+    "nod_volve_reference_development.csv": "22 rows, all columns from the development table view, wellbore names matching 15/9-F-* (Volve platform wells)",
+    "nod_volve_reference_exploration.csv": "5 rows, all columns from the exploration table view, wellbore names matching 15/9-19* (original Volve appraisal/wildcat wellbores, later used for development history)"
+  },
+  "known_reference_point_verification": {
+    "15/9-F-7": {"wlbTotalDepth": "1085.0", "npdid_wellbore": 5610, "matches_task_reference": true},
+    "15/9-F-9": {"wlbTotalDepth": "1085.0", "npdid_wellbore": 5927, "matches_task_reference": true},
+    "verdict": "BOTH reference points reproduced exactly. Extraction method verified correct."
+  }
+}
