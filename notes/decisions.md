@@ -33,3 +33,10 @@
 14. **Old `rig` column (TJ):** `workspace.default.volve_ddr_master.rig` is wrong: it holds the literal string `name` in all 1,759 rows (old extractor read the first `<name>` child). It must not be shipped, and any earlier paper that used it must be checked. Correct rigs come from `rigAlias` with namingSystem "NPD Name": MÆRSK INSPIRER 1,384, BYFORD DOLPHIN 208, TREASURE PROSPECT 166, 1 null.
 15. **WITSML version:** the raw DDR files declare `drillReports version="1.4.0.0"` (all 1,759), not 1.4.1.1. In Stage 12 correct every "1.4.1.1" in the manuscript and fix the Energistics reference to the correct version, verifying the version and year first.
 16. **`data/interim/` is gitignored** (regenerated from raw by code).
+
+## 2026-10-24, Stage 3
+
+17. **Table 1 rig (TJ):** rig populated is 1,758 (99.94%), note "1 record missing (1980 sentinel)". Replaces the v2 value 1,759 (100.0%), which came from the constant old column.
+18. **Table 1 forecast24hr (TJ), deliberate change from v2:** report the genuine population excluding the 103 literal "None" strings, for consistency with sum24Hr: 1,759 - 103 = 1,656 (94.14%), note `103 literal "None" strings excluded`. v2 reported 100.0%. Eight `n/a`/`N/A` forecast strings are kept as genuine (flagged, not changed).
+19. **Placeholder total (TJ):** count every placeholder in every extracted field (literal "None", `-999.99`, `0` depth, empty-but-present tags, 1980 date sentinel), tabulate by field, register the total. Result 515 cells (176 None + 331 sentinel + 7 zero + 0 empty + 1 date). v2 "411" = 331 + 7 + 73. Manuscript sentence rewritten from the registry value in Stage 12.
+20. **Non-ASCII characters** ³ Ø æ ¿ Æ Å are not normalised by classifier v3 (frozen); logged in `notes/classifier_gaps.md`.

@@ -13,8 +13,8 @@ def add(col, label, mask, note=""):
     rows.append((label, round(100 * mask.sum() / N, 2), int(mask.sum()), note))
 add("date_report", "date_report", s("date_report") != "")
 add("dTimSpud", "spud_date (dTimSpud)", s("dTimSpud") != "")
-add("rig", "rig (NPD Name alias)", s("rig") != "")
-add("forecast24hr", "forecast24hr (non-blank, incl. literal None)", s("forecast24hr") != "", f"{int((s('forecast24hr')=='None').sum())} literal None")
+add("rig", "rig (NPD Name alias)", s("rig") != "", "1 record missing (1980 sentinel)")
+add("forecast24hr", "forecast24hr (genuine)", (s("forecast24hr") != "") & (s("forecast24hr") != "None"), f"{int((s('forecast24hr')=='None').sum())} literal \"None\" strings excluded")
 add("operator", "operator", s("operator") != "")
 add("md_csg_last", "md_csg_last_m", s("md_csg_last") != "")
 add("sum24Hr", "sum24Hr (genuine narrative)", (s("sum24Hr") != "") & (s("sum24Hr") != "None"), f"{int((s('sum24Hr')=='None').sum())} literal None excluded")
@@ -68,3 +68,32 @@ sw["spud_minus_first_days"] = (sw.spud_min - sw.first_ddr).dt.days
 print(sw.to_string())
 sw.to_csv("outputs/stage3_spud_vs_first_ddr.csv")
 print("DDRs dated before the wellbore's dTimSpud:", int((dr < sp).sum()), "| after drill_complete:", int((dr > pd.to_datetime(d.drill_complete, errors='coerce')).sum()))
+
+# --- placeholder register: every extracted field (TJ decision 3)
+print("\nPLACEHOLDER REGISTER")
+fields = ["well", "wellbore", "date_report", "dTimSpud", "md", "md_kickoff", "md_csg_last", "rig", "operator", "forecast24hr", "drill_complete", "sum24Hr"]
+depth = {"md", "md_kickoff", "md_csg_last"}
+generic = r"^(?:none|null|n/?a|nan|-+|\.+|-999(?:\.99?)?|-9999(?:\.9+)?)$"
+sentinel_date = d.date_report.str[:4] == "1980"
+reg = []
+for c in fields:
+    raw, v = d[c], d[c].fillna("")
+    st = v.str.strip()
+    nonn = pd.to_numeric(raw, errors="coerce")
+    row = {"field": c,
+           "literal_None": int((st == "None").sum()),
+           "sentinel_-999.99": int((st == "-999.99").sum()),
+           "zero_depth": int((st == "0").sum()) if c in depth else 0,
+           "empty_but_present": int((raw.notna() & (st == "")).sum()),
+           "date_sentinel_1980": int(sentinel_date.sum()) if c == "date_report" else 0}
+    row["placeholder_cells"] = sum(row[k] for k in ["literal_None", "sentinel_-999.99", "zero_depth", "empty_but_present", "date_sentinel_1980"])
+    row["absent_tag_not_counted"] = int(raw.isna().sum())
+    other = st[st.str.lower().str.match(generic) & ~st.isin(["None", "-999.99"])]
+    row["other_generic_placeholder_like"] = len(other)
+    reg.append(row)
+r = pd.DataFrame(reg); r.loc[len(r)] = ["TOTAL"] + [int(r[c].sum()) for c in r.columns[1:]]
+r.to_csv("outputs/stage3_placeholder_register.csv", index=False); print(r.to_string(index=False))
+anyph = (d[fields].apply(lambda col: col.fillna("").str.strip().isin(["None", "-999.99"]) | ((col.name in depth) & (col.fillna("").str.strip() == "0"))).any(axis=1)) | sentinel_date
+print("DDRs with at least one placeholder cell:", int(anyph.sum()))
+print("v2 411 = 331 + 7 + 73 =", 331 + 7 + 73, "| rerun cells sum of those three:", int(r.set_index('field').loc['TOTAL', ['sentinel_-999.99', 'zero_depth']].sum()) + int((s('sum24Hr') == 'None').sum()))
+print("forecast genuine:", int(((s('forecast24hr') != '') & (s('forecast24hr') != 'None')).sum()), round(100 * int(((s('forecast24hr') != '') & (s('forecast24hr') != 'None')).sum()) / N, 4))
