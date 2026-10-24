@@ -1,22 +1,33 @@
 cff-version: 1.2.0
-message: "If you use this repository or the accompanying paper, please cite as below."
+message: "If you use this repository or the accompanying paper, please cite the paper (preferred-citation below)."
 type: software
-title: "volve-well-construction-timeline"
+title: "volve-well-construction-timeline: reproducible pipeline for field-scale well construction timeline reconstruction from WITSML Daily Drilling Reports (Equinor Volve)"
 authors:
   - given-names: Tejaswy
     family-names: Appalla
-date-released: "2026-09-09"
+date-released: "2026-10-24"
 license: Apache-2.0
 repository-code: "https://github.com/985185/volve-well-construction-timeline"
+keywords:
+  - WITSML
+  - Daily Drilling Reports
+  - Volve
+  - well construction
+  - NOD FactPages
 preferred-citation:
   type: conference-paper
-  title: "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: The Equinor Volve Dataset"
+  title: "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: A Complete Operational History of the Equinor Volve Dataset"
   authors:
     - given-names: Tejaswy
       family-names: Appalla
   conference:
-    name: "International Petroleum Technology Conference 2027"
+    name: "International Petroleum Technology Conference (IPTC) 2027"
+    city: "Bangkok"
+    country: "TH"
+    date-start: "2027-03-24"
+    date-end: "2027-03-26"
   year: 2027
   identifiers:
     - type: other
       value: "IPTC-25544-MS"
+  notes: "Paper IPTC-25544-MS (control number 27IPTC-P-1392-SPE). Page range and DOI to be added when the proceedings are published."

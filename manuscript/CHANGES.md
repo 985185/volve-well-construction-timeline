@@ -42,7 +42,7 @@ Base file: `inputs/paper2_v2.docx`. Draft: `manuscript/paper2_draft.docx`, built
 36. **8 Conclusions (paragraph 99).** Old: affect 411 field values New: affect 515 field values Registry id: `placeholders.total_cells_all_fields`. Reason: full placeholder register (decision 19).
 37. **8 Conclusions (paragraph 101).** Old: and use the dataset for phase-duration benchmarking across the campaign. New: and extend the duration results to phase-level durations across the campaign. Reason: duration results now reported (Section 5.7).
 38. **Acknowledgements (paragraph 104).** Old: v2 AI disclosure (writing, debugging, arithmetic, editing; note about audit adjudication and figures) New: Generative AI (Anthropic Claude, used through Claude Code) built and ran the reproducible analysis pipeline from the raw data and was used to assist with debugging, checking arithmetic and editing the manuscript text. The sidetrack kick-off depths were proposed by the AI tool from the narratives under one rule. The author reject ... Reason: AI disclosure matches what happened: AI proposed, author reviewed all 15 rows of the sign-off workbook, approved all 15, changed none, marked none N (decisions 37, 40 and 52).
-39. **Code and Data Availability (paragraph 106).** Old: v2 availability statement (audit sample with adjudications, extracted DDR table, NOD tables, registry) New: The classifier (v3), the extraction and analysis code, the 1,421-row timeline dataset, the audit adjudications (file name, wellbore, date, stratum, call and miss reason), the NOD comparison tables, the kick-off and duration tables, and a numbers registry tracing every reported figure to the script that produced it are available ... Reason: licence and no-narrative-text policy (decisions 26 and 46); the extracted table is no longer published because it holds narrative text.
+39. **Code and Data Availability (paragraph 106).** Old: v2 availability statement (audit sample with adjudications, extracted DDR table, NOD tables, registry) New: The classifier (v3), the extraction and analysis code, the 1,421-row timeline dataset, the audit adjudications (file name, wellbore, date, stratum, call and miss reason), the NOD comparison tables, the kick-off and duration tables, and a numbers registry tracing every reported figure to the script that produced it are available ... Reason: licence and no-narrative-text policy (decisions 26 and 46); the extracted table is no longer published because it holds narrative text; Stage 13 check: every item listed exists in the repository (decision 57), so the confirmation note is removed.
 40. **Appendix A: Traceability (paragraph 143).** Old: v2 Appendix A (59 entries, each with the exact query and execution timestamp) New: Every quantitative figure in this paper traces to an entry in the numbers registry published in the repository (235 entries, each with the producing script and function, the SHA-256 of its input files and an execution timestamp). The audit estimates in Section 5.2 are derived arithmetically from registry entries, and the arithme ... Registry id: `registry.n_entries`. Reason: registry rebuilt with 224 entries; resolves the open note on the attainable-rate and placeholder-total entries.
 41. **References (paragraph 119).** Old: Energistics. 2012. ... Version 1.4.1.1 New: Energistics. n.d. ... data schema version 1.4.0.0, as declared in the Volve DDR files ... (accessed 24 October 2026) Registry id: `data.witsml_schema_version`. Reason: release label and year of 1.4.0.0 could not be verified (decision 45), so the schema version is cited with an access date.
 42. **References (paragraph 123).** Old: (accessed 8 September 2026) New: (accessed 24 October 2026) Registry id: `data.nod_snapshot_date`. Reason: snapshot refreshed.
@@ -86,7 +86,6 @@ All other numbers in the v2 text and tables are unchanged and match the registry
 ## 4. [TJ:] notes still open in the draft
 
 - [TJ: the proposal author block reads "Department of Mining and Energy". Change the affiliation to Independent Researcher in the IPTC author portal before uploading; the portal, not this file, sets the published front matter.]
-- [TJ: confirm every item listed is in the public repository before you upload the manuscript; Stage 13 checks this.]
 - Not a [TJ:] note but open: the release label and year of the WITSML 1.4.0.0 schema could not be verified (decision 45), so the Energistics reference cites the schema version declared in the files with an access date; and the Sidahmed et al. (2015) check used the Crossref record because OnePetro returned 403 (decision 44).
 
 ## 5. Kick-off sign-off
@@ -97,7 +96,7 @@ The kick-off depths were proposed by an AI tool and signed off by the author in 
 
 `src/stage12_check.py` (output `outputs/manuscript_registry_check.csv`):
 
-    tokens: 1577 {'in registry': 1545, 'ignored': 32} | em dashes: 0
+    tokens: 1576 {'in registry': 1544, 'ignored': 32} | em dashes: 0
     Empty DataFrame
     Columns: [where, token, context]
     Index: []
