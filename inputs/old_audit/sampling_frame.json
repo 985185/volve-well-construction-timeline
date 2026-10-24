@@ -1,0 +1,23 @@
+{
+  "population_unclassified_total": 456,
+  "excluded_empty_record": 73,
+  "adjusted_sampling_population": 383,
+  "strata": {
+    "construction_era": {
+      "definition": "date_report within 730 days (inclusive) of that wellbore's own first_ddr",
+      "size": 296,
+      "allocation": 39,
+      "allocation_method": "proportional, largest-remainder rounding to guarantee sum=50"
+    },
+    "production_era": {
+      "definition": "date_report more than 730 days after that wellbore's own first_ddr",
+      "size": 87,
+      "allocation": 11,
+      "allocation_method": "proportional, largest-remainder rounding to guarantee sum=50"
+    }
+  },
+  "total_sample_size": 50,
+  "random_seed": 42,
+  "seed_note": "Python random.seed(42); random.sample() used per stratum. Seed 42 chosen for consistency with the RAND(42) seed already used in this rebuild's prior spot-checks (Stage 4 classifier verification).",
+  "missing_wellbore_lookups": []
+}

@@ -61,10 +61,7 @@ manuscript/    updated docx and a number-by-number change log
 
 **5. Timeline dataset.** Exclude the placeholders and cast depth; write `outputs/timeline.csv` (wellbore, date, days_from_first_ddr, md_m, phase, filename).
 
-**6. Audit.** Assign the eleven descriptive categories to unclassified records. Exclude EMPTY_RECORD (the "None" narratives). Build strata (construction era = within 730 days of the wellbore's first *genuine* DDR, so the 1980 sentinel is ignored and the old stratum error is fixed; record this as a deliberate change). **Sort the frame by filename**, then sample proportionally with seed 42. Check whether the old 50 records are reproduced:
-  - If they are, reuse the adjudications from `inputs/` (copy them, don't retype them).
-  - If they aren't, write `outputs/audit_workbook.xlsx` with blank adjudication columns and stop for TJ.
-  Then compute: sample proportion, Wilson 95% CI, scale by **frame size / total DDRs** (not unclassified / total), stratum-weighted check, and the floor from EMPTY_RECORD.
+**6. Audit.** Assign the eleven descriptive categories to unclassified records. Exclude EMPTY_RECORD (the "None" narratives). **TJ decision 2026-10-24 (see `notes/decisions.md`): keep the existing 50-record sample and the original stratification; do not redraw and do not apply the 1980 stratum fix.** Strata stay as in v2 (construction era = date_report within 730 days of the wellbore's first DDR, sentinel included; 296 + 87, allocation 39 + 11). Load the old 50 from `inputs/old_audit/audit_adjudicated.csv` (copy the adjudications, don't retype them) and map each record to its filename by wellbore + date. Verify the mapping is one-to-one against the new extraction, and report any record that does not map or whose narrative text differs. Rebuild the frame and strata from the new extraction and report whether they still give 383 / 296 + 87. The 15/9-19 A 1980-sentinel and 15/9-F-1 2013 re-entry stratum misassignments are reported as a stated limitation, not fixed. Then compute: sample proportion, Wilson 95% CI, scale by **frame size / total DDRs** (not unclassified / total), stratum-weighted check, and the floor from EMPTY_RECORD.
 
 **7. NOD validation.** TD comparison for all wellbores, with the technical-sidetrack matching rule (WITSML T2 wellbore to NOD parent designation; abandoned parent legs reported as unmatched). Spud comparison across WITSML field, first-DDR free text and NOD entry date, with the tolerances TJ sets (open item 5; ask before computing).
 
@@ -101,4 +98,4 @@ manuscript/    updated docx and a number-by-number change log
 | Spud | exact 7, definitional 8, error 4 (F-4, F-7, F-12, F-15), identity 1 (F-1), inherited 2 (F-11 A, F-11 T2), unresolved 4 (19 series) |
 | Kick-off | 12 free text, 2 depth sequence (19 ST2, F-15 D); 15th sidetrack unknown; F-1 C 3,059 m vs NOD 1,364 m |
 
-Note: the Stage 6 stratum fix (ignoring the 1980 sentinel) may move 15/9-19 A records between strata. That is expected; report it.
+Note: the Stage 6 stratum fix is NOT applied (TJ decision 2026-10-24). The 1980-sentinel and F-1 re-entry stratum misassignments stay and are disclosed as a limitation.

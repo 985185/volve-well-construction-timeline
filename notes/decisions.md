@@ -1,0 +1,27 @@
+# Decisions log (append-only)
+
+## 2026-10-24, after Stage 0
+
+1. **Raw XML source.** Search local drives first (C:\Volve, then the rest of C:). If the DDR XML is not found, TJ downloads the "Daily Drilling Report - XML Version" folder from Equinor himself. Do not try to repair the Marketplace share.
+2. **Old audit files copied (not moved) into `inputs/old_audit/`.**
+
+   | File in repo | Source path | SHA-256 |
+   |---|---|---|
+   | `inputs/old_audit/audit_adjudicated.csv` | `C:\Volve\paper2_rebuild\audit_adjudicated.csv` | `6e5a566672f0a2612888fb9426ab3a5a52234a64b978caa2716d813f88aea041` |
+   | `inputs/old_audit/audit_sample.csv` | `C:\Volve\paper2_rebuild\audit_sample.csv` | `ed20f2eb5bb201b8847366460be804f912e5e2caf27c7b5e9cc0c92823532b50` |
+   | `inputs/old_audit/sampling_frame.json` | `C:\Volve\paper2_rebuild\sampling_frame.json` | `72506e0a3d4ea339a609497899036a904ff80b04375465389bb1acd4ed823b09` |
+   | `inputs/old_audit/numbers_registry_59entry.json` | `C:\Volve\paper2_rebuild\numbers_registry.json` | `a52ef2caba60fb53d6bcc8c06568ccb93e97f44d14a31ff237aca81216a5804d` |
+
+   Hashes were computed on the source files and re-checked on the copies; they match. The 59-entry registry supersedes the 53-entry `inputs/repo_before/data/numbers_registry.json`, which is kept unchanged as part of the "before" state.
+3. **Python 3.10 is acceptable** for the venv.
+4. **Latest manuscript (`inputs/paper2_v2.docx`):** the answer in TJ's reply was left as an unfilled template. Treated as UNANSWERED. Working assumption for now is that `inputs/paper2_v2.docx` is the base; TJ to confirm before Stage 12.
+5. **Adjudicator identity (open item 4):** the answer in TJ's reply was left as an unfilled template. UNANSWERED. Nothing is assumed. TJ to answer before Stage 6 and before the AI disclosure is finalised.
+6. **Stage 6 audit decision (TJ).** Keep the existing 50-record sample and the original stratification (construction era = date_report within 730 days of the wellbore's first DDR, 1980 sentinel included, as in v2: 296 + 87, allocation 39 + 11). Map each record to its filename by wellbore + date and verify the mapping is one-to-one. Do not redraw the sample. Do not apply the 1980 stratum fix; the two known stratum misassignments (15/9-19 A 1980 sentinel, 15/9-F-1 2013 re-entry) become a stated limitation in the paper. This supersedes the earlier CLAUDE.md Stage 6 wording; CLAUDE.md has been updated to match.
+
+## 2026-10-24, Stage 1
+
+7. **Manuscript base confirmed (TJ):** `inputs/paper2_v2.docx` is the latest manuscript.
+8. **Adjudicator identity (open item 4):** STILL UNANSWERED. TJ's reply again contained the unfilled template. Nothing assumed; needed before Stage 6.
+9. **Licence note:** TJ's reply contained an unfilled placeholder instead of the listing's sharing terms. NOT RECORDED. Needed for open item 7 and the README (Stage 13). Until then the repo must not be assumed to permit redistributing DDR narrative text.
+10. **Raw DDR route.** TJ re-added the Volve Marketplace listing (the reply left the date as a placeholder; catalog `equinor_asa_volve_data_village.public` created per Databricks timestamp 1792824654197 ms, i.e. 2026-10-24). Files were downloaded on 2026-10-24 with `databricks fs cp -r --overwrite` (profile `volve`, CLI v1.15.0) from `dbfs:/Volumes/equinor_asa_volve_data_village/public/volve/Well_technical_data/Daily Drilling Report - XML Version` to `data/raw/ddr_xml/`. Verified: 1,759 files, 21,315,879 bytes, zero missing or extra names, zero per-file size mismatches against `workspace.default.volve_metadata_catalog`. Manifest: `data/raw/manifest.csv`. The expected list is `data/raw/expected_from_catalog.csv`.
+11. **NOD snapshot 2026-10-24.** Full national development and exploration wellbore CSV exports fetched by HTTP from the same FactPages export URLs as the Sept snapshot (see `data/raw/nod/nod_snapshot_20261024_metadata.json`). Volve subset (`15/9-F-` and `15/9-19`) is identical to the 2026-09-08 snapshot except for the `datesyncNPD` column.
