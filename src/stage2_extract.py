@@ -41,6 +41,7 @@ if problems:
 cols = ["filename", "well", "wellbore", "date_report", "dTimSpud", "md", "md_kickoff", "md_csg_last", "rig", "operator",
         "forecast24hr", "drill_complete", "sum24Hr", "report_no", "schema_version", "n_rig_npd_name", "n_activity"]
 df = pd.DataFrame(rows)[cols].astype("string")
+os.makedirs("data/interim", exist_ok=True)
 df.to_parquet("data/interim/ddr.parquet", index=False)
 print(len(df), "rows")
 print(df.schema_version.value_counts(dropna=False).to_dict())

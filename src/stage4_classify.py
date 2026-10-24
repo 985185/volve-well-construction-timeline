@@ -5,7 +5,6 @@ sys.path.insert(0, "src")
 import classifier_v3 as C
 
 new = pd.read_parquet("data/interim/ddr.parquet")
-old = pd.read_parquet("data/interim/old/volve_ddr_master.parquet")
 new["phase"] = new["sum24Hr"].fillna("").map(lambda t: C.classify_ddr(t.strip()))
 new[["filename", "wellbore", "date_report", "phase"]].to_parquet("data/interim/classified_new.parquet", index=False)
 
@@ -17,15 +16,21 @@ t2["pct_of_1759"] = (100 * t2["count"] / len(new)).round(1); t2["v2_count"] = [i
 t2.to_csv("outputs/table2_phase_distribution.csv", index=False); print(t2.to_string(index=False))
 print("classified:", int((new.phase != "Unclassified").sum()), "unclassified:", int((new.phase == "Unclassified").sum()), "sum:", int(t2["count"].sum()))
 
-# row-by-row against phase assigned on OLD text (v2 result)
-m = new[["filename", "phase", "sum24Hr"]].merge(old[["filename", "sum24hr"]], on="filename")
-m["phase_oldtext"] = m["sum24hr"].fillna("").str.strip().map(C.classify_ddr)
-ch = m[m.phase != m.phase_oldtext]
-print("phase differs between old text and new text:", len(ch))
-moji = m["sum24hr"].fillna("").str.contains("[ÃÂ]", regex=True) | (m["sum24hr"].fillna("").str.strip() != m["sum24Hr"].fillna("").str.strip())
-print("rows whose stripped narrative text differs old vs new:", int(moji.sum()), "| of which phase changes:", int((moji & (m.phase != m.phase_oldtext)).sum()))
-print(ch[["filename", "phase_oldtext", "phase"]].to_string())
-ch.rename(columns={"sum24Hr": "text_new", "sum24hr": "text_old"}).to_csv("outputs/stage4_phase_changes_mojibake.csv", index=False)   # columns named text_*: the file is empty (0 phase changes) and must never carry narrative text
+import os
+if os.path.exists("data/interim/old/volve_ddr_master.parquet"):
+    old = pd.read_parquet("data/interim/old/volve_ddr_master.parquet")
+    # row-by-row against phase assigned on OLD text (v2 result)
+    m = new[["filename", "phase", "sum24Hr"]].merge(old[["filename", "sum24hr"]], on="filename")
+    m["phase_oldtext"] = m["sum24hr"].fillna("").str.strip().map(C.classify_ddr)
+    ch = m[m.phase != m.phase_oldtext]
+    print("phase differs between old text and new text:", len(ch))
+    moji = m["sum24hr"].fillna("").str.contains("[ÃÂ]", regex=True) | (m["sum24hr"].fillna("").str.strip() != m["sum24Hr"].fillna("").str.strip())
+    print("rows whose stripped narrative text differs old vs new:", int(moji.sum()), "| of which phase changes:", int((moji & (m.phase != m.phase_oldtext)).sum()))
+    print(ch[["filename", "phase_oldtext", "phase"]].to_string())
+    ch.rename(columns={"sum24Hr": "text_new", "sum24hr": "text_old"}).to_csv("outputs/stage4_phase_changes_mojibake.csv", index=False)   # columns named text_*: the file is empty (0 phase changes) and must never carry narrative text
+
+else:
+    print("SKIPPED (optional verification): the earlier table is not available, so the comparison of old and new narrative text is not run; outputs/stage4_phase_changes_mojibake.csv keeps its committed content.")
 
 # is any DDR classified only through the 8½ pattern (suspected dead pattern)?
 pat = re.compile(r"8½.{0,5}(?:hole|section)", re.I)

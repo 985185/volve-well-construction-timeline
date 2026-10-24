@@ -1,5 +1,10 @@
 """Stage 1a: pull the expected DDR XML file list (name, bytes, rel_path) from the metadata catalog."""
-import csv, json, subprocess, sys
+import csv, json, shutil, subprocess, sys
+
+import os
+if os.environ.get("VOLVE_FETCH_CATALOG") != "1" or shutil.which("databricks") is None:
+    print("SKIPPED (optional step): set VOLVE_FETCH_CATALOG=1 with a Databricks CLI profile named volve to run it; the expected file list comes from the Marketplace metadata catalog. stage1_manifest.py then records every file and its SHA-256 without the catalog comparison.")
+    sys.exit(0)
 
 STMT = ("SELECT file_name, file_size_bytes, rel_path FROM workspace.default.volve_metadata_catalog "
         "WHERE file_name RLIKE '_[0-9]{4}_[0-9]{2}_[0-9]{2}\\.xml$' ORDER BY file_name")

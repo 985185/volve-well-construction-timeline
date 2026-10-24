@@ -1,6 +1,11 @@
 """Stage 8b: outputs/kickoff_signoff.xlsx for TJ's sign-off, and reports/STAGE_8b.md.
 The author columns (author_approved, author_depth, author_note) are left empty: they are for TJ only (rule 6)."""
+import os
 import pandas as pd
+from openpyxl import Workbook
+if os.path.exists("outputs/kickoff_signoff.xlsx"):      # the workbook has been signed off by the author: this historical step must never overwrite it
+    print("SKIPPED: outputs/kickoff_signoff.xlsx already exists and holds the author's sign-off; this step is not part of the reproduction pipeline.")
+    raise SystemExit(0)
 from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.datavalidation import DataValidation

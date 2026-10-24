@@ -1,4 +1,8 @@
 """Stage 2b: summary counts and row-by-row diff of the new extraction against the old volve_ddr_master (join on filename)."""
+import os, sys
+if not os.path.exists("data/interim/old/volve_ddr_master.parquet"):
+    print("SKIPPED (optional verification step): data/interim/old/volve_ddr_master.parquet is not available, so the comparison with the earlier extraction cannot run. No reported number depends on running this step; its committed result is reports/STAGE_2.md.")
+    sys.exit(0)
 import pandas as pd
 
 new = pd.read_parquet("data/interim/ddr.parquet")

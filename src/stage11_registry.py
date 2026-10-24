@@ -102,8 +102,8 @@ cl = pd.read_parquet(CL)
 add("classifier.classified", int((cl.phase != "Unclassified").sum()), "DDRs classified", S4, "classify_ddr", [CL], 1303)
 add("classifier.classified_pct", round(100 * (cl.phase != "Unclassified").mean(), 1), "Percent classified", S4, "classify_ddr", [CL], 74.1)
 add("classifier.unclassified", int((cl.phase == "Unclassified").sum()), "DDRs unclassified", S4, "classify_ddr", [CL], 456)
-add("classifier.faithfulness_classified_on_old_text", 1303, "Ported classifier on the old volve_ddr_master narratives: classified (run on the same day; see reports/STAGE_4.md)", "src/stage4_faithfulness.py", "module level",
-    ["outputs/stage4_faithfulness_phase_counts.csv"], 1303)
+add("classifier.faithfulness_classified_on_old_text", json.load(open("outputs/stage4_faithfulness_summary.json"))["classified_on_old_text"], "Ported classifier on the old volve_ddr_master narratives: classified; comparison with the earlier extraction (optional verification, committed result; see reports/STAGE_4.md)", "src/stage4_faithfulness.py", "module level",
+    ["outputs/stage4_faithfulness_summary.json"], 1303)
 fc = pd.read_csv("outputs/stage4_faithfulness_phase_counts.csv")
 add("classifier.faithfulness_phase_counts_equal", bool(fc.same.all()), "All 14 per-phase counts equal the v2 table on the old text", "src/stage4_faithfulness.py", "module level", ["outputs/stage4_faithfulness_phase_counts.csv"], True)
 ph = pd.read_csv("outputs/stage4_phase_changes_mojibake.csv")
@@ -275,18 +275,11 @@ add("external.nod_19S_suspended_tvd_m", 2394.0, "Same source, true vertical dept
 
 # ---------------------------------------------------------------- K. entries added for the manuscript draft (Stage 12)
 add("placeholders.none_total", int(pr.loc["TOTAL", "literal_None"]), "Literal None strings in all fields (73 narratives + 103 forecasts)", S3, "placeholder register", [DDR])
-oldt = pd.read_parquet("data/interim/old/volve_ddr_master.parquet")
-mm = d[["filename", "sum24Hr"]].merge(oldt[["filename", "sum24hr"]], on="filename")
-
-
-def _moji(t):
-    try: return t.encode("cp1252").decode("utf-8")
-    except Exception: return t
-
-
-nm_rows = int(sum(1 for a, b in zip(mm.sum24Hr.fillna(""), mm.sum24hr.fillna("")) if _moji(b) == a and a != b))
-add("extract.old_table_encoding_rows_sum24Hr", int(sum(1 for a, b in zip(mm.sum24Hr.fillna(""), mm.sum24hr.fillna("")) if (_moji(b.strip()) == a.strip()) and _moji(b) != b)), "sum24Hr rows whose text in the earlier table had a character-encoding error (UTF-8 bytes read as cp1252)", S2, "stage2_text_diff.py", [DDR, "data/interim/old/volve_ddr_master.parquet"], 103)
-add("classifier.faithfulness_row_mismatches", 0, "Row-by-row mismatches between the ported classifier on the earlier narratives and the earlier phase labels (1,759 rows)", "src/stage4_faithfulness.py", "module level", ["outputs/stage4_faithfulness_phase_counts.csv"], 0)
+# comparisons with the earlier extraction: read from the committed results of the optional verification steps (they are not recomputed here)
+_enc = json.load(open("outputs/stage2_encoding_summary.json"))
+add("extract.old_table_encoding_rows_sum24Hr", _enc["sum24Hr_rows_with_encoding_error_in_earlier_table"], "sum24Hr rows whose text in the earlier table had a character-encoding error (UTF-8 bytes read as cp1252); comparison with the earlier extraction", S2, "stage2_text_diff.py (optional verification, committed result)", ["outputs/stage2_encoding_summary.json"], 103)
+_fs = json.load(open("outputs/stage4_faithfulness_summary.json"))
+add("classifier.faithfulness_row_mismatches", _fs["row_mismatches"], "Row-by-row mismatches between the ported classifier on the earlier narratives and the earlier phase labels (1,759 rows); comparison with the earlier extraction", "src/stage4_faithfulness.py", "module level (optional verification, committed result)", ["outputs/stage4_faithfulness_summary.json"], 0)
 add("classifier.size_patterns", {r.phase: r.size_patterns for r in ru.itertuples() if isinstance(r.size_patterns, str)}, "Size-based patterns per phase from the frozen classifier (hole, casing and liner sizes)", "src/stage4_rules_table.py", "module level", ["outputs/stage4_priority_rules.csv"])
 add("spud.rule_thresholds_days", {"exact_W_minus_N_max": 1, "exact_anchor_minus_W_max": 1, "definitional_W_minus_N_max": 8, "definitional_T_minus_W_min": 2, "definitional_T_minus_W_max": 20,
                                    "error_W_minus_anchor_min": 30, "error_N_minus_anchor_max": 3, "identity_W_minus_first_max": 7, "identity_N_minus_W_min": 365},

@@ -1,5 +1,10 @@
 """Stage 2c: classify every sum24hr / forecast24hr difference between new raw strings and the old master table."""
+import os, sys
+if not os.path.exists("data/interim/old/volve_ddr_master.parquet"):
+    print("SKIPPED (optional verification step): data/interim/old/volve_ddr_master.parquet is not available, so the comparison with the earlier extraction cannot run. No reported number depends on running this step; its committed result is outputs/stage2_encoding_summary.json and reports/STAGE_2.md.")
+    sys.exit(0)
 import collections
+import json
 import pandas as pd
 
 new = pd.read_parquet("data/interim/ddr.parquet"); old = pd.read_parquet("data/interim/old/volve_ddr_master.parquet")
@@ -29,3 +34,9 @@ pd.DataFrame(out, columns=["filename", "field", "cause"]).to_csv("data/interim/o
 for c in ["sum24Hr", "forecast24hr"]:
     s = m[c if c != c.lower() else c + "_n"].dropna()
     print(c, "new strings with leading/trailing whitespace:", int((s != s.str.strip()).sum()), "| 'None' literal:", int((s.str.strip() == "None").sum()), "| empty:", int((s.str.strip() == "").sum()))
+
+# committed result read by the registry (a comparison with the earlier table, so it is stored rather than recomputed from the earlier table)
+_mm = new[["filename", "sum24Hr"]].merge(old[["filename", "sum24hr"]], on="filename")
+n_enc = int(sum(1 for a, b in zip(_mm.sum24Hr.fillna(""), _mm.sum24hr.fillna("")) if (moji(b.strip()) == a.strip()) and moji(b) != b))
+json.dump({"sum24Hr_rows_with_encoding_error_in_earlier_table": n_enc, "rows_compared": len(_mm)}, open("outputs/stage2_encoding_summary.json", "w"), indent=1)
+print("encoding-error rows in the earlier table (sum24Hr):", n_enc)

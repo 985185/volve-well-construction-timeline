@@ -1,6 +1,6 @@
 """Stage 8: kick-off recovery, one row per sidetrack by designation (15). Method: FREE_TEXT (depth quoted in a DDR narrative near the hand-over), DEPTH_SEQUENCE
 (depth taken from the parent's last / child's first measured depth), or NONE. Evidence quotes are <= 15 words; full narratives go to local_private/ only."""
-import re, sys
+import os, re, sys
 import pandas as pd
 
 d = pd.read_parquet("data/interim/ddr.parquet"); d["day"] = d.date_report.str[:10]; d["mdn"] = pd.to_numeric(d.md, errors="coerce")
@@ -57,7 +57,7 @@ for w in SIDETRACKS:
 r = pd.DataFrame(rows)
 r["nod_minus_ours_m"] = pd.to_numeric(r.nod_kickoff_m) - pd.to_numeric(r.kickoff_depth_m)
 r.to_csv("outputs/kickoff_recovery.csv", index=False)
-open("local_private/stage8_kickoff_evidence.txt", "w", encoding="utf-8").write("\n".join(full))
+(os.makedirs("local_private", exist_ok=True), open("local_private/stage8_kickoff_evidence.txt", "w", encoding="utf-8"))[1].write("\n".join(full))
 pd.set_option("display.width", 260, "display.max_colwidth", 80)
 print(r[["wellbore", "v2_method", "v2_depth_m", "method", "kickoff_depth_m", "evidence_date", "evidence_days_after_first_ddr", "parent_last_md", "child_first_md", "structured_md_kickoff", "nod_kickoff_m", "nod_minus_ours_m", "nod_parent", "confidence"]].to_string(index=False))
 print(r.method.value_counts().to_dict(), "| quotes over 15 words:", int((r.evidence_quote.dropna().str.split().str.len() > 15).sum()))
