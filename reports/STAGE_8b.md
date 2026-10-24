@@ -1,36 +1,42 @@
-# Stage 8b: Kick-off re-derived (depth at which the sidetrack leaves the parent)
+# Stage 8b: Kick-off under the uniform rule
 
-Date: 2026-10-24. Branch: `rerun-2026-10`. Script: `src/stage8b_kickoff_table.py`. Output: `outputs/kickoff_table.csv`. Decisions: `notes/decisions.md` items 27 to 31.
+Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8b_kickoff_table.py`, `src/stage8b_signoff.py`. Outputs: `outputs/kickoff_table.csv`, `outputs/kickoff_signoff.xlsx` (for TJ's sign-off, author columns empty). Decisions: `notes/decisions.md` items 27 to 36.
 
-**Status: STOPPED after the table, as instructed. Stage 9 waits for TJ to see this table.**
+**Status: the table is final pending TJ's row-by-row sign-off. The manuscript will use only author-approved depths.**
 
-Definition (TJ decision 27): kick-off = the depth at which the sidetrack leaves the parent wellbore. Evidence = the parent's last report(s) and the sidetrack's first report(s): kick-off, window milling, time drilling, "% formation" and hand-over language. For each sidetrack I picked the evidence report and depth by reading the narratives; the script then checks the depth really occurs in that report (text or md field) and cuts the quote from the raw narrative. Quotes are 15 words or fewer (cut from the narrative, so they can start mid-sentence). Method: FREE_TEXT = the depth is written in the narrative; DEPTH_SEQUENCE = the depth is the md field of the parent's last report (equal to the sidetrack's first), with kick-off wording in the narrative or none. "NOD" = `wlbKickOffPoint`, NOD snapshot 2026-10-24; difference = NOD minus DDR depth; blank where NOD has no record or no value. All depths in m MD.
+## The rule (TJ decision 32), applied uniformly to all 15
 
-## Kick-off table (15 sidetracks)
+"The depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or window is started; where the narrative is empty, the measured depth at the parent-to-child transition (DEPTH_SEQUENCE)."
 
-| Sidetrack | Parent | DDR kick-off (m) | Evidence quote (wellbore report, date) | Method | Confidence | NOD wlbKickOffPoint (m) | NOD - DDR (m) |
-|---|---|---|---|---|---|---|---|
-| 15/9-19 A | none in WITSML (NOD lists 15/9-19 S) | 2,178 | `SET 2ND WHIPSTOCK & MILLED WINDOW FROM 2178-2183 M. DRILLED 19 M FORMATION. CIRCULATED HOLE` (9-19 A, 1997-07-29) | FREE_TEXT | HIGH | 2,178 | +0 |
-| 15/9-19 B | 15/9-19 A | 2,231 | `DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M.` (9-19 B, 1997-11-11) | FREE_TEXT | HIGH | 2,200 | -31 |
-| 15/9-19 BT2 | 15/9-19 B | 2,911 | `M;TOP OF SIDETRACK PLUG. DRILLED CMT. TO 2911 M. COMMENCED DRILLING 8 1/2" HOLE FROM` (9-19 B, 1997-12-06) | FREE_TEXT | HIGH |  |  |
-| 15/9-19 ST2 | 15/9-19 S | 1,536 | `(narratives of both 1992-12-19 reports are 'None'; md 1,536 on both)` (9-19 S, 1992-12-19) | DEPTH_SEQUENCE | LOW |  |  |
-| 15/9-F-1 A | 15/9-F-1 | 2,620 | `shoe and rathole. Commenced kick off to F-1A` (9-F-1, 2013-08-24) | DEPTH_SEQUENCE | MEDIUM | 2,620 | +0 |
-| 15/9-F-1 B | 15/9-F-1 A | 2,617 | `Drilled out cement and kicked off well to F-1 B.` (9-F-1 A, 2013-08-30) | DEPTH_SEQUENCE | MEDIUM | 2,604 | -13 |
-| 15/9-F-1 C | 15/9-F-1 B | 1,364 | `hole to 1355 m. Commenced time drilling to1364 m. 50% formation obtained at 1364 m.` (9-F-1 B, 2014-02-22) | FREE_TEXT | HIGH | 1,364 | +0 |
-| 15/9-F-9 A | 15/9-F-9 | 421.5 | `over pull. Milled 12-1/4" sidetrack window from 421,5 m (top) to 424 m. Note:Bottom window` (9-F-9, 2009-06-30) | FREE_TEXT | HIGH | 428 | +6.5 |
-| 15/9-F-11 T2 | 15/9-F-11 | 257 | `drilled 26" hole from 250 m to 257 m. Transferred over to well 15/9-F-11 T2.` (9-F-11, 2013-03-24) | FREE_TEXT | MEDIUM |  |  |
-| 15/9-F-11 A | 15/9-F-11 T2 | 2,586 | `and kicked off to F-11 A at 2586m MD.` (9-F-11 T2, 2013-05-15) | FREE_TEXT | HIGH | 2,578 | -8 |
-| 15/9-F-11 B | 15/9-F-11 A | 2,589 | `new formation from 2531 m MD to 2589 m MD.` (9-F-11 A, 2013-05-29) | FREE_TEXT | LOW | 2,586 | -3 |
-| 15/9-F-15 A | 15/9-F-15 | 1,381 | `Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.` (9-F-15, 2008-12-12) | FREE_TEXT | HIGH | 1,381 | +0 |
-| 15/9-F-15 B | 15/9-F-15 A | 3,185 | `Drilled 8½" hole from 3141m to 3185m and kicked off at 3185m continued drilling` (9-F-15 A, 2009-01-14) | FREE_TEXT | HIGH | 3,185 | +0 |
-| 15/9-F-15 C | 15/9-F-15 B | 2,566 | `OBM. Drilled cement from 2490 m to 2566 m MD. Initiated kick off and drilled` (9-F-15 B, 2009-01-19) | FREE_TEXT | MEDIUM | 2,575 | +9 |
-| 15/9-F-15 D | 15/9-F-15 C | 1,380 | `BHA. Drilled cement and kicked off. Drilled 17 1/2" hole.` (9-F-15 C, 2013-11-11) | DEPTH_SEQUENCE | MEDIUM | 1,380 | +0 |
+Operationally: tier T1 = a depth is stated together with new-formation or departure language (for example "50% formation obtained at 1364 m", "kicked off at 3185m"); tier T2 = the narrative names a kick-off, window or oriented-drilling start but gives no formation or departure depth, so the start depth is used (window top for windows); tier T3 = empty narrative, measured depth at the parent-to-child transition. Evidence is read from the parent's last and the sidetrack's first reports. I chose the evidence report and depth by reading the narratives; the script checks the depth occurs in that report (text or md field) and cuts the quote.
 
-Counts: FREE_TEXT 11, DEPTH_SEQUENCE 4 (15/9-19 ST2, F-1 A, F-1 B, F-15 D); 11 + 4 = 15, none unrecovered. NOD gives a value for 12 of the 15 (no value for 19 BT2, 19 ST2 and F-11 T2: NOD has no separate record, or none with a kick-off). Of those 12: exactly equal in 6 (19 A, F-1 A, F-1 C, F-15 A, F-15 B, F-15 D); within 10 m but not equal in 4 (F-9 A +6.5, F-11 A -8, F-11 B -3, F-15 C +9); further away in 2 (19 B -31, F-1 B -13). 6 + 4 + 2 = 12.
+Method wording (decision 33): "depth in text", "event in text, depth from md" (the narrative names the kick-off event but not the depth, the depth is the md of the same report), "depth sequence (narrative empty)". Counts: depth in text 11, event in text with depth from md 3 (F-1 A, F-1 B, F-15 D), depth sequence 1 (19 ST2); 15 in total. Tiers: T1 7, T2 7, T3 1.
 
-Notes on individual rows (evidence, not interpretation): 15/9-19 A: second whipstock, an earlier window at 2,202 to 2,207 m (1997-07-26) was abandoned. 15/9-19 ST2: both 1992-12-19 narratives read "None"; the parent had drilled cement to 1,486 m the day before, so 1,536 m rests on the measured depth only. 15/9-F-9 A: window top 421.5 m, window bottom 428.2 m (NOD 428). 15/9-F-11 T2: oriented drilling out of the cement began at 246 m on 2013-03-23, and 257 m is the hand-over depth; the table uses the hand-over depth, consistent with F-1 C. 15/9-F-11 B: evidence is an interval (cement and new formation drilled from 2,531 to 2,589 m), the point value is where new formation is reached. 15/9-F-15 C: kick-off initiated after cement was drilled to 2,566 m, the section then reached 2,575 m, which is the NOD value.
+## Table (15 sidetracks, depths in m MD, NOD = wlbKickOffPoint, snapshot 2026-10-24)
 
-## v2 depths that were not kick-offs (5 of 15)
+| Sidetrack | Parent | DDR kick-off | Evidence quote (report, date) | Method | Tier | Confidence | NOD | NOD - DDR |
+|---|---|---|---|---|---|---|---|---|
+| 15/9-19 A | none in WITSML (NOD lists 15/9-19 S) | 2,178 | `SET 2ND WHIPSTOCK & MILLED WINDOW FROM 2178-2183 M. DRILLED 19 M FORMATION. CIRCULATED HOLE` (9-19 A, 1997-07-29) | depth in text | T2 | HIGH | 2,178 | +0 |
+| 15/9-19 B | 15/9-19 A | 2,231 | `DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M.` (9-19 B, 1997-11-11) | depth in text | T1 | HIGH | 2,200 | -31 |
+| 15/9-19 BT2 | 15/9-19 B | 2,911 | `M;TOP OF SIDETRACK PLUG. DRILLED CMT. TO 2911 M. COMMENCED DRILLING 8 1/2" HOLE FROM` (9-19 B, 1997-12-06) | depth in text | T1 | HIGH |  |  |
+| 15/9-19 ST2 | 15/9-19 S | 1,536 | `(narratives of both 1992-12-19 reports are 'None'; md 1,536 on both)` (9-19 S, 1992-12-19) | depth sequence (narrative empty) | T3 | LOW |  |  |
+| 15/9-F-1 A | 15/9-F-1 | 2,620 | `shoe and rathole. Commenced kick off to F-1A` (9-F-1, 2013-08-24) | event in text, depth from md | T2 | MEDIUM | 2,620 | +0 |
+| 15/9-F-1 B | 15/9-F-1 A | 2,617 | `Drilled out cement and kicked off well to F-1 B.` (9-F-1 A, 2013-08-30) | event in text, depth from md | T2 | MEDIUM | 2,604 | -13 |
+| 15/9-F-1 C | 15/9-F-1 B | 1,364 | `hole to 1355 m. Commenced time drilling to1364 m. 50% formation obtained at 1364 m.` (9-F-1 B, 2014-02-22) | depth in text | T1 | HIGH | 1,364 | +0 |
+| 15/9-F-9 A | 15/9-F-9 | 421.5 | `over pull. Milled 12-1/4" sidetrack window from 421,5 m (top) to 424 m. Note:Bottom window` (9-F-9, 2009-06-30) | depth in text | T2 | HIGH | 428 | +6.5 |
+| 15/9-F-11 T2 | 15/9-F-11 | 246 | `Ran wireline gyro. Washed down oriented to 246 m. Oriented drilled 26" hole from 246` (9-F-11, 2013-03-23) | depth in text | T2 | MEDIUM |  |  |
+| 15/9-F-11 A | 15/9-F-11 T2 | 2,586 | `and kicked off to F-11 A at 2586m MD.` (9-F-11 T2, 2013-05-15) | depth in text | T1 | HIGH | 2,578 | -8 |
+| 15/9-F-11 B | 15/9-F-11 A | 2,589 | `new formation from 2531 m MD to 2589 m MD.` (9-F-11 A, 2013-05-29) | depth in text | T1 | LOW | 2,586 | -3 |
+| 15/9-F-15 A | 15/9-F-15 | 1,381 | `Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.` (9-F-15, 2008-12-12) | depth in text | T1 | HIGH | 1,381 | +0 |
+| 15/9-F-15 B | 15/9-F-15 A | 3,185 | `Drilled 8½" hole from 3141m to 3185m and kicked off at 3185m continued drilling` (9-F-15 A, 2009-01-14) | depth in text | T1 | HIGH | 3,185 | +0 |
+| 15/9-F-15 C | 15/9-F-15 B | 2,566 | `OBM. Drilled cement from 2490 m to 2566 m MD. Initiated kick off and drilled` (9-F-15 B, 2009-01-19) | depth in text | T2 | MEDIUM | 2,575 | +9 |
+| 15/9-F-15 D | 15/9-F-15 C | 1,380 | `BHA. Drilled cement and kicked off. Drilled 17 1/2" hole.` (9-F-15 C, 2013-11-11) | event in text, depth from md | T2 | MEDIUM | 1,380 | +0 |
+
+## Rows whose depth changed under the rule
+
+Compared with the previous version of this table (the departure-from-parent version): **one row changes. 15/9-F-11 T2: 257 m to 246 m.** The narrative of 2013-03-23 reports oriented drilling out of the cement starting at 246 m (top of cement 244 m), and gives no formation or departure depth, so tier T2 applies; 257 m was the hand-over depth of the next day. **15/9-F-1 C stays at 1,364 m** (T1: 50% formation obtained at 1,364 m). The other 13 rows are unchanged. Compared with v2, the rows that differ are the five listed below plus F-11 T2 (v2 257 m) and the new 19 A.
+
+## v2 depths that were not kick-offs
 
 | Sidetrack | v2 depth (m) | Re-derived (m) | What the v2 depth is |
 |---|---|---|---|
@@ -40,23 +46,38 @@ Notes on individual rows (evidence, not interpretation): 15/9-19 A: second whips
 | 15/9-F-9 A | 459 | 421.5 | 459 m is where the first F-9 A report starts drilling, below the window (window 421.5 to 428.2 m) |
 | 15/9-F-11 B | 3,271 | 2,589 | SECTION START (3,271 m = 8 1/2 in. section start after the 9 5/8 x 10 3/4 in. casing) |
 
-Section starts: F-1 B, F-1 C and F-11 B (the first two checked first, as you asked; both are section starts). Not section starts but also not kick-offs: F-1 A (depth reached on the first report) and F-9 A (where the first report starts drilling below the window). The other nine v2 depths equal the re-derived ones, and 15/9-19 A is new. So 5 of the 14 v2 values change.
+F-1 B, F-1 C and F-11 B are section starts; F-1 A and F-9 A are drilled depths of the first report. 15/9-F-11 T2 differs from v2 (257 to 246 m) because of the rule, not because v2 used a section start.
 
-## 15/9-19 S structured kick-off versus NOD (reported only)
+## Where the evidence allows another reading (not applied; for sign-off)
 
-- Structured `mdKickoff` for 15/9-19 S: 562 m in all 49 of its DDRs (constant).
-- NOD `wlbKickOffPoint` for 15/9-19 S: blank. (For the rest of the 19 series NOD gives 2,178 m for 19 A, 2,200 m for 19 B, and blank for 19 SR and 19 SR2.)
+| Sidetrack | Depth used | Other depth(s) the evidence supports |
+|---|---|---|
+| 15/9-19 A | 2,178 | 2183 (window bottom) |
+| 15/9-19 BT2 | 2,911 | 2903 (top of sidetrack plug) |
+| 15/9-19 ST2 | 1,536 | 1486 (parent drilled cement to 1,486 m the day before) |
+| 15/9-F-1 C | 1,364 | 1355 (start of time drilling) |
+| 15/9-F-9 A | 421.5 | 428.2 (window bottom); 436.5 (formation drilled to, 2009-07-02) |
+| 15/9-F-11 T2 | 246 | 257 (hand-over depth, 2013-03-24) |
+| 15/9-F-11 B | 2,589 | 2531 (start of the cement and new-formation interval) |
+| 15/9-F-15 A | 1,381 | 1368 (start of the cement/new-formation interval) |
+| 15/9-F-15 B | 3,185 | 3210 (depth of the first '50/50 cement/formation' report) |
+| 15/9-F-15 C | 2,566 | 2575 (depth the section reached; the NOD value) |
 
-No interpretation, as instructed.
+The two window cases (19 A and F-9 A) are the main judgement: I read "where the kick-off or window is started" as the window top; reading "departure from the parent hole" as the window bottom would give 2,183 m and 428.2 m. NOD is 2,178 m and 428 m.
 
-## Cross-paper correction (decision 28)
+## 15/9-19 S (reported only, as instructed)
 
-F-1 / F-1 C shared interval is above 1,364 m MD, not 3,059 m; to be corrected in Papers 1, 3 and the barrier paper. For F-1 B to F-1 A and F-11 B to F-11 A the same section-start problem applies to any statement that used v2's 3,100 m or 3,271 m as a kick-off or shared-interval limit; the re-derived depths are 2,617 m and 2,589 m.
+Structured `mdKickoff` for 19 S: 562 m in all 49 DDRs. NOD `wlbKickOffPoint` for 19 S: blank. No interpretation.
 
-## Quotes policy checks (decision 31)
+## Cross-paper correction (replaces the note of decision 28, per TJ)
 
-All evidence quotes in `outputs/kickoff_table.csv` are 15 words or fewer (asserted in the script). `inputs/repo_before/data/sidetrack_relationships.csv` was trimmed: four quoted DDR fragments of 16 to 22 words now end after 15 words plus an ellipsis. `spud_validation.csv` has no quoted DDR fragment over 15 words (the long spans found earlier were my own prose between apostrophes), so it is unchanged. To remove the long fragments from the unpushed branch history too, the branch was rewritten again, this time from `master`'s tip, because the rerun-setup commit `e1ce707` (the old `798d6ce`) held the untrimmed files. `master` and `origin/master` were not touched (still `34bc1c0`) and still contain the untrimmed `data/sidetrack_relationships.csv`; per your decision I did not rewrite them. All branch commit hashes changed again.
+"F-1 family shared intervals: all four of F-1, F-1 A, F-1 B, F-1 C share the hole above 1,364 m MD; F-1, F-1 A and F-1 B share it above approximately 2,617 to 2,620 m MD. Correct the former 'F-1 / F-1 C share formations above 3,059 m' statement in Papers 1, 3 and the barrier paper."
+
+## Housekeeping
+
+- `inputs/paper2_rebuild_prompt_pack_v2.md` copied from the Downloads folder (SHA-256 `18dbd3265cf9796ee26c93feb4a4486bddb1a1b392faeea4b73eddeb582884e0`; source and copy hashes identical; no secrets found by scan).
+- All evidence quotes in `outputs/kickoff_table.csv` and the workbook are 15 words or fewer.
 
 ## Next
 
-Stage 9 (duration table) after TJ has seen this table.
+TJ reviews `outputs/kickoff_signoff.xlsx`. Stage 9 plan is in the chat reply; computing waits for TJ's go.
