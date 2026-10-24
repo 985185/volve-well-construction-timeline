@@ -25,7 +25,7 @@ print("phase differs between old text and new text:", len(ch))
 moji = m["sum24hr"].fillna("").str.contains("[ÃÂ]", regex=True) | (m["sum24hr"].fillna("").str.strip() != m["sum24Hr"].fillna("").str.strip())
 print("rows whose stripped narrative text differs old vs new:", int(moji.sum()), "| of which phase changes:", int((moji & (m.phase != m.phase_oldtext)).sum()))
 print(ch[["filename", "phase_oldtext", "phase"]].to_string())
-ch.to_csv("outputs/stage4_phase_changes_mojibake.csv", index=False)
+ch.rename(columns={"sum24Hr": "text_new", "sum24hr": "text_old"}).to_csv("outputs/stage4_phase_changes_mojibake.csv", index=False)   # columns named text_*: the file is empty (0 phase changes) and must never carry narrative text
 
 # is any DDR classified only through the 8½ pattern (suspected dead pattern)?
 pat = re.compile(r"8½.{0,5}(?:hole|section)", re.I)

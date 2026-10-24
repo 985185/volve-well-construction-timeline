@@ -24,6 +24,7 @@ This is a **one-time clean rerun from raw data**. Its purpose is that every numb
 - Windows, Git Bash. Prefix Databricks API calls with `MSYS_NO_PATHCONV=1`.
 - Python venv at `.venv/` (`requirements.txt`: pandas, pyarrow, lxml, matplotlib, databricks-sdk, python-docx, openpyxl).
 - Databricks workspace `https://<workspace-host>`, profile `volve`. Serverless only. If writing there: DBFS root disabled, path-based Delta writes fail; only `saveAsTable()` to `workspace.default.*` and plain file I/O to `/Workspace/Users/<user-email>/` work. Jobs API does not capture notebook stdout.
+- The real values of `<workspace-host>` and `<user-email>` are in `local_private/env_notes.md` (gitignored, local only). Never write them into a tracked file.
 - **Preferred architecture:** use Databricks only to *fetch* the raw DDR XML, then run everything locally in Python. Confirm this with TJ in Stage 0.
 
 ## Data sources

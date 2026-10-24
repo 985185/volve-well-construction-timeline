@@ -471,6 +471,10 @@ p66,14,14.0,in registry,"-drill date for the 2007 work, unlike F-4, F-5, F-14 an
 p66,15.,15.0,in registry,"te for the 2007 work, unlike F-4, F-5, F-14 and F-15. NOD's date therefore marks th"
 p66,2007,2007.0,in registry,"date therefore marks the later campaign, not the 2007 spud, and the case is classif"
 p67,5.6,5.6,ignored: section number,5.6 Sidetrack Kick-Off Depth Reco
+p68,15,15.0,in registry,to build angle; the structured kick-off field of 15/9-19 S (562 m in all its repo
+p68,9,9.0,in registry,build angle; the structured kick-off field of 15/9-19 S (562 m in all its report
+p68,19,19.0,in registry,uild angle; the structured kick-off field of 15/9-19 S (562 m in all its reports)
+p68,562,562.0,in registry,ngle; the structured kick-off field of 15/9-19 S (562 m in all its reports) is cons
 p69,15,15.0,in registry,All 15 sidetracks by designation (15
 p69,15,15.0,in registry,"All 15 sidetracks by designation (15/9-19 A, 19 B, 19 BT2 and 19 S"
 p69,9,9.0,in registry,"All 15 sidetracks by designation (15/9-19 A, 19 B, 19 BT2 and 19 ST2"
@@ -783,7 +787,7 @@ p150,400,400.0,in registry,"r of 15/9-F-1 (offset -2,064 days) is clipped at -40
 p150,15,15.0,in registry,clipped at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because
 p150,9,9.0,in registry,pped at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because N
 p150,11,11.0,in registry,at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because NOD do
-p152,234,234.0,in registry,"the numbers registry published in the repository (234 entries, each with the produc"
+p152,235,235.0,in registry,"the numbers registry published in the repository (235 entries, each with the produc"
 p152,256,256.0,in registry,"h with the producing script and function, the SHA-256 of its input files and an exe"
 p152,5.2,5.2,ignored: section number,cution timestamp). The audit estimates in Section 5.2 are derived arithmetically fr
 table 1 r1 c1,100.0%,100.0,in registry,100.0%

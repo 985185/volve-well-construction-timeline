@@ -234,6 +234,9 @@ add("duration.family_summary", fam_s.to_dict("records"), "Well-family summary: w
 add("f1.reports_2007", {"ddrs": 4, "first": "2007-12-02", "last": "2007-12-05", "max_valid_depth_m": 226}, "15/9-F-1 reports of 2007", "src/stage8c_report.py", "module level", [DDR])
 add("f1.reports_2013", {"ddrs": 34, "first": "2013-07-22", "last": "2013-08-24", "max_valid_depth_m": 3632, "td_date": "2013-08-17"}, "15/9-F-1 reports of 2013", "src/stage8c_report.py", "module level", [DDR])
 
+_s19 = d[d.wellbore == "NO 15/9-19 S"]
+assert len(_s19) == 49 and _s19.md_kickoff.nunique() == 1
+add("kickoff.19S_structured_field_m", {"md_kickoff_m": int(float(_s19.md_kickoff.iloc[0])), "reports": len(_s19), "distinct_values": int(_s19.md_kickoff.nunique())}, "Structured md_kickoff field of 15/9-19 S: one value in all its reports (consistent with the start of angle build, not a sidetrack departure; not used)", "src/stage11_registry.py", "module level", [DDR])
 # F-1 spud verification (TJ review): first 2013 report and NOD dates, computed from the extraction and the NOD snapshot
 _f1 = d[d.wellbore == "NO 15/9-F-1"].assign(day=lambda x: pd.to_datetime(x.date_report.str[:10]))
 _f1_2013 = _f1[_f1.day.dt.year == 2013].day.min()
