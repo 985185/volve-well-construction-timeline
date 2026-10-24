@@ -3,6 +3,7 @@
   "the depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or
    window is started; where the narrative is empty, the measured depth at the parent-to-child transition (DEPTH_SEQUENCE)."
 
+Added by TJ (decision 40): for casing exits (milled windows), kick-off = top of window.
 Tier T1 = a depth is stated together with new-formation or departure language ("50% formation obtained at 1364 m", "kicked off at 3185m", "commenced drilling hole from 2911 m").
 Tier T2 = the narrative names a kick-off / window / oriented-drilling start but no formation or departure depth: the start depth is used (window top for windows).
 Tier T3 = the narrative is empty: measured depth at the parent-to-child transition.

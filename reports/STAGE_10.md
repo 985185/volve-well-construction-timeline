@@ -11,7 +11,7 @@ Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/figure_style.py` (share
 | 1 | Depth versus calendar date, four representative wellbores (19 S, F-14, the F-1, F-1 B and F-1 C family, F-7), points coloured by phase, line broken across gaps longer than 14 days | `timeline.csv` | 1,421-row timeline |
 | 2 | Days versus depth, all wellbores, coloured by hole section. x-axis label: "Days from first report with recorded depth" (TJ) | `timeline.csv` | 26 wellbores; Spud 50, Surface casing 62, Intermediate drilling 77, Reservoir drilling 255 plotted in colour, 977 other points in grey; 50 + 62 + 77 + 255 + 977 = 1,421 |
 | 3 | WITSML maximum depth versus NOD total depth, with the 1:1 line | `td_validation.csv` | all 24 matched wellbores (22 exact, 2 close: F-15 15 m, 19 S 227 m); unmatched 19 B and F-11 named in the title |
-| 4 | Offset in days, WITSML spud date minus NOD main entry date, coloured by category | `spud_validation.csv` | 25 wellbores, F-11 T2 excluded (no separate NOD record): Exact 7, Definitional offset 8, WITSML data-entry error 4, Unresolved 4, Inherited 1, Wellbore-identity conflation 1; 7 + 8 + 4 + 4 + 1 + 1 = 25 |
+| 4 | Offset in days, WITSML spud date minus the NOD entry date closest to the first report (same definition as the Stage 7 table), coloured by category | `spud_validation.csv` | 25 wellbores, F-11 T2 excluded (no separate NOD record): Exact 7, Definitional offset 8, WITSML data-entry error 4, Unresolved 4, Inherited 1, Wellbore-identity conflation 1; 7 + 8 + 4 + 4 + 1 + 1 = 25 |
 
 Phase colours come from one dictionary (`PHASE_COLORS`) used by Figs 1 and 2, the same hues as v2, so the colours are consistent across figures.
 
@@ -21,7 +21,7 @@ Phase colours come from one dictionary (`PHASE_COLORS`) used by Figs 1 and 2, th
 - Axis label for depth is "Measured depth (m)": v2 said "m RKB", and I have not verified the depth reference of the WITSML `md` field, so I removed the reference datum.
 - Figure titles no longer start with "Figure N" (captions belong in the manuscript) and use no dashes.
 - Fig. 3 plots 24 wellbores as before, including F-11 T2, which is matched to NOD F-11 by depth.
-- Fig. 4 offset convention is unchanged from v2: WITSML spud date minus NOD **main** entry date. That differs from the NOD date used for the categories in `spud_validation.csv` (the main or predrill date closer to the first report). The plotted offsets that differ from the category offsets are F-4 (-217 days against -91), F-5 (-37 against -4), F-14 (-31 against -2) and F-15 (+305 against +340). This is a convention to state in the caption; the days quoted in the Stage 7 report for F-4 (-91) and F-15 (+340) use the predrill date.
+- Fig. 4 offset definition changed (TJ ruling 2, decision 41). Two conventions existed: (A) WITSML spud minus the NOD main entry date (v2 Fig. 4) and (B) WITSML spud minus the NOD entry date, main or predrill, closest to the first report (the date the categories are judged against). I recommended and applied B to both Fig. 4 and the Stage 7 table. Offsets that moved against the earlier version of this figure: F-4 -217 to -91, F-5 -37 to -4, F-14 -31 to -2, F-15 +305 to +340 days.
 - Zero-day offsets are drawn as value labels so that they are visible (13 of 25 are 0 or 1 day).
 - File names changed (for example `figure2_days_vs_depth.png`), and the old PNGs stay in `inputs/repo_before/figures/` as the "before" state.
 

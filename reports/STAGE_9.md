@@ -53,11 +53,11 @@ Indicative only (TJ): 15/9-19 B (3,272 m is the TD of an abandoned parent leg; N
 
 ## Drilled length and metres per report-day (PROVISIONAL for sidetracks)
 
-`drilled_length_m` = TD minus the proposed kick-off depth for the 15 sidetracks; = TD for the 11 original wellbores. `m_per_report_day` = drilled length divided by DDRs to TD. The 15 sidetrack values depend on the AI-proposed kick-off depths (three of which differ from the earlier table: 19 A 2,183 m, F-9 A 428.2 m, F-11 B 2,531 m) and are **PROVISIONAL** until the author columns are filled; the 11 original-wellbore values do not use any kick-off depth.
+`drilled_length_m` = TD minus the proposed kick-off depth for the 15 sidetracks; = TD for the 11 original wellbores. `m_per_report_day` = drilled length divided by DDRs to TD. The 15 sidetrack values depend on the AI-proposed kick-off depths and are **PROVISIONAL** until the author columns are filled; the 11 original-wellbore values do not use any kick-off depth.
 
 | Wellbore | TD (m) | Proposed kick-off (m) | Drilled length (m) | DDRs to TD | m per report-day | Status |
 |---|---|---|---|---|---|---|
-| 15/9-19 A | 4,131.0 | 2,183 | 1,948.0 | 29 | 67.2 | PROVISIONAL |
+| 15/9-19 A | 4,131.0 | 2,178 | 1,953.0 | 29 | 67.3 | PROVISIONAL |
 | 15/9-19 B | 3,272.0 | 2,231 | 1,041.0 | 19 | 54.8 | PROVISIONAL, indicative only |
 | 15/9-19 BT2 | 4,250.0 | 2,911 | 1,339.0 | 37 | 36.2 | PROVISIONAL |
 | 15/9-19 S | 3,353.0 |  | 3,353.0 | 39 | 86.0 | TD only |
@@ -69,7 +69,7 @@ Indicative only (TJ): 15/9-19 B (3,272 m is the TD of an abandoned parent leg; N
 | 15/9-F-10 | 5,331.0 |  | 5,331.0 | 58 | 91.9 | TD only |
 | 15/9-F-11 | 347.0 |  | 347.0 | 13 | 26.7 | TD only, indicative only |
 | 15/9-F-11 A | 3,762.0 | 2,586 | 1,176.0 | 7 | 168.0 | PROVISIONAL |
-| 15/9-F-11 B | 4,770.0 | 2,531 | 2,239.0 | 15 | 149.3 | PROVISIONAL |
+| 15/9-F-11 B | 4,770.0 | 2,589 | 2,181.0 | 15 | 145.4 | PROVISIONAL |
 | 15/9-F-11 T2 | 4,562.1 | 246 | 4,316.1 | 43 | 100.4 | PROVISIONAL |
 | 15/9-F-12 | 3,520.0 |  | 3,520.0 | 73 | 48.2 | TD only |
 | 15/9-F-14 | 3,750.0 |  | 3,750.0 | 61 | 61.5 | TD only |
@@ -82,7 +82,7 @@ Indicative only (TJ): 15/9-19 B (3,272 m is the TD of an abandoned parent leg; N
 | 15/9-F-5 | 3,792.0 |  | 3,792.0 | 31 | 122.3 | TD only |
 | 15/9-F-7 | 1,085.0 |  | 1,085.0 | 22 | 49.3 | TD only |
 | 15/9-F-9 | 1,085.0 |  | 1,085.0 | 14 | 77.5 | TD only |
-| 15/9-F-9 A | 1,206.0 | 428.2 | 777.8 | 6 | 129.6 | PROVISIONAL |
+| 15/9-F-9 A | 1,206.0 | 421.5 | 784.5 | 6 | 130.8 | PROVISIONAL |
 
 Caveats: 19 B and F-11 are indicative only (see above). F-1's 31 DDRs to TD mix 4 reports from 2007 (maximum valid depth 226 m) with the 2013 re-entry reports, so its figure of metres per report-day is not a single-campaign rate. Wellbores with the gap flag have a report-day denominator that is much smaller than the elapsed time. These are DDR-count rates, not elapsed-time rates.
 

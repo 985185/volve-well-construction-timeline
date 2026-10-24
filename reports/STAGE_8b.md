@@ -8,7 +8,7 @@ Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8b_kickoff_table.p
 
 "The depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or window is started; where the narrative is empty, the measured depth at the parent-to-child transition (DEPTH_SEQUENCE)."
 
-Operationally: tier T1 = a depth is stated together with new-formation or departure language (for example "50% formation obtained at 1364 m", "kicked off at 3185m"); tier T2 = the narrative names a kick-off, window or oriented-drilling start but gives no formation or departure depth, so the start depth is used (window top for windows); tier T3 = empty narrative, measured depth at the parent-to-child transition. Evidence is read from the parent's last and the sidetrack's first reports. I chose the evidence report and depth by reading the narratives; the script checks the depth occurs in that report (text or md field) and cuts the quote.
+Added by TJ (decision 40): for casing exits (milled windows), kick-off = top of window. Operationally: tier T1 = a depth is stated together with new-formation or departure language (for example "50% formation obtained at 1364 m", "kicked off at 3185m"); tier T2 = the narrative names a kick-off, window or oriented-drilling start but gives no formation or departure depth, so the start depth is used (window top for windows); tier T3 = empty narrative, measured depth at the parent-to-child transition. Evidence is read from the parent's last and the sidetrack's first reports. I chose the evidence report and depth by reading the narratives; the script checks the depth occurs in that report (text or md field) and cuts the quote.
 
 Method wording (decision 33): "depth in text", "event in text, depth from md" (the narrative names the kick-off event but not the depth, the depth is the md of the same report), "depth sequence (narrative empty)". Counts: depth in text 11, event in text with depth from md 3 (F-1 A, F-1 B, F-15 D), depth sequence 1 (19 ST2); 15 in total. Tiers: T1 7, T2 7, T3 1.
 
@@ -63,7 +63,7 @@ F-1 B, F-1 C and F-11 B are section starts; F-1 A and F-9 A are drilled depths o
 | 15/9-F-15 B | 3,185 | 3210 (depth of the first '50/50 cement/formation' report) |
 | 15/9-F-15 C | 2,566 | 2575 (depth the section reached; the NOD value) |
 
-The two window cases (19 A and F-9 A) are the main judgement: I read "where the kick-off or window is started" as the window top; reading "departure from the parent hole" as the window bottom would give 2,183 m and 428.2 m. NOD is 2,178 m and 428 m.
+TJ ruling (decision 40): for casing exits (milled windows), kick-off = top of window. This keeps 19 A at 2,178 m and F-9 A at 421.5 m; F-11 B stays at 2,589 m (LOW confidence; departure confirmed by the end of the cement-and-formation interval, consistent with F-1 C). The window-bottom readings (2,183 m and 428.2 m) and the 2,531 m interval start are not used.
 
 ## 15/9-19 S (reported only, as instructed)
 

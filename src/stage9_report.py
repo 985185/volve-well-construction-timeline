@@ -65,7 +65,7 @@ Indicative only (TJ): 15/9-19 B (3,272 m is the TD of an abandoned parent leg; N
 
 ## Drilled length and metres per report-day (PROVISIONAL for sidetracks)
 
-`drilled_length_m` = TD minus the proposed kick-off depth for the 15 sidetracks; = TD for the 11 original wellbores. `m_per_report_day` = drilled length divided by DDRs to TD. The 15 sidetrack values depend on the AI-proposed kick-off depths (three of which differ from the earlier table: 19 A 2,183 m, F-9 A 428.2 m, F-11 B 2,531 m) and are **PROVISIONAL** until the author columns are filled; the 11 original-wellbore values do not use any kick-off depth.
+`drilled_length_m` = TD minus the proposed kick-off depth for the 15 sidetracks; = TD for the 11 original wellbores. `m_per_report_day` = drilled length divided by DDRs to TD. The 15 sidetrack values depend on the AI-proposed kick-off depths and are **PROVISIONAL** until the author columns are filled; the 11 original-wellbore values do not use any kick-off depth.
 
 | Wellbore | TD (m) | Proposed kick-off (m) | Drilled length (m) | DDRs to TD | m per report-day | Status |
 |---|---|---|---|---|---|---|

@@ -12,6 +12,9 @@ inputs/repo_before/data/spud_validation.csv. Applied in this order, first rule t
  R4 EXACT         |W - N| <= 1 day and 0 <= anchor - W <= 1 day.
  R6 DEFINITIONAL  |W - N| <= 8 days and 2 <= T - W <= 20 days (administrative start precedes operational start).
  R7 UNRESOLVED    everything else.
+
+Offset used in the outputs and in Fig. 4 (one definition, TJ ruling 2): w_minus_n_days = W minus N, with N chosen as above. The two other NOD dates are kept as columns
+(nod_main_entry_date, nod_predrill_entry_date) but no offset is computed from the main entry date.
 """
 import re, sys
 import pandas as pd
@@ -50,9 +53,7 @@ for w in W.index:
     N, ntype = (min(cands)[1], min(cands)[2]) if cands else (pd.NaT, "none")
     Tw = T.get(w, pd.NaT)
     dWN = (W[w] - N).days if pd.notna(N) else None
-    dmain = None if pd.isna(main) else (W[w] - main).days
-    rows.append(dict(nod_main_entry_date=None if pd.isna(main) else main.date(), nod_predrill_entry_date=None if pd.isna(pre) else pre.date(), w_minus_nod_main_days=dmain,
-                     wellbore=w, witsml_spud=W[w].date(), first_ddr=F[w].date(), freetext_date=None if pd.isna(Tw) else Tw.date(), nod_entry_date=None if pd.isna(N) else N.date(), nod_entry_type=ntype, nod_record=n,
+    rows.append(dict(nod_main_entry_date=None if pd.isna(main) else main.date(), nod_predrill_entry_date=None if pd.isna(pre) else pre.date(), wellbore=w, witsml_spud=W[w].date(), first_ddr=F[w].date(), freetext_date=None if pd.isna(Tw) else Tw.date(), nod_entry_date=None if pd.isna(N) else N.date(), nod_entry_type=ntype, nod_record=n,
                      w_minus_n_days=dWN, w_minus_first_ddr_days=(W[w] - F[w]).days, anchor_minus_w_days=(anchor - W[w]).days, n_minus_anchor_days=None if pd.isna(N) else (N - anchor).days))
 r = pd.DataFrame(rows)
 

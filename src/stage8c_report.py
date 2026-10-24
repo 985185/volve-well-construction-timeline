@@ -23,7 +23,7 @@ Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8c_proposal.py`, `
 
 ## Rule used (TJ decision 32), applied strictly
 
-"The depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or window is started; where the narrative is empty, the measured depth at the parent-to-child transition." For windows I read the hole as leaving the parent casing at the window bottom (with new formation drilled below), so the window bottom is the stated departure depth and the window top is the fallback when no departure depth is stated. This reading is the one judgement that changes two rows (19 A and F-9 A).
+"The depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or window is started; where the narrative is empty, the measured depth at the parent-to-child transition." Rule added by TJ (decision 40): for casing exits (milled windows), kick-off = top of window. My first proposal read windows at the window bottom; TJ rejected that reading, and the proposal columns now equal the Stage 8b table.
 
 ## Proposal (15 rows; Y = proposal equals the current table, N = it does not)
 
@@ -31,11 +31,9 @@ Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8c_proposal.py`, `
 |---|---|---|---|---|
 {chr(10).join(rows)}
 
-## Rows where the proposal differs from the current table (3)
+## TJ's ruling (decision 40): all three AI proposals rejected
 
-{chr(10).join(f"- {r.sidetrack}: {f(r.ddr_kickoff_depth_m)} m to {f(r.proposed_depth)} m." for r in diff.itertuples())}
-
-The five rows you asked about: F-1 C stays at 1,364 m (Y; 1,355 m is the second-tier fallback and is not used because the first tier is met); F-11 T2 stays at 246 m (Y); F-11 B changes to 2,531 m (N; the 2,531 to 2,589 m interval gives no point value under the first tier); 19 ST2 stays at 1,536 m (Y, depth only, third tier); 19 B stays at 2,231 m (Y; NOD's 2,200 m is not an input to the rule, and the only 2200 in the 19 A and 19 B reports is a clock time, "AT 2200 HRS").
+My first proposal differed from the Stage 8b table in three rows: 19 A (2,178 to 2,183 m), F-9 A (421.5 to 428.2 m) and F-11 B (2,589 to 2,531 m). TJ rejected all three, keeping the table values and adding the window-top rule. The proposal now agrees with the table in all 15 rows (proposed_approved = Y everywhere); F-11 B stays at LOW confidence (departure confirmed by the end of the cement-and-formation interval, 2,589 m, consistent with F-1 C). F-1 C stays at 1,364 m (1,355 m is the time-drilling start and is not used), F-11 T2 at 246 m, 19 ST2 at 1,536 m (depth only) and 19 B at 2,231 m (NOD's 2,200 m is not an input to the rule; the only 2200 in the 19 A and 19 B reports is a clock time). The values stay PROVISIONAL until TJ fills the author columns.
 
 ## Check and report only: 15/9-F-1 reports of 2007 versus 2013
 

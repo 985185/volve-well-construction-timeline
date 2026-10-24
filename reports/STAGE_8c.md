@@ -6,35 +6,31 @@ Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8c_proposal.py`, `
 
 ## Rule used (TJ decision 32), applied strictly
 
-"The depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or window is started; where the narrative is empty, the measured depth at the parent-to-child transition." For windows I read the hole as leaving the parent casing at the window bottom (with new formation drilled below), so the window bottom is the stated departure depth and the window top is the fallback when no departure depth is stated. This reading is the one judgement that changes two rows (19 A and F-9 A).
+"The depth at which the narrative first reports new formation or departure from the parent hole; where none is stated, the depth at which the kick-off or window is started; where the narrative is empty, the measured depth at the parent-to-child transition." Rule added by TJ (decision 40): for casing exits (milled windows), kick-off = top of window. My first proposal read windows at the window bottom; TJ rejected that reading, and the proposal columns now equal the Stage 8b table.
 
 ## Proposal (15 rows; Y = proposal equals the current table, N = it does not)
 
 | Sidetrack | Current table (m) | Proposed approved | Proposed depth (m) | Reason |
 |---|---|---|---|---|
-| 15/9-19 A | 2,178 | N | 2,183 | The 1997-07-29 report states the window milled 2178-2183 m with 19 m of formation drilled below it, so under the rule's first tier the hole leaves the parent at the window bottom, 2183 m; 2178 m (window start) is the second-tier fallback for when no departure depth is stated. The first window (2202-2207 m, 1997-07-26) was abandoned and is not the kick-off; NOD and the structured field say 2178 m. |
+| 15/9-19 A | 2,178 | Y | 2,178 | Casing exit by a milled window: under the rule as ruled by TJ (decision 40) the kick-off is the top of the window, 2,178 m (window milled 2178-2183 m on 1997-07-29; an earlier window at 2,202-2,207 m was abandoned). NOD and the structured mdKickoff also say 2,178 m. |
 | 15/9-19 B | 2,231 | Y | 2,231 | The report states the kick-off depth directly: 'DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M'. NOD's 2,200 m is not an input to the rule; the only '2200' in the 19 A and 19 B reports is a clock time ('AT 2200 HRS'). |
 | 15/9-19 BT2 | 2,911 | Y | 2,911 | The parent's last report states departure with a depth: 'COMMENCED DRILLING 8 1/2" HOLE FROM 2911 M AT 15/9-19BT2' (after cement drilled to 2911 m), and the first BT2 report starts at the same depth. Tier 1. |
 | 15/9-19 ST2 | 1,536 | Y | 1,536 | Both 1992-12-19 narratives (parent last, sidetrack first) read 'None', so the third tier applies: measured depth at the transition, 1,536 m on both reports. Depth only, no text support; the parent had drilled cement to 1,486 m the day before, so the true departure could be shallower. |
 | 15/9-F-1 A | 2,620 | Y | 2,620 | The parent's last report says 'Commenced kick off to F-1A' without a depth and its md is 2620 m, so tier 2, event in text with depth from md. NOD agrees at 2,620 m. |
 | 15/9-F-1 B | 2,617 | Y | 2,617 | The parent's last report says 'Drilled out cement and kicked off well to F-1 B' and its md is 2617 m (2,545 m the day before), so tier 2, event in text with depth from md; the md is the day's deepest point, so the kick-off may be a little shallower (NOD 2,604 m). |
 | 15/9-F-1 C | 1,364 | Y | 1,364 | Tier 1: the F-1 B report of 2014-02-22 states '50% formation obtained at 1364 m', the first report of new formation, and F-1 C's first report drills from 1,364 m. 1,355 m is only where time drilling started, the fallback used when no formation depth is stated. NOD agrees at 1,364 m. |
-| 15/9-F-9 A | 421.5 | N | 428.2 | The window was milled from 421.5 m (top) to 428.2 m (bottom) and the 2009-07-02 report continues to drill formation below it (to 436.5 m), so the stated departure and first new formation are at the window bottom, 428.2 m (NOD 428 m); 421.5 m is the window-start fallback. |
+| 15/9-F-9 A | 421.5 | Y | 421.5 | Casing exit by a milled window: kick-off = top of window, 421.5 m ('Milled 12-1/4" sidetrack window from 421,5 m (top) to 424 m'); the window bottom, 428.2 m, is not used (TJ ruling, decision 40). NOD gives 428 m. |
 | 15/9-F-11 T2 | 246 | Y | 246 | No formation or departure depth is stated, so tier 2: the 2013-03-23 report says oriented drilling out of the cement started at 246 m (top of cement 244 m). 257 m is where the sidetrack was handed over the next day. NOD has no separate record. |
 | 15/9-F-11 A | 2,586 | Y | 2,586 | Tier 1: 'Drilled cement and kicked off to F-11 A at 2586m MD' states the departure depth. NOD 2,578 m. |
-| 15/9-F-11 B | 2,589 | N | 2,531 | The only evidence is 'Drilled cement and new formation from 2531 m MD to 2589 m MD': the depth at which new formation is first reported is not separable inside the interval, so the first tier gives no point value; the second tier gives where the kick-off drilling started, 2,531 m. The sidetrack's first report starts at 2,627 m, so 2,589 m is not supported either. NOD 2,586 m and 2,589 m both lie inside the interval, so the uncertainty is about 58 m. |
+| 15/9-F-11 B | 2,589 | Y | 2,589 | LOW confidence. 'Drilled cement and new formation from 2531 m MD to 2589 m MD' reports new formation by the end of the interval, so departure is confirmed at 2,589 m, consistent with F-1 C (formation first reported); the interval start, 2,531 m, is not used (TJ ruling, decision 40). NOD gives 2,586 m, inside the interval. |
 | 15/9-F-15 A | 1,381 | Y | 1,381 | 'Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.' puts the start of the kick-off at the end of the interval, 1,381 m, where the sidetrack's first report also starts. NOD agrees at 1,381 m. |
 | 15/9-F-15 B | 3,185 | Y | 3,185 | Tier 1: 'kicked off at 3185m' states the departure depth; the '50/50 cement/formation' remark relates to 3,210 m, drilled afterwards. NOD agrees at 3,185 m. |
 | 15/9-F-15 C | 2,566 | Y | 2,566 | Tier 2: cement was drilled from 2,490 to 2,566 m, then 'Initiated kick off', and no formation or departure depth is stated; 2,575 m (the NOD value) is only where the section had reached by the end of the day. |
 | 15/9-F-15 D | 1,380 | Y | 1,380 | The sidetrack's first report says 'Drilled cement and kicked off' without a depth, so tier 2 with depth from md: the parent's last report (kick-off plug set the day before) has md 1,380 m. NOD agrees at 1,380 m. |
 
-## Rows where the proposal differs from the current table (3)
+## TJ's ruling (decision 40): all three AI proposals rejected
 
-- 15/9-19 A: 2,178 m to 2,183 m.
-- 15/9-F-9 A: 421.5 m to 428.2 m.
-- 15/9-F-11 B: 2,589 m to 2,531 m.
-
-The five rows you asked about: F-1 C stays at 1,364 m (Y; 1,355 m is the second-tier fallback and is not used because the first tier is met); F-11 T2 stays at 246 m (Y); F-11 B changes to 2,531 m (N; the 2,531 to 2,589 m interval gives no point value under the first tier); 19 ST2 stays at 1,536 m (Y, depth only, third tier); 19 B stays at 2,231 m (Y; NOD's 2,200 m is not an input to the rule, and the only 2200 in the 19 A and 19 B reports is a clock time, "AT 2200 HRS").
+My first proposal differed from the Stage 8b table in three rows: 19 A (2,178 to 2,183 m), F-9 A (421.5 to 428.2 m) and F-11 B (2,589 to 2,531 m). TJ rejected all three, keeping the table values and adding the window-top rule. The proposal now agrees with the table in all 15 rows (proposed_approved = Y everywhere); F-11 B stays at LOW confidence (departure confirmed by the end of the cement-and-formation interval, 2,589 m, consistent with F-1 C). F-1 C stays at 1,364 m (1,355 m is the time-drilling start and is not used), F-11 T2 at 246 m, 19 ST2 at 1,536 m (depth only) and 19 B at 2,231 m (NOD's 2,200 m is not an input to the rule; the only 2200 in the 19 A and 19 B reports is a clock time). The values stay PROVISIONAL until TJ fills the author columns.
 
 ## Check and report only: 15/9-F-1 reports of 2007 versus 2013
 
