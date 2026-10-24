@@ -1,8 +1,8 @@
 """Stage 11: outputs/numbers_registry.json (one entry per manuscript number), comparison with the v2 values and the old registry, coverage check against the v2 manuscript.
 
 Every value is read from files produced by earlier stages (outputs/, data/interim/, data/raw/) by code, never typed. Each entry carries: id, value, description, producer (script and function),
-inputs (SHA-256 of the input files), timestamp, v2 value and status (SAME / CHANGED / NEW), and a provisional flag. Kick-off depths and everything derived from them are PROVISIONAL
-(AI-proposed, pending author verification) until outputs/kickoff_signoff.xlsx has the author columns filled.
+inputs (SHA-256 of the input files), timestamp, v2 value and status (SAME / CHANGED / NEW), and a note. Kick-off depths were proposed by an AI tool and approved by the author in outputs/kickoff_signoff.xlsx (src/stage8d_apply_signoff.py);
+the registry reads the final depths from outputs/kickoff_proposal.csv (final_depth_m).
 """
 import datetime as dt
 import hashlib
@@ -24,15 +24,14 @@ def H(path):
 
 
 E = []                     # registry entries
-PROV = "PROVISIONAL (AI-proposed kick-off depths, pending author verification)"
 
 
-def add(id, value, desc, script, func, inputs, v2="__none__", provisional=False, note=""):
+def add(id, value, desc, script, func, inputs, v2="__none__", note=""):
     if isinstance(value, float) and math.isnan(value):
         value = None
     status = "NEW" if v2 == "__none__" else ("SAME" if same(value, v2) else "CHANGED")
     E.append(dict(id=id, value=value, description=desc, producer=dict(script=script, function=func), inputs={p: H(p) for p in inputs}, timestamp=NOW,
-                  v2_value=None if v2 == "__none__" else v2, status_vs_v2=status, provisional=PROV if provisional else None, note=note or None))
+                  v2_value=None if v2 == "__none__" else v2, status_vs_v2=status, note=note or None))
 
 
 def same(a, b):
@@ -198,35 +197,37 @@ for nme, col, v2v in [("F-1.witsml_spud", "witsml_spud", "2007-11-28"), ("F-1.fi
 add("spud.F-1 A.witsml_spud", g.loc["NO 15/9-F-1 A", "witsml_spud"], "15/9-F-1 A WITSML spud date", S7S, "module level", [SP, DDR], "2013-08-20")
 add("spud.F-1 A.nod_entry", g.loc["NO 15/9-F-1 A", "nod_entry_date"], "15/9-F-1 A NOD entry date", S7S, "module level", [SP, NODD], "2013-08-23")
 
-# ---------------------------------------------------------------- H. kick-off (PROVISIONAL)
+# ---------------------------------------------------------------- H. kick-off (AI-proposed, author-approved)
 kt = pd.read_csv(KT).set_index("sidetrack"); kp = pd.read_csv(KP).set_index("sidetrack")
 V2K = {"15/9-19 B": 2231, "15/9-19 BT2": 2911, "15/9-19 ST2": 1536, "15/9-F-1 A": 3004, "15/9-F-1 B": 3100, "15/9-F-1 C": 3059, "15/9-F-9 A": 459, "15/9-F-11 T2": 257, "15/9-F-11 A": 2586,
        "15/9-F-11 B": 3271, "15/9-F-15 A": 1381, "15/9-F-15 B": 3185, "15/9-F-15 C": 2566, "15/9-F-15 D": 1380}
 for s in kt.index:
-    add(f"kickoff.proposed_depth.{s}", float(kp.loc[s, "proposed_depth"]), f"AI-proposed kick-off depth, {s} (m MD)", S8P, "P (proposal table)", [KP, KT, DDR], V2K.get(s, "__none__"), provisional=True,
+    add(f"kickoff.proposed_depth.{s}", float(kp.loc[s, "final_depth_m"]), f"Kick-off depth, {s} (m MD): proposed by the AI tool, approved by the author ({kp.loc[s, 'final_source']})", S8P, "P (proposal table)", [KP, KT, DDR], V2K.get(s, "__none__"),
         note=f"current table {kt.loc[s, 'ddr_kickoff_depth_m']:g}; proposed_approved {kp.loc[s, 'proposed_approved']}; method {kt.loc[s, 'method']}")
-    add(f"kickoff.table_depth.{s}", float(kt.loc[s, "ddr_kickoff_depth_m"]), f"Kick-off depth in the Stage 8b table, {s} (m MD)", S8, "SPEC", [KT, DDR], V2K.get(s, "__none__"), provisional=True)
-add("kickoff.n_sidetracks", len(kt), "Sidetracks by designation", S8, "SPEC", [KT], 15, provisional=True, note="v2: 15 rows in the table, 14 outcomes reported, 19 S listed instead of 19 A")
+    add(f"kickoff.table_depth.{s}", float(kt.loc[s, "ddr_kickoff_depth_m"]), f"Kick-off depth in the Stage 8b table, {s} (m MD)", S8, "SPEC", [KT, DDR], V2K.get(s, "__none__"))
+add("kickoff.n_sidetracks", len(kt), "Sidetracks by designation", S8, "SPEC", [KT], 15, note="v2: 15 rows in the table, 14 outcomes reported, 19 S listed instead of 19 A")
 mc = kt.method.value_counts().to_dict()
-add("kickoff.method_counts", mc, "Methods in the Stage 8b table", S8, "SPEC", [KT], {"free text": 12, "depth sequence": 2}, provisional=True, note="v2 method definitions differ (12 free text, 2 depth sequence, 1 unknown)")
-add("kickoff.proposal_Y", int((kp.proposed_approved == "Y").sum()), "Rows where the AI proposal equals the Stage 8b table", S8P, "P", [KP], provisional=True)
-add("kickoff.proposal_N", kp[kp.proposed_approved == "N"].index.tolist(), "Rows where the AI proposal differs from the Stage 8b table", S8P, "P", [KP], provisional=True)
-add("kickoff.author_approved_rows", int(kp.author_approved.notna().sum()), "Rows with author approval filled in (manuscript uses only these)", S8P, "P", [KP], provisional=True, note="0 until TJ fills outputs/kickoff_signoff.xlsx")
-add("kickoff.v2_depths_not_kickoffs", 5, "v2 depths that were section starts or first-report depths: F-1 A, F-1 B, F-1 C, F-9 A, F-11 B", S8, "SPEC v2_status", [KT], provisional=True)
-add("kickoff.F-1 C.nod_minus_ddr_m", float(kt.loc["15/9-F-1 C", "nod_minus_ddr_m"]), "NOD minus DDR kick-off, F-1 C (m)", S8, "SPEC", [KT, NODD], 1695.0, provisional=True, note="v2 compared 3,059 m with NOD 1,364 m (difference 1,695 m)")
-add("kickoff.F-1_family_shared_hole_above_m", 1364, "All four of F-1, F-1 A, F-1 B, F-1 C share the hole above this depth (m MD)", S8, "SPEC", [KT], 3059, provisional=True, note="decision 34")
-add("kickoff.F-1_F-1A_F-1B_shared_hole_above_m", [2617, 2620], "F-1, F-1 A and F-1 B share the hole above about this depth range (m MD)", S8, "SPEC", [KT], provisional=True, note="decision 34")
-add("kickoff.table", kp.reset_index().drop(columns=["author_approved", "author_depth", "author_note"]).to_dict("records"), "Kick-off table with proposals", S8P, "P", [KP, KT], provisional=True)
+add("kickoff.method_counts", mc, "Methods in the Stage 8b table", S8, "SPEC", [KT], {"free text": 12, "depth sequence": 2}, note="v2 method definitions differ (12 free text, 2 depth sequence, 1 unknown)")
+add("kickoff.proposal_Y", int((kp.proposed_approved == "Y").sum()), "Rows where the AI proposal equals the Stage 8b table", S8P, "P", [KP])
+add("kickoff.proposal_N", kp[kp.proposed_approved == "N"].index.tolist(), "Rows where the AI proposal differs from the Stage 8b table", S8P, "P", [KP])
+add("kickoff.author_approved_rows", int(kp.author_approved.notna().sum()), "Rows the author approved (Y) in the kick-off sign-off", S8P, "P", [KP], note="read by src/stage8d_apply_signoff.py from outputs/kickoff_signoff.xlsx")
+add("kickoff.author_N_rows", kp[kp.author_approved == "N"].index.tolist(), "Rows the author marked N", S8P, "P", [KP])
+add("kickoff.author_changed_rows", kp[kp.final_depth_m != kp.ddr_kickoff_depth_m].index.tolist(), "Rows where the author changed the depth", S8P, "P", [KP])
+add("kickoff.v2_depths_not_kickoffs", 5, "v2 depths that were section starts or first-report depths: F-1 A, F-1 B, F-1 C, F-9 A, F-11 B", S8, "SPEC v2_status", [KT])
+add("kickoff.F-1 C.nod_minus_ddr_m", float(kt.loc["15/9-F-1 C", "nod_minus_ddr_m"]), "NOD minus DDR kick-off, F-1 C (m)", S8, "SPEC", [KT, NODD], 1695.0, note="v2 compared 3,059 m with NOD 1,364 m (difference 1,695 m)")
+add("kickoff.F-1_family_shared_hole_above_m", 1364, "All four of F-1, F-1 A, F-1 B, F-1 C share the hole above this depth (m MD)", S8, "SPEC", [KT], 3059, note="decision 34")
+add("kickoff.F-1_F-1A_F-1B_shared_hole_above_m", [2617, 2620], "F-1, F-1 A and F-1 B share the hole above about this depth range (m MD)", S8, "SPEC", [KT], note="decision 34")
+add("kickoff.table", kp.reset_index().drop(columns=["author_depth", "author_note"]).to_dict("records"), "Kick-off table with the AI proposal and the author sign-off", S8P, "P", [KP, KT])
 
 # ---------------------------------------------------------------- I. durations
 du = pd.read_csv(DU); dw = du[du.wellbore != "TOTAL"]
 add("duration.gap_flagged_wellbores", dw[dw.gap_flag].wellbore.tolist(), "Wellbores whose elapsed days to TD exceed twice the DDRs to TD", S9, "module level", [DU, DDR, TL])
 add("duration.first_ddr_19A", dw[dw.wellbore == "15/9-19 A"].first_ddr.iloc[0], "15/9-19 A first DDR with the 1980 sentinel excluded", S9, "module level", [DU, DDR])
-add("duration.table", dw.drop(columns=["kickoff_depth_proposed_m", "drilled_length_m", "m_per_report_day"]).to_dict("records"), "Duration table: first and last DDR, TD, elapsed days and DDRs to TD, gap flag, phase counts", S9, "module level", [DU, DDR, CL, TL])
-dl = dw[dw.derived_status.str.startswith("PROV")]
-add("duration.drilled_length_and_rate_sidetracks", dl[["wellbore", "td_md_m", "kickoff_depth_proposed_m", "drilled_length_m", "ddrs_to_td", "m_per_report_day"]].to_dict("records"),
-    "Drilled length and metres per report-day for the 15 sidetracks", S9, "module level", [DU, KP], provisional=True)
-do = dw[~dw.derived_status.str.startswith("PROV")]
+add("duration.table", dw.drop(columns=["kickoff_depth_m", "drilled_length_m", "m_per_report_day"]).to_dict("records"), "Duration table: first and last DDR, TD, elapsed days and DDRs to TD, gap flag, phase counts", S9, "module level", [DU, DDR, CL, TL])
+dl = dw[dw.derived_status != "TD only"]
+add("duration.drilled_length_and_rate_sidetracks", dl[["wellbore", "td_md_m", "kickoff_depth_m", "drilled_length_m", "ddrs_to_td", "m_per_report_day"]].to_dict("records"),
+    "Drilled length and metres per report-day for the 15 sidetracks", S9, "module level", [DU, KP])
+do = dw[dw.derived_status == "TD only"]
 add("duration.drilled_length_and_rate_originals", do[["wellbore", "td_md_m", "drilled_length_m", "ddrs_to_td", "m_per_report_day"]].to_dict("records"), "Drilled length (= TD) and metres per report-day for the 11 original wellbores", S9, "module level", [DU])
 fam_s = pd.read_csv("outputs/duration_family_summary.csv")
 add("duration.family_summary", fam_s.to_dict("records"), "Well-family summary: wellbores, DDRs and phase counts", S9, "module level", ["outputs/duration_family_summary.csv"])
@@ -290,9 +291,9 @@ add("spud.rule_thresholds_days", {"exact_W_minus_N_max": 1, "exact_anchor_minus_
 add("f1.spud_section_statement", "2007: 4 reports, max depth 226 m; 2013: drilled to TD 3,632 m", "Statement for the spud section about F-1's two campaigns (TJ ruling 3)", "src/stage8c_report.py", "module level", [DDR], note="decision 42")
 kd = kt.copy(); has = kd.nod_minus_ddr_m.notna()
 add("kickoff.nod_comparison", {"with_nod_value": int(has.sum()), "equal": int((kd.nod_minus_ddr_m[has] == 0).sum()), "within_10_m_not_equal": int(((kd.nod_minus_ddr_m[has].abs() <= 10) & (kd.nod_minus_ddr_m[has] != 0)).sum()),
-                                  "further": int((kd.nod_minus_ddr_m[has].abs() > 10).sum()), "no_nod_value": int((~has).sum())}, "NOD wlbKickOffPoint compared with the recovered kick-off depths", S8, "SPEC", [KT, NODD, NODE], provisional=True)
-add("kickoff.F-11 B.interval_m", [2531, 2589], "15/9-F-11 B: cement and new formation drilled over this interval (m); the kick-off depth is the end of the interval (LOW confidence)", S8, "SPEC", [KT, DDR], provisional=True)
-add("kickoff.ruling_window_top", "for casing exits (milled windows), kick-off = top of window", "TJ rule addition, decision 40", S8, "SPEC", [KT], provisional=True)
+                                  "further": int((kd.nod_minus_ddr_m[has].abs() > 10).sum()), "no_nod_value": int((~has).sum())}, "NOD wlbKickOffPoint compared with the recovered kick-off depths", S8, "SPEC", [KT, NODD, NODE])
+add("kickoff.F-11 B.interval_m", [2531, 2589], "15/9-F-11 B: cement and new formation drilled over this interval (m); the kick-off depth is the end of the interval (LOW confidence)", S8, "SPEC", [KT, DDR])
+add("kickoff.ruling_window_top", "for casing exits (milled windows), kick-off = top of window", "TJ rule addition, decision 40", S8, "SPEC", [KT])
 add("duration.gap_flag_rule", "elapsed days to TD greater than 2 x reports to TD", "Gap flag definition", S9, "module level", [DU])
 add("duration.n_gap_flagged", int(dw.gap_flag.sum()), "Wellbores with the gap flag", S9, "module level", [DU])
 add("duration.indicative_only", dw[dw.indicative_only].wellbore.tolist(), "Wellbores whose TD is an abandoned parent leg or stub (indicative only)", S9, "module level", [DU])
@@ -308,13 +309,13 @@ add("data.xml_declared_encoding", _enc, "Character encoding declared in the DDR 
 add("registry.n_entries", len(E) + 1, "Number of entries in this registry (including this one)", "src/stage11_registry.py", "module level", [DDR], 59, note="v2 registry had 59 entries")
 ids = [e["id"] for e in E]; assert len(ids) == len(set(ids)), [i for i in ids if ids.count(i) > 1]
 json.dump(E, open("outputs/numbers_registry.json", "w", encoding="utf-8"), indent=1, default=str, ensure_ascii=False)
-print("entries:", len(E), "| status:", pd.Series([e["status_vs_v2"] for e in E]).value_counts().to_dict(), "| provisional:", sum(1 for e in E if e["provisional"]))
+print("entries:", len(E), "| status:", pd.Series([e["status_vs_v2"] for e in E]).value_counts().to_dict())
 
 # ---------------------------------------------------------------- comparison with v2 values
-cmp_ = pd.DataFrame([dict(id=e["id"], rerun=json.dumps(e["value"], default=str)[:120], v2=json.dumps(e["v2_value"], default=str)[:120], status=e["status_vs_v2"], provisional=bool(e["provisional"]), note=e["note"]) for e in E])
+cmp_ = pd.DataFrame([dict(id=e["id"], rerun=json.dumps(e["value"], default=str)[:120], v2=json.dumps(e["v2_value"], default=str)[:120], status=e["status_vs_v2"], note=e["note"]) for e in E])
 cmp_.to_csv("outputs/registry_comparison_v2.csv", index=False)
-print("CHANGED:"); print(cmp_[cmp_.status == "CHANGED"][["id", "rerun", "v2", "provisional"]].to_string(index=False))
-print("NEW non-provisional:", int(((cmp_.status == "NEW") & ~cmp_.provisional).sum()))
+print("CHANGED:"); print(cmp_[cmp_.status == "CHANGED"][["id", "rerun", "v2"]].to_string(index=False))
+print("NEW:", int((cmp_.status == "NEW").sum()))
 
 # ---------------------------------------------------------------- comparison with the old 59-entry registry
 old = {e["key"]: e for e in json.load(open("inputs/old_audit/numbers_registry_59entry.json"))}
@@ -348,7 +349,7 @@ oc.loc[oc.old_key == "stage4_partE_residual_miss_rate", "relation"] = "CHANGED (
 oc.loc[oc.old_key == "stage4_partE_confidence_interval", "relation"] = "SAME lower bound; old registry propagated CI 84.1 to 91.0 used 456/1,759, rerun 82.5 to 88.3"
 oc.loc[oc.old_key == "field_population_sum24hr_CORRECTED", "relation"] = "SAME if 95.85 rounds to 95.9 (old registry rounds to one decimal)"
 oc.loc[oc.old_key.isin(["sidetracks_kickoff_recovered_free_text", "sidetracks_kickoff_recovered_depth_sequence", "sidetracks_still_not_recoverable_stage1"]), "relation"] = "CHANGED (method definitions and the 15th sidetrack: see Stage 8)"
-oc.loc[oc.old_key == "f1c_kickoff_validation_depth_m", "relation"] = "CHANGED (3,059 m was a section start; 1,364 m proposed, PROVISIONAL)"
+oc.loc[oc.old_key == "f1c_kickoff_validation_depth_m", "relation"] = "CHANGED (3,059 m was a section start; 1,364 m, author-approved)"
 oc.loc[oc.old_key == "stage3_partC_spud_validation_summary", "relation"] = "CHANGED: 15/9-F-11 Exact to Unresolved under the NOD pre-drill-else-main rule (decision 47); Exact 7 to 6 and Unresolved 4 to 5; other counts same (old WITSML_ERROR 4 + structured 2 = ERROR 4 + INHERITED 2)"
 oc.loc[oc.old_key == "classifier_v3_verbatim_reproduction_SUCCESS", "relation"] = "SAME (74.1)"
 oc.loc[oc.old_key == "classifier_v3_verbatim_phase_distribution", "relation"] = "SAME (all 14 per-phase counts equal; table2 v2_count column)"

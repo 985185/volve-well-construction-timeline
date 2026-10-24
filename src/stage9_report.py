@@ -20,7 +20,7 @@ for r in w.itertuples():
     dur.append(f"| {r.wellbore} | {r.first_ddr} | {r.last_ddr} | {r.n_ddrs} | {td} | {r.td_date} | {r.elapsed_days_to_td:,} | {r.ddrs_to_td} | {'YES' if r.gap_flag else ''} | {'indicative only' if r.indicative_only else ''} |")
 drl = []
 for r in w.itertuples():
-    kp = "" if pd.isna(r.kickoff_depth_proposed_m) else f"{r.kickoff_depth_proposed_m:,.1f}".rstrip("0").rstrip(".")
+    kp = "" if pd.isna(r.kickoff_depth_m) else f"{r.kickoff_depth_m:,.1f}".rstrip("0").rstrip(".")
     drl.append(f"| {r.wellbore} | {r.td_md_m:,.1f}".replace(".0 |", " |") + f" | {kp} | {r.drilled_length_m:,.1f} | {int(r.ddrs_to_td)} | {r.m_per_report_day:,.1f} | {'PROVISIONAL' if r.derived_status.startswith('PROV') else 'TD only'}{', indicative only' if r.indicative_only else ''} |")
 ph = []
 for r in w.itertuples(index=False):

@@ -19,7 +19,7 @@ stage4_discrepancy_literal_None_text,73,placeholders.none_sum24Hr,73,SAME
 stage6_partA_timeline_derivation,1421,timeline.rows,1421,SAME
 stage6_partB_well_inventory,26,data.n_wellbores,26,SAME
 nod_f7_f9_total_depth_reference_verified,1085.0,td.witsml_max_md.15/9-F-7,1085.0,SAME
-f1c_kickoff_validation_depth_m,3059,kickoff.proposed_depth.15/9-F-1 C,1364.0,"CHANGED (3,059 m was a section start; 1,364 m proposed, PROVISIONAL)"
+f1c_kickoff_validation_depth_m,3059,kickoff.proposed_depth.15/9-F-1 C,1364.0,"CHANGED (3,059 m was a section start; 1,364 m, author-approved)"
 sidetracks_kickoff_recovered_free_text,12,kickoff.method_counts,"{""depth in text"": 11, ""event in text, depth from md"": 3, ""depth sequence (narrative empty)",CHANGED (method definitions and the 15th sidetrack: see Stage 8)
 sidetracks_kickoff_recovered_depth_sequence,2,kickoff.method_counts,"{""depth in text"": 11, ""event in text, depth from md"": 3, ""depth sequence (narrative empty)",CHANGED (method definitions and the 15th sidetrack: see Stage 8)
 sidetracks_still_not_recoverable_stage1,1,kickoff.n_sidetracks,15,CHANGED (method definitions and the 15th sidetrack: see Stage 8)

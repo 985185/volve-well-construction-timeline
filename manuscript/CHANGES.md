@@ -1,11 +1,11 @@
 # Manuscript change log (DRAFT)
 
-Base file: `inputs/paper2_v2.docx`. Draft: `manuscript/paper2_draft.docx`, built by `src/stage12_manuscript.py` on 2026-10-24 from `outputs/numbers_registry.json` (232 entries). Every change below carries the registry id of the new value (where the change is a number) and the reason. Yellow highlighting in the draft marks PROVISIONAL values derived from the AI-proposed kick-off depths and open [TJ:] notes; the draft is not final until TJ fills the author columns of `outputs/kickoff_signoff.xlsx`. No em dashes are used.
+Base file: `inputs/paper2_v2.docx`. Draft: `manuscript/paper2_draft.docx`, built by `src/stage12_manuscript.py` on 2026-10-24 from `outputs/numbers_registry.json` (234 entries). Every change below carries the registry id of the new value (where the change is a number) and the reason. Yellow highlighting in the draft marks open [TJ:] notes only. The kick-off depths were signed off by the author in `outputs/kickoff_signoff.xlsx` (section 5). No em dashes are used.
 
 ## 1. Changes
 
 1. **Abstract (paragraph 7).** Old: The archive also stores 73 narratives as the literal string "None" and 331 depths as a sentinel value, neither of which a simple null test detects. New: The archive also stores placeholder values in 515 fields (331 depth sentinels, 7 zero depths, 176 literal "None" strings and one date sentinel) that a simple null test does not detect. Registry id: `placeholders.total_cells_all_fields`. Reason: full placeholder register (decision 19); v2 counted 411 (331 + 7 + 73).
-2. **Abstract (paragraph 8).** Old: The output is an open depth-time-phase dataset of 1,421 records, published with the classifier code. It supports days-versus-depth benchmarking and records-based screening of legacy wellbores, and the method transfers to other WITSML 1.4.1.1 archives. New: Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; where NOD records a kick-off point (12 of 15), the recovered depth agrees within 10 m for 10. The output is an open depth-time-phase dataset of 1,421 records, with per-wellbore durations to total depth, published with the classifier code. It supports day ... Registry id: `kickoff.nod_comparison`, `kickoff.n_sidetracks`, `data.witsml_schema_version`. Reason: new kick-off and duration results (PROVISIONAL); abstract clause on NOD agreement replaces the F-1 family clause (TJ review); WITSML version from the files.
+2. **Abstract (paragraph 8).** Old: The output is an open depth-time-phase dataset of 1,421 records, published with the classifier code. It supports days-versus-depth benchmarking and records-based screening of legacy wellbores, and the method transfers to other WITSML 1.4.1.1 archives. New: Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; where NOD records a kick-off point (12 of 15), the recovered depth agrees within 10 m for 10. The output is an open depth-time-phase dataset of 1,421 records, with per-wellbore durations to total depth, published with the classifier code. It supports day ... Registry id: `kickoff.nod_comparison`, `kickoff.n_sidetracks`, `data.witsml_schema_version`. Reason: new kick-off and duration results; abstract clause on NOD agreement replaces the F-1 family clause (TJ review); WITSML version from the files.
 3. **Abstract (paragraph 7).** Old: one wellbore-identity conflation New: one NOD entry date that marks a later drilling campaign Registry id: `spud.identity`. Reason: category renamed from Wellbore-identity conflation (TJ review; F-1 verified: first 2013 report 2013-07-22, no NOD pre-drill date).
 4. **1 Introduction (paragraph 10).** Old: (Energistics 2012) New: (Energistics n.d.) Reason: Energistics reference now cites the schema version declared in the files with an access date (decision 45).
 5. **3.1 Data Source and Extraction (paragraph 20).** Old: dataset's WITSML 1.4.1.1 XML files into a single managed table holding 1,759 rows New: dataset's WITSML 1.4.0.0 XML files (1,759 files, 21,315,879 bytes, each recorded with a SHA-256 hash) into a single table holding 1,759 rows Registry id: `data.witsml_schema_version`, `data.n_xml_files`, `data.xml_total_bytes`. Reason: the files declare version 1.4.0.0 (decision 15); file count and bytes from the raw download.
@@ -15,8 +15,8 @@ Base file: `inputs/paper2_v2.docx`. Draft: `manuscript/paper2_draft.docx`, built
 9. **3.4 Stratified Audit of the Unclassified Residual (paragraph 29).** Old: was drawn from these 383 with a fixed random seed of 42. New: was drawn from these 383 with a fixed random seed of 42; the rerun of the analysis from the raw files kept this sample and its strata, after confirming that each of the 50 records maps to exactly one DDR file. Registry id: `audit.sample_size`. Reason: reproducibility statement for the kept sample (decision 6).
 10. **3.4 Stratified Audit of the Unclassified Residual (paragraph 29).** Old: Each sampled record was adjudicated as CONSTRUCTION New: Each sampled record was adjudicated by the author as CONSTRUCTION Reason: open item 4 resolved: the author made all 50 calls.
 11. **3.5 External Validation Against NOD FactPages (paragraph 31).** Old: (4,562.1 m and 4,562.0 m). New: (4,562.1 m and 4,562.0 m). The NOD export was retrieved on 24 October 2026; its rows for the Volve wellbores are identical to an export taken on 8 September 2026 except for the register's own synchronisation date. Registry id: `data.nod_snapshot_date`. Reason: NOD snapshot refreshed and compared with the September snapshot.
-12. **3.5 External Validation Against NOD FactPages (paragraph 32).** Old: new hole was kicked off from 2,911 m under New: new hole was kicked off from 2,911 m under Registry id: `kickoff.proposed_depth.15/9-19 BT2`. Reason: highlighted: kick-off depth is PROVISIONAL (unchanged value).
-13. **3.5 External Validation Against NOD FactPages (paragraph 32).** Old: new hole from approximately 1,536 m under New: new hole from approximately 1,536 m under Registry id: `kickoff.proposed_depth.15/9-19 ST2`. Reason: highlighted: kick-off depth is PROVISIONAL (unchanged value).
+12. **3.5 External Validation Against NOD FactPages (paragraph 32).** Old: new hole was kicked off from 2,911 m under New: new hole was kicked off from 2,911 m under Registry id: `kickoff.proposed_depth.15/9-19 BT2`. Reason: kick-off depth, author-approved (unchanged value).
+13. **3.5 External Validation Against NOD FactPages (paragraph 32).** Old: new hole from approximately 1,536 m under New: new hole from approximately 1,536 m under Registry id: `kickoff.proposed_depth.15/9-19 ST2`. Reason: kick-off depth, author-approved (unchanged value).
 14. **4 Data Quality (paragraph 40).** Old: but 73 records contain the literal string "None", almost certainly the product of a Python str(None) conversion during the original extraction. A null test cannot detect a non-empty placeholder of this kind. Correcting for it, the genuine narrative population is 95.85% (1,686 of 1,759). New: but 73 records contain the literal string "None". The string is stored in the source XML itself (73 of the 1,759 files contain it), so it is a placeholder in the archive, not an artefact of extraction. A null test cannot detect a non-empty placeholder of this kind. Correcting for it, the genuine narrative population is 95.85% (1 ... Registry id: `placeholders.none_sum24Hr`, `placeholders.none_forecast24hr`, `placeholders.none_total`, `placeholders.total_cells_all_fields`, `table1.forecast24hr_genuine.count`, `table1.forecast24hr_genuine.pct`. Reason: the None string is in the source archive (decision 12); forecast24hr treated like sum24Hr (decision 18); full placeholder total (decision 19).
 15. **4 Data Quality (paragraph 41).** Old: 17.5 years before New: 17.6 years before Registry id: `data.sentinel_years_before_first_ddr`. Reason: 6,415 days / 365.25 = 17.56; TJ ruling 4 (v2 said 17.5).
 16. **4 Data Quality (paragraph 41).** Old: It is a date sentinel, not a drilling report. New: It is a date sentinel, not a drilling report. The raw files declare the ISO-8859-1 character encoding; reading them correctly repaired an encoding error that affected 103 narratives in the earlier extraction (for example the character Ø), which changes no phase. Registry id: `extract.old_table_encoding_rows_sum24Hr`. Reason: new finding from the raw-data rerun.
@@ -28,22 +28,22 @@ Base file: `inputs/paper2_v2.docx`. Draft: `manuscript/paper2_draft.docx`, built
 22. **5.5 Spud Date Validation (paragraph 64).** Old: by three months to a full year New: by 91 to 340 days Registry id: `spud.table4`. Reason: recomputed offsets against the first report (F-12 91, F-4 92, F-7 137, F-15 340 days).
 23. **5.5 Spud Date Validation (paragraph 65).** Old: an ordinary spud-to-first-report gap. NOD, however, records an entry date of 23 July 2013, nearly six years later and about four weeks before the WITSML spud date (20 August 2013) and NOD entry date (23 August 2013) of 15/9-F-1 A, the sidetrack drilled from the same slot. NOD's 15/9-F-1 record most plausibly reflects the 2013 re ... New: an ordinary spud-to-first-report gap. The 2007 reports are top-hole only (four reports, maximum depth 226 m). F-1 was drilled to its total depth of 3,632 m in the 2013 campaign, whose first report (22 July 2013) is one day before NOD's entry date (23 July 2013). NOD records no pre-drill date for the 2007 work, unlike F-4, F-5, F ... Registry id: `f1.reports_2007`, `f1.reports_2013`, `f1.spud_section_statement`, `f1.first_report_2013`, `f1.nod_main_entry_date`, `f1.nod_predrill_entry_date`. Reason: TJ ruling 3 (decision 42); TJ review: category renamed, F-1 paragraph rewritten after verifying that the first 2013 report is 2013-07-22 and that NOD records no pre-drill date for F-1; the re-entry-ahead-of-the-sidetrack reading removed.
 24. **5.6 Sidetrack Kick-Off Depth Recovery (paragraph 67).** Old: v2 5.6 first paragraph (twelve free-text and two depth-sequence recoveries) New: Because the structured kick-off field is sparse, kick-off depth was recovered from the DDRs. The kick-off depth of a sidetrack is the depth at which it leaves its parent wellbore. It was read from the parent's last and the sidetrack's first reports by one rule applied to all sidetracks: the depth at which the narrative first rep ... Registry id: `kickoff.ruling_window_top`. Reason: Section 5.6 rewritten from the kick-off table with the uniform rule (decisions 27, 32, 40).
-25. **5.6 Sidetrack Kick-Off Depth Recovery (paragraph 69).** Old: v2 5.6 paragraph on NOD's wlbKickOffPoint (operational versus geometric definition) New: NOD's wlbKickOffPoint is available for 12 of the 15 sidetracks. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C), and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick-off value for 3 (15/9-19 BT2, 19 S ... Registry id: `kickoff.nod_comparison`, `kickoff.F-11 B.interval_m`. Reason: the 'operational versus geometric' paragraph is deleted (decision 27); NOD comparison counts from the kick-off table (PROVISIONAL).
+25. **5.6 Sidetrack Kick-Off Depth Recovery (paragraph 69).** Old: v2 5.6 paragraph on NOD's wlbKickOffPoint (operational versus geometric definition) New: NOD's wlbKickOffPoint is available for 12 of the 15 sidetracks. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C), and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick-off value for 3 (15/9-19 BT2, 19 S ... Registry id: `kickoff.nod_comparison`, `kickoff.F-11 B.interval_m`. Reason: the 'operational versus geometric' paragraph is deleted (decision 27); NOD comparison counts from the kick-off table.
 26. **6.2 Data-Quality Lessons for WITSML Archive Users (paragraph 75).** Old: and the narrative string "None" together affect 411 field values (331 + 7 + 73). New: and the string "None" (in the narrative and forecast fields), together with the date sentinel, affect 515 field values (331 + 7 + 176 + 1). Registry id: `placeholders.total_cells_all_fields`. Reason: full placeholder register (decision 19).
 27. **6.1 What the Dataset Supports (paragraph 72).** Old: concentrated in drilling progress reported without a hole size. New: concentrated in drilling progress reported without a hole size. Table 6 gives elapsed days, reports and metres per report-day to total depth for each wellbore as a first benchmark, with the gap flag marking wellbores whose elapsed time cannot be read as drilling time. Registry id: `duration.table`. Reason: new duration results.
-28. **6.3 Relevance to Records-Based Screening of Legacy Wellbores (paragraph 82).** Old: such as 15/9-F-1 and 15/9-F-1 C, are not independent penetrations above their kick-off depth. New: such as the four wellbores of the 15/9-F-1 family, which share the hole above 1,364 m MD, are not independent penetrations above their kick-off depths. Registry id: `kickoff.F-1_family_shared_hole_above_m`. Reason: decision 34 replaces the 'F-1 / F-1 C share formations above 3,059 m' statement (PROVISIONAL).
+28. **6.3 Relevance to Records-Based Screening of Legacy Wellbores (paragraph 82).** Old: such as 15/9-F-1 and 15/9-F-1 C, are not independent penetrations above their kick-off depth. New: such as the four wellbores of the 15/9-F-1 family, which share the hole above 1,364 m MD, are not independent penetrations above their kick-off depths. Registry id: `kickoff.F-1_family_shared_hole_above_m`. Reason: decision 34 replaces the 'F-1 / F-1 C share formations above 3,059 m' statement.
 29. **6.4 Transferability (paragraph 84).** Old: any WITSML 1.4.1.1 archive New: WITSML 1.4-series drillReport archives (tested here on 1.4.0.0) Registry id: `data.witsml_schema_version`. Reason: WITSML version from the files; TJ review: tested only on 1.4.0.0.
 30. **6.1 What the Dataset Supports (paragraph 72).** Old: Days-versus-depth curves (Fig. 2) New: Depth-versus-report-count curves (Fig. 2) Reason: Fig. 2 x-axis is the report number (TJ review).
 31. **7 Limitations (paragraph 88).** Old: 2013 re-entry reports ahead of the F-1 A sidetrack New: 2013 drilling campaign reports Reason: F-1 stratum wording (TJ review).
 32. **8 Conclusions (paragraph 98).** Old: one apparent error is a wellbore-identity conflation in the register New: one apparent error is a NOD entry date that marks a later drilling campaign Registry id: `spud.identity`. Reason: category renamed (TJ review).
 33. **7 Limitations (paragraph 87).** Old: was adjudicated by a single reviewer, and New: was adjudicated by a single reviewer, the author, and Reason: open item 4 resolved.
-34. **7 Limitations (paragraph 90).** Old: v2 limitation: two depth-sequence kick-offs; F-1 and F-1 C shared interval above the F-1 C kick-off New: Kick-off depths were read from the narratives by one rule, and two rest on weaker evidence: 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kick-off point for three sidetracks. All four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 ... Registry id: `kickoff.F-1_family_shared_hole_above_m`, `kickoff.F-1_F-1A_F-1B_shared_hole_above_m`, `kickoff.F-11 B.interval_m`. Reason: decisions 34 and 40 (PROVISIONAL); duration caveat added.
+34. **7 Limitations (paragraph 90).** Old: v2 limitation: two depth-sequence kick-offs; F-1 and F-1 C shared interval above the F-1 C kick-off New: Kick-off depths were read from the narratives by one rule, and two rest on weaker evidence: 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kick-off point for three sidetracks. All four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 ... Registry id: `kickoff.F-1_family_shared_hole_above_m`, `kickoff.F-1_F-1A_F-1B_shared_hole_above_m`, `kickoff.F-11 B.interval_m`. Reason: decisions 34 and 40; duration caveat added.
 35. **7 Limitations (paragraph 92).** Old: The analysis uses the extracted table rather than the raw XML, so any extraction error upstream of that table would propagate. New: The analysis starts from the raw XML, extracted by the published code with every field kept as a raw string, but an extraction error would still propagate to every result. Registry id: `data.n_xml_files`. Reason: v2 said the analysis used the extracted table; the rerun starts from the raw files.
 36. **8 Conclusions (paragraph 99).** Old: affect 411 field values New: affect 515 field values Registry id: `placeholders.total_cells_all_fields`. Reason: full placeholder register (decision 19).
 37. **8 Conclusions (paragraph 101).** Old: and use the dataset for phase-duration benchmarking across the campaign. New: and extend the duration results to phase-level durations across the campaign. Reason: duration results now reported (Section 5.7).
-38. **Acknowledgements (paragraph 104).** Old: v2 AI disclosure (writing, debugging, arithmetic, editing; note about audit adjudication and figures) New: Generative AI (Anthropic Claude, used through Claude Code) built and ran the reproducible analysis pipeline from the raw data and was used to assist with debugging, checking arithmetic and editing the manuscript text. The sidetrack kick-off depths were proposed by the AI tool from the narratives and verified by the author. The a ... Reason: AI disclosure per TJ instruction; the verification clause stays highlighted until the author columns are filled.
+38. **Acknowledgements (paragraph 104).** Old: v2 AI disclosure (writing, debugging, arithmetic, editing; note about audit adjudication and figures) New: Generative AI (Anthropic Claude, used through Claude Code) built and ran the reproducible analysis pipeline from the raw data and was used to assist with debugging, checking arithmetic and editing the manuscript text. The sidetrack kick-off depths were proposed by the AI tool from the narratives under one rule. The author reject ... Reason: AI disclosure matches what happened: AI proposed, author reviewed all 15 rows of the sign-off workbook, approved all 15, changed none, marked none N (decisions 37, 40 and 52).
 39. **Code and Data Availability (paragraph 106).** Old: v2 availability statement (audit sample with adjudications, extracted DDR table, NOD tables, registry) New: The classifier (v3), the extraction and analysis code, the 1,421-row timeline dataset, the audit adjudications (file name, wellbore, date, stratum, call and miss reason), the NOD comparison tables, the kick-off and duration tables, and a numbers registry tracing every reported figure to the script that produced it are available ... Reason: licence and no-narrative-text policy (decisions 26 and 46); the extracted table is no longer published because it holds narrative text.
-40. **Appendix A: Traceability (paragraph 143).** Old: v2 Appendix A (59 entries, each with the exact query and execution timestamp) New: Every quantitative figure in this paper traces to an entry in the numbers registry published in the repository (232 entries, each with the producing script and function, the SHA-256 of its input files and an execution timestamp). The audit estimates in Section 5.2 are derived arithmetically from registry entries, and the arithme ... Registry id: `registry.n_entries`. Reason: registry rebuilt with 224 entries; resolves the open note on the attainable-rate and placeholder-total entries.
+40. **Appendix A: Traceability (paragraph 143).** Old: v2 Appendix A (59 entries, each with the exact query and execution timestamp) New: Every quantitative figure in this paper traces to an entry in the numbers registry published in the repository (234 entries, each with the producing script and function, the SHA-256 of its input files and an execution timestamp). The audit estimates in Section 5.2 are derived arithmetically from registry entries, and the arithme ... Registry id: `registry.n_entries`. Reason: registry rebuilt with 224 entries; resolves the open note on the attainable-rate and placeholder-total entries.
 41. **References (paragraph 119).** Old: Energistics. 2012. ... Version 1.4.1.1 New: Energistics. n.d. ... data schema version 1.4.0.0, as declared in the Volve DDR files ... (accessed 24 October 2026) Registry id: `data.witsml_schema_version`. Reason: release label and year of 1.4.0.0 could not be verified (decision 45), so the schema version is cited with an access date.
 42. **References (paragraph 123).** Old: (accessed 8 September 2026) New: (accessed 24 October 2026) Registry id: `data.nod_snapshot_date`. Reason: snapshot refreshed.
 43. **References (paragraph 129).** Old: Sidahmed, M., Coley, C., and Shirzadi, S. 2015 ... [TJ: verify] New: Sidahmed, M., Coley, C.J., and Shirzadi, S. 2015 ... Reason: title and authors verified through Crossref (OnePetro returned 403); citation kept.
@@ -57,10 +57,10 @@ Base file: `inputs/paper2_v2.docx`. Draft: `manuscript/paper2_draft.docx`, built
 51. **Table 4, row Exact.** Old: 7 New: 6: 15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D Registry id: `spud.exact`. Reason: 15/9-F-11 moves to Unresolved under the NOD pre-drill-else-main rule (decision 47).
 52. **Table 4, row Definitional offset.** Old: (no wellbores listed) New: wellbores listed Registry id: `spud.definitional_offset`. Reason: detail added from the spud table.
 53. **Table 4.** Old: three columns (Outcome, Wellbores, Detail); category named Wellbore-identity conflation New: four columns with a Rule column; category named NOD date marks later campaign Registry id: `spud.rule_thresholds_days`, `spud.table4`. Reason: TJ review: rules moved from the text of Section 5.5 into the table; the technical-sidetrack rule now names the wellbores it applies to (15/9-19 BT2, 19 ST2 and the parent leg 19 B).
-54. **Section 5.6.** Old: (no kick-off table) New: Table 5: sidetrack, parent, kick-off depth, method, NOD value, difference, confidence Registry id: `kickoff.table`, `kickoff.method_counts`, `kickoff.nod_comparison`. Reason: new table from the kick-off table (PROVISIONAL, highlighted).
-55. **Section 5.6.** Old: Twelve free-text and two depth-sequence recoveries; 15th sidetrack unidentified; the F-1 C example 'Drilled and oriented 8 1/2" from 3059 m' New: 11 depth in text, 3 event in text with depth from md, 1 depth sequence; 15 recovered; F-1 C 1,364 m; 3,059 m is the 8 1/2 in. section start; 19 A (2,178 m) is the 15th sidetrack Registry id: `kickoff.method_counts`, `kickoff.proposed_depth.15/9-F-1 C`, `kickoff.proposed_depth.15/9-19 A`. Reason: decisions 27, 32, 40; open item 2 resolved (PROVISIONAL).
-56. **Section 5.7 (new).** Old: (no duration results) New: new subsection and Table 6: first report, TD, TD date, elapsed days, reports to TD, gap flag, drilled length, m per report-day Registry id: `duration.table`, `duration.drilled_length_and_rate_sidetracks`, `duration.drilled_length_and_rate_originals`, `duration.n_gap_flagged`. Reason: TJ answers to the Stage 9 questions; drilled length and rate for sidetracks are PROVISIONAL.
-57. **Conclusions (new bullet).** Old: (none) New: kick-off result for all 15 sidetracks, F-1 C 1,364 m Registry id: `kickoff.proposed_depth.15/9-F-1 C`, `kickoff.F-1_family_shared_hole_above_m`. Reason: new result (PROVISIONAL).
+54. **Section 5.6.** Old: (no kick-off table) New: Table 5: sidetrack, parent, kick-off depth, method, NOD value, difference, confidence Registry id: `kickoff.table`, `kickoff.method_counts`, `kickoff.nod_comparison`. Reason: new table from the kick-off table (author-approved, no highlighting).
+55. **Section 5.6.** Old: Twelve free-text and two depth-sequence recoveries; 15th sidetrack unidentified; the F-1 C example 'Drilled and oriented 8 1/2" from 3059 m' New: 11 depth in text, 3 event in text with depth from md, 1 depth sequence; 15 recovered; F-1 C 1,364 m; 3,059 m is the 8 1/2 in. section start; 19 A (2,178 m) is the 15th sidetrack Registry id: `kickoff.method_counts`, `kickoff.proposed_depth.15/9-F-1 C`, `kickoff.proposed_depth.15/9-19 A`. Reason: decisions 27, 32, 40; open item 2 resolved.
+56. **Section 5.7 (new).** Old: (no duration results) New: new subsection and Table 6: first report, TD, TD date, elapsed days, reports to TD, gap flag, drilled length, m per report-day Registry id: `duration.table`, `duration.drilled_length_and_rate_sidetracks`, `duration.drilled_length_and_rate_originals`, `duration.n_gap_flagged`. Reason: TJ answers to the Stage 9 questions.
+57. **Conclusions (new bullet).** Old: (none) New: kick-off result for all 15 sidetracks, F-1 C 1,364 m Registry id: `kickoff.proposed_depth.15/9-F-1 C`, `kickoff.F-1_family_shared_hole_above_m`. Reason: new result.
 
 ## 2. Unchanged v2 numbers
 
@@ -86,92 +86,18 @@ All other numbers in the v2 text and tables are unchanged and match the registry
 ## 4. [TJ:] notes still open in the draft
 
 - [TJ: the proposal author block reads "Department of Mining and Energy". Change the affiliation to Independent Researcher in the IPTC author portal before uploading; the portal, not this file, sets the published front matter.]
-- [TJ: DRAFT built from the numbers registry on 24 October 2026. Yellow highlighting marks PROVISIONAL values derived from the AI-proposed kick-off depths; they are not final until the author columns of outputs/kickoff_signoff.xlsx are filled.]
-- [TJ: DRAFT. Values highlighted in yellow are PROVISIONAL: the kick-off depths were proposed by an AI tool from the narratives and are pending author verification (outputs/kickoff_signoff.xlsx). Remove this note and the highlighting once the author columns are filled.]
 - [TJ: confirm every item listed is in the public repository before you upload the manuscript; Stage 13 checks this.]
 - Not a [TJ:] note but open: the release label and year of the WITSML 1.4.0.0 schema could not be verified (decision 45), so the Energistics reference cites the schema version declared in the files with an access date; and the Sidahmed et al. (2015) check used the Crossref record because OnePetro returned 403 (decision 44).
 
-## 5. PROVISIONAL values highlighted in yellow
+## 5. Kick-off sign-off
 
-These depend on the AI-proposed kick-off depths (pending author verification). Highlighted text and how often it is highlighted in the draft:
-
-- `0` (6x)
-- `1,364 m` (4x)
-- `` (3x)
-- `12` (2x)
-- `2,531 to 2,589 m` (2x)
-- `3` (2x)
-- `+6.5`
-- `+9`
-- `-13`
-- `-3`
-- `-31`
-- `-8`
-- `1`
-- `1,041`
-- `1,062`
-- `1,176`
-- `1,339`
-- `1,364`
-- `1,380`
-- `1,381`
-- `1,536`
-- `1,536 m`
-- `1,953`
-- `10`
-- `100.4`
-- `106.0`
-- `108.6`
-- `11`
-- `124.1`
-- `130.8`
-- `145.4`
-- `150.2`
-- `156.0`
-- `168.0`
-- `2`
-- `2,178`
-- `2,178 m`
-- `2,181`
-- `2,231`
-- `2,566`
-- `2,586`
-- `2,589`
-- `2,617`
-- `2,617 to 2,620 m`
-- `2,620`
-- `2,714`
-- `2,730`
-- `2,911`
-- `2,911 m`
-- `24.7`
-- `246`
-- `3,059 m`
-- `3,105`
-- `3,185`
-- `3,305`
-- `312`
-- `354.0`
-- `36.2`
-- `4`
-- `4,316.1`
-- `421.5`
-- `45.7`
-- `54.8`
-- `6`
-- `666`
-- `67.3`
-- `784.5`
-- `848`
-- `verified by the author`
-
-Total highlighted runs: 82. They sit in the abstract, Section 3.5, Section 5.6 and Table 5, Table 6 (drilled length and metres per report-day for the 15 sidetracks), Section 6.3, the limitations, the conclusions and the AI disclosure (the clause 'verified by the author').
+The kick-off depths were proposed by an AI tool and signed off by the author in `outputs/kickoff_signoff.xlsx` (read by `src/stage8d_apply_signoff.py`): 15 rows reviewed, 15 approved (Y), 0 marked N, 0 author depths entered, 0 author notes, so no row was changed. The AI's first proposals for 15/9-19 A, 15/9-F-9 A and 15/9-F-11 B were rejected earlier (decision 40) and the table values kept. The Table 5 and Table 6 values derived from these depths are final, and no value in the draft is highlighted as provisional.
 
 ## 6. Check: every number in the draft against the registry
 
 `src/stage12_check.py` (output `outputs/manuscript_registry_check.csv`):
 
-    tokens: 1565 {'in registry': 1533, 'ignored': 32} | em dashes: 0
+    tokens: 1573 {'in registry': 1541, 'ignored': 32} | em dashes: 0
     Empty DataFrame
     Columns: [where, token, context]
     Index: []

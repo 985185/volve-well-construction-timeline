@@ -1,3 +1,5 @@
+> Status update 2026-10-24: the kick-off depths were signed off by the author (15 of 15 approved, none changed; decision 52). The word PROVISIONAL below is the state at the time of writing and no longer applies.
+
 # Stage 8c: AI proposal for the kick-off sign-off, and the F-1 check
 
 Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8c_proposal.py`, `src/stage8c_report.py`. Outputs: `outputs/kickoff_signoff.xlsx` (proposal columns added), `outputs/kickoff_proposal.csv`.

@@ -1,3 +1,5 @@
+> Status update 2026-10-24: the kick-off depths were signed off by the author (15 of 15 approved, none changed; decision 52). The word PROVISIONAL below is the state at the time of writing and no longer applies.
+
 # Stage 12: Manuscript (DRAFT)
 
 Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage12_manuscript.py` (builds the draft), `src/stage12_check.py` (registry check), `src/stage12_changes.py` (change log). Outputs: `manuscript/paper2_draft.docx`, `manuscript/CHANGES.md`, `outputs/manuscript_registry_check.csv`, `data/interim/stage12_log.json`.

@@ -7,9 +7,9 @@ Definitions (TJ answers, Stage 9):
   elapsed_days     td_date minus first_ddr, calendar days.      ddrs_to_td = DDRs dated first_ddr..td_date inclusive.
   gap_flag         True if elapsed_days > 2 x ddrs_to_td (gaps between reports).
   phase columns    number of DDRs per v3 phase (report-days in phase, not elapsed time); gaps are not allocated to phases.
-  drilled_length_m   sidetracks: TD minus the PROPOSED kick-off depth (outputs/kickoff_proposal.csv, AI proposal pending author verification); original wellbores: TD.
+  drilled_length_m   sidetracks: TD minus the kick-off depth (final_depth_m of outputs/kickoff_proposal.csv, signed off by the author); original wellbores: TD.
   m_per_report_day   drilled_length_m / ddrs_to_td.
-  derived_status     PROVISIONAL for the 15 sidetracks (depends on the AI-proposed kick-off); 'TD only' for the 11 original wellbores (no kick-off input).
+  derived_status     'author-verified kick-off' for the 15 sidetracks (final depth from the author sign-off, outputs/kickoff_proposal.csv); 'TD only' for the 11 original wellbores (no kick-off input).
 No summed or averaged durations anywhere.
 """
 import pandas as pd
@@ -42,12 +42,11 @@ for w, g in d.groupby("wellbore"):
     rows.append(row)
 t = pd.DataFrame(rows).sort_values("wellbore", key=lambda s: s.map(lambda x: (0 if x.startswith("19") else 1, x)))
 prop = pd.read_csv("outputs/kickoff_proposal.csv").set_index("sidetrack")
-assert (prop[["author_approved", "author_depth"]].isna().all().all()) or True
-t["kickoff_depth_proposed_m"] = t.wellbore.map(lambda w: prop.proposed_depth.get(w))
-t["drilled_length_m"] = (t.td_md_m - t.kickoff_depth_proposed_m.fillna(0)).round(1)
+t["kickoff_depth_m"] = t.wellbore.map(lambda w: prop.final_depth_m.get(w))
+t["drilled_length_m"] = (t.td_md_m - t.kickoff_depth_m.fillna(0)).round(1)
 t["m_per_report_day"] = (t.drilled_length_m / t.ddrs_to_td).round(1)
-t["derived_status"] = t.kickoff_depth_proposed_m.map(lambda v: "TD only" if pd.isna(v) else "PROVISIONAL (AI-proposed kick-off, pending author verification)")
-assert int(t.kickoff_depth_proposed_m.notna().sum()) == 15
+t["derived_status"] = t.kickoff_depth_m.map(lambda v: "TD only" if pd.isna(v) else "author-verified kick-off")
+assert int(t.kickoff_depth_m.notna().sum()) == 15
 assert len(t) == 26 and t.n_ddrs.sum() == 1759
 
 # totals row (wellbore, DDR and per-phase counts only)

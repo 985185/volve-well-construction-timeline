@@ -1,3 +1,5 @@
+> Status update 2026-10-24: the kick-off depths were signed off by the author (15 of 15 approved, none changed; decision 52). The word PROVISIONAL below is the state at the time of writing and no longer applies.
+
 # Stage 11: Numbers registry
 
 Date: 2026-10-24. Branch: `rerun-2026-10`. Script: `src/stage11_registry.py`. Outputs: `outputs/numbers_registry.json` (211 entries), `outputs/registry_comparison_v2.csv`, `outputs/registry_comparison_old.csv`, `outputs/registry_coverage.csv`.
