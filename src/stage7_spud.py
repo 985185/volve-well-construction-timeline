@@ -50,7 +50,9 @@ for w in W.index:
     N, ntype = (min(cands)[1], min(cands)[2]) if cands else (pd.NaT, "none")
     Tw = T.get(w, pd.NaT)
     dWN = (W[w] - N).days if pd.notna(N) else None
-    rows.append(dict(wellbore=w, witsml_spud=W[w].date(), first_ddr=F[w].date(), freetext_date=None if pd.isna(Tw) else Tw.date(), nod_entry_date=None if pd.isna(N) else N.date(), nod_entry_type=ntype, nod_record=n,
+    dmain = None if pd.isna(main) else (W[w] - main).days
+    rows.append(dict(nod_main_entry_date=None if pd.isna(main) else main.date(), nod_predrill_entry_date=None if pd.isna(pre) else pre.date(), w_minus_nod_main_days=dmain,
+                     wellbore=w, witsml_spud=W[w].date(), first_ddr=F[w].date(), freetext_date=None if pd.isna(Tw) else Tw.date(), nod_entry_date=None if pd.isna(N) else N.date(), nod_entry_type=ntype, nod_record=n,
                      w_minus_n_days=dWN, w_minus_first_ddr_days=(W[w] - F[w]).days, anchor_minus_w_days=(anchor - W[w]).days, n_minus_anchor_days=None if pd.isna(N) else (N - anchor).days))
 r = pd.DataFrame(rows)
 
