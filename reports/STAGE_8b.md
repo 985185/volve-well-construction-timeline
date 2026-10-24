@@ -16,21 +16,21 @@ Method wording (decision 33): "depth in text", "event in text, depth from md" (t
 
 | Sidetrack | Parent | DDR kick-off | Evidence quote (report, date) | Method | Tier | Confidence | NOD | NOD - DDR |
 |---|---|---|---|---|---|---|---|---|
-| 15/9-19 A | none in WITSML (NOD lists 15/9-19 S) | 2,178 | `SET 2ND WHIPSTOCK & MILLED WINDOW FROM 2178-2183 M. DRILLED 19 M FORMATION. CIRCULATED HOLE` (9-19 A, 1997-07-29) | depth in text | T2 | HIGH | 2,178 | +0 |
-| 15/9-19 B | 15/9-19 A | 2,231 | `DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M.` (9-19 B, 1997-11-11) | depth in text | T1 | HIGH | 2,200 | -31 |
-| 15/9-19 BT2 | 15/9-19 B | 2,911 | `M;TOP OF SIDETRACK PLUG. DRILLED CMT. TO 2911 M. COMMENCED DRILLING 8 1/2" HOLE FROM` (9-19 B, 1997-12-06) | depth in text | T1 | HIGH |  |  |
-| 15/9-19 ST2 | 15/9-19 S | 1,536 | `(narratives of both 1992-12-19 reports are 'None'; md 1,536 on both)` (9-19 S, 1992-12-19) | depth sequence (narrative empty) | T3 | LOW |  |  |
-| 15/9-F-1 A | 15/9-F-1 | 2,620 | `shoe and rathole. Commenced kick off to F-1A` (9-F-1, 2013-08-24) | event in text, depth from md | T2 | MEDIUM | 2,620 | +0 |
-| 15/9-F-1 B | 15/9-F-1 A | 2,617 | `Drilled out cement and kicked off well to F-1 B.` (9-F-1 A, 2013-08-30) | event in text, depth from md | T2 | MEDIUM | 2,604 | -13 |
-| 15/9-F-1 C | 15/9-F-1 B | 1,364 | `hole to 1355 m. Commenced time drilling to1364 m. 50% formation obtained at 1364 m.` (9-F-1 B, 2014-02-22) | depth in text | T1 | HIGH | 1,364 | +0 |
-| 15/9-F-9 A | 15/9-F-9 | 421.5 | `over pull. Milled 12-1/4" sidetrack window from 421,5 m (top) to 424 m. Note:Bottom window` (9-F-9, 2009-06-30) | depth in text | T2 | HIGH | 428 | +6.5 |
-| 15/9-F-11 T2 | 15/9-F-11 | 246 | `Ran wireline gyro. Washed down oriented to 246 m. Oriented drilled 26" hole from 246` (9-F-11, 2013-03-23) | depth in text | T2 | MEDIUM |  |  |
-| 15/9-F-11 A | 15/9-F-11 T2 | 2,586 | `and kicked off to F-11 A at 2586m MD.` (9-F-11 T2, 2013-05-15) | depth in text | T1 | HIGH | 2,578 | -8 |
-| 15/9-F-11 B | 15/9-F-11 A | 2,589 | `new formation from 2531 m MD to 2589 m MD.` (9-F-11 A, 2013-05-29) | depth in text | T1 | LOW | 2,586 | -3 |
-| 15/9-F-15 A | 15/9-F-15 | 1,381 | `Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.` (9-F-15, 2008-12-12) | depth in text | T1 | HIGH | 1,381 | +0 |
-| 15/9-F-15 B | 15/9-F-15 A | 3,185 | `Drilled 8½" hole from 3141m to 3185m and kicked off at 3185m continued drilling` (9-F-15 A, 2009-01-14) | depth in text | T1 | HIGH | 3,185 | +0 |
-| 15/9-F-15 C | 15/9-F-15 B | 2,566 | `OBM. Drilled cement from 2490 m to 2566 m MD. Initiated kick off and drilled` (9-F-15 B, 2009-01-19) | depth in text | T2 | MEDIUM | 2,575 | +9 |
-| 15/9-F-15 D | 15/9-F-15 C | 1,380 | `BHA. Drilled cement and kicked off. Drilled 17 1/2" hole.` (9-F-15 C, 2013-11-11) | event in text, depth from md | T2 | MEDIUM | 1,380 | +0 |
+| 15/9-19 A | none in WITSML (NOD lists 15/9-19 S) | 2,178 | `SET 2ND WHIPSTOCK & MILLED WINDOW FROM 2178-2183 M. DRILLED 19 M FORMATION. CIRCULATED HOLE` (15/9-19 A, 1997-07-29) | depth in text | T2 | HIGH | 2,178 | +0 |
+| 15/9-19 B | 15/9-19 A | 2,231 | `DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M.` (15/9-19 B, 1997-11-11) | depth in text | T1 | HIGH | 2,200 | -31 |
+| 15/9-19 BT2 | 15/9-19 B | 2,911 | `M;TOP OF SIDETRACK PLUG. DRILLED CMT. TO 2911 M. COMMENCED DRILLING 8 1/2" HOLE FROM` (15/9-19 B, 1997-12-06) | depth in text | T1 | HIGH |  |  |
+| 15/9-19 ST2 | 15/9-19 S | 1,536 | `(narratives of both 1992-12-19 reports are 'None'; md 1,536 on both)` (15/9-19 S, 1992-12-19) | depth sequence (narrative empty) | T3 | LOW |  |  |
+| 15/9-F-1 A | 15/9-F-1 | 2,620 | `shoe and rathole. Commenced kick off to F-1A` (15/9-F-1, 2013-08-24) | event in text, depth from md | T2 | MEDIUM | 2,620 | +0 |
+| 15/9-F-1 B | 15/9-F-1 A | 2,617 | `Drilled out cement and kicked off well to F-1 B.` (15/9-F-1 A, 2013-08-30) | event in text, depth from md | T2 | MEDIUM | 2,604 | -13 |
+| 15/9-F-1 C | 15/9-F-1 B | 1,364 | `hole to 1355 m. Commenced time drilling to1364 m. 50% formation obtained at 1364 m.` (15/9-F-1 B, 2014-02-22) | depth in text | T1 | HIGH | 1,364 | +0 |
+| 15/9-F-9 A | 15/9-F-9 | 421.5 | `over pull. Milled 12-1/4" sidetrack window from 421,5 m (top) to 424 m. Note:Bottom window` (15/9-F-9, 2009-06-30) | depth in text | T2 | HIGH | 428 | +6.5 |
+| 15/9-F-11 T2 | 15/9-F-11 | 246 | `Ran wireline gyro. Washed down oriented to 246 m. Oriented drilled 26" hole from 246` (15/9-F-11, 2013-03-23) | depth in text | T2 | MEDIUM |  |  |
+| 15/9-F-11 A | 15/9-F-11 T2 | 2,586 | `and kicked off to F-11 A at 2586m MD.` (15/9-F-11 T2, 2013-05-15) | depth in text | T1 | HIGH | 2,578 | -8 |
+| 15/9-F-11 B | 15/9-F-11 A | 2,589 | `new formation from 2531 m MD to 2589 m MD.` (15/9-F-11 A, 2013-05-29) | depth in text | T1 | LOW | 2,586 | -3 |
+| 15/9-F-15 A | 15/9-F-15 | 1,381 | `Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.` (15/9-F-15, 2008-12-12) | depth in text | T1 | HIGH | 1,381 | +0 |
+| 15/9-F-15 B | 15/9-F-15 A | 3,185 | `Drilled 8½" hole from 3141m to 3185m and kicked off at 3185m continued drilling` (15/9-F-15 A, 2009-01-14) | depth in text | T1 | HIGH | 3,185 | +0 |
+| 15/9-F-15 C | 15/9-F-15 B | 2,566 | `OBM. Drilled cement from 2490 m to 2566 m MD. Initiated kick off and drilled` (15/9-F-15 B, 2009-01-19) | depth in text | T2 | MEDIUM | 2,575 | +9 |
+| 15/9-F-15 D | 15/9-F-15 C | 1,380 | `BHA. Drilled cement and kicked off. Drilled 17 1/2" hole.` (15/9-F-15 C, 2013-11-11) | event in text, depth from md | T2 | MEDIUM | 1,380 | +0 |
 
 ## Rows whose depth changed under the rule
 

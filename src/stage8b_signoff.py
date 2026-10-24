@@ -42,7 +42,7 @@ print(chk.shape, "author columns filled:", int(chk[["author_approved", "author_d
 # ---------------- report
 f = lambda x: "" if pd.isna(x) else (f"{x:,.1f}" if float(x) % 1 else f"{x:,.0f}")
 fd = lambda x: "" if pd.isna(x) else (f"{x:+,.1f}" if float(x) % 1 else f"{x:+,.0f}")
-rows = [f"| {r.sidetrack} | {r.parent} | {f(r.ddr_kickoff_depth_m)} | `{r.evidence_quote}` ({r.evidence_wellbore[3:]}, {r.evidence_date}) | {r.method} | {r.rule_tier} | {r.confidence} | {f(r.nod_wlbKickOffPoint_m)} | {fd(r.nod_minus_ddr_m)} |" for r in t.itertuples()]
+rows = [f"| {r.sidetrack} | {r.parent} | {f(r.ddr_kickoff_depth_m)} | `{r.evidence_quote}` ({r.evidence_wellbore}, {r.evidence_date}) | {r.method} | {r.rule_tier} | {r.confidence} | {f(r.nod_wlbKickOffPoint_m)} | {fd(r.nod_minus_ddr_m)} |" for r in t.itertuples()]
 flag = t[t.v2_status.str.startswith("NOT")]
 frows = [f"| {r.sidetrack} | {f(r.v2_depth_m)} | {f(r.ddr_kickoff_depth_m)} | {r.v2_status.replace('NOT A KICK-OFF: ', '')} |" for r in flag.itertuples()]
 alt = t[t.alternative_depths.notna()]
