@@ -151,7 +151,7 @@ spud.F-1.first_ddr,"""2007-12-02""","""2007-12-02""",SAME,False,
 spud.F-1.nod_entry,"""2013-07-23""","""2013-07-23""",SAME,False,
 spud.F-1 A.witsml_spud,"""2013-08-20""","""2013-08-20""",SAME,False,
 spud.F-1 A.nod_entry,"""2013-08-23""","""2013-08-23""",SAME,False,
-kickoff.proposed_depth.15/9-19 A,2183.0,null,NEW,True,current table 2178; proposed_approved N; method depth in text
+kickoff.proposed_depth.15/9-19 A,2178.0,null,NEW,True,current table 2178; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-19 A,2178.0,null,NEW,True,
 kickoff.proposed_depth.15/9-19 B,2231.0,2231,SAME,True,current table 2231; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-19 B,2231.0,2231,SAME,True,
@@ -165,13 +165,13 @@ kickoff.proposed_depth.15/9-F-1 B,2617.0,3100,CHANGED,True,"current table 2617; 
 kickoff.table_depth.15/9-F-1 B,2617.0,3100,CHANGED,True,
 kickoff.proposed_depth.15/9-F-1 C,1364.0,3059,CHANGED,True,current table 1364; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-F-1 C,1364.0,3059,CHANGED,True,
-kickoff.proposed_depth.15/9-F-9 A,428.2,459,CHANGED,True,current table 421.5; proposed_approved N; method depth in text
+kickoff.proposed_depth.15/9-F-9 A,421.5,459,CHANGED,True,current table 421.5; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-F-9 A,421.5,459,CHANGED,True,
 kickoff.proposed_depth.15/9-F-11 T2,246.0,257,CHANGED,True,current table 246; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-F-11 T2,246.0,257,CHANGED,True,
 kickoff.proposed_depth.15/9-F-11 A,2586.0,2586,SAME,True,current table 2586; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-F-11 A,2586.0,2586,SAME,True,
-kickoff.proposed_depth.15/9-F-11 B,2531.0,3271,CHANGED,True,current table 2589; proposed_approved N; method depth in text
+kickoff.proposed_depth.15/9-F-11 B,2589.0,3271,CHANGED,True,current table 2589; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-F-11 B,2589.0,3271,CHANGED,True,
 kickoff.proposed_depth.15/9-F-15 A,1381.0,1381,SAME,True,current table 1381; proposed_approved Y; method depth in text
 kickoff.table_depth.15/9-F-15 A,1381.0,1381,SAME,True,
@@ -183,8 +183,8 @@ kickoff.proposed_depth.15/9-F-15 D,1380.0,1380,SAME,True,"current table 1380; pr
 kickoff.table_depth.15/9-F-15 D,1380.0,1380,SAME,True,
 kickoff.n_sidetracks,15,15,SAME,True,"v2: 15 rows in the table, 14 outcomes reported, 19 S listed instead of 19 A"
 kickoff.method_counts,"{""depth in text"": 11, ""event in text, depth from md"": 3, ""depth sequence (narrative empty)"": 1}","{""free text"": 12, ""depth sequence"": 2}",CHANGED,True,"v2 method definitions differ (12 free text, 2 depth sequence, 1 unknown)"
-kickoff.proposal_Y,12,null,NEW,True,
-kickoff.proposal_N,"[""15/9-19 A"", ""15/9-F-9 A"", ""15/9-F-11 B""]",null,NEW,True,
+kickoff.proposal_Y,15,null,NEW,True,
+kickoff.proposal_N,[],null,NEW,True,
 kickoff.author_approved_rows,0,null,NEW,True,0 until TJ fills outputs/kickoff_signoff.xlsx
 kickoff.v2_depths_not_kickoffs,5,null,NEW,True,
 kickoff.F-1 C.nod_minus_ddr_m,0.0,1695.0,CHANGED,True,"v2 compared 3,059 m with NOD 1,364 m (difference 1,695 m)"
@@ -194,7 +194,7 @@ kickoff.table,"[{""sidetrack"": ""15/9-19 A"", ""parent"": ""none in WITSML (NOD
 duration.gap_flagged_wellbores,"[""15/9-19 S"", ""15/9-F-1"", ""15/9-F-14"", ""15/9-F-15"", ""15/9-F-4"", ""15/9-F-5"", ""15/9-F-9""]",null,NEW,False,
 duration.first_ddr_19A,"""1997-07-25""",null,NEW,False,
 duration.table,"[{""wellbore"": ""15/9-19 A"", ""family"": ""19"", ""first_ddr"": ""1997-07-25"", ""last_ddr"": ""1997-11-10"", ""n_ddrs"": 110, ""td_md_m""",null,NEW,False,
-duration.drilled_length_and_rate_sidetracks,"[{""wellbore"": ""15/9-19 A"", ""td_md_m"": 4131.0, ""kickoff_depth_proposed_m"": 2183.0, ""drilled_length_m"": 1948.0, ""ddrs_to_t",null,NEW,True,
+duration.drilled_length_and_rate_sidetracks,"[{""wellbore"": ""15/9-19 A"", ""td_md_m"": 4131.0, ""kickoff_depth_proposed_m"": 2178.0, ""drilled_length_m"": 1953.0, ""ddrs_to_t",null,NEW,True,
 duration.drilled_length_and_rate_originals,"[{""wellbore"": ""15/9-19 S"", ""td_md_m"": 3353.0, ""drilled_length_m"": 3353.0, ""ddrs_to_td"": 39.0, ""m_per_report_day"": 86.0},",null,NEW,False,
 duration.family_summary,"[{""family"": ""15/9-19"", ""wellbores"": 5, ""n_ddrs"": 375, ""n_spud_conductor"": 0, ""n_surface_casing"": 2, ""n_intermediate_dril",null,NEW,False,
 f1.reports_2007,"{""ddrs"": 4, ""first"": ""2007-12-02"", ""last"": ""2007-12-05"", ""max_valid_depth_m"": 226}",null,NEW,False,
@@ -206,7 +206,21 @@ audit.residual_miss_pp,11.3,11.3,SAME,False,
 td.fseries_name_matched_n,19,19,SAME,False,
 td.fseries_name_matched_exact,18,18,SAME,False,
 td.fseries_name_matched_exact_pct,94.7,94.7,SAME,False,
-data.sentinel_years_before_first_ddr,17.56,17.5,CHANGED,False,"the v2 text says 17.5 years; the computation gives 17.56, which rounds to 17.6 (v2 appears to have truncated)"
+data.sentinel_years_before_first_ddr,17.6,17.5,CHANGED,False,TJ ruling 4: use 17.6 years; the computation gives 17.56 (v2 text said 17.5)
 s19.stuck_pipe_depth_m,2741,2741,SAME,False,found in 2 DDRs
 external.nod_19S_suspended_md_m,3569.0,3569.0,SAME,False,EXTERNAL: carried from the old registry entry manuscript_revision_part2_nod_wellbore_history_ground_truth; not reproducible from the snapshot
 external.nod_19S_suspended_tvd_m,2394.0,2394.0,SAME,False,"EXTERNAL, see above"
+placeholders.none_total,176,null,NEW,False,
+extract.old_table_encoding_rows_sum24Hr,103,103,SAME,False,
+classifier.faithfulness_row_mismatches,0,0,SAME,False,
+classifier.size_patterns,"{""Spud / Conductor"": ""36.{0,5}(?:hole|HO|BHA); 30.{0,5}conductor"", ""Surface casing"": ""26.{0,5}(?:hole|BHA|section); 20.{",null,NEW,False,
+spud.rule_thresholds_days,"{""exact_W_minus_N_max"": 1, ""exact_anchor_minus_W_max"": 1, ""definitional_W_minus_N_max"": 8, ""definitional_T_minus_W_min"":",null,NEW,False,
+f1.spud_section_statement,"""2007: 4 reports, max depth 226 m; 2013: drilled to TD 3,632 m""",null,NEW,False,decision 42
+kickoff.nod_comparison,"{""with_nod_value"": 12, ""equal"": 6, ""within_10_m_not_equal"": 4, ""further"": 2, ""no_nod_value"": 3}",null,NEW,True,
+kickoff.F-11 B.interval_m,"[2531, 2589]",null,NEW,True,
+kickoff.ruling_window_top,"""for casing exits (milled windows), kick-off = top of window""",null,NEW,True,
+duration.gap_flag_rule,"""elapsed days to TD greater than 2 x reports to TD""",null,NEW,False,
+duration.n_gap_flagged,7,null,NEW,False,
+duration.indicative_only,"[""15/9-19 B"", ""15/9-F-11""]",null,NEW,False,
+data.xml_declared_encoding,"{""none declared (ASCII only)"": 336, ""ISO-8859-1"": 1423}",null,NEW,False,
+registry.n_entries,225,59,CHANGED,False,v2 registry had 59 entries

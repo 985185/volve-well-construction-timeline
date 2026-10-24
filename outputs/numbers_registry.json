@@ -10,7 +10,7 @@
   "inputs": {
    "data/raw/manifest.csv": "631504c0a8fb110c680903473bf9ae0da396858b452cdb104c7abf12edc106f1"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -27,7 +27,7 @@
   "inputs": {
    "data/raw/manifest.csv": "631504c0a8fb110c680903473bf9ae0da396858b452cdb104c7abf12edc106f1"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 21315879,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -44,7 +44,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -61,7 +61,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 26,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -78,7 +78,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -95,7 +95,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 11,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -112,7 +112,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -129,7 +129,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "1.4.1.1",
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -146,7 +146,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -163,7 +163,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -180,7 +180,7 @@
   "inputs": {
    "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2026-09-08",
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -199,7 +199,7 @@
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 27,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -216,7 +216,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -233,7 +233,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 100.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -250,7 +250,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -267,7 +267,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 100.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -284,7 +284,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1759,
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -301,7 +301,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 100.0,
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -318,7 +318,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1759,
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -335,7 +335,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 100.0,
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -352,7 +352,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1758,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -369,7 +369,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 99.94,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -386,7 +386,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1702,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -403,7 +403,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 96.76,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -420,7 +420,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1686,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -437,7 +437,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 95.85,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -454,7 +454,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1613,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -471,7 +471,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 91.7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -488,7 +488,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1421,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -505,7 +505,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 80.78,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -522,7 +522,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 248,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -539,7 +539,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 14.1,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -556,7 +556,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 331,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -573,7 +573,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -590,7 +590,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 73,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -607,7 +607,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -624,7 +624,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -641,7 +641,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 411,
   "status_vs_v2": "CHANGED",
   "provisional": null,
@@ -658,7 +658,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 411,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -675,7 +675,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -692,7 +692,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 61,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -709,7 +709,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 82,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -726,7 +726,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 10,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -743,7 +743,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 14,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -760,7 +760,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -777,7 +777,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -794,7 +794,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -811,7 +811,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -830,7 +830,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 256,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -848,7 +848,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 14.6,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -867,7 +867,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 228,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -885,7 +885,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 13.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -904,7 +904,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 144,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -922,7 +922,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 8.2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -941,7 +941,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 120,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -959,7 +959,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 6.8,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -978,7 +978,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 100,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -996,7 +996,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 5.7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1015,7 +1015,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 93,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1033,7 +1033,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 5.3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1052,7 +1052,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 82,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1070,7 +1070,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4.7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1089,7 +1089,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 77,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1107,7 +1107,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4.4,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1126,7 +1126,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 66,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1144,7 +1144,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3.8,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1163,7 +1163,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 52,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1181,7 +1181,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1200,7 +1200,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 41,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1218,7 +1218,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2.3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1237,7 +1237,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 38,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1255,7 +1255,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2.2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1274,7 +1274,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 6,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1292,7 +1292,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1311,7 +1311,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 456,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1329,7 +1329,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 25.9,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1346,7 +1346,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1303,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1363,7 +1363,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 74.1,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1380,7 +1380,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 456,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1397,7 +1397,7 @@
   "inputs": {
    "outputs/stage4_faithfulness_phase_counts.csv": "e6466b27d853870ecd3a17f0c47bad6123d00bff6b2b372462a8011e2bf78650"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1303,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1414,7 +1414,7 @@
   "inputs": {
    "outputs/stage4_faithfulness_phase_counts.csv": "e6466b27d853870ecd3a17f0c47bad6123d00bff6b2b372462a8011e2bf78650"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": true,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1431,7 +1431,7 @@
   "inputs": {
    "outputs/stage4_phase_changes_mojibake.csv": "66d382c468e46e52d82511de0f2f86a647df72cbc249551920608d036593851d"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -1454,7 +1454,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -1485,7 +1485,7 @@
   "inputs": {
    "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -1504,7 +1504,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 147,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1523,7 +1523,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 63,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1542,7 +1542,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 61,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1561,7 +1561,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 35,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1580,7 +1580,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 34,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1599,7 +1599,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 30,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1618,7 +1618,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 8,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1637,7 +1637,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1656,7 +1656,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1675,7 +1675,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 73,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1694,7 +1694,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1711,7 +1711,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 383,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1728,7 +1728,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 296,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1745,7 +1745,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 87,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1762,7 +1762,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 50,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1779,7 +1779,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 39,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1796,7 +1796,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 11,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1813,7 +1813,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 26,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1830,7 +1830,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 23,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1847,7 +1847,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1864,7 +1864,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 9,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1881,7 +1881,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 10,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1898,7 +1898,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1915,7 +1915,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.52,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1932,7 +1932,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.385,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1949,7 +1949,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.652,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1966,7 +1966,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.2177,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -1983,7 +1983,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.7408,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2001,7 +2001,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.1132,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2019,7 +2019,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 199,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2038,7 +2038,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 85.4,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2057,7 +2057,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 82.5,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2076,7 +2076,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 88.3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2094,7 +2094,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 0.518,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2113,7 +2113,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 85.3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2130,7 +2130,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4.2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2147,7 +2147,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1421,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2164,7 +2164,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 26,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2196,7 +2196,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -2213,7 +2213,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -2233,7 +2233,7 @@
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 22,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2253,7 +2253,7 @@
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2273,7 +2273,7 @@
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2293,7 +2293,7 @@
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 24,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2310,7 +2310,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 15.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2327,7 +2327,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 227.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2345,7 +2345,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3272.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2363,7 +2363,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 347.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2381,7 +2381,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4250.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2399,7 +2399,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4641.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2417,7 +2417,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4562.1,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2435,7 +2435,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1085.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2453,7 +2453,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1085.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2682,7 +2682,7 @@
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -2697,13 +2697,13 @@
    "function": "classify() (rules formalised after the assignments)"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2718,13 +2718,13 @@
    "function": "classify() (rules formalised after the assignments)"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 8,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2739,13 +2739,13 @@
    "function": "classify() (rules formalised after the assignments)"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2760,13 +2760,13 @@
    "function": "classify() (rules formalised after the assignments)"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2781,13 +2781,13 @@
    "function": "classify() (rules formalised after the assignments)"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2802,13 +2802,13 @@
    "function": "classify() (rules formalised after the assignments)"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 4,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -2825,8 +2825,8 @@
     "nod_main_entry_date": "1997-07-25",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "1997-07-25",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": 0,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -2838,8 +2838,8 @@
     "nod_main_entry_date": "1997-11-09",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "1997-11-09",
-    "w_minus_nod_main_days": 1.0,
     "w_minus_n_days": 1.0,
+    "w_minus_first_ddr_days": 0,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R5"
    },
@@ -2851,8 +2851,8 @@
     "nod_main_entry_date": "1997-11-09",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "1997-11-09",
-    "w_minus_nod_main_days": 26.0,
     "w_minus_n_days": 26.0,
+    "w_minus_first_ddr_days": -1,
     "category": "UNRESOLVED",
     "rule": "R5"
    },
@@ -2864,8 +2864,8 @@
     "nod_main_entry_date": "1992-11-18",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "1992-11-18",
-    "w_minus_nod_main_days": -61.0,
     "w_minus_n_days": -61.0,
+    "w_minus_first_ddr_days": 9,
     "category": "UNRESOLVED",
     "rule": "R7"
    },
@@ -2877,8 +2877,8 @@
     "nod_main_entry_date": "1993-02-17",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "1993-02-17",
-    "w_minus_nod_main_days": -155.0,
     "w_minus_n_days": -155.0,
+    "w_minus_first_ddr_days": -95,
     "category": "UNRESOLVED",
     "rule": "R5"
    },
@@ -2890,8 +2890,8 @@
     "nod_main_entry_date": "2013-07-23",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2013-07-23",
-    "w_minus_nod_main_days": -2064.0,
     "w_minus_n_days": -2064.0,
+    "w_minus_first_ddr_days": -4,
     "category": "IDENTITY",
     "rule": "R3"
    },
@@ -2903,8 +2903,8 @@
     "nod_main_entry_date": "2013-08-23",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2013-08-23",
-    "w_minus_nod_main_days": -3.0,
     "w_minus_n_days": -3.0,
+    "w_minus_first_ddr_days": -4,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    },
@@ -2916,8 +2916,8 @@
     "nod_main_entry_date": "2013-08-29",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2013-08-29",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    },
@@ -2929,8 +2929,8 @@
     "nod_main_entry_date": "2014-02-21",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2014-02-21",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    },
@@ -2942,8 +2942,8 @@
     "nod_main_entry_date": "2009-04-06",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2009-04-06",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -2955,8 +2955,8 @@
     "nod_main_entry_date": "2013-03-07",
     "nod_predrill_entry_date": "2012-04-06",
     "nod_entry_date": "2013-03-07",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -2968,8 +2968,8 @@
     "nod_main_entry_date": "2013-05-14",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2013-05-14",
-    "w_minus_nod_main_days": -68.0,
     "w_minus_n_days": -68.0,
+    "w_minus_first_ddr_days": -69,
     "category": "INHERITED",
     "rule": "R1"
    },
@@ -2981,8 +2981,8 @@
     "nod_main_entry_date": "2013-05-28",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2013-05-28",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    },
@@ -2994,8 +2994,8 @@
     "nod_main_entry_date": NaN,
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": NaN,
-    "w_minus_nod_main_days": NaN,
     "w_minus_n_days": NaN,
+    "w_minus_first_ddr_days": -17,
     "category": "INHERITED",
     "rule": "R1"
    },
@@ -3007,8 +3007,8 @@
     "nod_main_entry_date": "2007-06-14",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2007-06-14",
-    "w_minus_nod_main_days": -91.0,
     "w_minus_n_days": -91.0,
+    "w_minus_first_ddr_days": -91,
     "category": "ERROR",
     "rule": "R2"
    },
@@ -3020,8 +3020,8 @@
     "nod_main_entry_date": "2007-12-05",
     "nod_predrill_entry_date": "2007-11-06",
     "nod_entry_date": "2007-11-06",
-    "w_minus_nod_main_days": -31.0,
     "w_minus_n_days": -2.0,
+    "w_minus_first_ddr_days": -2,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    },
@@ -3033,8 +3033,8 @@
     "nod_main_entry_date": "2007-12-24",
     "nod_predrill_entry_date": "2007-11-19",
     "nod_entry_date": "2007-11-19",
-    "w_minus_nod_main_days": 305.0,
     "w_minus_n_days": 340.0,
+    "w_minus_first_ddr_days": 340,
     "category": "ERROR",
     "rule": "R2"
    },
@@ -3046,8 +3046,8 @@
     "nod_main_entry_date": "2008-12-11",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2008-12-11",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -3059,8 +3059,8 @@
     "nod_main_entry_date": "2009-01-13",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2009-01-13",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -3072,8 +3072,8 @@
     "nod_main_entry_date": "2009-01-18",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2009-01-18",
-    "w_minus_nod_main_days": 1.0,
     "w_minus_n_days": 1.0,
+    "w_minus_first_ddr_days": 0,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -3085,8 +3085,8 @@
     "nod_main_entry_date": "2013-11-10",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2013-11-10",
-    "w_minus_nod_main_days": 0.0,
     "w_minus_n_days": 0.0,
+    "w_minus_first_ddr_days": -1,
     "category": "EXACT",
     "rule": "R4"
    },
@@ -3098,8 +3098,8 @@
     "nod_main_entry_date": "2007-10-13",
     "nod_predrill_entry_date": "2007-06-09",
     "nod_entry_date": "2007-06-09",
-    "w_minus_nod_main_days": -217.0,
     "w_minus_n_days": -91.0,
+    "w_minus_first_ddr_days": -92,
     "category": "ERROR",
     "rule": "R2"
    },
@@ -3111,8 +3111,8 @@
     "nod_main_entry_date": "2007-12-18",
     "nod_predrill_entry_date": "2007-11-15",
     "nod_entry_date": "2007-11-15",
-    "w_minus_nod_main_days": -37.0,
     "w_minus_n_days": -4.0,
+    "w_minus_first_ddr_days": -4,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    },
@@ -3124,8 +3124,8 @@
     "nod_main_entry_date": "2007-09-16",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2007-09-16",
-    "w_minus_nod_main_days": -138.0,
     "w_minus_n_days": -138.0,
+    "w_minus_first_ddr_days": -137,
     "category": "ERROR",
     "rule": "R2"
    },
@@ -3137,8 +3137,8 @@
     "nod_main_entry_date": "2008-08-30",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2008-08-30",
-    "w_minus_nod_main_days": -295.0,
     "w_minus_n_days": -295.0,
+    "w_minus_first_ddr_days": -20,
     "category": "UNRESOLVED",
     "rule": "R7"
    },
@@ -3150,24 +3150,24 @@
     "nod_main_entry_date": "2009-07-01",
     "nod_predrill_entry_date": NaN,
     "nod_entry_date": "2009-07-01",
-    "w_minus_nod_main_days": -8.0,
     "w_minus_n_days": -8.0,
+    "w_minus_first_ddr_days": -11,
     "category": "DEFINITIONAL_OFFSET",
     "rule": "R6"
    }
   ],
-  "description": "Per-wellbore spud dates, offsets and categories (Fig. 4 uses w_minus_nod_main_days)",
+  "description": "Per-wellbore spud dates, offsets and categories (Fig. 4 and the table use w_minus_n_days: WITSML spud minus the NOD entry date closest to the first report)",
   "producer": {
    "script": "src/stage7_spud.py",
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -3182,10 +3182,10 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2007-03-15",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3200,10 +3200,10 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2007-06-14",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3218,11 +3218,11 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2007-11-28",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3237,11 +3237,11 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2007-12-02",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3256,11 +3256,11 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2013-07-23",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3275,10 +3275,10 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2013-08-20",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3293,10 +3293,10 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "outputs/spud_validation.csv": "365fba77df58770ddf147cf8ce1fef7a2c5f61d0646078b2a61abccee9b43f82",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": "2013-08-23",
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -3304,22 +3304,22 @@
  },
  {
   "id": "kickoff.proposed_depth.15/9-19 A",
-  "value": 2183.0,
+  "value": 2178.0,
   "description": "AI-proposed kick-off depth, 15/9-19 A (m MD)",
   "producer": {
    "script": "src/stage8c_proposal.py",
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
-  "note": "current table 2178; proposed_approved N; method depth in text"
+  "note": "current table 2178; proposed_approved Y; method depth in text"
  },
  {
   "id": "kickoff.table_depth.15/9-19 A",
@@ -3333,7 +3333,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3348,11 +3348,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2231,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3370,7 +3370,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2231,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3385,11 +3385,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2911,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3407,7 +3407,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2911,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3422,11 +3422,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1536,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3444,7 +3444,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1536,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3459,11 +3459,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3004,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3481,7 +3481,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3004,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3496,11 +3496,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3100,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3518,7 +3518,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3100,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3533,11 +3533,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3059,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3555,7 +3555,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3059,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3563,22 +3563,22 @@
  },
  {
   "id": "kickoff.proposed_depth.15/9-F-9 A",
-  "value": 428.2,
+  "value": 421.5,
   "description": "AI-proposed kick-off depth, 15/9-F-9 A (m MD)",
   "producer": {
    "script": "src/stage8c_proposal.py",
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 459,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
-  "note": "current table 421.5; proposed_approved N; method depth in text"
+  "note": "current table 421.5; proposed_approved Y; method depth in text"
  },
  {
   "id": "kickoff.table_depth.15/9-F-9 A",
@@ -3592,7 +3592,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 459,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3607,11 +3607,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 257,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3629,7 +3629,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 257,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3644,11 +3644,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2586,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3666,7 +3666,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2586,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3674,22 +3674,22 @@
  },
  {
   "id": "kickoff.proposed_depth.15/9-F-11 B",
-  "value": 2531.0,
+  "value": 2589.0,
   "description": "AI-proposed kick-off depth, 15/9-F-11 B (m MD)",
   "producer": {
    "script": "src/stage8c_proposal.py",
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3271,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
-  "note": "current table 2589; proposed_approved N; method depth in text"
+  "note": "current table 2589; proposed_approved Y; method depth in text"
  },
  {
   "id": "kickoff.table_depth.15/9-F-11 B",
@@ -3703,7 +3703,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3271,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3718,11 +3718,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1381,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3740,7 +3740,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1381,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3755,11 +3755,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3185,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3777,7 +3777,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3185,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3792,11 +3792,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2566,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3814,7 +3814,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2566,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3829,11 +3829,11 @@
    "function": "P (proposal table)"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1380,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3851,7 +3851,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1380,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3868,7 +3868,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 15,
   "status_vs_v2": "SAME",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3889,7 +3889,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": {
    "free text": 12,
    "depth sequence": 2
@@ -3900,16 +3900,16 @@
  },
  {
   "id": "kickoff.proposal_Y",
-  "value": 12,
+  "value": 15,
   "description": "Rows where the AI proposal equals the Stage 8b table",
   "producer": {
    "script": "src/stage8c_proposal.py",
    "function": "P"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3917,20 +3917,16 @@
  },
  {
   "id": "kickoff.proposal_N",
-  "value": [
-   "15/9-19 A",
-   "15/9-F-9 A",
-   "15/9-F-11 B"
-  ],
+  "value": [],
   "description": "Rows where the AI proposal differs from the Stage 8b table",
   "producer": {
    "script": "src/stage8c_proposal.py",
    "function": "P"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3945,9 +3941,9 @@
    "function": "P"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3964,7 +3960,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3982,7 +3978,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 1695.0,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -3999,7 +3995,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3059,
   "status_vs_v2": "CHANGED",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -4019,7 +4015,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -4043,9 +4039,13 @@
     "alternative_depths": "2183 (window bottom)",
     "note": "window top; a first window (2202-2207 m, 1997-07-26) was abandoned",
     "proposed_by": "AI",
-    "proposed_approved": "N",
-    "proposed_depth": 2183.0,
-    "proposed_reason": "The 1997-07-29 report states the window milled 2178-2183 m with 19 m of formation drilled below it, so under the rule's first tier the hole leaves the parent at the window bottom, 2183 m; 2178 m (window start) is the second-tier fallback for when no departure depth is stated. The first window (2202-2207 m, 1997-07-26) was abandoned and is not the kick-off; NOD and the structured field say 2178 m."
+    "proposed_approved": "Y",
+    "proposed_depth": 2178.0,
+    "proposed_reason": "Casing exit by a milled window: under the rule as ruled by TJ (decision 40) the kick-off is the top of the window, 2,178 m (window milled 2178-2183 m on 1997-07-29; an earlier window at 2,202-2,207 m was abandoned). NOD and the structured mdKickoff also say 2,178 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2178.0,
+    "proposed_reason.1": "Casing exit by a milled window: under the rule as ruled by TJ (decision 40) the kick-off is the top of the window, 2,178 m (window milled 2178-2183 m on 1997-07-29; an earlier window at 2,202-2,207 m was abandoned). NOD and the structured mdKickoff also say 2,178 m."
    },
    {
     "sidetrack": "15/9-19 B",
@@ -4064,7 +4064,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 2231.0,
-    "proposed_reason": "The report states the kick-off depth directly: 'DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M'. NOD's 2,200 m is not an input to the rule; the only '2200' in the 19 A and 19 B reports is a clock time ('AT 2200 HRS')."
+    "proposed_reason": "The report states the kick-off depth directly: 'DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M'. NOD's 2,200 m is not an input to the rule; the only '2200' in the 19 A and 19 B reports is a clock time ('AT 2200 HRS').",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2231.0,
+    "proposed_reason.1": "The report states the kick-off depth directly: 'DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M'. NOD's 2,200 m is not an input to the rule; the only '2200' in the 19 A and 19 B reports is a clock time ('AT 2200 HRS')."
    },
    {
     "sidetrack": "15/9-19 BT2",
@@ -4083,7 +4087,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 2911.0,
-    "proposed_reason": "The parent's last report states departure with a depth: 'COMMENCED DRILLING 8 1/2\" HOLE FROM 2911 M AT 15/9-19BT2' (after cement drilled to 2911 m), and the first BT2 report starts at the same depth. Tier 1."
+    "proposed_reason": "The parent's last report states departure with a depth: 'COMMENCED DRILLING 8 1/2\" HOLE FROM 2911 M AT 15/9-19BT2' (after cement drilled to 2911 m), and the first BT2 report starts at the same depth. Tier 1.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2911.0,
+    "proposed_reason.1": "The parent's last report states departure with a depth: 'COMMENCED DRILLING 8 1/2\" HOLE FROM 2911 M AT 15/9-19BT2' (after cement drilled to 2911 m), and the first BT2 report starts at the same depth. Tier 1."
    },
    {
     "sidetrack": "15/9-19 ST2",
@@ -4102,7 +4110,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 1536.0,
-    "proposed_reason": "Both 1992-12-19 narratives (parent last, sidetrack first) read 'None', so the third tier applies: measured depth at the transition, 1,536 m on both reports. Depth only, no text support; the parent had drilled cement to 1,486 m the day before, so the true departure could be shallower."
+    "proposed_reason": "Both 1992-12-19 narratives (parent last, sidetrack first) read 'None', so the third tier applies: measured depth at the transition, 1,536 m on both reports. Depth only, no text support; the parent had drilled cement to 1,486 m the day before, so the true departure could be shallower.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 1536.0,
+    "proposed_reason.1": "Both 1992-12-19 narratives (parent last, sidetrack first) read 'None', so the third tier applies: measured depth at the transition, 1,536 m on both reports. Depth only, no text support; the parent had drilled cement to 1,486 m the day before, so the true departure could be shallower."
    },
    {
     "sidetrack": "15/9-F-1 A",
@@ -4121,7 +4133,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 2620.0,
-    "proposed_reason": "The parent's last report says 'Commenced kick off to F-1A' without a depth and its md is 2620 m, so tier 2, event in text with depth from md. NOD agrees at 2,620 m."
+    "proposed_reason": "The parent's last report says 'Commenced kick off to F-1A' without a depth and its md is 2620 m, so tier 2, event in text with depth from md. NOD agrees at 2,620 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2620.0,
+    "proposed_reason.1": "The parent's last report says 'Commenced kick off to F-1A' without a depth and its md is 2620 m, so tier 2, event in text with depth from md. NOD agrees at 2,620 m."
    },
    {
     "sidetrack": "15/9-F-1 B",
@@ -4140,7 +4156,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 2617.0,
-    "proposed_reason": "The parent's last report says 'Drilled out cement and kicked off well to F-1 B' and its md is 2617 m (2,545 m the day before), so tier 2, event in text with depth from md; the md is the day's deepest point, so the kick-off may be a little shallower (NOD 2,604 m)."
+    "proposed_reason": "The parent's last report says 'Drilled out cement and kicked off well to F-1 B' and its md is 2617 m (2,545 m the day before), so tier 2, event in text with depth from md; the md is the day's deepest point, so the kick-off may be a little shallower (NOD 2,604 m).",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2617.0,
+    "proposed_reason.1": "The parent's last report says 'Drilled out cement and kicked off well to F-1 B' and its md is 2617 m (2,545 m the day before), so tier 2, event in text with depth from md; the md is the day's deepest point, so the kick-off may be a little shallower (NOD 2,604 m)."
    },
    {
     "sidetrack": "15/9-F-1 C",
@@ -4159,7 +4179,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 1364.0,
-    "proposed_reason": "Tier 1: the F-1 B report of 2014-02-22 states '50% formation obtained at 1364 m', the first report of new formation, and F-1 C's first report drills from 1,364 m. 1,355 m is only where time drilling started, the fallback used when no formation depth is stated. NOD agrees at 1,364 m."
+    "proposed_reason": "Tier 1: the F-1 B report of 2014-02-22 states '50% formation obtained at 1364 m', the first report of new formation, and F-1 C's first report drills from 1,364 m. 1,355 m is only where time drilling started, the fallback used when no formation depth is stated. NOD agrees at 1,364 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 1364.0,
+    "proposed_reason.1": "Tier 1: the F-1 B report of 2014-02-22 states '50% formation obtained at 1364 m', the first report of new formation, and F-1 C's first report drills from 1,364 m. 1,355 m is only where time drilling started, the fallback used when no formation depth is stated. NOD agrees at 1,364 m."
    },
    {
     "sidetrack": "15/9-F-9 A",
@@ -4176,9 +4200,13 @@
     "alternative_depths": "428.2 (window bottom); 436.5 (formation drilled to, 2009-07-02)",
     "note": "window top",
     "proposed_by": "AI",
-    "proposed_approved": "N",
-    "proposed_depth": 428.2,
-    "proposed_reason": "The window was milled from 421.5 m (top) to 428.2 m (bottom) and the 2009-07-02 report continues to drill formation below it (to 436.5 m), so the stated departure and first new formation are at the window bottom, 428.2 m (NOD 428 m); 421.5 m is the window-start fallback."
+    "proposed_approved": "Y",
+    "proposed_depth": 421.5,
+    "proposed_reason": "Casing exit by a milled window: kick-off = top of window, 421.5 m ('Milled 12-1/4\" sidetrack window from 421,5 m (top) to 424 m'); the window bottom, 428.2 m, is not used (TJ ruling, decision 40). NOD gives 428 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 421.5,
+    "proposed_reason.1": "Casing exit by a milled window: kick-off = top of window, 421.5 m ('Milled 12-1/4\" sidetrack window from 421,5 m (top) to 424 m'); the window bottom, 428.2 m, is not used (TJ ruling, decision 40). NOD gives 428 m."
    },
    {
     "sidetrack": "15/9-F-11 T2",
@@ -4197,7 +4225,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 246.0,
-    "proposed_reason": "No formation or departure depth is stated, so tier 2: the 2013-03-23 report says oriented drilling out of the cement started at 246 m (top of cement 244 m). 257 m is where the sidetrack was handed over the next day. NOD has no separate record."
+    "proposed_reason": "No formation or departure depth is stated, so tier 2: the 2013-03-23 report says oriented drilling out of the cement started at 246 m (top of cement 244 m). 257 m is where the sidetrack was handed over the next day. NOD has no separate record.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 246.0,
+    "proposed_reason.1": "No formation or departure depth is stated, so tier 2: the 2013-03-23 report says oriented drilling out of the cement started at 246 m (top of cement 244 m). 257 m is where the sidetrack was handed over the next day. NOD has no separate record."
    },
    {
     "sidetrack": "15/9-F-11 A",
@@ -4216,7 +4248,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 2586.0,
-    "proposed_reason": "Tier 1: 'Drilled cement and kicked off to F-11 A at 2586m MD' states the departure depth. NOD 2,578 m."
+    "proposed_reason": "Tier 1: 'Drilled cement and kicked off to F-11 A at 2586m MD' states the departure depth. NOD 2,578 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2586.0,
+    "proposed_reason.1": "Tier 1: 'Drilled cement and kicked off to F-11 A at 2586m MD' states the departure depth. NOD 2,578 m."
    },
    {
     "sidetrack": "15/9-F-11 B",
@@ -4233,9 +4269,13 @@
     "alternative_depths": "2531 (start of the cement and new-formation interval)",
     "note": "new formation reported by 2589 m; evidence is an interval 2531 to 2589 m",
     "proposed_by": "AI",
-    "proposed_approved": "N",
-    "proposed_depth": 2531.0,
-    "proposed_reason": "The only evidence is 'Drilled cement and new formation from 2531 m MD to 2589 m MD': the depth at which new formation is first reported is not separable inside the interval, so the first tier gives no point value; the second tier gives where the kick-off drilling started, 2,531 m. The sidetrack's first report starts at 2,627 m, so 2,589 m is not supported either. NOD 2,586 m and 2,589 m both lie inside the interval, so the uncertainty is about 58 m."
+    "proposed_approved": "Y",
+    "proposed_depth": 2589.0,
+    "proposed_reason": "LOW confidence. 'Drilled cement and new formation from 2531 m MD to 2589 m MD' reports new formation by the end of the interval, so departure is confirmed at 2,589 m, consistent with F-1 C (formation first reported); the interval start, 2,531 m, is not used (TJ ruling, decision 40). NOD gives 2,586 m, inside the interval.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2589.0,
+    "proposed_reason.1": "LOW confidence. 'Drilled cement and new formation from 2531 m MD to 2589 m MD' reports new formation by the end of the interval, so departure is confirmed at 2,589 m, consistent with F-1 C (formation first reported); the interval start, 2,531 m, is not used (TJ ruling, decision 40). NOD gives 2,586 m, inside the interval."
    },
    {
     "sidetrack": "15/9-F-15 A",
@@ -4254,7 +4294,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 1381.0,
-    "proposed_reason": "'Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.' puts the start of the kick-off at the end of the interval, 1,381 m, where the sidetrack's first report also starts. NOD agrees at 1,381 m."
+    "proposed_reason": "'Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.' puts the start of the kick-off at the end of the interval, 1,381 m, where the sidetrack's first report also starts. NOD agrees at 1,381 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 1381.0,
+    "proposed_reason.1": "'Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.' puts the start of the kick-off at the end of the interval, 1,381 m, where the sidetrack's first report also starts. NOD agrees at 1,381 m."
    },
    {
     "sidetrack": "15/9-F-15 B",
@@ -4273,7 +4317,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 3185.0,
-    "proposed_reason": "Tier 1: 'kicked off at 3185m' states the departure depth; the '50/50 cement/formation' remark relates to 3,210 m, drilled afterwards. NOD agrees at 3,185 m."
+    "proposed_reason": "Tier 1: 'kicked off at 3185m' states the departure depth; the '50/50 cement/formation' remark relates to 3,210 m, drilled afterwards. NOD agrees at 3,185 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 3185.0,
+    "proposed_reason.1": "Tier 1: 'kicked off at 3185m' states the departure depth; the '50/50 cement/formation' remark relates to 3,210 m, drilled afterwards. NOD agrees at 3,185 m."
    },
    {
     "sidetrack": "15/9-F-15 C",
@@ -4292,7 +4340,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 2566.0,
-    "proposed_reason": "Tier 2: cement was drilled from 2,490 to 2,566 m, then 'Initiated kick off', and no formation or departure depth is stated; 2,575 m (the NOD value) is only where the section had reached by the end of the day."
+    "proposed_reason": "Tier 2: cement was drilled from 2,490 to 2,566 m, then 'Initiated kick off', and no formation or departure depth is stated; 2,575 m (the NOD value) is only where the section had reached by the end of the day.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 2566.0,
+    "proposed_reason.1": "Tier 2: cement was drilled from 2,490 to 2,566 m, then 'Initiated kick off', and no formation or departure depth is stated; 2,575 m (the NOD value) is only where the section had reached by the end of the day."
    },
    {
     "sidetrack": "15/9-F-15 D",
@@ -4311,7 +4363,11 @@
     "proposed_by": "AI",
     "proposed_approved": "Y",
     "proposed_depth": 1380.0,
-    "proposed_reason": "The sidetrack's first report says 'Drilled cement and kicked off' without a depth, so tier 2 with depth from md: the parent's last report (kick-off plug set the day before) has md 1,380 m. NOD agrees at 1,380 m."
+    "proposed_reason": "The sidetrack's first report says 'Drilled cement and kicked off' without a depth, so tier 2 with depth from md: the parent's last report (kick-off plug set the day before) has md 1,380 m. NOD agrees at 1,380 m.",
+    "proposed_by.1": "AI",
+    "proposed_approved.1": "Y",
+    "proposed_depth.1": 1380.0,
+    "proposed_reason.1": "The sidetrack's first report says 'Drilled cement and kicked off' without a depth, so tier 2 with depth from md: the parent's last report (kick-off plug set the day before) has md 1,380 m. NOD agrees at 1,380 m."
    }
   ],
   "description": "Kick-off table with proposals",
@@ -4320,10 +4376,10 @@
    "function": "P"
   },
   "inputs": {
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -4346,11 +4402,11 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -4365,10 +4421,10 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -5138,12 +5194,12 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -5155,10 +5211,10 @@
    {
     "wellbore": "15/9-19 A",
     "td_md_m": 4131.0,
-    "kickoff_depth_proposed_m": 2183.0,
-    "drilled_length_m": 1948.0,
+    "kickoff_depth_proposed_m": 2178.0,
+    "drilled_length_m": 1953.0,
     "ddrs_to_td": 29.0,
-    "m_per_report_day": 67.2
+    "m_per_report_day": 67.3
    },
    {
     "wellbore": "15/9-19 B",
@@ -5219,10 +5275,10 @@
    {
     "wellbore": "15/9-F-11 B",
     "td_md_m": 4770.0,
-    "kickoff_depth_proposed_m": 2531.0,
-    "drilled_length_m": 2239.0,
+    "kickoff_depth_proposed_m": 2589.0,
+    "drilled_length_m": 2181.0,
     "ddrs_to_td": 15.0,
-    "m_per_report_day": 149.3
+    "m_per_report_day": 145.4
    },
    {
     "wellbore": "15/9-F-11 T2",
@@ -5267,10 +5323,10 @@
    {
     "wellbore": "15/9-F-9 A",
     "td_md_m": 1206.0,
-    "kickoff_depth_proposed_m": 428.2,
-    "drilled_length_m": 777.8,
+    "kickoff_depth_proposed_m": 421.5,
+    "drilled_length_m": 784.5,
     "ddrs_to_td": 6.0,
-    "m_per_report_day": 129.6
+    "m_per_report_day": 130.8
    }
   ],
   "description": "Drilled length and metres per report-day for the 15 sidetracks",
@@ -5279,10 +5335,10 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
-   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d",
+   "outputs/kickoff_proposal.csv": "70ddee0d0038d61fc268477ed9e8444d715092dfcada74b0a4969b1434f72a34"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
@@ -5375,9 +5431,9 @@
    "function": "module level"
   },
   "inputs": {
-   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62"
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -5623,7 +5679,7 @@
   "inputs": {
    "outputs/duration_family_summary.csv": "00cda462f7adfad5543e94b663a2b4f6bcbfd0cd4a47c74e542578f27c15ed24"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -5645,7 +5701,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -5668,7 +5724,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "provisional": null,
@@ -5685,7 +5741,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 95,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5702,7 +5758,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 730,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5719,7 +5775,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 32.2,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5737,7 +5793,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 11.3,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5754,7 +5810,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 19,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5771,7 +5827,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 18,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5788,7 +5844,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 94.7,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5796,7 +5852,7 @@
  },
  {
   "id": "data.sentinel_years_before_first_ddr",
-  "value": 17.56,
+  "value": 17.6,
   "description": "Years from the 1980-01-01 sentinel to 15/9-19 A's first genuine DDR (6415 days / 365.25)",
   "producer": {
    "script": "src/stage3_quality.py",
@@ -5805,11 +5861,11 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 17.5,
   "status_vs_v2": "CHANGED",
   "provisional": null,
-  "note": "the v2 text says 17.5 years; the computation gives 17.56, which rounds to 17.6 (v2 appears to have truncated)"
+  "note": "TJ ruling 4: use 17.6 years; the computation gives 17.56 (v2 text said 17.5)"
  },
  {
   "id": "s19.stuck_pipe_depth_m",
@@ -5822,7 +5878,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2741,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5839,7 +5895,7 @@
   "inputs": {
    "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 3569.0,
   "status_vs_v2": "SAME",
   "provisional": null,
@@ -5856,10 +5912,284 @@
   "inputs": {
    "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
   },
-  "timestamp": "2026-10-24T09:37:20Z",
+  "timestamp": "2026-10-24T09:51:16Z",
   "v2_value": 2394.0,
   "status_vs_v2": "SAME",
   "provisional": null,
   "note": "EXTERNAL, see above"
+ },
+ {
+  "id": "placeholders.none_total",
+  "value": 176,
+  "description": "Literal None strings in all fields (73 narratives + 103 forecasts)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "extract.old_table_encoding_rows_sum24Hr",
+  "value": 103,
+  "description": "sum24Hr rows whose text in the earlier table had a character-encoding error (UTF-8 bytes read as cp1252)",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "stage2_text_diff.py"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/old/volve_ddr_master.parquet": "c10f13490849ff1f90981a0833f3c99902e87e7bb00cd7ca1057e1e24f5f9792"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": 103,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.faithfulness_row_mismatches",
+  "value": 0,
+  "description": "Row-by-row mismatches between the ported classifier on the earlier narratives and the earlier phase labels (1,759 rows)",
+  "producer": {
+   "script": "src/stage4_faithfulness.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/stage4_faithfulness_phase_counts.csv": "e6466b27d853870ecd3a17f0c47bad6123d00bff6b2b372462a8011e2bf78650"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": 0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.size_patterns",
+  "value": {
+   "Spud / Conductor": "36.{0,5}(?:hole|HO|BHA); 30.{0,5}conductor",
+   "Surface casing": "26.{0,5}(?:hole|BHA|section); 20.{0,5}casing; RIH.{0,20}20.{0,5}cas; running.{0,15}20.{0,5}cas; ran.{0,10}20.{0,5}casing; land.{0,10}20.{0,5}casing",
+   "Intermediate drilling": "17.{0,3}1.2.{0,5}(?:hole|section|BHA); 17\\.5.{0,5}(?:hole|section); drilling.{0,15}17.{0,3}(?:1.2|5); drilled.{0,15}17.{0,3}(?:1.2|5)",
+   "Intermediate casing": "13.{0,3}3.8.{0,10}(?:casing|cas|liner); 10.{0,3}3.4.{0,10}(?:casing|cas|liner); RIH.{0,20}(?:13|10.{0,3}3).{0,10}(?:casing|liner|cas); running.{0,15}(?:13|10.{0,3}3).{0,10}(?:casing|liner); ran.{0,15}(?:13|10.{0,3}3).{0,10}(?:casing|liner); 14.{0,5}(?:casing|liner).{0,5}(?:run|ran|RIH); ran.{0,10}14.{0,5}casing; RIH.{0,15}14.{0,5}casing",
+   "Reservoir drilling": "12.{0,3}1.4.{0,5}(?:hole|section|BHA); 12\\.25.{0,5}(?:hole|section); drilling.{0,15}12.{0,3}(?:1.4|25); drilled.{0,15}12.{0,3}(?:1.4|25); 8.{0,3}1.2.{0,5}(?:hole|section|BHA); 8\\.5.{0,5}(?:hole|section); drilling.{0,15}8.{0,3}(?:1.2|5); drilled.{0,15}8.{0,3}(?:1.2|5); 8½.{0,5}(?:hole|section); 6.{0,3}(?:hole|section)",
+   "Liner / Casing run": "9.{0,3}5.8.{0,10}(?:casing|liner|screen); 7.{0,5}liner; 7.{0,5}casing"
+  },
+  "description": "Size-based patterns per phase from the frozen classifier (hole, casing and liner sizes)",
+  "producer": {
+   "script": "src/stage4_rules_table.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.rule_thresholds_days",
+  "value": {
+   "exact_W_minus_N_max": 1,
+   "exact_anchor_minus_W_max": 1,
+   "definitional_W_minus_N_max": 8,
+   "definitional_T_minus_W_min": 2,
+   "definitional_T_minus_W_max": 20,
+   "error_W_minus_anchor_min": 30,
+   "error_N_minus_anchor_max": 3,
+   "identity_W_minus_first_max": 7,
+   "identity_N_minus_W_min": 365
+  },
+  "description": "Day limits of the spud rules, formalised after the categories were assigned by inspection",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify()"
+  },
+  "inputs": {
+   "src/stage7_spud.py": "4863f3e589015b6b6adc6c40a5460e647566cfae4bd4fd8a0cd0dcf55dbfa4b9"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "f1.spud_section_statement",
+  "value": "2007: 4 reports, max depth 226 m; 2013: drilled to TD 3,632 m",
+  "description": "Statement for the spud section about F-1's two campaigns (TJ ruling 3)",
+  "producer": {
+   "script": "src/stage8c_report.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": "decision 42"
+ },
+ {
+  "id": "kickoff.nod_comparison",
+  "value": {
+   "with_nod_value": 12,
+   "equal": 6,
+   "within_10_m_not_equal": 4,
+   "further": 2,
+   "no_nod_value": 3
+  },
+  "description": "NOD wlbKickOffPoint compared with the recovered kick-off depths",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.F-11 B.interval_m",
+  "value": [
+   2531,
+   2589
+  ],
+  "description": "15/9-F-11 B: cement and new formation drilled over this interval (m); the kick-off depth is the end of the interval (LOW confidence)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.ruling_window_top",
+  "value": "for casing exits (milled windows), kick-off = top of window",
+  "description": "TJ rule addition, decision 40",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "duration.gap_flag_rule",
+  "value": "elapsed days to TD greater than 2 x reports to TD",
+  "description": "Gap flag definition",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "duration.n_gap_flagged",
+  "value": 7,
+  "description": "Wellbores with the gap flag",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "duration.indicative_only",
+  "value": [
+   "15/9-19 B",
+   "15/9-F-11"
+  ],
+  "description": "Wellbores whose TD is an abandoned parent leg or stub (indicative only)",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "39e2e900797e7cfd3128e3a199372ba8040b91fa60cba48a256f156c2a26751d"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.xml_declared_encoding",
+  "value": {
+   "none declared (ASCII only)": 336,
+   "ISO-8859-1": 1423
+  },
+  "description": "Character encoding declared in the DDR XML headers (files per encoding)",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/raw/manifest.csv": "631504c0a8fb110c680903473bf9ae0da396858b452cdb104c7abf12edc106f1"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "registry.n_entries",
+  "value": 225,
+  "description": "Number of entries in this registry (including this one)",
+  "producer": {
+   "script": "src/stage11_registry.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:51:16Z",
+  "v2_value": 59,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": "v2 registry had 59 entries"
  }
 ]

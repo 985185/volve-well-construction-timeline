@@ -183,8 +183,8 @@ add("td.table3", td.drop(columns="match_method").to_dict("records"), "Table 3: t
 sp = pd.read_csv(SP); sv = sp.category.value_counts().to_dict()
 for kk, v2v in [("EXACT", 7), ("DEFINITIONAL_OFFSET", 8), ("ERROR", 4), ("IDENTITY", 1), ("INHERITED", 2), ("UNRESOLVED", 4)]:
     add(f"spud.{kk.lower()}", int(sv[kk]), f"Spud category count: {kk}", S7S, "classify() (rules formalised after the assignments)", [SP, DDR, NODD, NODE, TD], v2v)
-add("spud.table4", sp[["wellbore", "witsml_spud", "first_ddr", "freetext_date", "nod_main_entry_date", "nod_predrill_entry_date", "nod_entry_date", "w_minus_nod_main_days", "w_minus_n_days", "category", "rule"]].to_dict("records"),
-    "Per-wellbore spud dates, offsets and categories (Fig. 4 uses w_minus_nod_main_days)", S7S, "module level", [SP, DDR, NODD, NODE])
+add("spud.table4", sp[["wellbore", "witsml_spud", "first_ddr", "freetext_date", "nod_main_entry_date", "nod_predrill_entry_date", "nod_entry_date", "w_minus_n_days", "w_minus_first_ddr_days", "category", "rule"]].to_dict("records"),
+    "Per-wellbore spud dates, offsets and categories (Fig. 4 and the table use w_minus_n_days: WITSML spud minus the NOD entry date closest to the first report)", S7S, "module level", [SP, DDR, NODD, NODE])
 g = sp.set_index("wellbore")
 add("spud.F-12.witsml_spud", g.loc["NO 15/9-F-12", "witsml_spud"], "15/9-F-12 WITSML spud date", S7S, "module level", [SP, DDR], "2007-03-15")
 add("spud.F-12.first_ddr", g.loc["NO 15/9-F-12", "first_ddr"], "15/9-F-12 first DDR (also free text and NOD)", S7S, "module level", [SP, DDR], "2007-06-14")
@@ -239,15 +239,52 @@ add("td.fseries_name_matched_exact", int((fs.outcome == "EXACT").sum()), "... of
 add("td.fseries_name_matched_exact_pct", round(100 * (fs.outcome == "EXACT").mean(), 1), "... percent exact (the exception is 15/9-F-15)", S7T, "module level", [TD], 94.7)
 a19 = d[(d.wellbore == "NO 15/9-19 A") & (d.date_report.str[:4] != "1980")]
 yrs = (pd.Timestamp(a19.date_report.str[:10].min()) - pd.Timestamp("1980-01-01")).days
-add("data.sentinel_years_before_first_ddr", round(yrs / 365.25, 2), f"Years from the 1980-01-01 sentinel to 15/9-19 A's first genuine DDR ({yrs} days / 365.25)", S3, "date checks", [DDR], 17.5,
-    note="the v2 text says 17.5 years; the computation gives 17.56, which rounds to 17.6 (v2 appears to have truncated)")
+add("data.sentinel_years_before_first_ddr", round(yrs / 365.25, 1), f"Years from the 1980-01-01 sentinel to 15/9-19 A's first genuine DDR ({yrs} days / 365.25)", S3, "date checks", [DDR], 17.5,
+    note="TJ ruling 4: use 17.6 years; the computation gives 17.56 (v2 text said 17.5)")
 s19 = d[(d.wellbore == "NO 15/9-19 S") & d.sum24Hr.str.contains(r"2[,]?741", regex=True)]
 add("s19.stuck_pipe_depth_m", 2741, "15/9-19 S stuck pipe depth quoted in the narratives of 1992-12-10 and 1992-12-11", S3, "manual reading checked by search", [DDR], 2741, note=f"found in {len(s19)} DDRs")
 add("external.nod_19S_suspended_md_m", 3569.0, "NOD wellbore history text for 15/9-19 S: temporarily suspended at 3,569.0 m MD (2,394.0 m TVD RKB)", "none (NOD FactPages web text, outside the CSV export)", "not reproduced by code",
     [NODM], 3569.0, note="EXTERNAL: carried from the old registry entry manuscript_revision_part2_nod_wellbore_history_ground_truth; not reproducible from the snapshot")
 add("external.nod_19S_suspended_tvd_m", 2394.0, "Same source, true vertical depth", "none (NOD FactPages web text)", "not reproduced by code", [NODM], 2394.0, note="EXTERNAL, see above")
 
+
+# ---------------------------------------------------------------- K. entries added for the manuscript draft (Stage 12)
+add("placeholders.none_total", int(pr.loc["TOTAL", "literal_None"]), "Literal None strings in all fields (73 narratives + 103 forecasts)", S3, "placeholder register", [DDR])
+oldt = pd.read_parquet("data/interim/old/volve_ddr_master.parquet")
+mm = d[["filename", "sum24Hr"]].merge(oldt[["filename", "sum24hr"]], on="filename")
+
+
+def _moji(t):
+    try: return t.encode("cp1252").decode("utf-8")
+    except Exception: return t
+
+
+nm_rows = int(sum(1 for a, b in zip(mm.sum24Hr.fillna(""), mm.sum24hr.fillna("")) if _moji(b) == a and a != b))
+add("extract.old_table_encoding_rows_sum24Hr", int(sum(1 for a, b in zip(mm.sum24Hr.fillna(""), mm.sum24hr.fillna("")) if (_moji(b.strip()) == a.strip()) and _moji(b) != b)), "sum24Hr rows whose text in the earlier table had a character-encoding error (UTF-8 bytes read as cp1252)", S2, "stage2_text_diff.py", [DDR, "data/interim/old/volve_ddr_master.parquet"], 103)
+add("classifier.faithfulness_row_mismatches", 0, "Row-by-row mismatches between the ported classifier on the earlier narratives and the earlier phase labels (1,759 rows)", "src/stage4_faithfulness.py", "module level", ["outputs/stage4_faithfulness_phase_counts.csv"], 0)
+add("classifier.size_patterns", {r.phase: r.size_patterns for r in ru.itertuples() if isinstance(r.size_patterns, str)}, "Size-based patterns per phase from the frozen classifier (hole, casing and liner sizes)", "src/stage4_rules_table.py", "module level", ["outputs/stage4_priority_rules.csv"])
+add("spud.rule_thresholds_days", {"exact_W_minus_N_max": 1, "exact_anchor_minus_W_max": 1, "definitional_W_minus_N_max": 8, "definitional_T_minus_W_min": 2, "definitional_T_minus_W_max": 20,
+                                   "error_W_minus_anchor_min": 30, "error_N_minus_anchor_max": 3, "identity_W_minus_first_max": 7, "identity_N_minus_W_min": 365},
+    "Day limits of the spud rules, formalised after the categories were assigned by inspection", S7S, "classify()", ["src/stage7_spud.py"])
+add("f1.spud_section_statement", "2007: 4 reports, max depth 226 m; 2013: drilled to TD 3,632 m", "Statement for the spud section about F-1's two campaigns (TJ ruling 3)", "src/stage8c_report.py", "module level", [DDR], note="decision 42")
+kd = kt.copy(); has = kd.nod_minus_ddr_m.notna()
+add("kickoff.nod_comparison", {"with_nod_value": int(has.sum()), "equal": int((kd.nod_minus_ddr_m[has] == 0).sum()), "within_10_m_not_equal": int(((kd.nod_minus_ddr_m[has].abs() <= 10) & (kd.nod_minus_ddr_m[has] != 0)).sum()),
+                                  "further": int((kd.nod_minus_ddr_m[has].abs() > 10).sum()), "no_nod_value": int((~has).sum())}, "NOD wlbKickOffPoint compared with the recovered kick-off depths", S8, "SPEC", [KT, NODD, NODE], provisional=True)
+add("kickoff.F-11 B.interval_m", [2531, 2589], "15/9-F-11 B: cement and new formation drilled over this interval (m); the kick-off depth is the end of the interval (LOW confidence)", S8, "SPEC", [KT, DDR], provisional=True)
+add("kickoff.ruling_window_top", "for casing exits (milled windows), kick-off = top of window", "TJ rule addition, decision 40", S8, "SPEC", [KT], provisional=True)
+add("duration.gap_flag_rule", "elapsed days to TD greater than 2 x reports to TD", "Gap flag definition", S9, "module level", [DU])
+add("duration.n_gap_flagged", int(dw.gap_flag.sum()), "Wellbores with the gap flag", S9, "module level", [DU])
+add("duration.indicative_only", dw[dw.indicative_only].wellbore.tolist(), "Wellbores whose TD is an abandoned parent leg or stub (indicative only)", S9, "module level", [DU])
+
 # ---------------------------------------------------------------- write registry
+import glob
+_enc = {}
+for _f in sorted(glob.glob("data/raw/ddr_xml/*.xml")):
+    _m = re.search(rb'encoding="([^"]+)"', open(_f, "rb").read(200))
+    _k = _m.group(1).decode() if _m else "none declared (ASCII only)"
+    _enc[_k] = _enc.get(_k, 0) + 1
+add("data.xml_declared_encoding", _enc, "Character encoding declared in the DDR XML headers (files per encoding)", "src/stage2_extract.py", "module level", [R])
+add("registry.n_entries", len(E) + 1, "Number of entries in this registry (including this one)", "src/stage11_registry.py", "module level", [DDR], 59, note="v2 registry had 59 entries")
 ids = [e["id"] for e in E]; assert len(ids) == len(set(ids)), [i for i in ids if ids.count(i) > 1]
 json.dump(E, open("outputs/numbers_registry.json", "w", encoding="utf-8"), indent=1, default=str, ensure_ascii=False)
 print("entries:", len(E), "| status:", pd.Series([e["status_vs_v2"] for e in E]).value_counts().to_dict(), "| provisional:", sum(1 for e in E if e["provisional"]))
