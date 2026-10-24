@@ -30,6 +30,8 @@ NOD Volve records: 27 = 24 matched + 3 with no WITSML counterpart (15/9-F-10 A a
 
 ### What v2 actually did
 
+**The spud categories were assigned by inspection of the three sources for each wellbore; the rules below were formalised afterwards to describe those assignments.** They are a description of the judgement, not an algorithm that produced it (TJ decision 30; this wording goes in the manuscript).
+
 v2 had no coded tolerance: the v2 manuscript still carries `[TJ: define the tolerance for "Exact" ... and the day range that separates a definitional offset from an error]`, and no script that produced `spud_validation.csv` exists in `inputs/`, the Databricks export, or `C:\Volve` (searched). The labels were assigned by judgement and explained row by row in the `notes` column. What I recovered is therefore a rule set that is *consistent with every v2 label and note*, not a stated v2 algorithm. This matters for the claim of independence: the dates are recomputed from raw data and the new NOD snapshot, but the category logic is fitted to v2's calls.
 
 Definitions: W = WITSML dTimSpud (date); F = first genuine DDR date (the 1980 sentinel ignored); T = free-text operational start date from the early narratives (taken from v2, checked below); N = NOD entry date, using the main entry or the predrill entry, whichever is closer to the anchor (anchor = T if present, else F). Days are calendar-date differences. Rules, first that fires wins:

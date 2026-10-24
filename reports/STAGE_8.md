@@ -2,7 +2,9 @@
 
 Date: 2026-10-24. Branch: `rerun-2026-10`. Scripts: `src/stage8_kickoff.py`, `src/stage8_f1c.py`, `src/stage8_report.py`. Outputs: `outputs/kickoff_recovery.csv`, `outputs/stage8_f1c_depths.csv` (depths only). Full narrative evidence (up to 300 characters per DDR) is in `local_private/stage8_kickoff_evidence.txt` and `local_private/stage8_f1c_ddrs.md`, untracked per the narrative policy. Quotes below are 15 words or fewer.
 
-**Status: complete. STOPPED for TJ as instructed. The 15/9-F-1 C result (open item 1) is in section 3 and is not what v2 states.**
+**UPDATE 2026-10-24 (TJ decisions 27 to 29): sections 1, 3 and 4 below used the v2 depths and are superseded by `reports/STAGE_8b.md`, where every kick-off is re-derived as the depth at which the sidetrack leaves the parent. Section 2 (the 15th sidetrack is 15/9-19 A) and the F-1 C evidence in section 3 stand.**
+
+**Status (original): complete. STOPPED for TJ as instructed. The 15/9-F-1 C result (open item 1) is in section 3 and is not what v2 states.**
 
 ## 1. Kick-off table, one row per sidetrack by designation (15)
 
