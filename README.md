@@ -26,33 +26,51 @@ MSYS_NO_PATHCONV=1 databricks fs cp -r --overwrite --profile volve \
 
 4. Expected result: 1,759 XML files, 21,315,879 bytes in total. `src/stage1_manifest.py` writes `data/raw/manifest.csv` (path, sha256, bytes) and checks names and sizes against the Marketplace metadata catalog (`workspace.default.volve_metadata_catalog`).
 
-## Setup
+## Setup and inputs
 
 ```
 python -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt     # Windows; use .venv/bin/python elsewhere
 ```
 
-All scripts are run from the repository root, for example `.venv/Scripts/python -X utf8 src/stage2_extract.py`.
+The pipeline needs only three things:
 
-## Reproducing the stages
+1. **The Volve DDR XML** in `data/raw/ddr_xml/` (1,759 files, see above).
+2. **The NOD wellbore snapshot** in `data/raw/nod/`: the FactPages Table View exports `wellbore_development_all_20261024.csv` and `wellbore_exploration_all_20261024.csv` (national files, retrieved 2026-10-24 from https://factpages.sodir.no). The register changes over time, so a newer export may give different NOD comparison results; the registry values of this repository correspond to the snapshot of 2026-10-24.
+3. **The files tracked in this repository** (`src/`, `inputs/`, and the committed outputs that act as inputs: `outputs/audit_adjudications.csv`, `outputs/kickoff_signoff.xlsx`).
 
-| Stage | Command(s) | Reads | Writes |
-|---|---|---|---|
-| 1 Fetch raw | `stage1_expected.py` (A), `stage1_manifest.py`, `stage1_nod.py` | Marketplace catalog, FactPages export URLs | `data/raw/manifest.csv`, `data/raw/nod/*` |
-| 2 Extract | `stage2_extract.py`; comparison with the old table: `stage2_export_old.py` (A), `stage2_diff.py` (A), `stage2_text_diff.py` (A) | `data/raw/ddr_xml/` | `data/interim/ddr.parquet` (raw strings, not tracked) |
-| 3 Data quality | `stage3_quality.py` | `ddr.parquet` | `outputs/stage3_*.csv` |
-| 4 Classify | `stage4_export_old_classified.py` (A), `stage4_faithfulness.py` (A), `stage4_classify.py` (A), `stage4_rules_table.py` | `ddr.parquet`, `src/classifier_v3.py` | `outputs/table2_phase_distribution.csv`, `outputs/stage4_*.csv`, `outputs/stage4_priority_rules.md` |
-| 5 Timeline | `stage5_timeline.py` | classified table, `ddr.parquet` | `outputs/timeline.csv` (1,421 rows) |
-| 6 Audit | `stage6_prepare.py` (A), `stage6_estimates.py` | audit frame, `inputs/old_audit/audit_adjudicated.csv` | `outputs/audit_adjudications.csv` |
-| 7 NOD validation | `stage7_td.py`, `stage7_spud.py` | NOD snapshot, `ddr.parquet` | `outputs/td_validation.csv`, `outputs/spud_validation.csv` |
-| 8 Kick-off | `stage8_kickoff.py`, `stage8b_kickoff_table.py`, `stage8b_signoff.py`, `stage8c_proposal.py`, `stage8d_apply_signoff.py` | `ddr.parquet`, NOD snapshot, `outputs/kickoff_signoff.xlsx` | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv`, `outputs/kickoff_signoff.xlsx` |
-| 9 Duration | `stage9_duration.py` | classified table, `outputs/kickoff_proposal.csv` | `outputs/duration_table.csv`, `outputs/duration_family_summary.csv` |
-| 10 Figures | `stage10_fig2_index.py`, then `figure1_depth_vs_time.py`, `figure2_days_vs_depth.py`, `figure3_td_validation.py`, `figure4_spud_offset.py` | `outputs/` only | `outputs/figures/*.png` (300 dpi) |
-| 11 Registry | `stage11_registry.py` (A) | everything above | `outputs/numbers_registry.json` and comparison CSVs |
-| 12 Manuscript | `stage12_manuscript.py`, `stage12_changes.py`, `stage12_check.py` | registry, `inputs/paper2_v2.docx` | `manuscript/paper2_draft.docx`, `manuscript/CHANGES.md`, `outputs/manuscript_registry_check.csv` |
+## Reproducing everything
 
-**Steps marked (A) need files that only the author holds and that are not in the repository:** the earlier extracted tables `workspace.default.volve_ddr_master` and `workspace.default.volve_ddr_classified` (exported once to `data/interim/old/` by the two `*_export_old*` scripts, they contain narrative text) and the original audit sample under `local_private/`. `stage1_expected.py` needs access to the Marketplace metadata catalog. These steps compare the rerun with the earlier state (faithfulness of the classifier port, row-by-row diff of the extraction, mapping of the original 50 audit records). Their results are in `outputs/` and `reports/`. As written, `stage4_classify.py` and `stage11_registry.py` also read those old tables, so a reader without them can rerun the extraction, data quality, classifier (`src/classifier_v3.py` is a verbatim port of `inputs/repo_before/classifier_v3.py`) and the NOD, kick-off and duration steps by supplying their own classified table, but not the full registry as written. The pipeline has not been run from a clean clone.
+From the repository root:
+
+```
+.venv/Scripts/python -X utf8 src/run_pipeline.py
+```
+
+This runs every stage in order (extract, data quality, classification, timeline, audit, NOD validation, kick-off, durations, figures, registry, manuscript draft) in about a minute on a laptop and stops at the first failure. It was tested from a fresh clone with only the DDR XML and the NOD snapshot added: all 235 registry values, all tables and figures, and the manuscript text came out identical to the committed ones (only timestamps and the SHA-256 of generated files differ in `outputs/numbers_registry.json`).
+
+| Stage | Script(s) | Writes |
+|---|---|---|
+| 1 Fetch raw | `stage1_manifest.py`, `stage1_nod.py` | `data/raw/manifest.csv`, `data/raw/nod/*_metadata.json` |
+| 2 Extract | `stage2_extract.py` | `data/interim/ddr.parquet` (raw strings, not tracked) |
+| 3 Data quality | `stage3_quality.py` | `outputs/stage3_*.csv` |
+| 4 Classify | `stage4_classify.py`, `stage4_rules_table.py` (classifier: `src/classifier_v3.py`, frozen) | `outputs/table2_phase_distribution.csv`, `outputs/stage4_priority_rules.*` |
+| 5 Timeline | `stage5_timeline.py` | `outputs/timeline.csv` (1,421 rows) |
+| 6 Audit | `stage6_prepare.py` (frame and strata), `stage6_estimates.py` (reads the published `outputs/audit_adjudications.csv`) | audit frame in `data/interim/`, estimates printed and registered |
+| 7 NOD validation | `stage7_td.py`, `stage7_spud.py` | `outputs/td_validation.csv`, `outputs/spud_validation.csv` |
+| 8 Kick-off | `stage8_f1c.py`, `stage8_kickoff.py`, `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv` |
+| 9 Duration | `stage9_duration.py` | `outputs/duration_table.csv`, `outputs/duration_family_summary.csv` |
+| 10 Figures | `stage10_fig2_index.py`, `figure1_depth_vs_time.py` to `figure4_spud_offset.py` | `outputs/figures/*.png` (300 dpi; read `outputs/` only) |
+| 11 Registry | `stage11_registry.py` | `outputs/numbers_registry.json` and comparison CSVs |
+| 12 Manuscript | `stage12_manuscript.py`, `stage12_changes.py`, `stage12_check.py` | `manuscript/paper2_draft.docx`, `manuscript/CHANGES.md`, `outputs/manuscript_registry_check.csv` |
+
+**Optional verification steps** compare the rerun with the author's earlier Databricks tables or catalog. They print `SKIPPED` and exit normally when those files are absent, and **no reported number depends on running them**:
+
+- `stage1_expected.py` (set `VOLVE_FETCH_CATALOG=1` and a Databricks profile `volve`): checks file names and sizes against the Marketplace metadata catalog.
+- `stage2_diff.py`, `stage2_text_diff.py`, `stage4_faithfulness.py` and the comparison blocks inside `stage4_classify.py` and `stage6_prepare.py`: need `data/interim/old/*.parquet` (exported with `stage2_export_old.py` and `stage4_export_old_classified.py` from the earlier tables) or `local_private/old_audit/`, which hold narrative text and are not in the repository.
+- The few numbers that state these comparisons in the paper (103 narratives whose encoding was repaired, 1,303 classified on the earlier text, 0 mismatches, 0 phase changes) are read from their committed results (`outputs/stage2_encoding_summary.json`, `outputs/stage4_faithfulness_summary.json`, `outputs/stage4_faithfulness_phase_counts.csv`, `outputs/stage4_phase_changes_mojibake.csv`) and are flagged as such in the registry.
+
+Historical steps that are not part of the pipeline because they were run once and must not be rerun: `stage8b_signoff.py` and `stage8c_proposal.py` (they built the kick-off sign-off workbook that the author has since signed off; both refuse to overwrite it), `stage6_publish_adjudications.py` (author side, builds the published adjudication file), `stage7_spud_evidence.py` (writes narrative snippets to `local_private/` only), and the report builders `stage8_report.py`, `stage8c_report.py`, `stage9_report.py`.
 
 The narrative of each stage (what ran, results, arithmetic, discrepancies) is in `reports/STAGE_<n>.md`; decisions taken by the author are logged in `notes/decisions.md`; suspected classifier gaps (the classifier is frozen) are in `notes/classifier_gaps.md`.
 

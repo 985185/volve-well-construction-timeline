@@ -78,9 +78,9 @@ table2.unclassified.pct,25.9,25.9,SAME,
 classifier.classified,1303,1303,SAME,
 classifier.classified_pct,74.1,74.1,SAME,
 classifier.unclassified,456,456,SAME,
-classifier.faithfulness_classified_on_old_text,1303,1303,SAME,
-classifier.faithfulness_phase_counts_equal,true,true,SAME,
-classifier.mojibake_phase_changes,0,null,NEW,
+classifier.faithfulness_classified_on_old_text,1303,1303,SAME,"comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
+classifier.faithfulness_phase_counts_equal,true,true,SAME,"comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
+classifier.mojibake_phase_changes,0,null,NEW,"comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
 classifier.ddrs_matching_0_1_2_3plus,"[456, 781, 376, 146]",null,NEW,"values from the Stage 4 run, sum 1,759"
 classifier.size_patterns_per_phase,"{""Spud / Conductor"": 2, ""Surface casing"": 6, ""Intermediate drilling"": 4, ""Intermediate casing"": 8, ""Reservoir drilling"":",null,NEW,
 audit.category.BOP_RISER,147,147,SAME,
@@ -221,8 +221,8 @@ s19.stuck_pipe_depth_m,2741,2741,SAME,found in 2 DDRs
 external.nod_19S_suspended_md_m,3569.0,3569.0,SAME,EXTERNAL: carried from the old registry entry manuscript_revision_part2_nod_wellbore_history_ground_truth; not reproducible from the snapshot
 external.nod_19S_suspended_tvd_m,2394.0,2394.0,SAME,"EXTERNAL, see above"
 placeholders.none_total,176,null,NEW,
-extract.old_table_encoding_rows_sum24Hr,103,103,SAME,
-classifier.faithfulness_row_mismatches,0,0,SAME,
+extract.old_table_encoding_rows_sum24Hr,103,103,SAME,"comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
+classifier.faithfulness_row_mismatches,0,0,SAME,"comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
 classifier.size_patterns,"{""Spud / Conductor"": ""36.{0,5}(?:hole|HO|BHA); 30.{0,5}conductor"", ""Surface casing"": ""26.{0,5}(?:hole|BHA|section); 20.{",null,NEW,
 spud.rule_thresholds_days,"{""exact_W_minus_N_max"": 1, ""exact_anchor_minus_W_max"": 1, ""definitional_W_minus_N_max"": 8, ""definitional_T_minus_W_min"":",null,NEW,
 f1.spud_section_statement,"""2007: 4 reports, max depth 226 m; 2013: drilled to TD 3,632 m""",null,NEW,decision 42
