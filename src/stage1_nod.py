@@ -23,7 +23,7 @@ for k, p in FILES.items():
     print(k, len(rows), "subset", len(sub), "sept", len(old), "new-only", meta["files"][k]["only_in_new"], "sept-only", meta["files"][k]["only_in_sept"], "changed", len(changed))
     for n in changed:
         print("  CHANGED", n, {c: (oldset[n][c], newset[n][c]) for c in oldset[n] if oldset[n][c] != newset[n].get(c)})
-json.dump(meta, open("data/nod/nod_snapshot_20261024_metadata.json", "w"), indent=1)
+json.dump(meta, open("data/nod/nod_snapshot_20261024_metadata.json", "w", newline="\n"), indent=1)   # LF on every platform: byte-identical when regenerated
 with open("data/raw/manifest.csv", "a", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     for k, v in meta["files"].items(): w.writerow([v["path"], v["sha256"], v["bytes"]])
