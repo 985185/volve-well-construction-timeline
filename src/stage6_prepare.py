@@ -24,6 +24,7 @@ def cat(t):
     return "OTHER"
 u = d[d.phase == "Unclassified"].copy()
 u["category"] = u.text.map(cat)
+u["day"] = u.date_report.str[:10]
 cc = u.category.value_counts()
 print("unclassified:", len(u)); print(cc.to_dict()); print("sum", int(cc.sum()))
 tgt = {"BOP_RISER": 147, "EMPTY_RECORD": 73, "OTHER": 63, "GENERIC_TRIP": 61, "MUD_FLUID": 35, "WIRELINE_NON_TEST": 34, "PRODUCTION_MON": 30, "RIG_MAINTENANCE": 8, "WAITING_GENERIC": 3, "WELL_HANDOVER": 2, "LABOUR": 0}
@@ -34,7 +35,6 @@ OLDCAT = "local_private/old_audit/unclassified_categories.csv"   # the author's 
 if os.path.exists(OLDCAT):
     # compare with the old category file row by row (wellbore + date)
     oc = pd.read_csv(OLDCAT); oc["day"] = oc.date_report.str[:10]
-    u["day"] = u.date_report.str[:10]
     mm = u.merge(oc[["wellbore", "day", "category"]], on=["wellbore", "day"], suffixes=("", "_old"), how="outer", indicator=True)
     print("old category file vs new, rows:", mm._merge.value_counts().to_dict(), "| category differs:", int((mm.category != mm.category_old).sum()))
 

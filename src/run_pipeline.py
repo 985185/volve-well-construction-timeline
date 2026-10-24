@@ -41,11 +41,11 @@ for stage, script, optional in STEPS:
     t0 = time.time()
     r = subprocess.run([sys.executable, "-X", "utf8", f"src/{script}"], capture_output=True, text=True, encoding="utf-8")
     skipped = r.returncode == 0 and "SKIPPED" in r.stdout
-    status = "skipped (optional)" if skipped else ("ok" if r.returncode == 0 else f"FAILED (exit {r.returncode})")
-    print(f"[stage {stage:>2}] {script:<34} {status:<20} {time.time() - t0:5.1f} s")
+    status = ("skipped (optional)" if optional else "ok, optional part skipped") if skipped else ("ok" if r.returncode == 0 else f"FAILED (exit {r.returncode})")
+    print(f"[stage {stage:>2}] {script:<34} {status:<26} {time.time() - t0:5.1f} s")
     if skipped: print("           " + next(l for l in r.stdout.splitlines() if "SKIPPED" in l)[:200])
     log.append((script, status))
     if r.returncode != 0:
         print(r.stdout[-1500:], r.stderr[-2500:])
         sys.exit(1)
-print(f"done: {sum(s == 'ok' for _, s in log)} steps ok, {sum(s.startswith('skipped') for _, s in log)} optional steps skipped")
+print(f"done: {sum(s.startswith('ok') for _, s in log)} steps ok, {sum(s.startswith('skipped') for _, s in log)} optional steps skipped entirely")
