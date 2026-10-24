@@ -11,7 +11,7 @@ import docx
 import pandas as pd
 from docx.enum.text import WD_COLOR_INDEX
 from docx.oxml import parse_xml
-from docx.oxml.ns import nsdecls
+from docx.oxml.ns import nsdecls, qn
 from docx.shared import Inches
 from docx.text.paragraph import Paragraph
 from docx.text.run import Run
@@ -85,8 +85,9 @@ sub(7, 'The archive also stores 73 narratives as the literal string "None" and 3
     'The archive also stores placeholder values in 515 fields (331 depth sentinels, 7 zero depths, 176 literal "None" strings and one date sentinel) that a simple null test does not detect.',
     "placeholders.total_cells_all_fields", "full placeholder register (decision 19); v2 counted 411 (331 + 7 + 73)")
 sub(8, "The output is an open depth-time-phase dataset of 1,421 records, published with the classifier code. It supports days-versus-depth benchmarking and records-based screening of legacy wellbores, and the method transfers to other WITSML 1.4.1.1 archives.",
-    f"Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule, and the four wellbores of the 15/9-F-1 family share their hole above {L}1,364 m{R} MD. The output is an open depth-time-phase dataset of 1,421 records, with per-wellbore durations to total depth, published with the classifier code. It supports days-versus-depth benchmarking and records-based screening of legacy wellbores, and the method transfers to other WITSML 1.4.0.0 archives.",
-    "kickoff.F-1_family_shared_hole_above_m;kickoff.n_sidetracks;data.witsml_schema_version", "new kick-off and duration results (PROVISIONAL); WITSML version from the files")
+    f"Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; where NOD records a kick-off point ({L}12{R} of 15), the recovered depth agrees within 10 m for {L}10{R}. The output is an open depth-time-phase dataset of 1,421 records, with per-wellbore durations to total depth, published with the classifier code. It supports days-versus-depth benchmarking and records-based screening of legacy wellbores, and the method transfers to other WITSML 1.4-series drillReport archives.",
+    "kickoff.nod_comparison;kickoff.n_sidetracks;data.witsml_schema_version", "new kick-off and duration results (PROVISIONAL); abstract clause on NOD agreement replaces the F-1 family clause (TJ review); WITSML version from the files")
+sub(7, "one wellbore-identity conflation", "one NOD entry date that marks a later drilling campaign", "spud.identity", "category renamed from Wellbore-identity conflation (TJ review; F-1 verified: first 2013 report 2013-07-22, no NOD pre-drill date)")
 sub(10, "(Energistics 2012)", "(Energistics n.d.)", None, "Energistics reference now cites the schema version declared in the files with an access date (decision 45)")
 dropnote(14)
 sub(20, "dataset's WITSML 1.4.1.1 XML files into a single managed table holding 1,759 rows", "dataset's WITSML 1.4.0.0 XML files (1,759 files, 21,315,879 bytes, each recorded with a SHA-256 hash) into a single table holding 1,759 rows",
@@ -95,8 +96,10 @@ sub(20, "The raw XML archive was not accessible from the compute environment dur
     "Every field is kept as a raw string at extraction, so placeholder values stay visible, and the table is regenerated from the raw files by the published code.",
     "data.n_xml_files", "v2 said the raw XML was not accessible; it was downloaded and hashed in the rerun")
 dropnote(25)
+sub(25, "Spud/Conductor, Surface casing, Intermediate drilling, Intermediate casing, Reservoir drilling, Liner/Casing run", "Spud/Conductor, Surface hole and casing, Intermediate drilling, Intermediate casing, 12¼ in. and smaller hole, Liner/Casing run", None,
+    "label-only change (TJ review): phase names Surface casing and Reservoir drilling renamed for display; classifier patterns and priorities are frozen and untouched")
 sub(25, "because drilling reports frequently express hole and casing sizes with these glyphs.",
-    "because drilling reports frequently express hole and casing sizes with these glyphs. The priority order is the order listed above. Hole and casing size separate the drilling phases: 36 in. hole and 30 in. conductor (Spud/Conductor), 26 in. hole and 20 in. casing (Surface casing), 17½ in. hole (Intermediate drilling), 13⅜, 10¾ and 14 in. casing (Intermediate casing), 12¼, 8½ and 6 in. hole and coring (Reservoir drilling), and 9⅝ and 7 in. liner or casing (Liner/Casing run); the remaining phases are matched on keywords alone. Every regular expression is listed in the repository file src/classifier_v3.py.",
+    "because drilling reports frequently express hole and casing sizes with these glyphs. The priority order is the order listed above. Hole and casing size separate the drilling phases: 36 in. hole and 30 in. conductor (Spud/Conductor), 26 in. hole and 20 in. casing (Surface hole and casing), 17½ in. hole (Intermediate drilling), 13⅜, 10¾ and 14 in. casing (Intermediate casing), 12¼, 8½ and 6 in. hole and coring (12¼ in. and smaller hole), and 9⅝ and 7 in. liner or casing (Liner/Casing run); the remaining phases are matched on keywords alone. Phase names describe the hole and casing sizes each pattern group matches; on Volve platform wells the 12¼ in. hole is usually the section above the reservoir. Every regular expression is listed in the repository file src/classifier_v3.py.",
     "classifier.size_patterns", "resolves the open note on priority order and hole-size rules (open item 3)")
 dropnote(29)
 sub(29, "was drawn from these 383 with a fixed random seed of 42.", "was drawn from these 383 with a fixed random seed of 42; the rerun of the analysis from the raw files kept this sample and its strata, after confirming that each of the 50 records maps to exactly one DDR file.",
@@ -123,14 +126,15 @@ sub(44, "The result was checked three ways: a row-count query (1,759), a differe
 sub(52, "a direct query against the classified table returned exactly 1,421.", "recomputing the dataset from the raw XML gave the same 1,421 rows as the earlier analysis, identical in every column.", "timeline.rows", "rerun check against the v2 dataset")
 sub(52, "days from first DDR, measured depth", "days from the wellbore's first report with a recorded depth, measured depth", None, "wording fix (TJ note 4): days are counted from each wellbore's first row with a usable depth")
 sub(52, "Fig. 2 plots days since first DDR against measured depth for all 26 wellbores.",
-    "Days are therefore counted from each wellbore's first row with a usable depth, not from its first DDR. Fig. 2 plots days from the first report with recorded depth against measured depth for all 26 wellbores.", None, "wording fix, Fig. 2 axis label")
+    "Days are therefore counted from each wellbore's first row with a usable depth, not from its first DDR. Fig. 2 plots report number against measured depth for all 26 wellbores. The report number counts every DDR of a wellbore, with or without a recorded depth, and is 1 for the wellbore's first report with a recorded depth; it is the unit of the reports to TD in Table 6, which starts at the wellbore's first report whether or not that report carries a depth.", None, "Fig. 2 x-axis changed from calendar days to report count (TJ review)")
 dropnote(61)
 sub(61, "Table 4 summarises the outcome, and Fig. 4 plots the offset (WITSML minus NOD) by category.",
-    f"Table 4 summarises the outcome, and Fig. 4 plots the offset (WITSML spud date minus the NOD pre-drill entry date where NOD records one, since it marks the start of top-hole drilling, and otherwise the NOD main entry date) by category. The categories were first assigned by inspection of the three sources for each wellbore; the rules below were formalised afterwards to describe those assignments. For the four other wellbores with NOD pre-drill dates (15/9-F-4, F-5, F-14 and F-15), the first report in the archive coincides with the pre-drill entry date (the same day, or one day later for F-4), which supports using the pre-drill date as the spud reference. Applied mechanically, the rules reproduce 25 of the 26 assignments. 15/9-F-11 was assigned Exact by inspection but is unresolved under the rule: NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR archive; the archive's 2013 reports describe a fresh spud from seabed, including the 30-inch conductor, so the relationship between the two campaigns cannot be determined from these records. Exact: the WITSML date is within one day of the NOD date, and the first report or free-text spud follows it by at most one day. Definitional offset: the WITSML date is within 8 days of the NOD date and the free-text operational start follows it by 2 to 20 days. WITSML data-entry error: the WITSML date differs from the first report or free-text spud by more than 30 days while the NOD date agrees with them within 3 days. Wellbore-identity conflation: the WITSML date is within 7 days of the first report but more than a year from the NOD date. Inherited: the sidetrack carries its parent's spud date. Two technical sidetracks share a NOD record with their parent leg by the depth matching of Section 3.5 (15/9-19 BT2 with 19 B); the sidetrack is left unresolved and the parent leg is classed as a definitional offset when it has no free-text spud date of its own. Everything else is unresolved.",
-    "spud.rule_thresholds_days;spud.table4;spud.unresolved;spud.predrill_first_ddr_offset_days;spud.F-11.predrill_period", "resolves the open note on spud tolerances (open item 5); NOD date rule (decision 47); wording: assigned by inspection, rules formalised afterwards (decision 30); F-11 stays Unresolved (TJ ruling, decision 48); pre-drill first-report sentence added")
+    f"Table 4 summarises the outcome, and Fig. 4 plots the offset by category. The offset is the WITSML spud date minus the NOD pre-drill entry date where NOD records one, since it marks the start of top-hole drilling, and otherwise the NOD main entry date. For the four wellbores whose archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report coincides with that date (the same day, or one day later for F-4), which supports using the pre-drill date as the spud reference. The categories were assigned by inspection of the three sources for each wellbore, and the rules in the Rule column of Table 4 were formalised afterwards to describe those assignments. Applied mechanically, the rules reproduce 25 of the 26 assignments. 15/9-F-11 was assigned Exact by inspection but is unresolved under the rule: NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR archive; the archive's 2013 reports describe a fresh spud from seabed, including the 30-inch conductor, so the relationship between the two campaigns cannot be determined from these records.",
+    "spud.rule_thresholds_days;spud.table4;spud.unresolved;spud.predrill_first_ddr_offset_days;spud.F-11.predrill_period", "resolves the open note on spud tolerances (open item 5); NOD date rule (decision 47); F-11 stays Unresolved (decision 48); TJ review: category rules moved to the Rule column of Table 4 and the paragraph reordered (reference date, pre-drill evidence, inspection then formalised rules, 25 of 26, F-11)")
 sub(64, "by three months to a full year", "by 91 to 340 days", "spud.table4", "recomputed offsets against the first report (F-12 91, F-4 92, F-7 137, F-15 340 days)")
-sub(65, "an ordinary spud-to-first-report gap.", "an ordinary spud-to-first-report gap. The reports of F-1 fall into two campaigns: four reports in December 2007 with a maximum depth of 226 m, and the 2013 reports, in which the well was drilled to its total depth of 3,632 m.",
-    "f1.reports_2007;f1.reports_2013;f1.spud_section_statement", "TJ ruling 3 (decision 42)")
+sub(65, "an ordinary spud-to-first-report gap. NOD, however, records an entry date of 23 July 2013, nearly six years later and about four weeks before the WITSML spud date (20 August 2013) and NOD entry date (23 August 2013) of 15/9-F-1 A, the sidetrack drilled from the same slot. NOD's 15/9-F-1 record most plausibly reflects the 2013 re-entry ahead of the sidetrack campaign, not the 2007 spud. The case is therefore classified as a wellbore-identity conflation: the WITSML value is consistent with the wellbore's own chronology.",
+    "an ordinary spud-to-first-report gap. The 2007 reports are top-hole only (four reports, maximum depth 226 m). F-1 was drilled to its total depth of 3,632 m in the 2013 campaign, whose first report (22 July 2013) is one day before NOD's entry date (23 July 2013). NOD records no pre-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. NOD's date therefore marks the later campaign, not the 2007 spud, and the case is classified as NOD date marks later campaign: the WITSML value is consistent with the wellbore's own chronology.",
+    "f1.reports_2007;f1.reports_2013;f1.spud_section_statement;f1.first_report_2013;f1.nod_main_entry_date;f1.nod_predrill_entry_date", "TJ ruling 3 (decision 42); TJ review: category renamed, F-1 paragraph rewritten after verifying that the first 2013 report is 2013-07-22 and that NOD records no pre-drill date for F-1; the re-entry-ahead-of-the-sidetrack reading removed")
 
 # ---- 5.6 kick-off (rewritten), 5.7 duration (new)
 dropnote(67)
@@ -145,7 +149,10 @@ sub(72, "concentrated in drilling progress reported without a hole size.", "conc
     "duration.table", "new duration results")
 sub(82, "such as 15/9-F-1 and 15/9-F-1 C, are not independent penetrations above their kick-off depth.", f"such as the four wellbores of the 15/9-F-1 family, which share the hole above {L}1,364 m{R} MD, are not independent penetrations above their kick-off depths.",
     "kickoff.F-1_family_shared_hole_above_m", "decision 34 replaces the 'F-1 / F-1 C share formations above 3,059 m' statement (PROVISIONAL)")
-sub(84, "WITSML 1.4.1.1", "WITSML 1.4.0.0", "data.witsml_schema_version", "WITSML version from the files")
+sub(84, "any WITSML 1.4.1.1 archive", "WITSML 1.4-series drillReport archives (tested here on 1.4.0.0)", "data.witsml_schema_version", "WITSML version from the files; TJ review: tested only on 1.4.0.0")
+sub(72, "Days-versus-depth curves (Fig. 2)", "Depth-versus-report-count curves (Fig. 2)", None, "Fig. 2 x-axis is the report number (TJ review)")
+sub(88, "2013 re-entry reports ahead of the F-1 A sidetrack", "2013 drilling campaign reports", None, "F-1 stratum wording (TJ review)")
+sub(98, "one apparent error is a wellbore-identity conflation in the register", "one apparent error is a NOD entry date that marks a later drilling campaign", "spud.identity", "category renamed (TJ review)")
 sub(87, "was adjudicated by a single reviewer, and", "was adjudicated by a single reviewer, the author, and", None, "open item 4 resolved")
 setp(90, f"Kick-off depths were read from the narratives by one rule, and two rest on weaker evidence: 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of cement and new formation ({L}2,531 to 2,589 m{R}). NOD gives no kick-off point for three sidetracks. All four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole above {L}1,364 m{R} MD, and F-1, F-1 A and F-1 B share it above approximately {L}2,617 to 2,620 m{R} MD; any formation-level analysis treating them as independent must account for this. Metres per report-day are rates per reported day, not per elapsed day, and the elapsed time to total depth is affected by gaps between reports in the archive (the gap flag in Table 6).",
      "v2 limitation: two depth-sequence kick-offs; F-1 and F-1 C shared interval above the F-1 C kick-off", "kickoff.F-1_family_shared_hole_above_m;kickoff.F-1_F-1A_F-1B_shared_hole_above_m;kickoff.F-11 B.interval_m", "decisions 34 and 40 (PROVISIONAL); duration caveat added")
@@ -164,7 +171,8 @@ setp(143, f"Every quantitative figure in this paper traces to an entry in the nu
 RESOLVED.append(dict(location=f"{SEC[143]} (paragraph 143)", note=P[143].text[P[143].text.index("[TJ:"):]))
 
 # references and captions
-run_sub(P[119], 0, "2012", "n.d.")
+assert P[119].runs[0].text.rstrip().endswith("2012."), P[119].runs[0].text
+run_sub(P[119], 0, "2012.", "n.d.")
 run_sub(P[119], 1, "Version 1.4.1.1", "data schema version 1.4.0.0, as declared in the Volve DDR files")
 run_sub(P[119], 2, "witsml-data-standards/.", "witsml-data-standards/ (accessed 24 October 2026).")
 log("References (paragraph 119)", "Energistics. 2012. ... Version 1.4.1.1", "Energistics. n.d. ... data schema version 1.4.0.0, as declared in the Volve DDR files ... (accessed 24 October 2026)", "data.witsml_schema_version",
@@ -173,8 +181,9 @@ sub(123, "(accessed 8 September 2026)", "(accessed 24 October 2026)", "data.nod_
 t129 = P[129]; run_sub(t129, 0, "Coley, C.,", "Coley, C.J.,"); t129._p.remove(t129.runs[1]._r)
 RESOLVED.append(dict(location="References (paragraph 129)", note="[TJ: verify] (Sidahmed et al. 2015); verified through the Crossref record of DOI 10.2118/173429-MS, decision 44"))
 log("References (paragraph 129)", "Sidahmed, M., Coley, C., and Shirzadi, S. 2015 ... [TJ: verify]", "Sidahmed, M., Coley, C.J., and Shirzadi, S. 2015 ...", None, "title and authors verified through Crossref (OnePetro returned 403); citation kept")
-sub(137, "Fig. 2: Days since first DDR versus measured depth for all 26 wellbores, coloured by phase.", "Fig. 2: Days from first report with recorded depth versus measured depth for all 26 wellbores, coloured by hole section (other phases and unclassified reports in grey).", None, "axis label and caption wording (TJ)")
-sub(141, "Fig. 4: Spud date offset (WITSML minus NOD) for 25 wellbores, coloured by validation category.", "Fig. 4: Spud date offset (WITSML spud date minus the NOD pre-drill entry date where recorded, otherwise the NOD main entry date) for 25 wellbores, coloured by validation category.", "spud.table4", "one offset definition, outcome-independent NOD date rule (decisions 41 and 47)")
+sub(137, "Fig. 2: Days since first DDR versus measured depth for all 26 wellbores, coloured by phase.", "Fig. 2: Report number (1 = the wellbore's first report with recorded depth) versus measured depth for all 26 wellbores, coloured by hole section (other phases and unclassified reports in grey).", None, "Fig. 2 x-axis is the report number (TJ review)")
+sub(139, "for the 24 matched wellbores, with 1:1 reference line.", "for the 24 matched wellbores, with 1:1 reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.", None, "title removed from the image; information moved to the caption (TJ review)")
+sub(141, "Fig. 4: Spud date offset (WITSML minus NOD) for 25 wellbores, coloured by validation category.", "Fig. 4: Spud date offset (WITSML spud date minus the NOD pre-drill entry date where recorded, otherwise the NOD main entry date) for 25 wellbores, coloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is clipped at -400 days and labelled with its value.", "spud.table4", "one offset definition, outcome-independent NOD date rule (decisions 41 and 47)")
 
 # flush the edited paragraphs
 for i, text in T.items():
@@ -185,6 +194,10 @@ for i, fn, w in [(134, "figure1_depth_vs_time.png", 6.5), (136, "figure2_days_vs
     RESOLVED.append(dict(location=f"Figures (paragraph {i})", note=P[i].text))
     for r in P[i].runs: P[i]._p.remove(r._r)
     P[i].add_run().add_picture(f"outputs/figures/{fn}", width=Inches(w))
+    sp = P[i]._p.pPr.find(qn("w:spacing"))
+    if sp is not None and sp.get(qn("w:line")) is not None: del sp.attrib[qn("w:line")]       # a multiple line height clips inline images
+    P[i].paragraph_format.keep_with_next = True                                               # the image stays with its caption below it
+    P[i + 1].paragraph_format.keep_with_next = None                                           # the caption does not hold on to the next figure
 
 # =========================================================================== tables
 t1 = doc.tables[0]
@@ -203,6 +216,10 @@ set_cell(t1.rows[3].cells[1], "99.94%"); set_cell(t1.rows[3].cells[2], "1,758");
 log("Table 1, row rig", "100.0% / 1,759", "99.94% / 1,758, note: 1 record missing (1980 sentinel)", "table1.rig_npd_name_alias.count;table1.rig_npd_name_alias.pct", "the v2 value counted the constant column 'name' (decision 17)")
 set_cell(t1.rows[4].cells[0], "forecast24hr (genuine)"); set_cell(t1.rows[4].cells[1], "94.14%"); set_cell(t1.rows[4].cells[2], "1,656"); set_cell(t1.rows[4].cells[3], '103 literal "None" strings excluded')
 log("Table 1, row forecast24hr", "100.0% / 1,759", '94.14% / 1,656, note: 103 literal "None" strings excluded', "table1.forecast24hr_genuine.count;table1.forecast24hr_genuine.pct", "treated like sum24Hr (decision 18, deliberate change)")
+for row in doc.tables[1].rows:
+    c0 = row.cells[0].text.strip()
+    if c0 in ("Reservoir drilling", "Surface casing"): set_cell(row.cells[0], {"Reservoir drilling": "12¼ in. and smaller hole", "Surface casing": "Surface hole and casing"}[c0])
+log("Table 2", "Reservoir drilling; Surface casing", "12¼ in. and smaller hole; Surface hole and casing", None, "label-only change (TJ review): counts unchanged (256 and 66), classifier patterns frozen")
 t4 = doc.tables[3]
 set_cell(t4.rows[1].cells[1], "6"); set_cell(t4.rows[1].cells[2], "15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D")
 set_cell(t4.rows[2].cells[2], "Administrative spud precedes operational start by days to weeks (15/9-19 B, F-1 A, F-1 B, F-1 C, F-5, F-9 A, F-11 B, F-14)")
@@ -240,19 +257,37 @@ def fdiff(x):
 
 body_t, head_t, cap_t, note_t, bullet_t = P[48], P[53], P[55], P[56], P[98]
 
+# ---- Table 4 rebuilt with a Rule column (the category rules moved out of the text of Section 5.5)
+RULE = {"Exact agreement": "R4: WITSML date within 1 day of the NOD date, and the first report or free-text spud follows it by at most 1 day.",
+        "Definitional offset": "R6: WITSML date within 8 days of the NOD date, and the free-text operational start follows it by 2 to 20 days. R5: a parent leg whose NOD record is claimed by a technical sidetrack and that has no free-text spud date of its own (15/9-19 B).",
+        "WITSML data-entry error": "R2: WITSML date differs from the first report or free-text spud by more than 30 days, while the NOD date agrees with them within 3 days.",
+        "NOD date marks later campaign": "R3: WITSML date within 7 days of the first report, but more than 1 year from the NOD date.",
+        "Inherited parent spud date": "R1: the sidetrack carries the same spud date as its parent.",
+        "Unresolved": "R5: a technical sidetrack whose NOD record is its parent leg's (15/9-19 BT2 with 19 B, 19 ST2 with 19 SR). R7: any wellbore that no other rule fits."}
+rows4 = []
+for r in t4.rows[1:]:
+    c = [x.text for x in r.cells]
+    if c[0] == "Wellbore-identity conflation": c[0] = "NOD date marks later campaign"
+    rows4.append([c[0], c[1], RULE.get(c[0], ""), c[2]])
+tbl4 = make_table(["Outcome", "Wellbores", "Rule", "Detail"], rows4, [1700, 800, 3900, 2960])
+t4._tbl.addnext(tbl4); t4._tbl.getparent().remove(t4._tbl)
+note4 = new_par_after(tbl4, note_t, "Rules are applied in the order R1 (inherited), R5 (technical sidetrack), R2 (error), R3 (later campaign), R4 (exact), R6 (definitional offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7).")
+log("Table 4", "three columns (Outcome, Wellbores, Detail); category named Wellbore-identity conflation", "four columns with a Rule column; category named NOD date marks later campaign", "spud.rule_thresholds_days;spud.table4",
+    "TJ review: rules moved from the text of Section 5.5 into the table; the technical-sidetrack rule now names the wellbores it applies to (15/9-19 BT2, 19 ST2 and the parent leg 19 B)")
+
 # ---- Table 5 (kick-off) and the text around it
 kt = pd.DataFrame(val("kickoff.table"))
 MET = {"depth in text": "depth in text", "event in text, depth from md": "event in text, depth from md", "depth sequence (narrative empty)": "depth sequence (narrative empty)"}
 rows5, hl5 = [], set()
 for ri, r in enumerate(kt.itertuples()):
-    parent = "none in WITSML" if str(r.parent).startswith("none") else r.parent
+    parent = "15/9-19 S (per NOD)" if str(r.parent).startswith("none") else r.parent
     rows5.append([r.sidetrack, parent, fdepth(r.ddr_kickoff_depth_m), MET[r.method], "" if pd.isna(r.nod_wlbKickOffPoint_m) else fdepth(r.nod_wlbKickOffPoint_m), fdiff(r.nod_minus_ddr_m), r.confidence])
     hl5 |= {(ri, 2), (ri, 5)}
 tbl5 = make_table(["Sidetrack", "Parent", "Kick-off depth (m MD)", "Method", "NOD kick-off (m)", "NOD minus DDR (m)", "Confidence"], rows5, [1350, 1500, 1050, 2260, 900, 1100, 1200], hl5, right={2, 4, 5})
 A = new_par_after(P[67]._p, body_t, f"All 15 sidetracks by designation (15/9-19 A, 19 B, 19 BT2 and 19 ST2, F-1 A, F-1 B and F-1 C, F-9 A, F-11 A, F-11 B and F-11 T2, and F-15 A to F-15 D) yielded a kick-off depth (Table 5). For {L}11{R} the depth is written in the narrative; for {L}3{R} (15/9-F-1 A, F-1 B and F-15 D) the narrative names the kick-off event but not the depth, which is taken from the measured depth of the same report; for {L}1{R} (15/9-19 ST2) both reports at the transition are empty and the depth is the measured depth there, the weakest case. For 15/9-F-1 C the last F-1 B report of 22 February 2014 reads \"Commenced time drilling to1364 m. 50% formation obtained at 1364 m.\", and the first F-1 C report drills 17 1/2 in. hole from that depth, so the kick-off is {L}1,364 m{R}. The depth of {L}3,059 m{R} that the narratives report on 13 March 2014 is the start of the 8 1/2 in. section, after casing was run, not the kick-off. 15/9-19 A is a sidetrack whose kick-off is the top of a milled window at {L}2,178 m{R} (window milled from 2,178 to 2,183 m), a depth that NOD also records.")
 cap5 = new_par_after(A._p, cap_t, "Table 5: Sidetrack kick-off depths, 15 sidetracks")
 cap5._p.addnext(tbl5)
-note5 = new_par_after(tbl5, note_t, f"{L}[TJ: DRAFT. Values highlighted in yellow are PROVISIONAL: the kick-off depths were proposed by an AI tool from the narratives and are pending author verification (outputs/kickoff_signoff.xlsx). Remove this note and the highlighting once the author columns are filled.]{R} Depths are m MD. NOD minus DDR is NOD's wlbKickOffPoint minus the recovered depth; blank where NOD has no value.")
+note5 = new_par_after(tbl5, note_t, f"{L}[TJ: DRAFT. Values highlighted in yellow are PROVISIONAL: the kick-off depths were proposed by an AI tool from the narratives and are pending author verification (outputs/kickoff_signoff.xlsx). Remove this note and the highlighting once the author columns are filled.]{R} Depths are m MD. NOD minus DDR is NOD's wlbKickOffPoint minus the recovered depth; blank where NOD has no value. 15/9-19 A: NOD lists 15/9-19 S as its parent wellbore. 15/9-19 S exists as a WITSML wellbore (reports of 1992), but the NOD record that ends on the day 15/9-19 A was entered (15/9-19 SR2, 18 to 25 July 1997) has no WITSML wellbore, so no WITSML parent report precedes the 15/9-19 A reports and its kick-off depth is read from those reports.")
 log("Section 5.6", "(no kick-off table)", "Table 5: sidetrack, parent, kick-off depth, method, NOD value, difference, confidence", "kickoff.table;kickoff.method_counts;kickoff.nod_comparison", "new table from the kick-off table (PROVISIONAL, highlighted)")
 log("Section 5.6", "Twelve free-text and two depth-sequence recoveries; 15th sidetrack unidentified; the F-1 C example 'Drilled and oriented 8 1/2\" from 3059 m'",
     "11 depth in text, 3 event in text with depth from md, 1 depth sequence; 15 recovered; F-1 C 1,364 m; 3,059 m is the 8 1/2 in. section start; 19 A (2,178 m) is the 15th sidetrack",
@@ -264,14 +299,14 @@ rows6, hl6 = [], set()
 for ri, r in enumerate(dt.itertuples()):
     src = dl if r.wellbore in dl.index else do
     ind = r.wellbore in val("duration.indicative_only")
-    rows6.append([r.wellbore + (" (indicative)" if ind else ""), r.first_ddr, fdepth(r.td_md_m), r.td_date, fm(r.elapsed_days_to_td), fm(r.ddrs_to_td), "yes" if r.gap_flag else "", fdepth(src.loc[r.wellbore, "drilled_length_m"]), fdepth(src.loc[r.wellbore, "m_per_report_day"])])
+    rows6.append([r.wellbore + (" (indicative)" if ind else ""), r.first_ddr, fdepth(r.td_md_m), r.td_date, fm(r.elapsed_days_to_td), fm(r.ddrs_to_td), "yes" if r.gap_flag else "", fdepth(src.loc[r.wellbore, "drilled_length_m"]), fm(src.loc[r.wellbore, "m_per_report_day"], 1)])
     if r.wellbore in dl.index: hl6 |= {(ri, 7), (ri, 8)}
 tbl6 = make_table(["Wellbore", "First report", "TD (m)", "TD reached", "Elapsed days to TD", "Reports to TD", "Gap flag", "Drilled length (m)", "m per report-day"], rows6, [1650, 1050, 800, 1050, 900, 800, 650, 1230, 1230], hl6, right={2, 4, 5, 7, 8})
 h57 = new_par_after(P[69]._p, head_t, "5.7 Duration to Total Depth")
 a57 = new_par_after(h57._p, body_t, f"Table 6 gives, for each wellbore, the first report (the 1980 date sentinel excluded), the date total depth was first reached (the maximum valid depth of Table 3), the elapsed calendar days from the first report to that date, the number of reports in that span (inclusive), the drilled length (total depth minus the kick-off depth of Table 5 for the 15 sidetracks, total depth for the other 11) and metres per report-day (drilled length divided by the number of reports). Elapsed days and reports agree where a wellbore was reported daily and differ where the archive has gaps; wellbores whose elapsed days exceed twice their reports are flagged. Seven of the 26 are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 days after its first report on 2 December 2007, in 31 reports, four of them from 2007. 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) end at the depth of an abandoned parent leg or stub (Section 5.4), so their durations are indicative only. Drilled lengths and rates for sidetracks depend on the kick-off depths of Section 5.6; rates are per reported day, not per elapsed day, and for F-1 they mix two campaigns. Per-phase report counts for each wellbore and well family are published with the duration table.")
 cap6 = new_par_after(a57._p, cap_t, "Table 6: Duration to total depth (TD) and drilled length, 26 wellbores")
 cap6._p.addnext(tbl6)
-note6 = new_par_after(tbl6, note_t, "Gap flag: elapsed days to TD exceed twice the reports to TD. Drilled length is total depth minus the Table 5 kick-off depth for sidetracks (values highlighted in yellow are provisional) and total depth for original wellbores. (indicative): TD is the depth of an abandoned parent leg or stub.")
+note6 = new_par_after(tbl6, note_t, "Gap flag: elapsed days to TD exceed twice the reports to TD. Drilled length is total depth minus the Table 5 kick-off depth for sidetracks (values highlighted in yellow are provisional) and total depth for original wellbores; for the original wellbores this is measured depth from the rig datum and includes the water depth. (indicative): TD is the depth of an abandoned parent leg or stub.")
 log("Section 5.7 (new)", "(no duration results)", "new subsection and Table 6: first report, TD, TD date, elapsed days, reports to TD, gap flag, drilled length, m per report-day", "duration.table;duration.drilled_length_and_rate_sidetracks;duration.drilled_length_and_rate_originals;duration.n_gap_flagged",
     "TJ answers to the Stage 9 questions; drilled length and rate for sidetracks are PROVISIONAL")
 

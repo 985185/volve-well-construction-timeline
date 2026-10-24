@@ -5,7 +5,7 @@ import matplotlib.dates as mdates
 import matplotlib.patches as mpatches
 import matplotlib.pyplot as plt
 import pandas as pd
-from figure_style import PHASE_COLORS, save
+from figure_style import PHASE_COLORS, label, save
 
 t = pd.read_csv("outputs/timeline.csv")
 t["day"] = pd.to_datetime(t.date.str[:10])
@@ -35,7 +35,6 @@ panel(axes[1], ["NO 15/9-F-14"], "15/9-F-14\n(development well)")
 panel(axes[2], ["NO 15/9-F-1", "NO 15/9-F-1 B", "NO 15/9-F-1 C"], "15/9-F-1, F-1 B, F-1 C\n(sidetrack family)")
 panel(axes[3], ["NO 15/9-F-7"], "15/9-F-7\n(shallow, TD 1,085 m)")
 axes[0].set_ylabel("Measured depth (m)")
-fig.legend(handles=[mpatches.Patch(color=c, label=p) for p, c in PHASE_COLORS.items()], loc="lower center", ncol=7, fontsize=6.5, bbox_to_anchor=(0.5, -0.08))
-fig.suptitle("Depth versus time, four representative wellbores (points coloured by phase)", fontsize=11)
-fig.tight_layout(rect=[0, 0.06, 1, 0.95])
+fig.legend(handles=[mpatches.Patch(color=c, label=label(p)) for p, c in PHASE_COLORS.items()], loc="lower center", ncol=7, fontsize=6.5, bbox_to_anchor=(0.5, -0.08))
+fig.tight_layout(rect=[0, 0.06, 1, 1])
 save(fig, "figure1_depth_vs_time.png")

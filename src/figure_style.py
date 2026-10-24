@@ -22,13 +22,21 @@ PHASE_COLORS = {
     "Unclassified": "#dddddd",
 }
 
+# display labels (label-only change, classifier patterns frozen): the phase names in the classifier output stay as they are
+DISPLAY = {"Reservoir drilling": "12¼ in. and smaller hole", "Surface casing": "Surface hole and casing"}
+
+
+def label(phase):
+    return DISPLAY.get(phase, phase)
+
+
 # validation categories (Fig. 4), same colours as v2
 CATEGORY_COLORS = {
     "EXACT": ("#2ca02c", "Exact"),
     "DEFINITIONAL_OFFSET": ("#1f77b4", "Definitional offset"),
     "ERROR": ("#d62728", "WITSML data-entry error"),
     "INHERITED": ("#ff9896", "Inherited parent spud date"),
-    "IDENTITY": ("#9467bd", "Wellbore-identity conflation"),
+    "IDENTITY": ("#9467bd", "NOD date marks later campaign"),
     "UNRESOLVED": ("#7f7f7f", "Unresolved"),
 }
 

@@ -22,8 +22,6 @@ for r in m.itertuples():
 ax.set_xlim(0, 5600); ax.set_ylim(0, 5600); ax.set_aspect("equal"); ax.grid(alpha=0.2)
 ax.set_xlabel("WITSML maximum measured depth (m)"); ax.set_ylabel("NOD total depth (m)")
 ax.legend(loc="upper left", fontsize=9)
-ax.set_title("TD validation: WITSML maximum depth versus NOD total depth (24 matched wellbores of 26)\n"
-             f"Not plotted (unmatched, no NOD counterpart): {', '.join(un.witsml_wellbore.str.replace('NO 15/9-', ''))}", fontsize=10)
 fig.tight_layout()
 save(fig, "figure3_td_validation.png")
 print("plotted", len(m), "unmatched", un.witsml_wellbore.tolist())

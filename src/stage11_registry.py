@@ -233,6 +233,22 @@ add("duration.family_summary", fam_s.to_dict("records"), "Well-family summary: w
 add("f1.reports_2007", {"ddrs": 4, "first": "2007-12-02", "last": "2007-12-05", "max_valid_depth_m": 226}, "15/9-F-1 reports of 2007", "src/stage8c_report.py", "module level", [DDR])
 add("f1.reports_2013", {"ddrs": 34, "first": "2013-07-22", "last": "2013-08-24", "max_valid_depth_m": 3632, "td_date": "2013-08-17"}, "15/9-F-1 reports of 2013", "src/stage8c_report.py", "module level", [DDR])
 
+# F-1 spud verification (TJ review): first 2013 report and NOD dates, computed from the extraction and the NOD snapshot
+_f1 = d[d.wellbore == "NO 15/9-F-1"].assign(day=lambda x: pd.to_datetime(x.date_report.str[:10]))
+_f1_2013 = _f1[_f1.day.dt.year == 2013].day.min()
+assert _f1_2013 == pd.Timestamp("2013-07-22") and len(_f1[_f1.day.dt.year == 2013]) == 34
+add("f1.first_report_2013", str(_f1_2013.date()), "Date of the first 15/9-F-1 report of the 2013 campaign", "src/stage11_registry.py", "module level", [DDR])
+add("f1.nod_main_entry_date", str(pd.to_datetime(_nf.loc["15/9-F-1", "wlbEntryDate"], format="%d.%m.%Y").date()), "NOD main entry date of 15/9-F-1", "src/stage11_registry.py", "module level", [NODD])
+_pre = _nf.loc["15/9-F-1", "wlbEntryPreDrillDate"]
+assert pd.isna(_pre)
+add("f1.nod_predrill_entry_date", "none", "NOD pre-drill entry date of 15/9-F-1 (the field is empty: NOD records none)", "src/stage11_registry.py", "module level", [NODD])
+# parent of 15/9-19 A in the NOD register (Table 5 note)
+_wb = set(d.wellbore)
+add("kickoff.19A_nod_parent", {"nod_diskos_parent": _nf.loc["15/9-19 A", "wlbDiskosWellboreParent"], "19 S_in_witsml": "NO 15/9-19 S" in _wb, "19 SR2_in_witsml": any("SR2" in w for w in _wb),
+                               "19 SR2_entry": _nf.loc["15/9-19 SR2", "wlbEntryDate"], "19 SR2_completion": _nf.loc["15/9-19 SR2", "wlbCompletionDate"], "19 A_entry": _nf.loc["15/9-19 A", "wlbEntryDate"]},
+    "NOD parent record of 15/9-19 A and whether it exists as a WITSML wellbore", "src/stage11_registry.py", "module level", [DDR, NODE])
+add("fig4.axis_clip_days", int(re.search(r"^CLIP = (\d+)", open("src/figure4_spud_offset.py", encoding="utf-8").read(), re.M).group(1)), "Fig. 4 axis clip: bars beyond this many days are clipped and labelled with their value (15/9-F-1)", "src/figure4_spud_offset.py", "module level", ["src/figure4_spud_offset.py"])
+
 # ---------------------------------------------------------------- J. derived constants and text figures
 add("audit.ci_level_pct", 95, "Confidence level of the Wilson interval", S6, "wilson()", [AA], 95)
 add("audit.strata_cutoff_days", 730, "Construction era = date within 730 days of the wellbore's first DDR (decision 6: original definition kept)", "src/stage6_prepare.py", "module level", [AF], 730)

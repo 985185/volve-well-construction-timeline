@@ -201,6 +201,11 @@ duration.drilled_length_and_rate_originals,"[{""wellbore"": ""15/9-19 S"", ""td_
 duration.family_summary,"[{""family"": ""15/9-19"", ""wellbores"": 5, ""n_ddrs"": 375, ""n_spud_conductor"": 0, ""n_surface_casing"": 2, ""n_intermediate_dril",null,NEW,False,
 f1.reports_2007,"{""ddrs"": 4, ""first"": ""2007-12-02"", ""last"": ""2007-12-05"", ""max_valid_depth_m"": 226}",null,NEW,False,
 f1.reports_2013,"{""ddrs"": 34, ""first"": ""2013-07-22"", ""last"": ""2013-08-24"", ""max_valid_depth_m"": 3632, ""td_date"": ""2013-08-17""}",null,NEW,False,
+f1.first_report_2013,"""2013-07-22""",null,NEW,False,
+f1.nod_main_entry_date,"""2013-07-23""",null,NEW,False,
+f1.nod_predrill_entry_date,"""none""",null,NEW,False,
+kickoff.19A_nod_parent,"{""nod_diskos_parent"": ""15/9-19 S                               "", ""19 S_in_witsml"": true, ""19 SR2_in_witsml"": false, ""19",null,NEW,False,
+fig4.axis_clip_days,400,null,NEW,False,
 audit.ci_level_pct,95,95,SAME,False,
 audit.strata_cutoff_days,730,730,SAME,False,
 audit.category_share.BOP_RISER_pct,32.2,32.2,SAME,False,
@@ -225,4 +230,4 @@ duration.gap_flag_rule,"""elapsed days to TD greater than 2 x reports to TD""",n
 duration.n_gap_flagged,7,null,NEW,False,
 duration.indicative_only,"[""15/9-19 B"", ""15/9-F-11""]",null,NEW,False,
 data.xml_declared_encoding,"{""none declared (ASCII only)"": 336, ""ISO-8859-1"": 1423}",null,NEW,False,
-registry.n_entries,227,59,CHANGED,False,v2 registry had 59 entries
+registry.n_entries,232,59,CHANGED,False,v2 registry had 59 entries
