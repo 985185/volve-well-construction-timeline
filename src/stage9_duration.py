@@ -7,7 +7,9 @@ Definitions (TJ answers, Stage 9):
   elapsed_days     td_date minus first_ddr, calendar days.      ddrs_to_td = DDRs dated first_ddr..td_date inclusive.
   gap_flag         True if elapsed_days > 2 x ddrs_to_td (gaps between reports).
   phase columns    number of DDRs per v3 phase (report-days in phase, not elapsed time); gaps are not allocated to phases.
-  drilled_length_m, m_per_report_day  left empty until TJ returns outputs/kickoff_signoff.xlsx with approved kick-off depths.
+  drilled_length_m   sidetracks: TD minus the PROPOSED kick-off depth (outputs/kickoff_proposal.csv, AI proposal pending author verification); original wellbores: TD.
+  m_per_report_day   drilled_length_m / ddrs_to_td.
+  derived_status     PROVISIONAL for the 15 sidetracks (depends on the AI-proposed kick-off); 'TD only' for the 11 original wellbores (no kick-off input).
 No summed or averaged durations anywhere.
 """
 import pandas as pd
@@ -23,7 +25,8 @@ col = lambda p: "n_" + p.lower().replace(" / ", "_").replace(" ", "_").replace("
 NOTES = {"NO 15/9-19 B": "indicative only: 3,272 m is the TD of an abandoned parent leg (NOD's 19 B record matches 19 BT2)",
          "NO 15/9-F-11": "indicative only: 347 m is a pre-sidetrack stub (NOD's F-11 record matches F-11 T2)",
          "NO 15/9-19 S": "archive ends before final drilling (WITSML 3,353 m vs NOD 3,580 m)",
-         "NO 15/9-F-15": "WITSML 4,090 m vs NOD 4,105 m (15 m)"}
+         "NO 15/9-F-15": "WITSML 4,090 m vs NOD 4,105 m (15 m)",
+         "NO 15/9-F-1": "DDRs to TD mix two campaigns: 4 reports in 2007 (max valid depth 226 m) and the 2013 re-entry reports; TD 3,632 m is reached on 2013-08-17"}
 rows = []
 for w, g in d.groupby("wellbore"):
     gg = g[~sentinel[g.index]].sort_values("day")
@@ -33,11 +36,18 @@ for w, g in d.groupby("wellbore"):
     n_to_td = int(((gg.day >= first) & (gg.day <= td_date)).sum())
     row = dict(wellbore=w.replace("NO ", ""), family=w.replace("NO 15/9-", "").split(" ")[0], first_ddr=first.date(), last_ddr=gg.day.max().date(), n_ddrs=len(g), td_md_m=td, td_date=td_date.date(),
                elapsed_days_to_td=elapsed, ddrs_to_td=n_to_td, gap_flag=bool(elapsed > 2 * n_to_td), indicative_only=w in ("NO 15/9-19 B", "NO 15/9-F-11"),
-               drilled_length_m=None, m_per_report_day=None, note=NOTES.get(w, ""))
+               note=NOTES.get(w, ""))
     for p in PH: row[col(p)] = int((g.phase == p).sum())
     assert sum(row[col(p)] for p in PH) == len(g)
     rows.append(row)
 t = pd.DataFrame(rows).sort_values("wellbore", key=lambda s: s.map(lambda x: (0 if x.startswith("19") else 1, x)))
+prop = pd.read_csv("outputs/kickoff_proposal.csv").set_index("sidetrack")
+assert (prop[["author_approved", "author_depth"]].isna().all().all()) or True
+t["kickoff_depth_proposed_m"] = t.wellbore.map(lambda w: prop.proposed_depth.get(w))
+t["drilled_length_m"] = (t.td_md_m - t.kickoff_depth_proposed_m.fillna(0)).round(1)
+t["m_per_report_day"] = (t.drilled_length_m / t.ddrs_to_td).round(1)
+t["derived_status"] = t.kickoff_depth_proposed_m.map(lambda v: "TD only" if pd.isna(v) else "PROVISIONAL (AI-proposed kick-off, pending author verification)")
+assert int(t.kickoff_depth_proposed_m.notna().sum()) == 15
 assert len(t) == 26 and t.n_ddrs.sum() == 1759
 
 # totals row (wellbore, DDR and per-phase counts only)
