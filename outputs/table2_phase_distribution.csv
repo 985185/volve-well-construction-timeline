@@ -1,0 +1,15 @@
+phase,count,pct_of_1759,v2_count,same
+Reservoir drilling,256,14.6,256,True
+Completion,228,13.0,228,True
+Liner / Casing run,144,8.2,144,True
+Waiting / Downtime,120,6.8,120,True
+Cementing,100,5.7,100,True
+Logging / Testing,93,5.3,93,True
+Intermediate casing,82,4.7,82,True
+Intermediate drilling,77,4.4,77,True
+Surface casing,66,3.8,66,True
+Spud / Conductor,52,3.0,52,True
+P&A,41,2.3,41,True
+Rig move / Setup,38,2.2,38,True
+Workover,6,0.3,6,True
+Unclassified,456,25.9,456,True
