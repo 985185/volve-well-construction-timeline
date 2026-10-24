@@ -1,0 +1,5865 @@
+[
+ {
+  "id": "data.n_xml_files",
+  "value": 1759,
+  "description": "DDR XML files downloaded and hashed",
+  "producer": {
+   "script": "src/stage1_manifest.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/raw/manifest.csv": "631504c0a8fb110c680903473bf9ae0da396858b452cdb104c7abf12edc106f1"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1759,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.xml_total_bytes",
+  "value": 21315879,
+  "description": "Total bytes of the DDR XML files",
+  "producer": {
+   "script": "src/stage1_manifest.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/raw/manifest.csv": "631504c0a8fb110c680903473bf9ae0da396858b452cdb104c7abf12edc106f1"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 21315879,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.n_ddrs",
+  "value": 1759,
+  "description": "DDRs (rows) extracted",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1759,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.n_wellbores",
+  "value": 26,
+  "description": "Distinct wellbores",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 26,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.n_wells",
+  "value": 23,
+  "description": "Distinct nameWell values",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.n_families",
+  "value": 11,
+  "description": "Well families (suffixes collapsed)",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 11,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.duplicate_wellbore_date_pairs",
+  "value": 0,
+  "description": "Duplicate wellbore/date pairs",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.witsml_schema_version",
+  "value": "1.4.0.0",
+  "description": "WITSML version attribute of the drillReports root in all 1,759 files",
+  "producer": {
+   "script": "src/stage2_extract.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "1.4.1.1",
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": "v2 manuscript says 1.4.1.1; the files say 1.4.0.0 (decision 15)"
+ },
+ {
+  "id": "data.first_ddr_date",
+  "value": "1992-09-09",
+  "description": "Earliest DDR date excluding the 1980 sentinel",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "date checks"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.last_ddr_date",
+  "value": "2018-01-25",
+  "description": "Latest DDR date",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "date checks"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.nod_snapshot_date",
+  "value": "2026-10-24",
+  "description": "NOD FactPages snapshot retrieval date",
+  "producer": {
+   "script": "src/stage1_nod.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2026-09-08",
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.nod_volve_records",
+  "value": 27,
+  "description": "NOD Volve wellbore records (15/9-F-* and 15/9-19*): 22 development + 5 exploration",
+  "producer": {
+   "script": "src/stage1_nod.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 27,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.date_report.count",
+  "value": 1759,
+  "description": "Table 1 population count: date_report",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1759,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.date_report.pct",
+  "value": 100.0,
+  "description": "Table 1 population percent: date_report",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 100.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.spud_date_dtimspud.count",
+  "value": 1759,
+  "description": "Table 1 population count: spud_date (dTimSpud)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1759,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.spud_date_dtimspud.pct",
+  "value": 100.0,
+  "description": "Table 1 population percent: spud_date (dTimSpud)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 100.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.rig_npd_name_alias.count",
+  "value": 1758,
+  "description": "Table 1 population count: rig (NPD Name alias)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1759,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.rig_npd_name_alias.pct",
+  "value": 99.94,
+  "description": "Table 1 population percent: rig (NPD Name alias)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 100.0,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.forecast24hr_genuine.count",
+  "value": 1656,
+  "description": "Table 1 population count: forecast24hr (genuine)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1759,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.forecast24hr_genuine.pct",
+  "value": 94.14,
+  "description": "Table 1 population percent: forecast24hr (genuine)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 100.0,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.operator.count",
+  "value": 1758,
+  "description": "Table 1 population count: operator",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1758,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.operator.pct",
+  "value": 99.94,
+  "description": "Table 1 population percent: operator",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 99.94,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.md_csg_last_m.count",
+  "value": 1702,
+  "description": "Table 1 population count: md_csg_last_m",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1702,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.md_csg_last_m.pct",
+  "value": 96.76,
+  "description": "Table 1 population percent: md_csg_last_m",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 96.76,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.sum24hr_genuine_narrative.count",
+  "value": 1686,
+  "description": "Table 1 population count: sum24Hr (genuine narrative)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1686,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.sum24hr_genuine_narrative.pct",
+  "value": 95.85,
+  "description": "Table 1 population percent: sum24Hr (genuine narrative)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 95.85,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.drill_complete.count",
+  "value": 1613,
+  "description": "Table 1 population count: drill_complete",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1613,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.drill_complete.pct",
+  "value": 91.7,
+  "description": "Table 1 population percent: drill_complete",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 91.7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.md_m_excluding_sentinel_and_zero.count",
+  "value": 1421,
+  "description": "Table 1 population count: md_m (excluding sentinel and zero)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1421,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.md_m_excluding_sentinel_and_zero.pct",
+  "value": 80.78,
+  "description": "Table 1 population percent: md_m (excluding sentinel and zero)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 80.78,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.md_kickoff_m.count",
+  "value": 248,
+  "description": "Table 1 population count: md_kickoff_m",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 248,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table1.md_kickoff_m.pct",
+  "value": 14.1,
+  "description": "Table 1 population percent: md_kickoff_m",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Table 1 population"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 14.1,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.md_sentinel_-999.99",
+  "value": 331,
+  "description": "md values equal to the -999.99 sentinel",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 331,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.md_zero",
+  "value": 7,
+  "description": "md values equal to 0",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.none_sum24Hr",
+  "value": 73,
+  "description": "sum24Hr equal to the literal string None (stored in the source XML)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 73,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.none_forecast24hr",
+  "value": 103,
+  "description": "forecast24hr equal to the literal string None",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.date_sentinel_1980",
+  "value": 1,
+  "description": "Date sentinel records (1980-01-01)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.total_cells_all_fields",
+  "value": 515,
+  "description": "Placeholder cells in all extracted fields (None, -999.99, 0 depth, empty-but-present, date sentinel)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 411,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": "v2 total 411 = 331 + 7 + 73 (depth placeholders and None narratives only); TJ decision 19: register the full total"
+ },
+ {
+  "id": "placeholders.v2_definition_total",
+  "value": 411,
+  "description": "331 + 7 + 73, the v2 definition of the placeholder total",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 411,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "placeholders.absent_tags_not_counted",
+  "value": 1716,
+  "description": "Absent tags (not placeholders)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "placeholder register"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.half.ddrs",
+  "value": 61,
+  "description": "DDRs with ½ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 61,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.half.occurrences",
+  "value": 82,
+  "description": "Occurrences of ½ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 82,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.quarter.ddrs",
+  "value": 10,
+  "description": "DDRs with ¼ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 10,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.quarter.occurrences",
+  "value": 14,
+  "description": "Occurrences of ¼ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 14,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.three_quarter.ddrs",
+  "value": 0,
+  "description": "DDRs with ¾ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.three_quarter.occurrences",
+  "value": 0,
+  "description": "Occurrences of ¾ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.eighth.ddrs",
+  "value": 0,
+  "description": "DDRs with ⅛ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "unicode.eighth.occurrences",
+  "value": 0,
+  "description": "Occurrences of ⅛ in sum24Hr",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "Unicode survey"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.reservoir_drilling.count",
+  "value": 256,
+  "description": "Table 2 DDRs in phase Reservoir drilling",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 256,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.reservoir_drilling.pct",
+  "value": 14.6,
+  "description": "Table 2 percent of 1,759: Reservoir drilling",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 14.6,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.completion.count",
+  "value": 228,
+  "description": "Table 2 DDRs in phase Completion",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 228,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.completion.pct",
+  "value": 13.0,
+  "description": "Table 2 percent of 1,759: Completion",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 13.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.liner_casing_run.count",
+  "value": 144,
+  "description": "Table 2 DDRs in phase Liner / Casing run",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 144,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.liner_casing_run.pct",
+  "value": 8.2,
+  "description": "Table 2 percent of 1,759: Liner / Casing run",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 8.2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.waiting_downtime.count",
+  "value": 120,
+  "description": "Table 2 DDRs in phase Waiting / Downtime",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 120,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.waiting_downtime.pct",
+  "value": 6.8,
+  "description": "Table 2 percent of 1,759: Waiting / Downtime",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 6.8,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.cementing.count",
+  "value": 100,
+  "description": "Table 2 DDRs in phase Cementing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 100,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.cementing.pct",
+  "value": 5.7,
+  "description": "Table 2 percent of 1,759: Cementing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 5.7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.logging_testing.count",
+  "value": 93,
+  "description": "Table 2 DDRs in phase Logging / Testing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 93,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.logging_testing.pct",
+  "value": 5.3,
+  "description": "Table 2 percent of 1,759: Logging / Testing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 5.3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.intermediate_casing.count",
+  "value": 82,
+  "description": "Table 2 DDRs in phase Intermediate casing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 82,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.intermediate_casing.pct",
+  "value": 4.7,
+  "description": "Table 2 percent of 1,759: Intermediate casing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4.7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.intermediate_drilling.count",
+  "value": 77,
+  "description": "Table 2 DDRs in phase Intermediate drilling",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 77,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.intermediate_drilling.pct",
+  "value": 4.4,
+  "description": "Table 2 percent of 1,759: Intermediate drilling",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4.4,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.surface_casing.count",
+  "value": 66,
+  "description": "Table 2 DDRs in phase Surface casing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 66,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.surface_casing.pct",
+  "value": 3.8,
+  "description": "Table 2 percent of 1,759: Surface casing",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3.8,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.spud_conductor.count",
+  "value": 52,
+  "description": "Table 2 DDRs in phase Spud / Conductor",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 52,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.spud_conductor.pct",
+  "value": 3.0,
+  "description": "Table 2 percent of 1,759: Spud / Conductor",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.p_a.count",
+  "value": 41,
+  "description": "Table 2 DDRs in phase P&A",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 41,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.p_a.pct",
+  "value": 2.3,
+  "description": "Table 2 percent of 1,759: P&A",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2.3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.rig_move_setup.count",
+  "value": 38,
+  "description": "Table 2 DDRs in phase Rig move / Setup",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 38,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.rig_move_setup.pct",
+  "value": 2.2,
+  "description": "Table 2 percent of 1,759: Rig move / Setup",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2.2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.workover.count",
+  "value": 6,
+  "description": "Table 2 DDRs in phase Workover",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 6,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.workover.pct",
+  "value": 0.3,
+  "description": "Table 2 percent of 1,759: Workover",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.unclassified.count",
+  "value": 456,
+  "description": "Table 2 DDRs in phase Unclassified",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 456,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "table2.unclassified.pct",
+  "value": 25.9,
+  "description": "Table 2 percent of 1,759: Unclassified",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr (classifier_v3)"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 25.9,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.classified",
+  "value": 1303,
+  "description": "DDRs classified",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr"
+  },
+  "inputs": {
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1303,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.classified_pct",
+  "value": 74.1,
+  "description": "Percent classified",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr"
+  },
+  "inputs": {
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 74.1,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.unclassified",
+  "value": 456,
+  "description": "DDRs unclassified",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "classify_ddr"
+  },
+  "inputs": {
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 456,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.faithfulness_classified_on_old_text",
+  "value": 1303,
+  "description": "Ported classifier on the old volve_ddr_master narratives: classified (run on the same day; see reports/STAGE_4.md)",
+  "producer": {
+   "script": "src/stage4_faithfulness.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/stage4_faithfulness_phase_counts.csv": "e6466b27d853870ecd3a17f0c47bad6123d00bff6b2b372462a8011e2bf78650"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1303,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.faithfulness_phase_counts_equal",
+  "value": true,
+  "description": "All 14 per-phase counts equal the v2 table on the old text",
+  "producer": {
+   "script": "src/stage4_faithfulness.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/stage4_faithfulness_phase_counts.csv": "e6466b27d853870ecd3a17f0c47bad6123d00bff6b2b372462a8011e2bf78650"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": true,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.mojibake_phase_changes",
+  "value": 0,
+  "description": "Phase changes between old text and new raw text (103 rows differ in text)",
+  "producer": {
+   "script": "src/stage4_classify.py",
+   "function": "mojibake comparison"
+  },
+  "inputs": {
+   "outputs/stage4_phase_changes_mojibake.csv": "66d382c468e46e52d82511de0f2f86a647df72cbc249551920608d036593851d"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "classifier.ddrs_matching_0_1_2_3plus",
+  "value": [
+   456,
+   781,
+   376,
+   146
+  ],
+  "description": "DDRs matching 0, 1, 2, 3 or more phases",
+  "producer": {
+   "script": "src/stage4_rules_table.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": "values from the Stage 4 run, sum 1,759"
+ },
+ {
+  "id": "classifier.size_patterns_per_phase",
+  "value": {
+   "Spud / Conductor": 2,
+   "Surface casing": 6,
+   "Intermediate drilling": 4,
+   "Intermediate casing": 8,
+   "Reservoir drilling": 10,
+   "Liner / Casing run": 3,
+   "Cementing": 0,
+   "Completion": 0,
+   "P&A": 0,
+   "Logging / Testing": 0,
+   "Workover": 0,
+   "Waiting / Downtime": 0,
+   "Rig move / Setup": 0
+  },
+  "description": "Size-based patterns per phase (a digit outside {m,n} quantifiers)",
+  "producer": {
+   "script": "src/stage4_rules_table.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.BOP_RISER",
+  "value": 147,
+  "description": "Unclassified DDRs in category BOP_RISER",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 147,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.OTHER",
+  "value": 63,
+  "description": "Unclassified DDRs in category OTHER",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 63,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.GENERIC_TRIP",
+  "value": 61,
+  "description": "Unclassified DDRs in category GENERIC_TRIP",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 61,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.MUD_FLUID",
+  "value": 35,
+  "description": "Unclassified DDRs in category MUD_FLUID",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 35,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.WIRELINE_NON_TEST",
+  "value": 34,
+  "description": "Unclassified DDRs in category WIRELINE_NON_TEST",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 34,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.PRODUCTION_MON",
+  "value": 30,
+  "description": "Unclassified DDRs in category PRODUCTION_MON",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 30,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.RIG_MAINTENANCE",
+  "value": 8,
+  "description": "Unclassified DDRs in category RIG_MAINTENANCE",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 8,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.WAITING_GENERIC",
+  "value": 3,
+  "description": "Unclassified DDRs in category WAITING_GENERIC",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.WELL_HANDOVER",
+  "value": 2,
+  "description": "Unclassified DDRs in category WELL_HANDOVER",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.EMPTY_RECORD",
+  "value": 73,
+  "description": "Unclassified DDRs in category EMPTY_RECORD",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 73,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category.LABOUR",
+  "value": 0,
+  "description": "Unclassified DDRs in category LABOUR",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.frame_size",
+  "value": 383,
+  "description": "Sampling frame (unclassified, excluding EMPTY_RECORD)",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 383,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.stratum_construction",
+  "value": 296,
+  "description": "Frame, construction era (<= 730 days from the wellbore's first DDR)",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 296,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.stratum_production",
+  "value": 87,
+  "description": "Frame, production era",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 87,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.sample_size",
+  "value": 50,
+  "description": "Audit sample (original 50 records, original strata)",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 50,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.sample_construction",
+  "value": 39,
+  "description": "Sample records, construction era",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 39,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.sample_production",
+  "value": 11,
+  "description": "Sample records, production era",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 11,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.construction_calls",
+  "value": 26,
+  "description": "Records adjudicated CONSTRUCTION (author's original calls)",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 26,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.construction_calls_construction_era",
+  "value": 23,
+  "description": "CONSTRUCTION calls, construction-era sample",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 23,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.construction_calls_production_era",
+  "value": 3,
+  "description": "CONSTRUCTION calls, production-era sample",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.miss_reason.NO_HOLE_SIZE",
+  "value": 9,
+  "description": "CONSTRUCTION calls with miss reason NO_HOLE_SIZE",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 9,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.miss_reason.OTHER_MISS",
+  "value": 10,
+  "description": "CONSTRUCTION calls with miss reason OTHER_MISS",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 10,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.miss_reason.NONSTANDARD_TERMINOLOGY",
+  "value": 7,
+  "description": "CONSTRUCTION calls with miss reason NONSTANDARD_TERMINOLOGY",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.sample_proportion",
+  "value": 0.52,
+  "description": "26/50",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.52,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.wilson_low",
+  "value": 0.385,
+  "description": "Wilson 95% lower bound",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "wilson()"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.385,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.wilson_high",
+  "value": 0.652,
+  "description": "Wilson 95% upper bound",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "wilson()"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.652,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.scale_frame_over_total",
+  "value": 0.2177,
+  "description": "383 / 1,759",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.2177,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.observed_rate",
+  "value": 0.7408,
+  "description": "1,303 / 1,759",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.7408,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.residual_miss",
+  "value": 0.1132,
+  "description": "0.52 x 0.2177",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.1132,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.residual_miss_ddrs",
+  "value": 199,
+  "description": "0.52 x 383 DDRs",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 199,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.attainable_rate_pct",
+  "value": 85.4,
+  "description": "Attainable classification rate",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 85.4,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.attainable_ci_low_pct",
+  "value": 82.5,
+  "description": "Attainable rate, lower 95% bound",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 82.5,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.attainable_ci_high_pct",
+  "value": 88.3,
+  "description": "Attainable rate, upper 95% bound",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 88.3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.stratum_weighted_proportion",
+  "value": 0.518,
+  "description": "Stratum-weighted sample proportion",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 0.518,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.stratum_weighted_rate_pct",
+  "value": 85.3,
+  "description": "Stratum-weighted attainable rate",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 85.3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.empty_record_floor_pct",
+  "value": 4.2,
+  "description": "Unclassified floor from EMPTY_RECORD, 73/1,759",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4.2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "timeline.rows",
+  "value": 1421,
+  "description": "Timeline rows (placeholders excluded)",
+  "producer": {
+   "script": "src/stage5_timeline.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1421,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "timeline.wellbores",
+  "value": 26,
+  "description": "Wellbores in the timeline",
+  "producer": {
+   "script": "src/stage5_timeline.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 26,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "timeline.phase_counts",
+  "value": {
+   "Unclassified": 339,
+   "Reservoir drilling": 255,
+   "Completion": 170,
+   "Liner / Casing run": 123,
+   "Waiting / Downtime": 99,
+   "Intermediate drilling": 77,
+   "Cementing": 71,
+   "Intermediate casing": 69,
+   "Logging / Testing": 63,
+   "Surface casing": 62,
+   "Spud / Conductor": 50,
+   "P&A": 23,
+   "Rig move / Setup": 16,
+   "Workover": 4
+  },
+  "description": "DDRs per phase among the 1,421 timeline rows",
+  "producer": {
+   "script": "src/stage5_timeline.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "timeline.unclassified_rows",
+  "value": 339,
+  "description": "Unclassified timeline rows",
+  "producer": {
+   "script": "src/stage5_timeline.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.exact",
+  "value": 22,
+  "description": "Wellbores with TD exact to 0.5 m",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 22,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.close",
+  "value": 2,
+  "description": "Matched, not exact",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.unmatched",
+  "value": 2,
+  "description": "Unmatched WITSML wellbores",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.matched",
+  "value": 24,
+  "description": "Matched wellbores",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 24,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.diff.15/9-F-15",
+  "value": 15.0,
+  "description": "TD difference WITSML versus NOD, 15/9-F-15 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 15.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.diff.15/9-19 S",
+  "value": 227.0,
+  "description": "TD difference WITSML versus NOD, 15/9-19 S (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 227.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-19 B",
+  "value": 3272.0,
+  "description": "WITSML maximum depth, 15/9-19 B (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3272.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-F-11",
+  "value": 347.0,
+  "description": "WITSML maximum depth, 15/9-F-11 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 347.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-19 BT2",
+  "value": 4250.0,
+  "description": "WITSML maximum depth, 15/9-19 BT2 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4250.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-19 ST2",
+  "value": 4641.0,
+  "description": "WITSML maximum depth, 15/9-19 ST2 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4641.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-F-11 T2",
+  "value": 4562.1,
+  "description": "WITSML maximum depth, 15/9-F-11 T2 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4562.1,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-F-7",
+  "value": 1085.0,
+  "description": "WITSML maximum depth, 15/9-F-7 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1085.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.witsml_max_md.15/9-F-9",
+  "value": 1085.0,
+  "description": "WITSML maximum depth, 15/9-F-9 (m)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1085.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.table3",
+  "value": [
+   {
+    "witsml_wellbore": "NO 15/9-19 A",
+    "witsml_max_md_m": 4131.0,
+    "nod_wellbore": "15/9-19 A",
+    "nod_total_depth_m": 4131.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-19 B",
+    "witsml_max_md_m": 3272.0,
+    "nod_wellbore": NaN,
+    "nod_total_depth_m": NaN,
+    "diff_m": NaN,
+    "outcome": "UNMATCHED"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-19 BT2",
+    "witsml_max_md_m": 4250.0,
+    "nod_wellbore": "15/9-19 B",
+    "nod_total_depth_m": 4250.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-19 S",
+    "witsml_max_md_m": 3353.0,
+    "nod_wellbore": "15/9-19 S",
+    "nod_total_depth_m": 3580.0,
+    "diff_m": 227.0,
+    "outcome": "CLOSE_NOT_EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-19 ST2",
+    "witsml_max_md_m": 4641.0,
+    "nod_wellbore": "15/9-19 SR",
+    "nod_total_depth_m": 4641.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-1",
+    "witsml_max_md_m": 3632.0,
+    "nod_wellbore": "15/9-F-1",
+    "nod_total_depth_m": 3632.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-1 A",
+    "witsml_max_md_m": 3682.0,
+    "nod_wellbore": "15/9-F-1 A",
+    "nod_total_depth_m": 3682.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-1 B",
+    "witsml_max_md_m": 3465.0,
+    "nod_wellbore": "15/9-F-1 B",
+    "nod_total_depth_m": 3465.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-1 C",
+    "witsml_max_md_m": 4094.0,
+    "nod_wellbore": "15/9-F-1 C",
+    "nod_total_depth_m": 4094.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-10",
+    "witsml_max_md_m": 5331.0,
+    "nod_wellbore": "15/9-F-10",
+    "nod_total_depth_m": 5331.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-11",
+    "witsml_max_md_m": 347.0,
+    "nod_wellbore": NaN,
+    "nod_total_depth_m": NaN,
+    "diff_m": NaN,
+    "outcome": "UNMATCHED"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-11 A",
+    "witsml_max_md_m": 3762.0,
+    "nod_wellbore": "15/9-F-11 A",
+    "nod_total_depth_m": 3762.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-11 B",
+    "witsml_max_md_m": 4770.0,
+    "nod_wellbore": "15/9-F-11 B",
+    "nod_total_depth_m": 4770.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-11 T2",
+    "witsml_max_md_m": 4562.1,
+    "nod_wellbore": "15/9-F-11",
+    "nod_total_depth_m": 4562.0,
+    "diff_m": 0.1,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-12",
+    "witsml_max_md_m": 3520.0,
+    "nod_wellbore": "15/9-F-12",
+    "nod_total_depth_m": 3520.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-14",
+    "witsml_max_md_m": 3750.0,
+    "nod_wellbore": "15/9-F-14",
+    "nod_total_depth_m": 3750.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-15",
+    "witsml_max_md_m": 4090.0,
+    "nod_wellbore": "15/9-F-15",
+    "nod_total_depth_m": 4105.0,
+    "diff_m": 15.0,
+    "outcome": "CLOSE_NOT_EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-15 A",
+    "witsml_max_md_m": 4095.0,
+    "nod_wellbore": "15/9-F-15 A",
+    "nod_total_depth_m": 4095.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-15 B",
+    "witsml_max_md_m": 3497.0,
+    "nod_wellbore": "15/9-F-15 B",
+    "nod_total_depth_m": 3497.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-15 C",
+    "witsml_max_md_m": 3232.0,
+    "nod_wellbore": "15/9-F-15 C",
+    "nod_total_depth_m": 3232.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-15 D",
+    "witsml_max_md_m": 4685.0,
+    "nod_wellbore": "15/9-F-15 D",
+    "nod_total_depth_m": 4685.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-4",
+    "witsml_max_md_m": 3510.0,
+    "nod_wellbore": "15/9-F-4",
+    "nod_total_depth_m": 3510.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-5",
+    "witsml_max_md_m": 3792.0,
+    "nod_wellbore": "15/9-F-5",
+    "nod_total_depth_m": 3792.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-7",
+    "witsml_max_md_m": 1085.0,
+    "nod_wellbore": "15/9-F-7",
+    "nod_total_depth_m": 1085.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-9",
+    "witsml_max_md_m": 1085.0,
+    "nod_wellbore": "15/9-F-9",
+    "nod_total_depth_m": 1085.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   },
+   {
+    "witsml_wellbore": "NO 15/9-F-9 A",
+    "witsml_max_md_m": 1206.0,
+    "nod_wellbore": "15/9-F-9 A",
+    "nod_total_depth_m": 1206.0,
+    "diff_m": 0.0,
+    "outcome": "EXACT"
+   }
+  ],
+  "description": "Table 3: total depth validation, 26 wellbores",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.exact",
+  "value": 7,
+  "description": "Spud category count: EXACT",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify() (rules formalised after the assignments)"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.definitional_offset",
+  "value": 8,
+  "description": "Spud category count: DEFINITIONAL_OFFSET",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify() (rules formalised after the assignments)"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 8,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.error",
+  "value": 4,
+  "description": "Spud category count: ERROR",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify() (rules formalised after the assignments)"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.identity",
+  "value": 1,
+  "description": "Spud category count: IDENTITY",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify() (rules formalised after the assignments)"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.inherited",
+  "value": 2,
+  "description": "Spud category count: INHERITED",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify() (rules formalised after the assignments)"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.unresolved",
+  "value": 4,
+  "description": "Spud category count: UNRESOLVED",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "classify() (rules formalised after the assignments)"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 4,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.table4",
+  "value": [
+   {
+    "wellbore": "NO 15/9-19 A",
+    "witsml_spud": "1997-07-25",
+    "first_ddr": "1997-07-25",
+    "freetext_date": NaN,
+    "nod_main_entry_date": "1997-07-25",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "1997-07-25",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-19 B",
+    "witsml_spud": "1997-11-10",
+    "first_ddr": "1997-11-10",
+    "freetext_date": NaN,
+    "nod_main_entry_date": "1997-11-09",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "1997-11-09",
+    "w_minus_nod_main_days": 1.0,
+    "w_minus_n_days": 1.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R5"
+   },
+   {
+    "wellbore": "NO 15/9-19 BT2",
+    "witsml_spud": "1997-12-05",
+    "first_ddr": "1997-12-06",
+    "freetext_date": "1997-12-06",
+    "nod_main_entry_date": "1997-11-09",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "1997-11-09",
+    "w_minus_nod_main_days": 26.0,
+    "w_minus_n_days": 26.0,
+    "category": "UNRESOLVED",
+    "rule": "R5"
+   },
+   {
+    "wellbore": "NO 15/9-19 S",
+    "witsml_spud": "1992-09-18",
+    "first_ddr": "1992-09-09",
+    "freetext_date": NaN,
+    "nod_main_entry_date": "1992-11-18",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "1992-11-18",
+    "w_minus_nod_main_days": -61.0,
+    "w_minus_n_days": -61.0,
+    "category": "UNRESOLVED",
+    "rule": "R7"
+   },
+   {
+    "wellbore": "NO 15/9-19 ST2",
+    "witsml_spud": "1992-09-15",
+    "first_ddr": "1992-12-19",
+    "freetext_date": "1992-12-19",
+    "nod_main_entry_date": "1993-02-17",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "1993-02-17",
+    "w_minus_nod_main_days": -155.0,
+    "w_minus_n_days": -155.0,
+    "category": "UNRESOLVED",
+    "rule": "R5"
+   },
+   {
+    "wellbore": "NO 15/9-F-1",
+    "witsml_spud": "2007-11-28",
+    "first_ddr": "2007-12-02",
+    "freetext_date": "2007-12-02",
+    "nod_main_entry_date": "2013-07-23",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2013-07-23",
+    "w_minus_nod_main_days": -2064.0,
+    "w_minus_n_days": -2064.0,
+    "category": "IDENTITY",
+    "rule": "R3"
+   },
+   {
+    "wellbore": "NO 15/9-F-1 A",
+    "witsml_spud": "2013-08-20",
+    "first_ddr": "2013-08-24",
+    "freetext_date": "2013-08-25",
+    "nod_main_entry_date": "2013-08-23",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2013-08-23",
+    "w_minus_nod_main_days": -3.0,
+    "w_minus_n_days": -3.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   },
+   {
+    "wellbore": "NO 15/9-F-1 B",
+    "witsml_spud": "2013-08-29",
+    "first_ddr": "2013-08-30",
+    "freetext_date": "2013-09-06",
+    "nod_main_entry_date": "2013-08-29",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2013-08-29",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   },
+   {
+    "wellbore": "NO 15/9-F-1 C",
+    "witsml_spud": "2014-02-21",
+    "first_ddr": "2014-02-22",
+    "freetext_date": "2014-03-13",
+    "nod_main_entry_date": "2014-02-21",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2014-02-21",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   },
+   {
+    "wellbore": "NO 15/9-F-10",
+    "witsml_spud": "2009-04-06",
+    "first_ddr": "2009-04-07",
+    "freetext_date": "2009-04-07",
+    "nod_main_entry_date": "2009-04-06",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2009-04-06",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-F-11",
+    "witsml_spud": "2013-03-07",
+    "first_ddr": "2013-03-08",
+    "freetext_date": "2013-03-08",
+    "nod_main_entry_date": "2013-03-07",
+    "nod_predrill_entry_date": "2012-04-06",
+    "nod_entry_date": "2013-03-07",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-F-11 A",
+    "witsml_spud": "2013-03-07",
+    "first_ddr": "2013-05-15",
+    "freetext_date": "2013-05-15",
+    "nod_main_entry_date": "2013-05-14",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2013-05-14",
+    "w_minus_nod_main_days": -68.0,
+    "w_minus_n_days": -68.0,
+    "category": "INHERITED",
+    "rule": "R1"
+   },
+   {
+    "wellbore": "NO 15/9-F-11 B",
+    "witsml_spud": "2013-05-28",
+    "first_ddr": "2013-05-29",
+    "freetext_date": "2013-06-09",
+    "nod_main_entry_date": "2013-05-28",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2013-05-28",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   },
+   {
+    "wellbore": "NO 15/9-F-11 T2",
+    "witsml_spud": "2013-03-07",
+    "first_ddr": "2013-03-24",
+    "freetext_date": "2013-03-24",
+    "nod_main_entry_date": NaN,
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": NaN,
+    "w_minus_nod_main_days": NaN,
+    "w_minus_n_days": NaN,
+    "category": "INHERITED",
+    "rule": "R1"
+   },
+   {
+    "wellbore": "NO 15/9-F-12",
+    "witsml_spud": "2007-03-15",
+    "first_ddr": "2007-06-14",
+    "freetext_date": "2007-06-14",
+    "nod_main_entry_date": "2007-06-14",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2007-06-14",
+    "w_minus_nod_main_days": -91.0,
+    "w_minus_n_days": -91.0,
+    "category": "ERROR",
+    "rule": "R2"
+   },
+   {
+    "wellbore": "NO 15/9-F-14",
+    "witsml_spud": "2007-11-04",
+    "first_ddr": "2007-11-06",
+    "freetext_date": "2007-11-07",
+    "nod_main_entry_date": "2007-12-05",
+    "nod_predrill_entry_date": "2007-11-06",
+    "nod_entry_date": "2007-11-06",
+    "w_minus_nod_main_days": -31.0,
+    "w_minus_n_days": -2.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   },
+   {
+    "wellbore": "NO 15/9-F-15",
+    "witsml_spud": "2008-10-24",
+    "first_ddr": "2007-11-19",
+    "freetext_date": "2007-11-19",
+    "nod_main_entry_date": "2007-12-24",
+    "nod_predrill_entry_date": "2007-11-19",
+    "nod_entry_date": "2007-11-19",
+    "w_minus_nod_main_days": 305.0,
+    "w_minus_n_days": 340.0,
+    "category": "ERROR",
+    "rule": "R2"
+   },
+   {
+    "wellbore": "NO 15/9-F-15 A",
+    "witsml_spud": "2008-12-11",
+    "first_ddr": "2008-12-12",
+    "freetext_date": "2008-12-12",
+    "nod_main_entry_date": "2008-12-11",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2008-12-11",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-F-15 B",
+    "witsml_spud": "2009-01-13",
+    "first_ddr": "2009-01-14",
+    "freetext_date": "2009-01-14",
+    "nod_main_entry_date": "2009-01-13",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2009-01-13",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-F-15 C",
+    "witsml_spud": "2009-01-19",
+    "first_ddr": "2009-01-19",
+    "freetext_date": "2009-01-19",
+    "nod_main_entry_date": "2009-01-18",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2009-01-18",
+    "w_minus_nod_main_days": 1.0,
+    "w_minus_n_days": 1.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-F-15 D",
+    "witsml_spud": "2013-11-10",
+    "first_ddr": "2013-11-11",
+    "freetext_date": "2013-11-11",
+    "nod_main_entry_date": "2013-11-10",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2013-11-10",
+    "w_minus_nod_main_days": 0.0,
+    "w_minus_n_days": 0.0,
+    "category": "EXACT",
+    "rule": "R4"
+   },
+   {
+    "wellbore": "NO 15/9-F-4",
+    "witsml_spud": "2007-03-10",
+    "first_ddr": "2007-06-10",
+    "freetext_date": "2007-06-10",
+    "nod_main_entry_date": "2007-10-13",
+    "nod_predrill_entry_date": "2007-06-09",
+    "nod_entry_date": "2007-06-09",
+    "w_minus_nod_main_days": -217.0,
+    "w_minus_n_days": -91.0,
+    "category": "ERROR",
+    "rule": "R2"
+   },
+   {
+    "wellbore": "NO 15/9-F-5",
+    "witsml_spud": "2007-11-11",
+    "first_ddr": "2007-11-15",
+    "freetext_date": "2007-11-16",
+    "nod_main_entry_date": "2007-12-18",
+    "nod_predrill_entry_date": "2007-11-15",
+    "nod_entry_date": "2007-11-15",
+    "w_minus_nod_main_days": -37.0,
+    "w_minus_n_days": -4.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   },
+   {
+    "wellbore": "NO 15/9-F-7",
+    "witsml_spud": "2007-05-01",
+    "first_ddr": "2007-09-15",
+    "freetext_date": "2007-09-17",
+    "nod_main_entry_date": "2007-09-16",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2007-09-16",
+    "w_minus_nod_main_days": -138.0,
+    "w_minus_n_days": -138.0,
+    "category": "ERROR",
+    "rule": "R2"
+   },
+   {
+    "wellbore": "NO 15/9-F-9",
+    "witsml_spud": "2007-11-09",
+    "first_ddr": "2007-11-29",
+    "freetext_date": "2007-11-29",
+    "nod_main_entry_date": "2008-08-30",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2008-08-30",
+    "w_minus_nod_main_days": -295.0,
+    "w_minus_n_days": -295.0,
+    "category": "UNRESOLVED",
+    "rule": "R7"
+   },
+   {
+    "wellbore": "NO 15/9-F-9 A",
+    "witsml_spud": "2009-06-23",
+    "first_ddr": "2009-07-04",
+    "freetext_date": "2009-07-04",
+    "nod_main_entry_date": "2009-07-01",
+    "nod_predrill_entry_date": NaN,
+    "nod_entry_date": "2009-07-01",
+    "w_minus_nod_main_days": -8.0,
+    "w_minus_n_days": -8.0,
+    "category": "DEFINITIONAL_OFFSET",
+    "rule": "R6"
+   }
+  ],
+  "description": "Per-wellbore spud dates, offsets and categories (Fig. 4 uses w_minus_nod_main_days)",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "data/raw/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-12.witsml_spud",
+  "value": "2007-03-15",
+  "description": "15/9-F-12 WITSML spud date",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2007-03-15",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-12.first_ddr",
+  "value": "2007-06-14",
+  "description": "15/9-F-12 first DDR (also free text and NOD)",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2007-06-14",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-1.witsml_spud",
+  "value": "2007-11-28",
+  "description": "15/9-F-1 F-1.witsml_spud",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2007-11-28",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-1.first_ddr",
+  "value": "2007-12-02",
+  "description": "15/9-F-1 F-1.first_ddr",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2007-12-02",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-1.nod_entry",
+  "value": "2013-07-23",
+  "description": "15/9-F-1 F-1.nod_entry",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2013-07-23",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-1 A.witsml_spud",
+  "value": "2013-08-20",
+  "description": "15/9-F-1 A WITSML spud date",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2013-08-20",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "spud.F-1 A.nod_entry",
+  "value": "2013-08-23",
+  "description": "15/9-F-1 A NOD entry date",
+  "producer": {
+   "script": "src/stage7_spud.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/spud_validation.csv": "b0a468361151988c3c550703afc7df60f979d03cfa43b1691b5cd1a2160adfcc",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": "2013-08-23",
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-19 A",
+  "value": 2183.0,
+  "description": "AI-proposed kick-off depth, 15/9-19 A (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2178; proposed_approved N; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-19 A",
+  "value": 2178.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-19 A (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-19 B",
+  "value": 2231.0,
+  "description": "AI-proposed kick-off depth, 15/9-19 B (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2231,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2231; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-19 B",
+  "value": 2231.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-19 B (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2231,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-19 BT2",
+  "value": 2911.0,
+  "description": "AI-proposed kick-off depth, 15/9-19 BT2 (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2911,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2911; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-19 BT2",
+  "value": 2911.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-19 BT2 (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2911,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-19 ST2",
+  "value": 1536.0,
+  "description": "AI-proposed kick-off depth, 15/9-19 ST2 (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1536,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 1536; proposed_approved Y; method depth sequence (narrative empty)"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-19 ST2",
+  "value": 1536.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-19 ST2 (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1536,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-1 A",
+  "value": 2620.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-1 A (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3004,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2620; proposed_approved Y; method event in text, depth from md"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-1 A",
+  "value": 2620.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-1 A (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3004,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-1 B",
+  "value": 2617.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-1 B (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3100,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2617; proposed_approved Y; method event in text, depth from md"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-1 B",
+  "value": 2617.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-1 B (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3100,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-1 C",
+  "value": 1364.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-1 C (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3059,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 1364; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-1 C",
+  "value": 1364.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-1 C (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3059,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-9 A",
+  "value": 428.2,
+  "description": "AI-proposed kick-off depth, 15/9-F-9 A (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 459,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 421.5; proposed_approved N; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-9 A",
+  "value": 421.5,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-9 A (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 459,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-11 T2",
+  "value": 246.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-11 T2 (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 257,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 246; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-11 T2",
+  "value": 246.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-11 T2 (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 257,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-11 A",
+  "value": 2586.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-11 A (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2586,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2586; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-11 A",
+  "value": 2586.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-11 A (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2586,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-11 B",
+  "value": 2531.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-11 B (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3271,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2589; proposed_approved N; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-11 B",
+  "value": 2589.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-11 B (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3271,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-15 A",
+  "value": 1381.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-15 A (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1381,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 1381; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-15 A",
+  "value": 1381.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-15 A (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1381,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-15 B",
+  "value": 3185.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-15 B (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3185,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 3185; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-15 B",
+  "value": 3185.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-15 B (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3185,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-15 C",
+  "value": 2566.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-15 C (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2566,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 2566; proposed_approved Y; method depth in text"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-15 C",
+  "value": 2566.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-15 C (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2566,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposed_depth.15/9-F-15 D",
+  "value": 1380.0,
+  "description": "AI-proposed kick-off depth, 15/9-F-15 D (m MD)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P (proposal table)"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1380,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "current table 1380; proposed_approved Y; method event in text, depth from md"
+ },
+ {
+  "id": "kickoff.table_depth.15/9-F-15 D",
+  "value": 1380.0,
+  "description": "Kick-off depth in the Stage 8b table, 15/9-F-15 D (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1380,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.n_sidetracks",
+  "value": 15,
+  "description": "Sidetracks by designation",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 15,
+  "status_vs_v2": "SAME",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "v2: 15 rows in the table, 14 outcomes reported, 19 S listed instead of 19 A"
+ },
+ {
+  "id": "kickoff.method_counts",
+  "value": {
+   "depth in text": 11,
+   "event in text, depth from md": 3,
+   "depth sequence (narrative empty)": 1
+  },
+  "description": "Methods in the Stage 8b table",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": {
+   "free text": 12,
+   "depth sequence": 2
+  },
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "v2 method definitions differ (12 free text, 2 depth sequence, 1 unknown)"
+ },
+ {
+  "id": "kickoff.proposal_Y",
+  "value": 12,
+  "description": "Rows where the AI proposal equals the Stage 8b table",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.proposal_N",
+  "value": [
+   "15/9-19 A",
+   "15/9-F-9 A",
+   "15/9-F-11 B"
+  ],
+  "description": "Rows where the AI proposal differs from the Stage 8b table",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.author_approved_rows",
+  "value": 0,
+  "description": "Rows with author approval filled in (manuscript uses only these)",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "0 until TJ fills outputs/kickoff_signoff.xlsx"
+ },
+ {
+  "id": "kickoff.v2_depths_not_kickoffs",
+  "value": 5,
+  "description": "v2 depths that were section starts or first-report depths: F-1 A, F-1 B, F-1 C, F-9 A, F-11 B",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC v2_status"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "kickoff.F-1 C.nod_minus_ddr_m",
+  "value": 0.0,
+  "description": "NOD minus DDR kick-off, F-1 C (m)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "data/raw/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 1695.0,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "v2 compared 3,059 m with NOD 1,364 m (difference 1,695 m)"
+ },
+ {
+  "id": "kickoff.F-1_family_shared_hole_above_m",
+  "value": 1364,
+  "description": "All four of F-1, F-1 A, F-1 B, F-1 C share the hole above this depth (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3059,
+  "status_vs_v2": "CHANGED",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "decision 34"
+ },
+ {
+  "id": "kickoff.F-1_F-1A_F-1B_shared_hole_above_m",
+  "value": [
+   2617,
+   2620
+  ],
+  "description": "F-1, F-1 A and F-1 B share the hole above about this depth range (m MD)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": "decision 34"
+ },
+ {
+  "id": "kickoff.table",
+  "value": [
+   {
+    "sidetrack": "15/9-19 A",
+    "parent": "none in WITSML (NOD lists 15/9-19 S)",
+    "ddr_kickoff_depth_m": 2178.0,
+    "evidence_quote": "SET 2ND WHIPSTOCK & MILLED WINDOW FROM 2178-2183 M. DRILLED 19 M FORMATION. CIRCULATED HOLE",
+    "evidence_report": "15/9-19 A 1997-07-29",
+    "method": "depth in text",
+    "rule_tier": "T2",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 2178.0,
+    "nod_minus_ddr_m": 0.0,
+    "v2_depth_m": NaN,
+    "alternative_depths": "2183 (window bottom)",
+    "note": "window top; a first window (2202-2207 m, 1997-07-26) was abandoned",
+    "proposed_by": "AI",
+    "proposed_approved": "N",
+    "proposed_depth": 2183.0,
+    "proposed_reason": "The 1997-07-29 report states the window milled 2178-2183 m with 19 m of formation drilled below it, so under the rule's first tier the hole leaves the parent at the window bottom, 2183 m; 2178 m (window start) is the second-tier fallback for when no departure depth is stated. The first window (2202-2207 m, 1997-07-26) was abandoned and is not the kick-off; NOD and the structured field say 2178 m."
+   },
+   {
+    "sidetrack": "15/9-19 B",
+    "parent": "15/9-19 A",
+    "ddr_kickoff_depth_m": 2231.0,
+    "evidence_quote": "DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M.",
+    "evidence_report": "15/9-19 B 1997-11-11",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 2200.0,
+    "nod_minus_ddr_m": -31.0,
+    "v2_depth_m": 2231.0,
+    "alternative_depths": NaN,
+    "note": NaN,
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 2231.0,
+    "proposed_reason": "The report states the kick-off depth directly: 'DRESS CMT AND PERFORMED KICK OFF FROM 2231M TO 2277M'. NOD's 2,200 m is not an input to the rule; the only '2200' in the 19 A and 19 B reports is a clock time ('AT 2200 HRS')."
+   },
+   {
+    "sidetrack": "15/9-19 BT2",
+    "parent": "15/9-19 B",
+    "ddr_kickoff_depth_m": 2911.0,
+    "evidence_quote": "M;TOP OF SIDETRACK PLUG. DRILLED CMT. TO 2911 M. COMMENCED DRILLING 8 1/2\" HOLE FROM",
+    "evidence_report": "15/9-19 B 1997-12-06",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": NaN,
+    "nod_minus_ddr_m": NaN,
+    "v2_depth_m": 2911.0,
+    "alternative_depths": "2903 (top of sidetrack plug)",
+    "note": "NOD has no separate record (its 15/9-19 B record is the B leg)",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 2911.0,
+    "proposed_reason": "The parent's last report states departure with a depth: 'COMMENCED DRILLING 8 1/2\" HOLE FROM 2911 M AT 15/9-19BT2' (after cement drilled to 2911 m), and the first BT2 report starts at the same depth. Tier 1."
+   },
+   {
+    "sidetrack": "15/9-19 ST2",
+    "parent": "15/9-19 S",
+    "ddr_kickoff_depth_m": 1536.0,
+    "evidence_quote": "(narratives of both 1992-12-19 reports are 'None'; md 1,536 on both)",
+    "evidence_report": "15/9-19 S 1992-12-19",
+    "method": "depth sequence (narrative empty)",
+    "rule_tier": "T3",
+    "confidence": "LOW",
+    "nod_wlbKickOffPoint_m": NaN,
+    "nod_minus_ddr_m": NaN,
+    "v2_depth_m": 1536.0,
+    "alternative_depths": "1486 (parent drilled cement to 1,486 m the day before)",
+    "note": "both reports of 1992-12-19 read 'None'",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 1536.0,
+    "proposed_reason": "Both 1992-12-19 narratives (parent last, sidetrack first) read 'None', so the third tier applies: measured depth at the transition, 1,536 m on both reports. Depth only, no text support; the parent had drilled cement to 1,486 m the day before, so the true departure could be shallower."
+   },
+   {
+    "sidetrack": "15/9-F-1 A",
+    "parent": "15/9-F-1",
+    "ddr_kickoff_depth_m": 2620.0,
+    "evidence_quote": "shoe and rathole. Commenced kick off to F-1A",
+    "evidence_report": "15/9-F-1 2013-08-24",
+    "method": "event in text, depth from md",
+    "rule_tier": "T2",
+    "confidence": "MEDIUM",
+    "nod_wlbKickOffPoint_m": 2620.0,
+    "nod_minus_ddr_m": 0.0,
+    "v2_depth_m": 3004.0,
+    "alternative_depths": NaN,
+    "note": "event named in the parent's last report; md 2620",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 2620.0,
+    "proposed_reason": "The parent's last report says 'Commenced kick off to F-1A' without a depth and its md is 2620 m, so tier 2, event in text with depth from md. NOD agrees at 2,620 m."
+   },
+   {
+    "sidetrack": "15/9-F-1 B",
+    "parent": "15/9-F-1 A",
+    "ddr_kickoff_depth_m": 2617.0,
+    "evidence_quote": "Drilled out cement and kicked off well to F-1 B.",
+    "evidence_report": "15/9-F-1 A 2013-08-30",
+    "method": "event in text, depth from md",
+    "rule_tier": "T2",
+    "confidence": "MEDIUM",
+    "nod_wlbKickOffPoint_m": 2604.0,
+    "nod_minus_ddr_m": -13.0,
+    "v2_depth_m": 3100.0,
+    "alternative_depths": NaN,
+    "note": "event named in the parent's last report; md 2617",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 2617.0,
+    "proposed_reason": "The parent's last report says 'Drilled out cement and kicked off well to F-1 B' and its md is 2617 m (2,545 m the day before), so tier 2, event in text with depth from md; the md is the day's deepest point, so the kick-off may be a little shallower (NOD 2,604 m)."
+   },
+   {
+    "sidetrack": "15/9-F-1 C",
+    "parent": "15/9-F-1 B",
+    "ddr_kickoff_depth_m": 1364.0,
+    "evidence_quote": "hole to 1355 m. Commenced time drilling to1364 m. 50% formation obtained at 1364 m.",
+    "evidence_report": "15/9-F-1 B 2014-02-22",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 1364.0,
+    "nod_minus_ddr_m": 0.0,
+    "v2_depth_m": 3059.0,
+    "alternative_depths": "1355 (start of time drilling)",
+    "note": "new formation (50%) first reported at 1364 m",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 1364.0,
+    "proposed_reason": "Tier 1: the F-1 B report of 2014-02-22 states '50% formation obtained at 1364 m', the first report of new formation, and F-1 C's first report drills from 1,364 m. 1,355 m is only where time drilling started, the fallback used when no formation depth is stated. NOD agrees at 1,364 m."
+   },
+   {
+    "sidetrack": "15/9-F-9 A",
+    "parent": "15/9-F-9",
+    "ddr_kickoff_depth_m": 421.5,
+    "evidence_quote": "over pull. Milled 12-1/4\" sidetrack window from 421,5 m (top) to 424 m. Note:Bottom window",
+    "evidence_report": "15/9-F-9 2009-06-30",
+    "method": "depth in text",
+    "rule_tier": "T2",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 428.0,
+    "nod_minus_ddr_m": 6.5,
+    "v2_depth_m": 459.0,
+    "alternative_depths": "428.2 (window bottom); 436.5 (formation drilled to, 2009-07-02)",
+    "note": "window top",
+    "proposed_by": "AI",
+    "proposed_approved": "N",
+    "proposed_depth": 428.2,
+    "proposed_reason": "The window was milled from 421.5 m (top) to 428.2 m (bottom) and the 2009-07-02 report continues to drill formation below it (to 436.5 m), so the stated departure and first new formation are at the window bottom, 428.2 m (NOD 428 m); 421.5 m is the window-start fallback."
+   },
+   {
+    "sidetrack": "15/9-F-11 T2",
+    "parent": "15/9-F-11",
+    "ddr_kickoff_depth_m": 246.0,
+    "evidence_quote": "Ran wireline gyro. Washed down oriented to 246 m. Oriented drilled 26\" hole from 246",
+    "evidence_report": "15/9-F-11 2013-03-23",
+    "method": "depth in text",
+    "rule_tier": "T2",
+    "confidence": "MEDIUM",
+    "nod_wlbKickOffPoint_m": NaN,
+    "nod_minus_ddr_m": NaN,
+    "v2_depth_m": 257.0,
+    "alternative_depths": "257 (hand-over depth, 2013-03-24)",
+    "note": "start of oriented drilling out of the cement (TOC 244 m); NOD has no separate record",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 246.0,
+    "proposed_reason": "No formation or departure depth is stated, so tier 2: the 2013-03-23 report says oriented drilling out of the cement started at 246 m (top of cement 244 m). 257 m is where the sidetrack was handed over the next day. NOD has no separate record."
+   },
+   {
+    "sidetrack": "15/9-F-11 A",
+    "parent": "15/9-F-11 T2",
+    "ddr_kickoff_depth_m": 2586.0,
+    "evidence_quote": "and kicked off to F-11 A at 2586m MD.",
+    "evidence_report": "15/9-F-11 T2 2013-05-15",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 2578.0,
+    "nod_minus_ddr_m": -8.0,
+    "v2_depth_m": 2586.0,
+    "alternative_depths": NaN,
+    "note": NaN,
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 2586.0,
+    "proposed_reason": "Tier 1: 'Drilled cement and kicked off to F-11 A at 2586m MD' states the departure depth. NOD 2,578 m."
+   },
+   {
+    "sidetrack": "15/9-F-11 B",
+    "parent": "15/9-F-11 A",
+    "ddr_kickoff_depth_m": 2589.0,
+    "evidence_quote": "new formation from 2531 m MD to 2589 m MD.",
+    "evidence_report": "15/9-F-11 A 2013-05-29",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "LOW",
+    "nod_wlbKickOffPoint_m": 2586.0,
+    "nod_minus_ddr_m": -3.0,
+    "v2_depth_m": 3271.0,
+    "alternative_depths": "2531 (start of the cement and new-formation interval)",
+    "note": "new formation reported by 2589 m; evidence is an interval 2531 to 2589 m",
+    "proposed_by": "AI",
+    "proposed_approved": "N",
+    "proposed_depth": 2531.0,
+    "proposed_reason": "The only evidence is 'Drilled cement and new formation from 2531 m MD to 2589 m MD': the depth at which new formation is first reported is not separable inside the interval, so the first tier gives no point value; the second tier gives where the kick-off drilling started, 2,531 m. The sidetrack's first report starts at 2,627 m, so 2,589 m is not supported either. NOD 2,586 m and 2,589 m both lie inside the interval, so the uncertainty is about 58 m."
+   },
+   {
+    "sidetrack": "15/9-F-15 A",
+    "parent": "15/9-F-15",
+    "ddr_kickoff_depth_m": 1381.0,
+    "evidence_quote": "Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.",
+    "evidence_report": "15/9-F-15 2008-12-12",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 1381.0,
+    "nod_minus_ddr_m": 0.0,
+    "v2_depth_m": 1381.0,
+    "alternative_depths": "1368 (start of the cement/new-formation interval)",
+    "note": NaN,
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 1381.0,
+    "proposed_reason": "'Drilled cement/new formation from 1368 m to 1381 m MD. Initiated kick off of F-15.' puts the start of the kick-off at the end of the interval, 1,381 m, where the sidetrack's first report also starts. NOD agrees at 1,381 m."
+   },
+   {
+    "sidetrack": "15/9-F-15 B",
+    "parent": "15/9-F-15 A",
+    "ddr_kickoff_depth_m": 3185.0,
+    "evidence_quote": "Drilled 8½\" hole from 3141m to 3185m and kicked off at 3185m continued drilling",
+    "evidence_report": "15/9-F-15 A 2009-01-14",
+    "method": "depth in text",
+    "rule_tier": "T1",
+    "confidence": "HIGH",
+    "nod_wlbKickOffPoint_m": 3185.0,
+    "nod_minus_ddr_m": 0.0,
+    "v2_depth_m": 3185.0,
+    "alternative_depths": "3210 (depth of the first '50/50 cement/formation' report)",
+    "note": NaN,
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 3185.0,
+    "proposed_reason": "Tier 1: 'kicked off at 3185m' states the departure depth; the '50/50 cement/formation' remark relates to 3,210 m, drilled afterwards. NOD agrees at 3,185 m."
+   },
+   {
+    "sidetrack": "15/9-F-15 C",
+    "parent": "15/9-F-15 B",
+    "ddr_kickoff_depth_m": 2566.0,
+    "evidence_quote": "OBM. Drilled cement from 2490 m to 2566 m MD. Initiated kick off and drilled",
+    "evidence_report": "15/9-F-15 B 2009-01-19",
+    "method": "depth in text",
+    "rule_tier": "T2",
+    "confidence": "MEDIUM",
+    "nod_wlbKickOffPoint_m": 2575.0,
+    "nod_minus_ddr_m": 9.0,
+    "v2_depth_m": 2566.0,
+    "alternative_depths": "2575 (depth the section reached; the NOD value)",
+    "note": "kick-off initiated after cement drilled to 2566 m",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 2566.0,
+    "proposed_reason": "Tier 2: cement was drilled from 2,490 to 2,566 m, then 'Initiated kick off', and no formation or departure depth is stated; 2,575 m (the NOD value) is only where the section had reached by the end of the day."
+   },
+   {
+    "sidetrack": "15/9-F-15 D",
+    "parent": "15/9-F-15 C",
+    "ddr_kickoff_depth_m": 1380.0,
+    "evidence_quote": "BHA. Drilled cement and kicked off. Drilled 17 1/2\" hole.",
+    "evidence_report": "15/9-F-15 C 2013-11-11",
+    "method": "event in text, depth from md",
+    "rule_tier": "T2",
+    "confidence": "MEDIUM",
+    "nod_wlbKickOffPoint_m": 1380.0,
+    "nod_minus_ddr_m": 0.0,
+    "v2_depth_m": 1380.0,
+    "alternative_depths": NaN,
+    "note": "parent set kick-off plug 2013-11-10; child's first report says 'kicked off' without a depth",
+    "proposed_by": "AI",
+    "proposed_approved": "Y",
+    "proposed_depth": 1380.0,
+    "proposed_reason": "The sidetrack's first report says 'Drilled cement and kicked off' without a depth, so tier 2 with depth from md: the parent's last report (kick-off plug set the day before) has md 1,380 m. NOD agrees at 1,380 m."
+   }
+  ],
+  "description": "Kick-off table with proposals",
+  "producer": {
+   "script": "src/stage8c_proposal.py",
+   "function": "P"
+  },
+  "inputs": {
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8",
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "duration.gap_flagged_wellbores",
+  "value": [
+   "15/9-19 S",
+   "15/9-F-1",
+   "15/9-F-14",
+   "15/9-F-15",
+   "15/9-F-4",
+   "15/9-F-5",
+   "15/9-F-9"
+  ],
+  "description": "Wellbores whose elapsed days to TD exceed twice the DDRs to TD",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "duration.first_ddr_19A",
+  "value": "1997-07-25",
+  "description": "15/9-19 A first DDR with the 1980 sentinel excluded",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "duration.table",
+  "value": [
+   {
+    "wellbore": "15/9-19 A",
+    "family": "19",
+    "first_ddr": "1997-07-25",
+    "last_ddr": "1997-11-10",
+    "n_ddrs": 110,
+    "td_md_m": 4131.0,
+    "td_date": "1997-08-22",
+    "elapsed_days_to_td": 28.0,
+    "ddrs_to_td": 29.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 21,
+    "n_liner_casing_run": 10,
+    "n_cementing": 0,
+    "n_completion": 9,
+    "n_panda": 7,
+    "n_logging_testing": 10,
+    "n_workover": 4,
+    "n_waiting_downtime": 30,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 19,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-19 B",
+    "family": "19",
+    "first_ddr": "1997-11-10",
+    "last_ddr": "1997-12-06",
+    "n_ddrs": 27,
+    "td_md_m": 3272.0,
+    "td_date": "1997-11-28",
+    "elapsed_days_to_td": 18.0,
+    "ddrs_to_td": 19.0,
+    "gap_flag": false,
+    "indicative_only": true,
+    "note": "indicative only: 3,272 m is the TD of an abandoned parent leg (NOD's 19 B record matches 19 BT2)",
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 4,
+    "n_liner_casing_run": 0,
+    "n_cementing": 5,
+    "n_completion": 0,
+    "n_panda": 1,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 2,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 15,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-19 BT2",
+    "family": "19",
+    "first_ddr": "1997-12-06",
+    "last_ddr": "1998-02-05",
+    "n_ddrs": 62,
+    "td_md_m": 4250.0,
+    "td_date": "1998-01-11",
+    "elapsed_days_to_td": 36.0,
+    "ddrs_to_td": 37.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 3,
+    "n_reservoir_drilling": 13,
+    "n_liner_casing_run": 12,
+    "n_cementing": 2,
+    "n_completion": 0,
+    "n_panda": 1,
+    "n_logging_testing": 10,
+    "n_workover": 0,
+    "n_waiting_downtime": 4,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 17,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-19 S",
+    "family": "19",
+    "first_ddr": "1992-09-09",
+    "last_ddr": "1992-12-19",
+    "n_ddrs": 49,
+    "td_md_m": 3353.0,
+    "td_date": "1992-12-09",
+    "elapsed_days_to_td": 91.0,
+    "ddrs_to_td": 39.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": "archive ends before final drilling (WITSML 3,353 m vs NOD 3,580 m)",
+    "n_spud_conductor": 0,
+    "n_surface_casing": 2,
+    "n_intermediate_drilling": 4,
+    "n_intermediate_casing": 2,
+    "n_reservoir_drilling": 10,
+    "n_liner_casing_run": 0,
+    "n_cementing": 3,
+    "n_completion": 0,
+    "n_panda": 1,
+    "n_logging_testing": 1,
+    "n_workover": 0,
+    "n_waiting_downtime": 2,
+    "n_rig_move_setup": 1,
+    "n_unclassified": 23,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-19 ST2",
+    "family": "19",
+    "first_ddr": "1992-12-19",
+    "last_ddr": "1997-07-26",
+    "n_ddrs": 127,
+    "td_md_m": 4641.0,
+    "td_date": "1993-03-12",
+    "elapsed_days_to_td": 83.0,
+    "ddrs_to_td": 68.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 1,
+    "n_reservoir_drilling": 26,
+    "n_liner_casing_run": 16,
+    "n_cementing": 9,
+    "n_completion": 12,
+    "n_panda": 2,
+    "n_logging_testing": 13,
+    "n_workover": 0,
+    "n_waiting_downtime": 10,
+    "n_rig_move_setup": 4,
+    "n_unclassified": 34,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-1",
+    "family": "F-1",
+    "first_ddr": "2007-12-02",
+    "last_ddr": "2013-08-24",
+    "n_ddrs": 38,
+    "td_md_m": 3632.0,
+    "td_date": "2013-08-17",
+    "elapsed_days_to_td": 2085.0,
+    "ddrs_to_td": 31.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": "DDRs to TD mix two campaigns: 4 reports in 2007 (max valid depth 226 m) and the 2013 re-entry reports; TD 3,632 m is reached on 2013-08-17",
+    "n_spud_conductor": 4,
+    "n_surface_casing": 8,
+    "n_intermediate_drilling": 5,
+    "n_intermediate_casing": 2,
+    "n_reservoir_drilling": 5,
+    "n_liner_casing_run": 0,
+    "n_cementing": 3,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 3,
+    "n_workover": 0,
+    "n_waiting_downtime": 1,
+    "n_rig_move_setup": 1,
+    "n_unclassified": 6,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-1 A",
+    "family": "F-1",
+    "first_ddr": "2013-08-24",
+    "last_ddr": "2013-08-30",
+    "n_ddrs": 7,
+    "td_md_m": 3682.0,
+    "td_date": "2013-08-26",
+    "elapsed_days_to_td": 2.0,
+    "ddrs_to_td": 3.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 6,
+    "n_liner_casing_run": 0,
+    "n_cementing": 1,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 0,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 0,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-1 B",
+    "family": "F-1",
+    "first_ddr": "2013-08-30",
+    "last_ddr": "2014-02-22",
+    "n_ddrs": 73,
+    "td_md_m": 3465.0,
+    "td_date": "2013-09-07",
+    "elapsed_days_to_td": 8.0,
+    "ddrs_to_td": 8.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 2,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 3,
+    "n_reservoir_drilling": 5,
+    "n_liner_casing_run": 7,
+    "n_cementing": 5,
+    "n_completion": 19,
+    "n_panda": 4,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 9,
+    "n_rig_move_setup": 2,
+    "n_unclassified": 17,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-1 C",
+    "family": "F-1",
+    "first_ddr": "2014-02-22",
+    "last_ddr": "2016-10-22",
+    "n_ddrs": 98,
+    "td_md_m": 4094.0,
+    "td_date": "2014-03-15",
+    "elapsed_days_to_td": 21.0,
+    "ddrs_to_td": 22.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 7,
+    "n_intermediate_casing": 4,
+    "n_reservoir_drilling": 8,
+    "n_liner_casing_run": 14,
+    "n_cementing": 9,
+    "n_completion": 27,
+    "n_panda": 1,
+    "n_logging_testing": 3,
+    "n_workover": 0,
+    "n_waiting_downtime": 5,
+    "n_rig_move_setup": 2,
+    "n_unclassified": 18,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-10",
+    "family": "F-10",
+    "first_ddr": "2009-04-07",
+    "last_ddr": "2009-06-16",
+    "n_ddrs": 71,
+    "td_md_m": 5331.0,
+    "td_date": "2009-06-03",
+    "elapsed_days_to_td": 57.0,
+    "ddrs_to_td": 58.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 4,
+    "n_surface_casing": 9,
+    "n_intermediate_drilling": 10,
+    "n_intermediate_casing": 8,
+    "n_reservoir_drilling": 23,
+    "n_liner_casing_run": 2,
+    "n_cementing": 8,
+    "n_completion": 1,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 1,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 5,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-11",
+    "family": "F-11",
+    "first_ddr": "2013-03-08",
+    "last_ddr": "2013-03-24",
+    "n_ddrs": 17,
+    "td_md_m": 347.0,
+    "td_date": "2013-03-20",
+    "elapsed_days_to_td": 12.0,
+    "ddrs_to_td": 13.0,
+    "gap_flag": false,
+    "indicative_only": true,
+    "note": "indicative only: 347 m is a pre-sidetrack stub (NOD's F-11 record matches F-11 T2)",
+    "n_spud_conductor": 11,
+    "n_surface_casing": 5,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 0,
+    "n_liner_casing_run": 0,
+    "n_cementing": 0,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 0,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 1,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-11 A",
+    "family": "F-11",
+    "first_ddr": "2013-05-15",
+    "last_ddr": "2013-05-29",
+    "n_ddrs": 14,
+    "td_md_m": 3762.0,
+    "td_date": "2013-05-22",
+    "elapsed_days_to_td": 7.0,
+    "ddrs_to_td": 7.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 8,
+    "n_liner_casing_run": 0,
+    "n_cementing": 3,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 2,
+    "n_workover": 0,
+    "n_waiting_downtime": 0,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 1,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-11 B",
+    "family": "F-11",
+    "first_ddr": "2013-05-29",
+    "last_ddr": "2016-10-22",
+    "n_ddrs": 90,
+    "td_md_m": 4770.0,
+    "td_date": "2013-06-12",
+    "elapsed_days_to_td": 14.0,
+    "ddrs_to_td": 15.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 5,
+    "n_reservoir_drilling": 10,
+    "n_liner_casing_run": 7,
+    "n_cementing": 2,
+    "n_completion": 26,
+    "n_panda": 1,
+    "n_logging_testing": 7,
+    "n_workover": 0,
+    "n_waiting_downtime": 0,
+    "n_rig_move_setup": 2,
+    "n_unclassified": 30,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-11 T2",
+    "family": "F-11",
+    "first_ddr": "2013-03-24",
+    "last_ddr": "2013-05-15",
+    "n_ddrs": 53,
+    "td_md_m": 4562.1,
+    "td_date": "2013-05-05",
+    "elapsed_days_to_td": 42.0,
+    "ddrs_to_td": 43.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 1,
+    "n_surface_casing": 11,
+    "n_intermediate_drilling": 6,
+    "n_intermediate_casing": 2,
+    "n_reservoir_drilling": 7,
+    "n_liner_casing_run": 1,
+    "n_cementing": 5,
+    "n_completion": 0,
+    "n_panda": 1,
+    "n_logging_testing": 5,
+    "n_workover": 0,
+    "n_waiting_downtime": 4,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 10,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-12",
+    "family": "F-12",
+    "first_ddr": "2007-06-14",
+    "last_ddr": "2016-10-21",
+    "n_ddrs": 165,
+    "td_md_m": 3520.0,
+    "td_date": "2007-08-25",
+    "elapsed_days_to_td": 72.0,
+    "ddrs_to_td": 73.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 6,
+    "n_surface_casing": 8,
+    "n_intermediate_drilling": 10,
+    "n_intermediate_casing": 5,
+    "n_reservoir_drilling": 17,
+    "n_liner_casing_run": 15,
+    "n_cementing": 8,
+    "n_completion": 26,
+    "n_panda": 5,
+    "n_logging_testing": 6,
+    "n_workover": 0,
+    "n_waiting_downtime": 11,
+    "n_rig_move_setup": 3,
+    "n_unclassified": 45,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-14",
+    "family": "F-14",
+    "first_ddr": "2007-11-06",
+    "last_ddr": "2016-10-20",
+    "n_ddrs": 134,
+    "td_md_m": 3750.0,
+    "td_date": "2008-06-15",
+    "elapsed_days_to_td": 222.0,
+    "ddrs_to_td": 61.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 7,
+    "n_surface_casing": 9,
+    "n_intermediate_drilling": 5,
+    "n_intermediate_casing": 6,
+    "n_reservoir_drilling": 11,
+    "n_liner_casing_run": 9,
+    "n_cementing": 6,
+    "n_completion": 22,
+    "n_panda": 6,
+    "n_logging_testing": 10,
+    "n_workover": 0,
+    "n_waiting_downtime": 3,
+    "n_rig_move_setup": 7,
+    "n_unclassified": 33,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-15",
+    "family": "F-15",
+    "first_ddr": "2007-11-19",
+    "last_ddr": "2018-01-25",
+    "n_ddrs": 69,
+    "td_md_m": 4090.0,
+    "td_date": "2008-11-29",
+    "elapsed_days_to_td": 376.0,
+    "ddrs_to_td": 55.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": "WITSML 4,090 m vs NOD 4,105 m (15 m)",
+    "n_spud_conductor": 3,
+    "n_surface_casing": 9,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 16,
+    "n_liner_casing_run": 1,
+    "n_cementing": 3,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 2,
+    "n_workover": 0,
+    "n_waiting_downtime": 2,
+    "n_rig_move_setup": 2,
+    "n_unclassified": 31,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-15 A",
+    "family": "F-15",
+    "first_ddr": "2008-12-12",
+    "last_ddr": "2009-01-14",
+    "n_ddrs": 34,
+    "td_md_m": 4095.0,
+    "td_date": "2009-01-05",
+    "elapsed_days_to_td": 24.0,
+    "ddrs_to_td": 25.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 6,
+    "n_intermediate_casing": 5,
+    "n_reservoir_drilling": 14,
+    "n_liner_casing_run": 0,
+    "n_cementing": 4,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 3,
+    "n_workover": 0,
+    "n_waiting_downtime": 0,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 2,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-15 B",
+    "family": "F-15",
+    "first_ddr": "2009-01-14",
+    "last_ddr": "2009-01-19",
+    "n_ddrs": 6,
+    "td_md_m": 3497.0,
+    "td_date": "2009-01-15",
+    "elapsed_days_to_td": 1.0,
+    "ddrs_to_td": 2.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 0,
+    "n_reservoir_drilling": 3,
+    "n_liner_casing_run": 0,
+    "n_cementing": 2,
+    "n_completion": 0,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 1,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 0,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-15 C",
+    "family": "F-15",
+    "first_ddr": "2009-01-19",
+    "last_ddr": "2013-11-11",
+    "n_ddrs": 84,
+    "td_md_m": 3232.0,
+    "td_date": "2009-02-14",
+    "elapsed_days_to_td": 26.0,
+    "ddrs_to_td": 27.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 7,
+    "n_reservoir_drilling": 4,
+    "n_liner_casing_run": 6,
+    "n_cementing": 2,
+    "n_completion": 14,
+    "n_panda": 4,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 15,
+    "n_rig_move_setup": 1,
+    "n_unclassified": 31,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-15 D",
+    "family": "F-15",
+    "first_ddr": "2013-11-11",
+    "last_ddr": "2016-10-19",
+    "n_ddrs": 99,
+    "td_md_m": 4685.0,
+    "td_date": "2013-12-02",
+    "elapsed_days_to_td": 21.0,
+    "ddrs_to_td": 22.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 3,
+    "n_intermediate_drilling": 7,
+    "n_intermediate_casing": 8,
+    "n_reservoir_drilling": 10,
+    "n_liner_casing_run": 10,
+    "n_cementing": 6,
+    "n_completion": 23,
+    "n_panda": 3,
+    "n_logging_testing": 2,
+    "n_workover": 0,
+    "n_waiting_downtime": 2,
+    "n_rig_move_setup": 3,
+    "n_unclassified": 22,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   },
+   {
+    "wellbore": "15/9-F-4",
+    "family": "F-4",
+    "first_ddr": "2007-06-10",
+    "last_ddr": "2016-10-14",
+    "n_ddrs": 130,
+    "td_md_m": 3510.0,
+    "td_date": "2008-02-16",
+    "elapsed_days_to_td": 251.0,
+    "ddrs_to_td": 40.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 5,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 3,
+    "n_intermediate_casing": 10,
+    "n_reservoir_drilling": 11,
+    "n_liner_casing_run": 18,
+    "n_cementing": 3,
+    "n_completion": 8,
+    "n_panda": 2,
+    "n_logging_testing": 12,
+    "n_workover": 1,
+    "n_waiting_downtime": 12,
+    "n_rig_move_setup": 5,
+    "n_unclassified": 40,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-5",
+    "family": "F-5",
+    "first_ddr": "2007-11-15",
+    "last_ddr": "2016-10-17",
+    "n_ddrs": 103,
+    "td_md_m": 3792.0,
+    "td_date": "2008-07-30",
+    "elapsed_days_to_td": 258.0,
+    "ddrs_to_td": 31.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 4,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 4,
+    "n_intermediate_casing": 7,
+    "n_reservoir_drilling": 15,
+    "n_liner_casing_run": 7,
+    "n_cementing": 6,
+    "n_completion": 13,
+    "n_panda": 1,
+    "n_logging_testing": 3,
+    "n_workover": 0,
+    "n_waiting_downtime": 3,
+    "n_rig_move_setup": 4,
+    "n_unclassified": 36,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-7",
+    "family": "F-7",
+    "first_ddr": "2007-09-15",
+    "last_ddr": "2016-10-24",
+    "n_ddrs": 39,
+    "td_md_m": 1085.0,
+    "td_date": "2007-10-06",
+    "elapsed_days_to_td": 21.0,
+    "ddrs_to_td": 22.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 5,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 7,
+    "n_intermediate_casing": 2,
+    "n_reservoir_drilling": 1,
+    "n_liner_casing_run": 3,
+    "n_cementing": 1,
+    "n_completion": 10,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 1,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 9,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-9",
+    "family": "F-9",
+    "first_ddr": "2007-11-29",
+    "last_ddr": "2009-07-04",
+    "n_ddrs": 32,
+    "td_md_m": 1085.0,
+    "td_date": "2008-08-30",
+    "elapsed_days_to_td": 275.0,
+    "ddrs_to_td": 14.0,
+    "gap_flag": true,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 2,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 3,
+    "n_intermediate_casing": 1,
+    "n_reservoir_drilling": 3,
+    "n_liner_casing_run": 1,
+    "n_cementing": 3,
+    "n_completion": 6,
+    "n_panda": 1,
+    "n_logging_testing": 1,
+    "n_workover": 1,
+    "n_waiting_downtime": 0,
+    "n_rig_move_setup": 1,
+    "n_unclassified": 9,
+    "derived_status": "TD only"
+   },
+   {
+    "wellbore": "15/9-F-9 A",
+    "family": "F-9",
+    "first_ddr": "2009-07-04",
+    "last_ddr": "2016-10-24",
+    "n_ddrs": 28,
+    "td_md_m": 1206.0,
+    "td_date": "2009-07-09",
+    "elapsed_days_to_td": 5.0,
+    "ddrs_to_td": 6.0,
+    "gap_flag": false,
+    "indicative_only": false,
+    "note": NaN,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 0,
+    "n_intermediate_casing": 1,
+    "n_reservoir_drilling": 5,
+    "n_liner_casing_run": 5,
+    "n_cementing": 1,
+    "n_completion": 12,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 2,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 2,
+    "derived_status": "PROVISIONAL (AI-proposed kick-off, pending author verification)"
+   }
+  ],
+  "description": "Duration table: first and last DDR, TD, elapsed days and DDRs to TD, gap flag, phase counts",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
+   "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "duration.drilled_length_and_rate_sidetracks",
+  "value": [
+   {
+    "wellbore": "15/9-19 A",
+    "td_md_m": 4131.0,
+    "kickoff_depth_proposed_m": 2183.0,
+    "drilled_length_m": 1948.0,
+    "ddrs_to_td": 29.0,
+    "m_per_report_day": 67.2
+   },
+   {
+    "wellbore": "15/9-19 B",
+    "td_md_m": 3272.0,
+    "kickoff_depth_proposed_m": 2231.0,
+    "drilled_length_m": 1041.0,
+    "ddrs_to_td": 19.0,
+    "m_per_report_day": 54.8
+   },
+   {
+    "wellbore": "15/9-19 BT2",
+    "td_md_m": 4250.0,
+    "kickoff_depth_proposed_m": 2911.0,
+    "drilled_length_m": 1339.0,
+    "ddrs_to_td": 37.0,
+    "m_per_report_day": 36.2
+   },
+   {
+    "wellbore": "15/9-19 ST2",
+    "td_md_m": 4641.0,
+    "kickoff_depth_proposed_m": 1536.0,
+    "drilled_length_m": 3105.0,
+    "ddrs_to_td": 68.0,
+    "m_per_report_day": 45.7
+   },
+   {
+    "wellbore": "15/9-F-1 A",
+    "td_md_m": 3682.0,
+    "kickoff_depth_proposed_m": 2620.0,
+    "drilled_length_m": 1062.0,
+    "ddrs_to_td": 3.0,
+    "m_per_report_day": 354.0
+   },
+   {
+    "wellbore": "15/9-F-1 B",
+    "td_md_m": 3465.0,
+    "kickoff_depth_proposed_m": 2617.0,
+    "drilled_length_m": 848.0,
+    "ddrs_to_td": 8.0,
+    "m_per_report_day": 106.0
+   },
+   {
+    "wellbore": "15/9-F-1 C",
+    "td_md_m": 4094.0,
+    "kickoff_depth_proposed_m": 1364.0,
+    "drilled_length_m": 2730.0,
+    "ddrs_to_td": 22.0,
+    "m_per_report_day": 124.1
+   },
+   {
+    "wellbore": "15/9-F-11 A",
+    "td_md_m": 3762.0,
+    "kickoff_depth_proposed_m": 2586.0,
+    "drilled_length_m": 1176.0,
+    "ddrs_to_td": 7.0,
+    "m_per_report_day": 168.0
+   },
+   {
+    "wellbore": "15/9-F-11 B",
+    "td_md_m": 4770.0,
+    "kickoff_depth_proposed_m": 2531.0,
+    "drilled_length_m": 2239.0,
+    "ddrs_to_td": 15.0,
+    "m_per_report_day": 149.3
+   },
+   {
+    "wellbore": "15/9-F-11 T2",
+    "td_md_m": 4562.1,
+    "kickoff_depth_proposed_m": 246.0,
+    "drilled_length_m": 4316.1,
+    "ddrs_to_td": 43.0,
+    "m_per_report_day": 100.4
+   },
+   {
+    "wellbore": "15/9-F-15 A",
+    "td_md_m": 4095.0,
+    "kickoff_depth_proposed_m": 1381.0,
+    "drilled_length_m": 2714.0,
+    "ddrs_to_td": 25.0,
+    "m_per_report_day": 108.6
+   },
+   {
+    "wellbore": "15/9-F-15 B",
+    "td_md_m": 3497.0,
+    "kickoff_depth_proposed_m": 3185.0,
+    "drilled_length_m": 312.0,
+    "ddrs_to_td": 2.0,
+    "m_per_report_day": 156.0
+   },
+   {
+    "wellbore": "15/9-F-15 C",
+    "td_md_m": 3232.0,
+    "kickoff_depth_proposed_m": 2566.0,
+    "drilled_length_m": 666.0,
+    "ddrs_to_td": 27.0,
+    "m_per_report_day": 24.7
+   },
+   {
+    "wellbore": "15/9-F-15 D",
+    "td_md_m": 4685.0,
+    "kickoff_depth_proposed_m": 1380.0,
+    "drilled_length_m": 3305.0,
+    "ddrs_to_td": 22.0,
+    "m_per_report_day": 150.2
+   },
+   {
+    "wellbore": "15/9-F-9 A",
+    "td_md_m": 1206.0,
+    "kickoff_depth_proposed_m": 428.2,
+    "drilled_length_m": 777.8,
+    "ddrs_to_td": 6.0,
+    "m_per_report_day": 129.6
+   }
+  ],
+  "description": "Drilled length and metres per report-day for the 15 sidetracks",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62",
+   "outputs/kickoff_proposal.csv": "a3573967fad87e80897fe749acc2b87837c41f1e31aa97efa911d13934714ff8"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": "PROVISIONAL (AI-proposed kick-off depths, pending author verification)",
+  "note": null
+ },
+ {
+  "id": "duration.drilled_length_and_rate_originals",
+  "value": [
+   {
+    "wellbore": "15/9-19 S",
+    "td_md_m": 3353.0,
+    "drilled_length_m": 3353.0,
+    "ddrs_to_td": 39.0,
+    "m_per_report_day": 86.0
+   },
+   {
+    "wellbore": "15/9-F-1",
+    "td_md_m": 3632.0,
+    "drilled_length_m": 3632.0,
+    "ddrs_to_td": 31.0,
+    "m_per_report_day": 117.2
+   },
+   {
+    "wellbore": "15/9-F-10",
+    "td_md_m": 5331.0,
+    "drilled_length_m": 5331.0,
+    "ddrs_to_td": 58.0,
+    "m_per_report_day": 91.9
+   },
+   {
+    "wellbore": "15/9-F-11",
+    "td_md_m": 347.0,
+    "drilled_length_m": 347.0,
+    "ddrs_to_td": 13.0,
+    "m_per_report_day": 26.7
+   },
+   {
+    "wellbore": "15/9-F-12",
+    "td_md_m": 3520.0,
+    "drilled_length_m": 3520.0,
+    "ddrs_to_td": 73.0,
+    "m_per_report_day": 48.2
+   },
+   {
+    "wellbore": "15/9-F-14",
+    "td_md_m": 3750.0,
+    "drilled_length_m": 3750.0,
+    "ddrs_to_td": 61.0,
+    "m_per_report_day": 61.5
+   },
+   {
+    "wellbore": "15/9-F-15",
+    "td_md_m": 4090.0,
+    "drilled_length_m": 4090.0,
+    "ddrs_to_td": 55.0,
+    "m_per_report_day": 74.4
+   },
+   {
+    "wellbore": "15/9-F-4",
+    "td_md_m": 3510.0,
+    "drilled_length_m": 3510.0,
+    "ddrs_to_td": 40.0,
+    "m_per_report_day": 87.8
+   },
+   {
+    "wellbore": "15/9-F-5",
+    "td_md_m": 3792.0,
+    "drilled_length_m": 3792.0,
+    "ddrs_to_td": 31.0,
+    "m_per_report_day": 122.3
+   },
+   {
+    "wellbore": "15/9-F-7",
+    "td_md_m": 1085.0,
+    "drilled_length_m": 1085.0,
+    "ddrs_to_td": 22.0,
+    "m_per_report_day": 49.3
+   },
+   {
+    "wellbore": "15/9-F-9",
+    "td_md_m": 1085.0,
+    "drilled_length_m": 1085.0,
+    "ddrs_to_td": 14.0,
+    "m_per_report_day": 77.5
+   }
+  ],
+  "description": "Drilled length (= TD) and metres per report-day for the 11 original wellbores",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_table.csv": "6de46ab1328ad6d64f61ff892dbb5ad54cd7263412e4ac2cab78324d83cfcf62"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "duration.family_summary",
+  "value": [
+   {
+    "family": "15/9-19",
+    "wellbores": 5,
+    "n_ddrs": 375,
+    "n_spud_conductor": 0,
+    "n_surface_casing": 2,
+    "n_intermediate_drilling": 4,
+    "n_intermediate_casing": 6,
+    "n_reservoir_drilling": 74,
+    "n_liner_casing_run": 38,
+    "n_cementing": 19,
+    "n_completion": 21,
+    "n_panda": 12,
+    "n_logging_testing": 34,
+    "n_workover": 4,
+    "n_waiting_downtime": 48,
+    "n_rig_move_setup": 5,
+    "n_unclassified": 108
+   },
+   {
+    "family": "15/9-F-1",
+    "wellbores": 4,
+    "n_ddrs": 216,
+    "n_spud_conductor": 4,
+    "n_surface_casing": 10,
+    "n_intermediate_drilling": 12,
+    "n_intermediate_casing": 9,
+    "n_reservoir_drilling": 24,
+    "n_liner_casing_run": 21,
+    "n_cementing": 18,
+    "n_completion": 46,
+    "n_panda": 5,
+    "n_logging_testing": 6,
+    "n_workover": 0,
+    "n_waiting_downtime": 15,
+    "n_rig_move_setup": 5,
+    "n_unclassified": 41
+   },
+   {
+    "family": "15/9-F-10",
+    "wellbores": 1,
+    "n_ddrs": 71,
+    "n_spud_conductor": 4,
+    "n_surface_casing": 9,
+    "n_intermediate_drilling": 10,
+    "n_intermediate_casing": 8,
+    "n_reservoir_drilling": 23,
+    "n_liner_casing_run": 2,
+    "n_cementing": 8,
+    "n_completion": 1,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 1,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 5
+   },
+   {
+    "family": "15/9-F-11",
+    "wellbores": 4,
+    "n_ddrs": 174,
+    "n_spud_conductor": 12,
+    "n_surface_casing": 16,
+    "n_intermediate_drilling": 6,
+    "n_intermediate_casing": 7,
+    "n_reservoir_drilling": 25,
+    "n_liner_casing_run": 8,
+    "n_cementing": 10,
+    "n_completion": 26,
+    "n_panda": 2,
+    "n_logging_testing": 14,
+    "n_workover": 0,
+    "n_waiting_downtime": 4,
+    "n_rig_move_setup": 2,
+    "n_unclassified": 42
+   },
+   {
+    "family": "15/9-F-12",
+    "wellbores": 1,
+    "n_ddrs": 165,
+    "n_spud_conductor": 6,
+    "n_surface_casing": 8,
+    "n_intermediate_drilling": 10,
+    "n_intermediate_casing": 5,
+    "n_reservoir_drilling": 17,
+    "n_liner_casing_run": 15,
+    "n_cementing": 8,
+    "n_completion": 26,
+    "n_panda": 5,
+    "n_logging_testing": 6,
+    "n_workover": 0,
+    "n_waiting_downtime": 11,
+    "n_rig_move_setup": 3,
+    "n_unclassified": 45
+   },
+   {
+    "family": "15/9-F-14",
+    "wellbores": 1,
+    "n_ddrs": 134,
+    "n_spud_conductor": 7,
+    "n_surface_casing": 9,
+    "n_intermediate_drilling": 5,
+    "n_intermediate_casing": 6,
+    "n_reservoir_drilling": 11,
+    "n_liner_casing_run": 9,
+    "n_cementing": 6,
+    "n_completion": 22,
+    "n_panda": 6,
+    "n_logging_testing": 10,
+    "n_workover": 0,
+    "n_waiting_downtime": 3,
+    "n_rig_move_setup": 7,
+    "n_unclassified": 33
+   },
+   {
+    "family": "15/9-F-15",
+    "wellbores": 5,
+    "n_ddrs": 292,
+    "n_spud_conductor": 3,
+    "n_surface_casing": 12,
+    "n_intermediate_drilling": 13,
+    "n_intermediate_casing": 20,
+    "n_reservoir_drilling": 47,
+    "n_liner_casing_run": 17,
+    "n_cementing": 17,
+    "n_completion": 37,
+    "n_panda": 7,
+    "n_logging_testing": 7,
+    "n_workover": 0,
+    "n_waiting_downtime": 20,
+    "n_rig_move_setup": 6,
+    "n_unclassified": 86
+   },
+   {
+    "family": "15/9-F-4",
+    "wellbores": 1,
+    "n_ddrs": 130,
+    "n_spud_conductor": 5,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 3,
+    "n_intermediate_casing": 10,
+    "n_reservoir_drilling": 11,
+    "n_liner_casing_run": 18,
+    "n_cementing": 3,
+    "n_completion": 8,
+    "n_panda": 2,
+    "n_logging_testing": 12,
+    "n_workover": 1,
+    "n_waiting_downtime": 12,
+    "n_rig_move_setup": 5,
+    "n_unclassified": 40
+   },
+   {
+    "family": "15/9-F-5",
+    "wellbores": 1,
+    "n_ddrs": 103,
+    "n_spud_conductor": 4,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 4,
+    "n_intermediate_casing": 7,
+    "n_reservoir_drilling": 15,
+    "n_liner_casing_run": 7,
+    "n_cementing": 6,
+    "n_completion": 13,
+    "n_panda": 1,
+    "n_logging_testing": 3,
+    "n_workover": 0,
+    "n_waiting_downtime": 3,
+    "n_rig_move_setup": 4,
+    "n_unclassified": 36
+   },
+   {
+    "family": "15/9-F-7",
+    "wellbores": 1,
+    "n_ddrs": 39,
+    "n_spud_conductor": 5,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 7,
+    "n_intermediate_casing": 2,
+    "n_reservoir_drilling": 1,
+    "n_liner_casing_run": 3,
+    "n_cementing": 1,
+    "n_completion": 10,
+    "n_panda": 0,
+    "n_logging_testing": 0,
+    "n_workover": 0,
+    "n_waiting_downtime": 1,
+    "n_rig_move_setup": 0,
+    "n_unclassified": 9
+   },
+   {
+    "family": "15/9-F-9",
+    "wellbores": 2,
+    "n_ddrs": 60,
+    "n_spud_conductor": 2,
+    "n_surface_casing": 0,
+    "n_intermediate_drilling": 3,
+    "n_intermediate_casing": 2,
+    "n_reservoir_drilling": 8,
+    "n_liner_casing_run": 6,
+    "n_cementing": 4,
+    "n_completion": 18,
+    "n_panda": 1,
+    "n_logging_testing": 1,
+    "n_workover": 1,
+    "n_waiting_downtime": 2,
+    "n_rig_move_setup": 1,
+    "n_unclassified": 11
+   },
+   {
+    "family": "TOTAL",
+    "wellbores": 26,
+    "n_ddrs": 1759,
+    "n_spud_conductor": 52,
+    "n_surface_casing": 66,
+    "n_intermediate_drilling": 77,
+    "n_intermediate_casing": 82,
+    "n_reservoir_drilling": 256,
+    "n_liner_casing_run": 144,
+    "n_cementing": 100,
+    "n_completion": 228,
+    "n_panda": 41,
+    "n_logging_testing": 93,
+    "n_workover": 6,
+    "n_waiting_downtime": 120,
+    "n_rig_move_setup": 38,
+    "n_unclassified": 456
+   }
+  ],
+  "description": "Well-family summary: wellbores, DDRs and phase counts",
+  "producer": {
+   "script": "src/stage9_duration.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/duration_family_summary.csv": "00cda462f7adfad5543e94b663a2b4f6bcbfd0cd4a47c74e542578f27c15ed24"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "f1.reports_2007",
+  "value": {
+   "ddrs": 4,
+   "first": "2007-12-02",
+   "last": "2007-12-05",
+   "max_valid_depth_m": 226
+  },
+  "description": "15/9-F-1 reports of 2007",
+  "producer": {
+   "script": "src/stage8c_report.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "f1.reports_2013",
+  "value": {
+   "ddrs": 34,
+   "first": "2013-07-22",
+   "last": "2013-08-24",
+   "max_valid_depth_m": 3632,
+   "td_date": "2013-08-17"
+  },
+  "description": "15/9-F-1 reports of 2013",
+  "producer": {
+   "script": "src/stage8c_report.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.ci_level_pct",
+  "value": 95,
+  "description": "Confidence level of the Wilson interval",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "wilson()"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 95,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.strata_cutoff_days",
+  "value": 730,
+  "description": "Construction era = date within 730 days of the wellbore's first DDR (decision 6: original definition kept)",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 730,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.category_share.BOP_RISER_pct",
+  "value": 32.2,
+  "description": "BOP_RISER share of the 456 unclassified DDRs (147/456)",
+  "producer": {
+   "script": "src/stage6_prepare.py",
+   "function": "cat()"
+  },
+  "inputs": {
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 32.2,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "audit.residual_miss_pp",
+  "value": 11.3,
+  "description": "Residual miss in percentage points (0.1132 x 100)",
+  "producer": {
+   "script": "src/stage6_estimates.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 11.3,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.fseries_name_matched_n",
+  "value": 19,
+  "description": "F-series wellbores matched by literal name",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 19,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.fseries_name_matched_exact",
+  "value": 18,
+  "description": "... of which exact",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 18,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "td.fseries_name_matched_exact_pct",
+  "value": 94.7,
+  "description": "... percent exact (the exception is 15/9-F-15)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 94.7,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": null
+ },
+ {
+  "id": "data.sentinel_years_before_first_ddr",
+  "value": 17.56,
+  "description": "Years from the 1980-01-01 sentinel to 15/9-19 A's first genuine DDR (6415 days / 365.25)",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "date checks"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 17.5,
+  "status_vs_v2": "CHANGED",
+  "provisional": null,
+  "note": "the v2 text says 17.5 years; the computation gives 17.56, which rounds to 17.6 (v2 appears to have truncated)"
+ },
+ {
+  "id": "s19.stuck_pipe_depth_m",
+  "value": 2741,
+  "description": "15/9-19 S stuck pipe depth quoted in the narratives of 1992-12-10 and 1992-12-11",
+  "producer": {
+   "script": "src/stage3_quality.py",
+   "function": "manual reading checked by search"
+  },
+  "inputs": {
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2741,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": "found in 2 DDRs"
+ },
+ {
+  "id": "external.nod_19S_suspended_md_m",
+  "value": 3569.0,
+  "description": "NOD wellbore history text for 15/9-19 S: temporarily suspended at 3,569.0 m MD (2,394.0 m TVD RKB)",
+  "producer": {
+   "script": "none (NOD FactPages web text, outside the CSV export)",
+   "function": "not reproduced by code"
+  },
+  "inputs": {
+   "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 3569.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": "EXTERNAL: carried from the old registry entry manuscript_revision_part2_nod_wellbore_history_ground_truth; not reproducible from the snapshot"
+ },
+ {
+  "id": "external.nod_19S_suspended_tvd_m",
+  "value": 2394.0,
+  "description": "Same source, true vertical depth",
+  "producer": {
+   "script": "none (NOD FactPages web text)",
+   "function": "not reproduced by code"
+  },
+  "inputs": {
+   "data/raw/nod/nod_snapshot_20261024_metadata.json": "f9b77e571056ecce8e366b82cc7c1c9fe26497521a423c2f5d1df9c23068d9a0"
+  },
+  "timestamp": "2026-10-24T09:37:20Z",
+  "v2_value": 2394.0,
+  "status_vs_v2": "SAME",
+  "provisional": null,
+  "note": "EXTERNAL, see above"
+ }
+]
