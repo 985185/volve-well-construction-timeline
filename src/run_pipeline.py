@@ -1,7 +1,7 @@
 """Run the whole pipeline from the repository root, in stage order, from a clean clone.
 
-Inputs needed: (a) the Volve DDR XML in data/raw/ddr_xml/, (b) the NOD wellbore snapshot of 2026-10-24 in data/raw/nod/
-(wellbore_development_all_20261024.csv and wellbore_exploration_all_20261024.csv), (c) the files tracked in this repository.
+Inputs needed: (a) the Volve DDR XML in data/raw/ddr_xml/ and (b) the files tracked in this repository, which include the NOD wellbore
+snapshot of 2026-10-24 in data/nod/.
 
 Steps marked optional compare the rerun with the author's earlier Databricks tables or catalog. They print a SKIPPED message and exit 0 when
 those files are not available, and no reported number depends on running them: the registry reads their committed results.
@@ -30,7 +30,7 @@ STEPS = [
     (12, "stage12_manuscript.py", False), (12, "stage12_changes.py", False), (12, "stage12_check.py", False),
 ]
 through = int(sys.argv[sys.argv.index("--through") + 1]) if "--through" in sys.argv else 99
-for d in ("data/interim", "data/raw/nod", "outputs/figures", "manuscript"):
+for d in ("data/interim", "outputs/figures", "manuscript"):
     os.makedirs(d, exist_ok=True)
 if not os.path.isdir("data/raw/ddr_xml") or not os.listdir("data/raw/ddr_xml"):
     sys.exit("data/raw/ddr_xml/ is empty: place the Volve DDR XML files there first (see README).")

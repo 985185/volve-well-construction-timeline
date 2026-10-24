@@ -1,0 +1,2 @@
+data/nod/*.csv -text
+data/nod/*.json -text

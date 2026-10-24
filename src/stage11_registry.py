@@ -43,7 +43,7 @@ def same(a, b):
 R = "data/raw/manifest.csv"; DDR = "data/interim/ddr.parquet"; CL = "data/interim/classified_new.parquet"; TL = "outputs/timeline.csv"; TD = "outputs/td_validation.csv"; SP = "outputs/spud_validation.csv"
 KT = "outputs/kickoff_table.csv"; KP = "outputs/kickoff_proposal.csv"; DU = "outputs/duration_table.csv"; AA = "outputs/audit_adjudications.csv"; T1F = "outputs/stage3_table1_field_population.csv"
 PR = "outputs/stage3_placeholder_register.csv"; UN = "outputs/stage3_unicode_survey.csv"; T2F = "outputs/table2_phase_distribution.csv"; AF = "data/interim/audit_frame.parquet"
-NODD = "data/raw/nod/wellbore_development_all_20261024.csv"; NODE = "data/raw/nod/wellbore_exploration_all_20261024.csv"; NODM = "data/raw/nod/nod_snapshot_20261024_metadata.json"
+NODD = "data/nod/wellbore_development_all_20261024.csv"; NODE = "data/nod/wellbore_exploration_all_20261024.csv"; NODM = "data/nod/nod_snapshot_20261024_metadata.json"
 S2 = "src/stage2_extract.py"; S3 = "src/stage3_quality.py"; S4 = "src/stage4_classify.py"; S6 = "src/stage6_estimates.py"; S7T = "src/stage7_td.py"; S7S = "src/stage7_spud.py"; S8 = "src/stage8b_kickoff_table.py"
 S8P = "src/stage8c_proposal.py"; S9 = "src/stage9_duration.py"; S5 = "src/stage5_timeline.py"
 
@@ -188,7 +188,7 @@ g = sp.set_index("wellbore")
 _pd = sp.set_index("wellbore")
 _po = {w: (pd.Timestamp(_pd.loc[w, "first_ddr"]) - pd.Timestamp(_pd.loc[w, "nod_predrill_entry_date"])).days for w in ["NO 15/9-F-4", "NO 15/9-F-5", "NO 15/9-F-14", "NO 15/9-F-15"]}
 add("spud.predrill_first_ddr_offset_days", {k.replace("NO ", ""): v for k, v in _po.items()}, "First DDR date minus NOD pre-drill entry date, days, for the four wellbores whose archive contains the pre-drill campaign (F-4, F-5, F-14, F-15)", S7S, "module level", [SP, DDR, NODD], note="decision 48")
-_nf = pd.concat([pd.read_csv(f"data/raw/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
+_nf = pd.concat([pd.read_csv(f"data/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
 add("spud.F-11.predrill_period", {"entry": _nf.loc["15/9-F-11", "wlbEntryPreDrillDate"], "completion": _nf.loc["15/9-F-11", "wlbCompPreDrillDate"], "ddrs_in_period": int(((pd.to_datetime(d_ddr_f11 := pd.read_parquet(DDR).query("wellbore == 'NO 15/9-F-11'").date_report.str[:10])) <= pd.Timestamp("2012-04-17")).sum())}, "NOD pre-drill period of 15/9-F-11 and number of archive DDRs dated within or before it (none)", S7S, "module level", [NODD, NODE, DDR], note="decision 48")
 add("spud.F-12.witsml_spud", g.loc["NO 15/9-F-12", "witsml_spud"], "15/9-F-12 WITSML spud date", S7S, "module level", [SP, DDR], "2007-03-15")
 add("spud.F-12.first_ddr", g.loc["NO 15/9-F-12", "first_ddr"], "15/9-F-12 first DDR (also free text and NOD)", S7S, "module level", [SP, DDR], "2007-06-14")

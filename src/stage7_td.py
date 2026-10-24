@@ -7,7 +7,7 @@ import pandas as pd
 TOL = 0.5
 tl = pd.read_csv("outputs/timeline.csv")
 wit = tl.groupby("wellbore").md_m.max().rename("witsml_max_md_m").reset_index()
-nod = pd.concat([pd.read_csv(f"data/raw/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]])
+nod = pd.concat([pd.read_csv(f"data/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]])
 nod = nod[nod.wlbWellboreName.str.contains(r"15/9-F-|15/9-19", regex=True)].copy()
 nod["td"] = pd.to_numeric(nod.wlbTotalDepth, errors="coerce")
 nodtd = nod.set_index("wlbWellboreName").td

@@ -2,8 +2,8 @@
 import csv, hashlib, io, json, re, sys
 
 DATE = "20261024"
-FILES = {"development": f"data/raw/nod/wellbore_development_all_{DATE}.csv",
-         "exploration": f"data/raw/nod/wellbore_exploration_all_{DATE}.csv"}
+FILES = {"development": f"data/nod/wellbore_development_all_{DATE}.csv",
+         "exploration": f"data/nod/wellbore_exploration_all_{DATE}.csv"}
 OLD = {"development": "inputs/repo_before/data/nod_volve_reference_development.csv",
        "exploration": "inputs/repo_before/data/nod_volve_reference_exploration.csv"}
 pat = re.compile(r"15/9-F-|15/9-19")
@@ -23,7 +23,7 @@ for k, p in FILES.items():
     print(k, len(rows), "subset", len(sub), "sept", len(old), "new-only", meta["files"][k]["only_in_new"], "sept-only", meta["files"][k]["only_in_sept"], "changed", len(changed))
     for n in changed:
         print("  CHANGED", n, {c: (oldset[n][c], newset[n][c]) for c in oldset[n] if oldset[n][c] != newset[n].get(c)})
-json.dump(meta, open("data/raw/nod/nod_snapshot_20261024_metadata.json", "w"), indent=1)
+json.dump(meta, open("data/nod/nod_snapshot_20261024_metadata.json", "w"), indent=1)
 with open("data/raw/manifest.csv", "a", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     for k, v in meta["files"].items(): w.writerow([v["path"], v["sha256"], v["bytes"]])

@@ -33,7 +33,7 @@ T = v2.set_index("wb").freetext_spud_or_kickoff_date.map(lead_date)
 src = v2.set_index("wb").freetext_source_type
 T[T.index == "NO 15/9-19 A"] = pd.NaT          # v2 filled this with the NOD date (no free text exists)
 
-nod = pd.concat([pd.read_csv(f"data/raw/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]])
+nod = pd.concat([pd.read_csv(f"data/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]])
 nod = nod[nod.wlbWellboreName.str.contains(r"15/9-F-|15/9-19", regex=True)].set_index("wlbWellboreName")
 pdt = lambda s: pd.to_datetime(s, format="%d.%m.%Y", errors="coerce")
 td = pd.read_csv("outputs/td_validation.csv")

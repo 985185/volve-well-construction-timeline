@@ -32,14 +32,15 @@ This is a **one-time clean rerun from raw data**. Its purpose is that every numb
 - Raw Volve volume: `/Volumes/equinor_asa_volve_data_village/public/volve/` (restored Sept 2026 via Marketplace reinstall; file download not yet verified).
 - File index: `workspace.default.volve_metadata_catalog` (404,408 rows; columns include well_id, file_name, folder_category, data_type, rel_path). Use it to locate the DDR XML files; don't guess the folder name.
 - Old extracted table (comparison only, never the source): `workspace.default.volve_ddr_master` (1,759 rows), `workspace.default.volve_ddr_classified`.
-- NOD FactPages: https://factpages.sodir.no, the wellbore Table View export. Save a dated snapshot to `data/raw/nod/`.
+- NOD FactPages: https://factpages.sodir.no, the wellbore Table View export. Save a dated snapshot to `data/nod/` (tracked, with its own README; moved there from `data/raw/nod/` on 2026-10-24, decision 61).
 - NOD wellbore designation guidelines: https://www.sodir.no/globalassets/1-sodir/regelverk/tematiske-veiledninger/eng/guidelines-for-designation-of-wells-and-wellbores.pdf (T2 = first technical sidetrack, R = re-entry, S = deviated exploration wellbore, A/B = sidetracks).
 
 ## Layout
 
 ```
 inputs/        TJ's "before" state: v2 manuscript, old registry, classifier v3 source, old adjudications, old figures
-data/raw/      DDR XML + NOD snapshot + manifest.csv (path, sha256, bytes)   [read-only after Stage 1]
+data/raw/      DDR XML + manifest.csv (path, sha256, bytes)   [read-only after Stage 1]
+data/nod/      NOD wellbore snapshot, README.md, metadata JSON   [tracked]
 data/interim/  ddr.parquet and intermediate tables
 src/           one module per stage
 outputs/       timeline CSV, tables, figures, numbers_registry.json, audit workbook

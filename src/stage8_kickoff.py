@@ -5,7 +5,7 @@ import pandas as pd
 
 d = pd.read_parquet("data/interim/ddr.parquet"); d["day"] = d.date_report.str[:10]; d["mdn"] = pd.to_numeric(d.md, errors="coerce")
 v2 = pd.read_csv("inputs/repo_before/data/sidetrack_relationships.csv").set_index("wellbore")
-nod = pd.concat([pd.read_csv(f"data/raw/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
+nod = pd.concat([pd.read_csv(f"data/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
 td = pd.read_csv("outputs/td_validation.csv").set_index("witsml_wellbore")
 
 SIDETRACKS = ["NO 15/9-19 A", "NO 15/9-19 B", "NO 15/9-19 BT2", "NO 15/9-19 ST2", "NO 15/9-F-1 A", "NO 15/9-F-1 B", "NO 15/9-F-1 C", "NO 15/9-F-9 A", "NO 15/9-F-11 A",

@@ -19,7 +19,7 @@ import pandas as pd
 d = pd.read_parquet("data/interim/ddr.parquet")
 d["day"] = d.date_report.str[:10]
 d["mdn"] = pd.to_numeric(d.md, errors="coerce")
-nod = pd.concat([pd.read_csv(f"data/raw/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
+nod = pd.concat([pd.read_csv(f"data/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
 v2 = pd.read_csv("inputs/repo_before/data/sidetrack_relationships.csv").set_index("wellbore").kickoff_depth_m
 prev = pd.read_csv("outputs/kickoff_table.csv").set_index("sidetrack").ddr_kickoff_depth_m if os.path.exists("outputs/kickoff_table.csv") else None
 
