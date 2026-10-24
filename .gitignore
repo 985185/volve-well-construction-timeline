@@ -36,3 +36,6 @@ Thumbs.db
 inputs/databricks_export/
 data/raw/
 *.env
+
+# Regenerated from data/raw by code
+data/interim/
