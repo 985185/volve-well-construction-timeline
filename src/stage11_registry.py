@@ -186,6 +186,11 @@ for kk, v2v in [("EXACT", 7), ("DEFINITIONAL_OFFSET", 8), ("ERROR", 4), ("IDENTI
 add("spud.table4", sp[["wellbore", "witsml_spud", "first_ddr", "freetext_date", "nod_main_entry_date", "nod_predrill_entry_date", "nod_entry_date", "w_minus_n_days", "w_minus_first_ddr_days", "category", "rule"]].to_dict("records"),
     "Per-wellbore spud dates, offsets and categories (Fig. 4 and the table use w_minus_n_days: WITSML spud minus the NOD pre-drill entry date where recorded, otherwise the NOD main entry date)", S7S, "module level", [SP, DDR, NODD, NODE])
 g = sp.set_index("wellbore")
+_pd = sp.set_index("wellbore")
+_po = {w: (pd.Timestamp(_pd.loc[w, "first_ddr"]) - pd.Timestamp(_pd.loc[w, "nod_predrill_entry_date"])).days for w in ["NO 15/9-F-4", "NO 15/9-F-5", "NO 15/9-F-14", "NO 15/9-F-15"]}
+add("spud.predrill_first_ddr_offset_days", {k.replace("NO ", ""): v for k, v in _po.items()}, "First DDR date minus NOD pre-drill entry date, days, for the four wellbores whose archive contains the pre-drill campaign (F-4, F-5, F-14, F-15)", S7S, "module level", [SP, DDR, NODD], note="decision 48")
+_nf = pd.concat([pd.read_csv(f"data/raw/nod/wellbore_{k}_all_20261024.csv", encoding="utf-8-sig", dtype=str) for k in ["development", "exploration"]]).set_index("wlbWellboreName")
+add("spud.F-11.predrill_period", {"entry": _nf.loc["15/9-F-11", "wlbEntryPreDrillDate"], "completion": _nf.loc["15/9-F-11", "wlbCompPreDrillDate"], "ddrs_in_period": int(((pd.to_datetime(d_ddr_f11 := pd.read_parquet(DDR).query("wellbore == 'NO 15/9-F-11'").date_report.str[:10])) <= pd.Timestamp("2012-04-17")).sum())}, "NOD pre-drill period of 15/9-F-11 and number of archive DDRs dated within or before it (none)", S7S, "module level", [NODD, NODE, DDR], note="decision 48")
 add("spud.F-12.witsml_spud", g.loc["NO 15/9-F-12", "witsml_spud"], "15/9-F-12 WITSML spud date", S7S, "module level", [SP, DDR], "2007-03-15")
 add("spud.F-12.first_ddr", g.loc["NO 15/9-F-12", "first_ddr"], "15/9-F-12 first DDR (also free text and NOD)", S7S, "module level", [SP, DDR], "2007-06-14")
 for nme, col, v2v in [("F-1.witsml_spud", "witsml_spud", "2007-11-28"), ("F-1.first_ddr", "first_ddr", "2007-12-02"), ("F-1.nod_entry", "nod_entry_date", "2013-07-23")]:

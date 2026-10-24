@@ -76,3 +76,7 @@ As instructed, stopping after Stage 11. Stage 12 (manuscript) must not finalise 
 - Two more numbers differ from v2: spud Exact 7 to 6 and spud Unresolved 4 to 5. Cause: 15/9-F-11 moves from Exact to Unresolved under the rule "NOD pre-drill entry date where recorded, otherwise the main entry date" (NOD date 2012-04-06, offset +335 days). Registry ids `spud.exact`, `spud.unresolved`, `spud.table4`.
 - Old registry comparison: 25 SAME, 8 CHANGED (the spud summary is now CHANGED), 1 not rerun, of the 34 compared entries.
 - Also added: the entries used by the manuscript draft (NOD comparison counts, spud rule thresholds, the F-1 statement, the 103 repaired narratives, the declared XML encodings, the registry entry count).
+
+## Update after decision 48 (F-11 stays Unresolved)
+
+- The registry now has 227 entries: two were added, `spud.predrill_first_ddr_offset_days` (first DDR minus NOD pre-drill entry date for F-4, F-5, F-14, F-15) and `spud.F-11.predrill_period` (NOD 6 to 17 April 2012, no archive DDRs in or before it). Spud counts are unchanged (Exact 6, Unresolved 5).
