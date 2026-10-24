@@ -334,8 +334,8 @@ p53,"1,421",1421.0,in registry,"el and 7 the zero value, giving 1,759 âˆ’ 331 âˆ
 p53,"1,421",1421.0,in registry,"puting the dataset from the raw XML gave the same 1,421 rows as the earlier analysis,"
 p53,2,2.0,in registry,"with a usable depth, not from its first DDR. Fig. 2 plots report number against m"
 p53,26,26.0,in registry,lots report number against measured depth for all 26 wellbores. The report number
-p53,1,1.0,in registry,"ellbore, with or without a recorded depth, and is 1 for the wellbore's first repo"
-p53,"6,",6.0,in registry,"pth; it is the unit of the reports to TD in Table 6, which starts at the wellbore'"
+p53,1980,1980.0,in registry,"ts every DDR of a wellbore from its first report (1980 sentinel excluded), with or w"
+p53,6,6.0,in registry,t is the same count as the reports to TD of Table 6; only reports with a valid de
 p54,5.4,5.4,ignored: section number,5.4 Total Depth Validation
 p55,26,26.0,in registry,"lbore was compared with NOD's total depth for all 26 wellbores (Table 3, Fig. 3)."
 p55,"3,",3.0,in registry,"ith NOD's total depth for all 26 wellbores (Table 3, Fig. 3)."
@@ -753,7 +753,8 @@ p116,13,13.0,in registry,epository before you upload the manuscript; Stage 13 ch
 p145,1,1.0,in registry,Fig. 1: Depth versus time for four r
 p147,2,2.0,in registry,Fig. 2: Report number (1 = the wellb
 p147,1,1.0,in registry,Fig. 2: Report number (1 = the wellbore's first report
-p147,26,26.0,in registry,"ith recorded depth) versus measured depth for all 26 wellbores, coloured by hole s"
+p147,6,6.0,in registry,"the wellbore's first report, as counted in Table 6) versus measured depth for al"
+p147,26,26.0,in registry,"counted in Table 6) versus measured depth for all 26 wellbores, coloured by hole s"
 p149,3,3.0,in registry,Fig. 3: Reconstructed WITSML maximum
 p149,24,24.0,in registry,"WITSML maximum MD versus NOD total depth for the 24 matched wellbores, with 1:1 r"
 p149,1,1.0,in registry,"OD total depth for the 24 matched wellbores, with 1:1 reference line. The two unm"

@@ -1,5 +1,5 @@
 """Figure 2: report number versus depth for all 26 wellbores, coloured by hole section. Reads only outputs/timeline.csv and outputs/fig2_report_index.csv.
-x = report number counted from the wellbore's first report with a recorded depth (1 = that report; every DDR counts, as in Table 6). No title inside the image (the caption carries it)."""
+x = report number counted from the wellbore's first report of any kind (1 = first report; every DDR counts, the 1980 sentinel excluded), the same count as Table 6. Only reports with a valid depth are plotted. No title inside the image (the caption carries it)."""
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -15,7 +15,7 @@ for p in HOLE:
     g = t[t.phase == p]
     ax.scatter(g.report_number, g.md_m, c=PHASE_COLORS[p], s=10, label=f"{label(p)} (n={len(g)})", zorder=2, edgecolors="none")
 ax.invert_yaxis()
-ax.set_xlabel("Report number (1 = wellbore's first report with recorded depth)")
+ax.set_xlabel("Report number (1 = wellbore's first report)")
 ax.set_ylabel("Measured depth (m)")
 ax.legend(loc="upper right", fontsize=8, markerscale=1.5); ax.grid(alpha=0.2)
 fig.tight_layout()
