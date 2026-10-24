@@ -44,3 +44,6 @@ data/interim/
 outputs/audit_blind_review*.xlsx
 outputs/audit_*_filled*.xlsx
 outputs/audit_workbook*.xlsx
+
+# Local-only full-text originals (DDR narratives); never commit
+local_private/
