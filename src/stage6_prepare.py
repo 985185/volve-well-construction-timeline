@@ -46,7 +46,7 @@ f = f.sort_values("filename")
 f[["filename", "wellbore", "date_report", "category", "days_since_first_ddr", "stratum"]].to_parquet("data/interim/audit_frame.parquet", index=False)
 
 # mapping of the old 50
-old = pd.read_csv("inputs/old_audit/audit_sample.csv")
+old = pd.read_csv("local_private/old_audit/audit_sample.csv")
 old["day"] = old.date_report.str[:10]
 fr = f.assign(day=f.day.dt.strftime("%Y-%m-%d"))
 dd = d.assign(day=d.day.dt.strftime("%Y-%m-%d"))
