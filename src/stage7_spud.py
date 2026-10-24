@@ -82,4 +82,5 @@ bad = m[m.category != m.v2]; print("rows whose category differs from v2:", len(b
 chk = m.apply(lambda x: (str(x.nod_entry_date) in str(x.nod_date_used)) or (x.nod_entry_date is None), axis=1)
 print("NOD date chosen is the date v2 used (or none):", int(chk.sum()), "of", len(m)); print(m[~chk][["wellbore", "nod_entry_date", "nod_date_used"]].to_string(index=False))
 r.to_pickle("data/interim/spud_rows.pkl")
-sys.exit(0 if len(bad) == 0 else 1)
+# the only category that differs from v2 is 15/9-F-11 (Exact in v2, Unresolved under the NOD pre-drill-else-main rule, decisions 47 and 48); any other difference fails
+sys.exit(0 if set(bad.wellbore) <= {"NO 15/9-F-11"} else 1)
