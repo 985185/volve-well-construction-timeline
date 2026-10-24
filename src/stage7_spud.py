@@ -2,7 +2,8 @@
 
 v2 never coded its tolerances (the v2 manuscript carries a [TJ: define the tolerance] note). The rules below were derived from the v2 labels and per-row notes in
 inputs/repo_before/data/spud_validation.csv. Applied in this order, first rule that fires wins. Days are calendar-date differences.
- N: NOD main entry date or predrill entry date, whichever is closer to the anchor (T if present, else F).
+ N: the NOD pre-drill entry date where NOD records one (it marks the start of top-hole drilling, i.e. spud); otherwise the NOD main entry date (TJ ruling, decision 47).
+    The rule does not look at any other date, so it cannot depend on the outcome. Anchor for the rules below: T if present, else F.
  R1 INHERITED     sidetrack whose W equals its parent wellbore's W.
  R5 SHARED_NOD    the NOD record used is one that TD matching assigned to a technical sidetrack (spans two WITSML legs):
                   the T2 leg is UNRESOLVED (not a like-for-like date); the parent leg is DEFINITIONAL_OFFSET only if it has no free-text
@@ -13,7 +14,7 @@ inputs/repo_before/data/spud_validation.csv. Applied in this order, first rule t
  R6 DEFINITIONAL  |W - N| <= 8 days and 2 <= T - W <= 20 days (administrative start precedes operational start).
  R7 UNRESOLVED    everything else.
 
-Offset used in the outputs and in Fig. 4 (one definition, TJ ruling 2): w_minus_n_days = W minus N, with N chosen as above. The two other NOD dates are kept as columns
+Offset used in the outputs and in Fig. 4 (one definition, TJ ruling 2): w_minus_n_days = W minus N, with N chosen by the pre-drill-else-main rule. Both NOD dates are kept as columns
 (nod_main_entry_date, nod_predrill_entry_date) but no offset is computed from the main entry date.
 """
 import re, sys
@@ -49,8 +50,7 @@ for w in W.index:
     n = pair[w]; main = pdt(nod.loc[n, "wlbEntryDate"]) if n in nod.index else pd.NaT
     pre = pdt(nod.loc[n, "wlbEntryPreDrillDate"]) if (n in nod.index and "wlbEntryPreDrillDate" in nod.columns) else pd.NaT
     anchor = T[w] if pd.notna(T.get(w, pd.NaT)) else F[w]
-    cands = [(abs((x - anchor).days), x, k) for x, k in [(main, "main"), (pre, "predrill")] if pd.notna(x)]
-    N, ntype = (min(cands)[1], min(cands)[2]) if cands else (pd.NaT, "none")
+    N, ntype = (pre, "predrill") if pd.notna(pre) else ((main, "main") if pd.notna(main) else (pd.NaT, "none"))
     Tw = T.get(w, pd.NaT)
     dWN = (W[w] - N).days if pd.notna(N) else None
     rows.append(dict(nod_main_entry_date=None if pd.isna(main) else main.date(), nod_predrill_entry_date=None if pd.isna(pre) else pre.date(), wellbore=w, witsml_spud=W[w].date(), first_ddr=F[w].date(), freetext_date=None if pd.isna(Tw) else Tw.date(), nod_entry_date=None if pd.isna(N) else N.date(), nod_entry_type=ntype, nod_record=n,

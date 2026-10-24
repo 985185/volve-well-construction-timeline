@@ -401,6 +401,14 @@ p60,227,227.0,in registry,"field, consistent with every other wellbore. The 227 
 p61,5.5,5.5,ignored: section number,5.5 Spud Date Validation
 p62,4,4.0,in registry,"re's earliest DDRs, and the NOD entry date. Table 4 summarises the outcome, and F"
 p62,4,4.0,in registry,"ry date. Table 4 summarises the outcome, and Fig. 4 plots the offset (WITSML spud"
+p62,25,25.0,in registry,"assignments. Applied mechanically, they reproduce 25 of the 26 assignments: 15/9-F"
+p62,26,26.0,in registry,"s. Applied mechanically, they reproduce 25 of the 26 assignments: 15/9-F-11 was as"
+p62,15,15.0,in registry,"nically, they reproduce 25 of the 26 assignments: 15/9-F-11 was assigned Exact by"
+p62,9,9.0,in registry,"ally, they reproduce 25 of the 26 assignments: 15/9-F-11 was assigned Exact by in"
+p62,11,11.0,in registry,", they reproduce 25 of the 26 assignments: 15/9-F-11 was assigned Exact by inspect"
+p62,6,6.0,in registry,"inspection, but NOD records a pre-drill entry on 6 April 2012, 335 days before t"
+p62,"2012,",2012.0,in registry,"ion, but NOD records a pre-drill entry on 6 April 2012, 335 days before the WITSML sp"
+p62,335,335.0,in registry,"ut NOD records a pre-drill entry on 6 April 2012, 335 days before the WITSML spud d"
 p62,8,8.0,in registry,y. Definitional offset: the WITSML date is within 8 days of the NOD date and the
 p62,2,2.0,in registry,and the free-text operational start follows it by 2 to 20 days. WITSML data-entry
 p62,20,20.0,in registry,he free-text operational start follows it by 2 to 20 days. WITSML data-entry error
@@ -412,6 +420,10 @@ p62,15,15.0,in registry,parent leg by the depth matching of Section 3.5 (15/9-19
 p62,9,9.0,in registry,rent leg by the depth matching of Section 3.5 (15/9-19 BT2 with 19 B); the sidetr
 p62,19,19.0,in registry,nt leg by the depth matching of Section 3.5 (15/9-19 BT2 with 19 B); the sidetrack
 p62,19,19.0,in registry,e depth matching of Section 3.5 (15/9-19 BT2 with 19 B); the sidetrack is left unr
+p62,15,15.0,in registry,e of its own. Everything else is unresolved. [TJ: 15/9-F-11 was assigned Exact by
+p62,9,9.0,in registry,f its own. Everything else is unresolved. [TJ: 15/9-F-11 was assigned Exact by in
+p62,11,11.0,in registry,s own. Everything else is unresolved. [TJ: 15/9-F-11 was assigned Exact by inspect
+p62,47,47.0,in registry,resolved under the stated NOD date rule (decision 47); confirm which category the
 p63,4,4.0,in registry,Table 4: Spud date validation outcome
 p65,91,91.0,in registry,"llbore's own first DDR and free-text narrative by 91 to 340 days, while the first"
 p65,340,340.0,in registry,"'s own first DDR and free-text narrative by 91 to 340 days, while the first DDR, th"
@@ -723,7 +735,7 @@ p148,24,24.0,in registry,"WITSML maximum MD versus NOD total depth for the 24 ma
 p148,1,1.0,in registry,"OD total depth for the 24 matched wellbores, with 1:1 reference line."
 p148,1,1.0,in registry,"total depth for the 24 matched wellbores, with 1:1 reference line."
 p150,4,4.0,in registry,Fig. 4: Spud date offset (WITSML spu
-p150,25,25.0,in registry,"e NOD entry date closest to the first report) for 25 wellbores, coloured by valida"
+p150,25,25.0,in registry,"recorded, otherwise the NOD main entry date) for 25 wellbores, coloured by valida"
 p150,15,15.0,in registry,"or 25 wellbores, coloured by validation category. 15/9-F-11 T2 is excluded because"
 p150,9,9.0,in registry,"25 wellbores, coloured by validation category. 15/9-F-11 T2 is excluded because N"
 p150,11,11.0,in registry,"ellbores, coloured by validation category. 15/9-F-11 T2 is excluded because NOD do"
@@ -955,16 +967,15 @@ table 3 r26 c0,9,9.0,in registry,15/9-F-9 A
 table 3 r26 c1,"1,206.0",1206.0,in registry,"1,206.0"
 table 3 r26 c2,"1,206.0",1206.0,in registry,"1,206.0"
 table 3 r26 c3,0.0,0.0,in registry,0.0
-table 4 r1 c1,7,7.0,in registry,7
-table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F"
-table 4 r1 c2,9,9.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-1"
-table 4 r1 c2,19,19.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B"
-table 4 r1 c2,"10,",10.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B, F-15 C,"
-table 4 r1 c2,"11,",11.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B, F-15 C, F-15"
-table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B, F-15 C, F-15 D"
-table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B, F-15 C, F-15 D"
-table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B, F-15 C, F-15 D"
-table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-11, F-15 A, F-15 B, F-15 C, F-15 D"
+table 4 r1 c1,6,6.0,in registry,6
+table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B,"
+table 4 r1 c2,9,9.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F"
+table 4 r1 c2,19,19.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F-15"
+table 4 r1 c2,"10,",10.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15"
+table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D"
+table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D"
+table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D"
+table 4 r1 c2,15,15.0,in registry,"15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D"
 table 4 r2 c1,8,8.0,in registry,8
 table 4 r2 c2,15,15.0,in registry,"spud precedes operational start by days to weeks (15/9-19 B, F-1 A, F-1 B, F-1 C,"
 table 4 r2 c2,9,9.0,in registry,"d precedes operational start by days to weeks (15/9-19 B, F-1 A, F-1 B, F-1 C, F-"
@@ -992,13 +1003,14 @@ table 4 r5 c2,15,15.0,in registry,"15/9-F-11 A, F-11 T2"
 table 4 r5 c2,9,9.0,in registry,"15/9-F-11 A, F-11 T2"
 table 4 r5 c2,11,11.0,in registry,"15/9-F-11 A, F-11 T2"
 table 4 r5 c2,11,11.0,in registry,"15/9-F-11 A, F-11 T2"
-table 4 r6 c1,4,4.0,in registry,4
-table 4 r6 c2,15,15.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9"
-table 4 r6 c2,9,9.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9"
-table 4 r6 c2,19,19.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9"
-table 4 r6 c2,19,19.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9"
-table 4 r6 c2,19,19.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9"
-table 4 r6 c2,9,9.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9"
+table 4 r6 c1,5,5.0,in registry,5
+table 4 r6 c2,15,15.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9,"
+table 4 r6 c2,9,9.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9, F-"
+table 4 r6 c2,19,19.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9, F-11"
+table 4 r6 c2,19,19.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9, F-11"
+table 4 r6 c2,19,19.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9, F-11"
+table 4 r6 c2,"9,",9.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9, F-11"
+table 4 r6 c2,11,11.0,in registry,"15/9-19 BT2, 19 S, 19 ST2, F-9, F-11"
 table 4 r7 c1,26,26.0,in registry,26
 table 5 r1 c0,15,15.0,in registry,15/9-19 A
 table 5 r1 c0,9,9.0,in registry,15/9-19 A

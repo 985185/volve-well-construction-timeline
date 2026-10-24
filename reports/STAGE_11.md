@@ -20,7 +20,7 @@ The v2 registry had 59 entries; the rerun has 211 because it registers every num
 
 ## Comparison with the v2 targets in CLAUDE.md
 
-Every v2 target in the CLAUDE.md table is reproduced exactly, except where the rows below say otherwise: 1,759 DDRs, 26 wellbores, 11 families; 73 "None" narratives, 331 `-999.99`, 7 zero depths; 1,686 genuine narratives (95.85%); 248 md_kickoff (14.10%); ½ and ¼ (61 DDRs 82 occurrences, 10 DDRs 14 occurrences); 1,303 classified (74.1%) and 456 unclassified; all 13 phase counts; BOP_RISER 147 of 456; audit frame 383, strata 296 + 87, allocation 39 + 11; 26 of 50 (23 of 39 and 3 of 11; misses 9, 10, 7); Wilson 0.385 to 0.652; attainable rate 85.4% (82.5 to 88.3%), stratum-weighted 85.3%; floor 4.2%; 1,421 timeline rows; TD 24 matched, 22 exact, F-15 15 m, 19 S 227 m, unmatched 19 B (3,272 m) and F-11 (347 m); spud 7, 8, 4, 1, 2, 4.
+Every v2 target in the CLAUDE.md table is reproduced exactly, except where the rows below say otherwise: 1,759 DDRs, 26 wellbores, 11 families; 73 "None" narratives, 331 `-999.99`, 7 zero depths; 1,686 genuine narratives (95.85%); 248 md_kickoff (14.10%); ½ and ¼ (61 DDRs 82 occurrences, 10 DDRs 14 occurrences); 1,303 classified (74.1%) and 456 unclassified; all 13 phase counts; BOP_RISER 147 of 456; audit frame 383, strata 296 + 87, allocation 39 + 11; 26 of 50 (23 of 39 and 3 of 11; misses 9, 10, 7); Wilson 0.385 to 0.652; attainable rate 85.4% (82.5 to 88.3%), stratum-weighted 85.3%; floor 4.2%; 1,421 timeline rows; TD 24 matched, 22 exact, F-15 15 m, 19 S 227 m, unmatched 19 B (3,272 m) and F-11 (347 m); spud Definitional offset 8, error 4, identity 1, inherited 2 (Exact 7 and Unresolved 4 changed after the NOD date ruling, see the update at the end).
 
 ## (a) Every number that differs from v2
 
@@ -69,3 +69,10 @@ Numeric tokens in the v2 manuscript body (before the references) and its four ta
 ## Stop
 
 As instructed, stopping after Stage 11. Stage 12 (manuscript) must not finalise kick-off numbers until TJ has filled the author columns. Open items that remain: 5 (spud tolerances are now stated explicitly but fitted to v2's labels), 6 (Sidahmed et al. 2015 title and authors on OnePetro, needs TJ), 7 (licence: narrative text is not published; TJ's listing note for the repo is still not recorded), and the Energistics version and year.
+
+## Update after Stage 12 and the NOD date ruling (decision 47)
+
+- The registry grew while the manuscript draft was built: it now has 225 entries (155 SAME as v2, 26 CHANGED, 44 NEW, 44 PROVISIONAL), not the 211 stated above; the counts and the "211" in this report describe the registry as it stood at the end of Stage 11.
+- Two more numbers differ from v2: spud Exact 7 to 6 and spud Unresolved 4 to 5. Cause: 15/9-F-11 moves from Exact to Unresolved under the rule "NOD pre-drill entry date where recorded, otherwise the main entry date" (NOD date 2012-04-06, offset +335 days). Registry ids `spud.exact`, `spud.unresolved`, `spud.table4`.
+- Old registry comparison: 25 SAME, 8 CHANGED (the spud summary is now CHANGED), 1 not rerun, of the 34 compared entries.
+- Also added: the entries used by the manuscript draft (NOD comparison counts, spud rule thresholds, the F-1 statement, the 103 repaired narratives, the declared XML encodings, the registry entry count).

@@ -184,7 +184,7 @@ sp = pd.read_csv(SP); sv = sp.category.value_counts().to_dict()
 for kk, v2v in [("EXACT", 7), ("DEFINITIONAL_OFFSET", 8), ("ERROR", 4), ("IDENTITY", 1), ("INHERITED", 2), ("UNRESOLVED", 4)]:
     add(f"spud.{kk.lower()}", int(sv[kk]), f"Spud category count: {kk}", S7S, "classify() (rules formalised after the assignments)", [SP, DDR, NODD, NODE, TD], v2v)
 add("spud.table4", sp[["wellbore", "witsml_spud", "first_ddr", "freetext_date", "nod_main_entry_date", "nod_predrill_entry_date", "nod_entry_date", "w_minus_n_days", "w_minus_first_ddr_days", "category", "rule"]].to_dict("records"),
-    "Per-wellbore spud dates, offsets and categories (Fig. 4 and the table use w_minus_n_days: WITSML spud minus the NOD entry date closest to the first report)", S7S, "module level", [SP, DDR, NODD, NODE])
+    "Per-wellbore spud dates, offsets and categories (Fig. 4 and the table use w_minus_n_days: WITSML spud minus the NOD pre-drill entry date where recorded, otherwise the NOD main entry date)", S7S, "module level", [SP, DDR, NODD, NODE])
 g = sp.set_index("wellbore")
 add("spud.F-12.witsml_spud", g.loc["NO 15/9-F-12", "witsml_spud"], "15/9-F-12 WITSML spud date", S7S, "module level", [SP, DDR], "2007-03-15")
 add("spud.F-12.first_ddr", g.loc["NO 15/9-F-12", "first_ddr"], "15/9-F-12 first DDR (also free text and NOD)", S7S, "module level", [SP, DDR], "2007-06-14")
@@ -328,7 +328,7 @@ oc.loc[oc.old_key == "stage4_partE_confidence_interval", "relation"] = "SAME low
 oc.loc[oc.old_key == "field_population_sum24hr_CORRECTED", "relation"] = "SAME if 95.85 rounds to 95.9 (old registry rounds to one decimal)"
 oc.loc[oc.old_key.isin(["sidetracks_kickoff_recovered_free_text", "sidetracks_kickoff_recovered_depth_sequence", "sidetracks_still_not_recoverable_stage1"]), "relation"] = "CHANGED (method definitions and the 15th sidetrack: see Stage 8)"
 oc.loc[oc.old_key == "f1c_kickoff_validation_depth_m", "relation"] = "CHANGED (3,059 m was a section start; 1,364 m proposed, PROVISIONAL)"
-oc.loc[oc.old_key == "stage3_partC_spud_validation_summary", "relation"] = "SAME counts (old WITSML_ERROR 4 + structured 2 = ERROR 4 + INHERITED 2)"
+oc.loc[oc.old_key == "stage3_partC_spud_validation_summary", "relation"] = "CHANGED: 15/9-F-11 Exact to Unresolved under the NOD pre-drill-else-main rule (decision 47); Exact 7 to 6 and Unresolved 4 to 5; other counts same (old WITSML_ERROR 4 + structured 2 = ERROR 4 + INHERITED 2)"
 oc.loc[oc.old_key == "classifier_v3_verbatim_reproduction_SUCCESS", "relation"] = "SAME (74.1)"
 oc.loc[oc.old_key == "classifier_v3_verbatim_phase_distribution", "relation"] = "SAME (all 14 per-phase counts equal; table2 v2_count column)"
 oc.loc[oc.old_key == "stage4_partC_sampling_frame", "relation"] = "SAME (296 + 87 = 383, allocation 39 + 11)"

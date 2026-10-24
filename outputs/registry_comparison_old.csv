@@ -31,5 +31,5 @@ stage4_partD_adjudication_results,"CONSTRUCTION=26, NON_CONSTRUCTION=24 (of 50)"
 stage4_partE_residual_miss_rate,87.6,audit.attainable_rate_pct,85.4,"CHANGED (old registry 87.6 used 456/1,759; v2 manuscript 85.4 uses 383/1,759; rerun 85.4)"
 stage4_partE_confidence_interval,"Wilson 95% CI on sample proportion: [38.5%, 65.2%]; propagated true-classification-rate CI",audit.wilson_low,0.385,"SAME lower bound; old registry propagated CI 84.1 to 91.0 used 456/1,759, rerun 82.5 to 88.3"
 stage3_partB_td_validation_summary,"22 EXACT, 2 CLOSE_NOT_EXACT, 2 UNMATCHED (of 26 total wellbores)",td.exact,22,SAME
-stage3_partC_spud_validation_summary,"EXACT_MATCH=7, DEFINITIONAL_OFFSET=8, WITSML_ERROR=4, WITSML_ERROR(structured field only)=",spud.exact,7,SAME counts (old WITSML_ERROR 4 + structured 2 = ERROR 4 + INHERITED 2)
+stage3_partC_spud_validation_summary,"EXACT_MATCH=7, DEFINITIONAL_OFFSET=8, WITSML_ERROR=4, WITSML_ERROR(structured field only)=",spud.exact,6,CHANGED: 15/9-F-11 Exact to Unresolved under the NOD pre-drill-else-main rule (decision 47); Exact 7 to 6 and Unresolved 4 to 5; other counts same (old WITSML_ERROR 4 + structured 2 = ERROR 4 + INHERITED 2)
 stage6_partC_figures,4,,,SAME (4 figures regenerated in Stage 10)
