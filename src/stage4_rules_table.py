@@ -11,10 +11,11 @@ H = pd.DataFrame(hits)
 final = pd.read_parquet("data/interim/classified_new.parquet").phase
 nmatch = H.sum(axis=1)
 print("DDRs matching 0 / 1 / 2 / 3+ phases:", int((nmatch == 0).sum()), int((nmatch == 1).sum()), int((nmatch == 2).sum()), int((nmatch >= 3).sum()))
-size_rx = re.compile(r"\d")  # a pattern is size-based if it contains a digit (hole, casing or liner size)
+size_rx = re.compile(r"\d")
+is_size = lambda p: bool(size_rx.search(re.sub(r"\{\d+(?:,\d*)?\}", "", p)))  # size-based = a digit outside {m,n} quantifiers (hole, casing or liner size)
 rows = []
 for name, pri, pats in C.PHASES_V3:
-    size = [p for p in pats if size_rx.search(p)]
+    size = [p for p in pats if is_size(p)]
     rows.append({"priority": pri, "phase": name, "n_patterns": len(pats), "n_size_patterns": len(size),
                  "ddrs_matching_any_pattern": int(H[name].sum()), "ddrs_assigned": int((final == name).sum()),
                  "assigned_to_higher_priority_phase_instead": int(H[name].sum()) - int((final == name).sum()),
