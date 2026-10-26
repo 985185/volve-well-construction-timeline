@@ -253,6 +253,50 @@ add("kickoff.19A_nod_parent", {"nod_diskos_parent": _nf.loc["15/9-19 A", "wlbDis
     "NOD parent record of 15/9-19 A and whether it exists as a WITSML wellbore", "src/stage11_registry.py", "module level", [DDR, NODE])
 add("fig4.axis_clip_days", int(re.search(r"^CLIP = (\d+)", open("src/figure4_spud_offset.py", encoding="utf-8").read(), re.M).group(1)), "Fig. 4 axis clip: bars beyond this many days are clipped and labelled with their value (15/9-F-1)", "src/figure4_spud_offset.py", "module level", ["src/figure4_spud_offset.py"])
 
+# ---------------------------------------------------------------- review round 2: Table 1 (example DDR), Table 2 (phases), references
+_enc2 = json.load(open("outputs/stage2_encoding_summary.json", encoding="utf-8"))["example"]
+add("extract.encoding_example", _enc2, "One real before/after phrase from the 103 repaired narratives (earlier table against raw file, at most 10 words each); comparison with the earlier extraction", S2, "stage2_text_diff.py (optional verification, committed result)", ["outputs/stage2_encoding_summary.json"],
+    note="comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)")
+
+_xr = d[d.filename == "15_9_F_5_2007_12_21.xml"].iloc[0]
+_xt = _xr.sum24Hr
+_frag = ['Drilled 17 1/2" section from 1101 m to 1415 m MD. Circulated well clean.', 'POOH with 17½" BHA. Had tight spot at 1123 m, rotated through.', 'Tight spots at 796, 775, 519 and 481m, pulled through with 10-15 MT overpull.']
+_fc = ['Complete handling of 17½" BHA. Rig up for running 13 3/8" casing']
+assert all(f in _xt for f in _frag) and all(f in _xr.forecast24hr for f in _fc) and all(len(f.split()) <= 15 for f in _frag + _fc)
+_xph = cl[cl.filename == _xr.filename].phase.iloc[0]
+add("example.ddr", {"filename": _xr.filename, "wellbore": _xr.wellbore.replace("NO ", ""), "date_report": _xr.date_report[:10], "md_m": float(_xr.md), "dTimSpud": _xr.dTimSpud[:10], "md_kickoff": None if pd.isna(_xr.md_kickoff) else _xr.md_kickoff,
+                    "md_csg_last_m": float(_xr.md_csg_last), "forecast24hr_fragments": _fc, "sum24Hr_fragments": _frag, "sum24Hr_words_shown": sum(len(f.split()) for f in _frag), "sum24Hr_words_total": len(_xt.split()),
+                    "report_no": int(_xr.report_no), "phase": _xph, "phase_priority": int(ru[ru.phase == _xph].priority.iloc[0])},
+    "Example DDR of Table 1: one real construction report whose narrative contains the one-half sign (fragments of at most 15 words)", "src/stage11_registry.py", "module level", [DDR, CL, "outputs/stage4_priority_rules.csv"],
+    note="the example was chosen by hand from the reports with a fraction glyph, a drilling phase and a narrative of 40 to 60 words; omitted text is not shown")
+
+
+def _sizes(s):
+    out = []
+    for p in ([x.strip() for x in str(s).split(";")] if isinstance(s, str) else []):
+        q = re.sub(r"\.\{0,\d+\}", "~", p)
+        m = re.search(r"(\d+(?:\\\.\d+)?)(?:~(\d)\.(\d))?", q)
+        if not m: continue
+        n = m.group(1).replace("\\.", ".")
+        v = f"{n} {m.group(2)}/{m.group(3)}" if m.group(2) else n
+        v = {"17.5": "17 1/2", "12.25": "12 1/4", "8.5": "8 1/2"}.get(v, v)
+        if v not in out: out.append(v)
+    return [v for v in out if not (re.fullmatch(r"\d+", v) and any(w.startswith(v + " ") for w in out))]
+
+
+def _kw(s):
+    out = []
+    for p in ([x for x in str(s).split("; ")] if isinstance(s, str) else []):
+        q = p.replace("\\b", "").replace("\\.", ".")
+        if re.fullmatch(r"[A-Za-z&\- ]+", q) and q not in out: out.append(q)
+    return out[:4]
+
+
+add("classifier.phase_table", [dict(priority=int(r.priority), phase=r.phase, sizes_in=_sizes(r.size_patterns), words=_kw(r.keyword_patterns)) for r in ru.itertuples()],
+    "Table 2: phases in priority order with representative hole and casing sizes (inches) and trigger words, derived from the frozen pattern table", "src/stage11_registry.py", "_sizes, _kw", ["outputs/stage4_priority_rules.csv", "src/classifier_v3.py"])
+add("external.nod_guidelines_revision_date", "2025-03-28", "Latest revision of the NOD Guidelines for designation of wells and wellbores, from the revision history on page 1 of the PDF (the PDF metadata gives a creation date of 2025-04-04)",
+    "none (NOD PDF read 2026-10-26)", "not reproduced by code", [], note="EXTERNAL: read from the PDF, not from the repository")
+
 # ---------------------------------------------------------------- J. derived constants and text figures
 add("audit.ci_level_pct", 95, "Confidence level of the Wilson interval", S6, "wilson()", [AA], 95)
 add("audit.strata_cutoff_days", 730, "Construction era = date within 730 days of the wellbore's first DDR (decision 6: original definition kept)", "src/stage6_prepare.py", "module level", [AF], 730)

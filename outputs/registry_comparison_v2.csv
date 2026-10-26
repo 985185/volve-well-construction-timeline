@@ -209,6 +209,10 @@ f1.nod_main_entry_date,"""2013-07-23""",null,NEW,
 f1.nod_predrill_entry_date,"""none""",null,NEW,
 kickoff.19A_nod_parent,"{""nod_diskos_parent"": ""15/9-19 S                               "", ""19 S_in_witsml"": true, ""19 SR2_in_witsml"": false, ""19",null,NEW,
 fig4.axis_clip_days,400,null,NEW,
+extract.encoding_example,"{""filename"": ""15_9_F_12_2007_07_07.xml"", ""earlier_table"": ""due to double 3 \u00c2\u00bd\"" DP"", ""raw_file"": ""due to doubl",null,NEW,"comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
+example.ddr,"{""filename"": ""15_9_F_5_2007_12_21.xml"", ""wellbore"": ""15/9-F-5"", ""date_report"": ""2007-12-21"", ""md_m"": 1415.0, ""dTimSpud"":",null,NEW,"the example was chosen by hand from the reports with a fraction glyph, a drilling phase and a narrative of 40 to 60 words; omitted text is not shown"
+classifier.phase_table,"[{""priority"": 1, ""phase"": ""Spud / Conductor"", ""sizes_in"": [""36"", ""30""], ""words"": [""spud"", ""tagged sea bt""]}, {""priority""",null,NEW,
+external.nod_guidelines_revision_date,"""2025-03-28""",null,NEW,"EXTERNAL: read from the PDF, not from the repository"
 audit.ci_level_pct,95,95,SAME,
 audit.strata_cutoff_days,730,730,SAME,
 audit.category_share.BOP_RISER_pct,32.2,32.2,SAME,
@@ -233,4 +237,4 @@ duration.gap_flag_rule,"""elapsed days to TD greater than 2 x reports to TD""",n
 duration.n_gap_flagged,7,null,NEW,
 duration.indicative_only,"[""15/9-19 B"", ""15/9-F-11""]",null,NEW,
 data.xml_declared_encoding,"{""none declared (ASCII only)"": 336, ""ISO-8859-1"": 1423}",null,NEW,
-registry.n_entries,235,59,CHANGED,v2 registry had 59 entries
+registry.n_entries,239,59,CHANGED,v2 registry had 59 entries

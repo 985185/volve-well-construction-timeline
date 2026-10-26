@@ -44,7 +44,7 @@ paragraph,token,value,status,context
 14,2017,2017.0,ignored (year),time causes from unstructured reports. Hoffimann et al. (2017) applied deep natural language
 14,2022,2022.0,ignored (year),"misspellings, and incomplete sentences. Zhang et al. (2022) compared keyword-based and"
 14,2015,2015.0,ignored (year),across report formats. [TJ: verify the Sidahmed et al. (2015) title and author list on
-15,2025,2025.0,ignored (year),"nearest comparable published work is Karnot et al. (2025), which applies change-point"
+15,2025,2025.0,in registry,"nearest comparable published work is Karnot et al. (2025), which applies change-point"
 15,701,701.0,ignored (literature figure (cited study)),analysis of non-productive time events. That study uses 701 DDRs from 10 wells and states
 15,10,10.0,in registry,non-productive time events. That study uses 701 DDRs from 10 wells and states that all
 16,2020,2020.0,ignored (year),"benchmark for drilling analytics. Tunkiel et al. (2020), for example, derived a reference"

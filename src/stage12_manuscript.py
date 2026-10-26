@@ -67,7 +67,8 @@ def write_par(p, text):
         run.font.highlight_color = WD_COLOR_INDEX.YELLOW if hl else None
 
 
-def new_par_after(anchor_el, template_p, text):
+def new_par_after(anchor_el, template_p, text, renum=True):
+    text = POST(text) if renum else text
     el = copy.deepcopy(template_p._p); anchor_el.addnext(el)
     par = Paragraph(el, template_p._parent); write_par(par, text); return par
 
@@ -78,6 +79,37 @@ def run_sub(p, idx, old, new):
 
 def val(k):
     return REG[k]["value"]
+
+
+DEL = set()                    # paragraphs deleted at flush time
+
+
+def delp(i, reason):
+    log(i, cur(i)[:160] + (" ..." if len(cur(i)) > 160 else ""), "(paragraph deleted)", None, reason)
+    DEL.add(i)
+
+
+def RENUM(t):                      # two tables were added in Section 3, so the old Tables 1 to 6 become 3 to 8
+    return re.sub(r"\bTable ([1-6])\b", lambda m: f"Table {int(m.group(1)) + 2}", t)
+
+
+ADJ = [("adjudications", "labels"), ("adjudication", "labelling"), ("adjudicator", "labeller"), ("adjudicated", "labelled")]
+
+
+def POST(t):
+    t = RENUM(t)
+    for a, b in ADJ: t = t.replace(a, b)
+    return t
+
+
+def subany(old, new, rid, reason):
+    hits = [i for i in range(len(P)) if i not in DEL and old in cur(i)]
+    assert len(hits) == 1, (old[:60], hits)
+    sub(hits[0], old, new, rid, reason)
+
+
+def app(i, text, rid, reason):
+    old = cur(i); T[i] = old.rstrip() + " " + text; log(i, old[-80:], text, rid, reason)
 
 
 # =========================================================================== front matter and abstract
@@ -126,7 +158,7 @@ sub(44, "The result was checked three ways: a row-count query (1,759), a differe
 sub(52, "a direct query against the classified table returned exactly 1,421.", "recomputing the dataset from the raw XML gave the same 1,421 rows as the earlier analysis, identical in every column.", "timeline.rows", "rerun check against the v2 dataset")
 sub(52, "days from first DDR, measured depth", "days from the wellbore's first report with a recorded depth, measured depth", None, "wording fix (TJ note 4): days are counted from each wellbore's first row with a usable depth")
 sub(52, "Fig. 2 plots days since first DDR against measured depth for all 26 wellbores.",
-    "Days are therefore counted from each wellbore's first row with a usable depth, not from its first DDR. Fig. 2 plots report number against measured depth for all 26 wellbores. The report number counts every DDR of a wellbore from its first report (1980 sentinel excluded), with or without a recorded depth, so it is the same count as the reports to TD of Table 6; only reports with a valid depth are plotted. The days_from_first_ddr column of the dataset is unchanged from v2.", None, "Fig. 2 x-axis changed from calendar days to report count, counted as in Table 6 (TJ review)")
+    "Days are therefore counted from each wellbore's first row with a usable depth, not from its first DDR. Fig. 2 plots report number against measured depth for all 26 wellbores. The report number counts every DDR of a wellbore from its first report (1980 sentinel excluded), with or without a recorded depth, so it is the same count as the reports to TD of Table 6; only reports with a valid depth are plotted. The days_from_first_ddr column of the dataset is unchanged from the earlier analysis.", None, "Fig. 2 x-axis changed from calendar days to report count, counted as in Table 6 (TJ review)")
 dropnote(61)
 sub(61, "Table 4 summarises the outcome, and Fig. 4 plots the offset (WITSML minus NOD) by category.",
     f"Table 4 summarises the outcome, and Fig. 4 plots the offset by category. The offset is the WITSML spud date minus the NOD pre-drill entry date where NOD records one, since it marks the start of top-hole drilling, and otherwise the NOD main entry date. For the four wellbores whose archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report coincides with that date (the same day, or one day later for F-4), which supports using the pre-drill date as the spud reference. The categories were assigned by inspection of the three sources for each wellbore, and the rules in the Rule column of Table 4 were formalised afterwards to describe those assignments. Applied mechanically, the rules reproduce 25 of the 26 assignments. 15/9-F-11 was assigned Exact by inspection but is unresolved under the rule: NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR archive; the archive's 2013 reports describe a fresh spud from seabed, including the 30-inch conductor, so the relationship between the two campaigns cannot be determined from these records.",
@@ -164,7 +196,7 @@ dropnote(104)
 setp(104, f"Generative AI (Anthropic Claude, used through Claude Code) built and ran the reproducible analysis pipeline from the raw data and was used to assist with debugging, checking arithmetic and editing the manuscript text. The sidetrack kick-off depths were proposed by the AI tool from the narratives under one rule. The author rejected the tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier values, then reviewed all 15 depths and approved every one without change. The author made all 50 audit adjudications, reviewed all AI-assisted content, and takes full responsibility for the paper.",
      "v2 AI disclosure (writing, debugging, arithmetic, editing; note about audit adjudication and figures)", None, "AI disclosure matches what happened: AI proposed, author reviewed all 15 rows of the sign-off workbook, approved all 15, changed none, marked none N (decisions 37, 40 and 52)")
 dropnote(106)
-setp(106, f"The classifier (v3), the extraction and analysis code, the 1,421-row timeline dataset, the audit adjudications (file name, wellbore, date, stratum, call and miss reason), the NOD comparison tables, the kick-off and duration tables, and a numbers registry tracing every reported figure to the script that produced it are available at https://github.com/985185/volve-well-construction-timeline. DDR narrative text is not redistributed: the Volve data are available from Equinor under the Equinor Open Data Licence (https://www.equinor.com/energy/volve-data-sharing), and the repository holds only file names, dates, depths, categories and quotes of 15 words or fewer. Comparisons with the author's earlier extraction are reported but are not needed to reproduce any figure.",
+setp(106, f"The classifier, the extraction and analysis code, the 1,421-row timeline dataset, the audit adjudications (file name, wellbore, date, stratum, call and miss reason), the NOD comparison tables, the kick-off and duration tables, and a numbers registry tracing every reported figure to the script that produced it are available at https://github.com/985185/volve-well-construction-timeline. DDR narrative text is not redistributed: the Volve data are available from Equinor under the Equinor Open Data Licence (https://www.equinor.com/energy/volve-data-sharing), and the repository holds only file names, dates, depths, categories and quotes of 15 words or fewer. Comparisons with the author's earlier extraction are reported but are not needed to reproduce any figure.",
      "v2 availability statement (audit sample with adjudications, extracted DDR table, NOD tables, registry)", None, "licence and no-narrative-text policy (decisions 26 and 46); TJ review: sentence on the earlier-extraction comparisons added (decision 58); the extracted table is no longer published because it holds narrative text; Stage 13 check: every item listed exists in the repository (decision 57), so the confirmation note is removed")
 setp(143, f"Every quantitative figure in this paper traces to an entry in the numbers registry published in the repository ({REG['registry.n_entries']['value']} entries, each with the producing script and function, the SHA-256 of its input files and an execution timestamp). The audit estimates in Section 5.2 are derived arithmetically from registry entries, and the arithmetic is shown in the text.",
      "v2 Appendix A (59 entries, each with the exact query and execution timestamp)", "registry.n_entries", "registry rebuilt with 224 entries; resolves the open note on the attainable-rate and placeholder-total entries")
@@ -185,9 +217,83 @@ sub(137, "Fig. 2: Days since first DDR versus measured depth for all 26 wellbore
 sub(139, "for the 24 matched wellbores, with 1:1 reference line.", "for the 24 matched wellbores, with 1:1 reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.", None, "title removed from the image; information moved to the caption (TJ review)")
 sub(141, "Fig. 4: Spud date offset (WITSML minus NOD) for 25 wellbores, coloured by validation category.", "Fig. 4: Spud date offset (WITSML spud date minus the NOD pre-drill entry date where recorded, otherwise the NOD main entry date) for 25 wellbores, coloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is clipped at -400 days and labelled with its value.", "spud.table4", "one offset definition, outcome-independent NOD date rule (decisions 41 and 47)")
 
+# =========================================================================== TJ review, round 2 (structure and wording)
+sub(6, "The final classifier version assigns", "It assigns", None, "no classifier versions named (TJ review)")
+sub(7, "because the archive does not cover", "because the DDR archive does not cover", None, "wording (TJ review)")
+
+# 1 Introduction: one paragraph, contribution reduced to one sentence
+t11 = cur(11); k11 = t11.index("The paper is written to be self-contained")
+CONTRIB = "The contribution is the combination, on a real, openly licensed field archive, of a transparent classifier, an estimate of what that classifier misses, validation against the regulator's register for every wellbore rather than a subset, and a description of the data-quality problems that any other user of the archive will meet. "
+setp(10, cur(10) + " " + t11[:k11] + CONTRIB + t11[k11:], "v2 Introduction, three paragraphs (context, scope, contribution and roadmap)", None, "TJ review: Introduction merged into one paragraph; the contribution paragraph reduced to one sentence; roadmap sentences removed")
+delp(11, "merged into the first Introduction paragraph (TJ review)")
+delp(12, "reduced to one sentence inside the first Introduction paragraph (TJ review)")
+
+# 2 Background
+t14 = cur(14); T[14] = "Several studies have extracted structured information from the free text of drilling reports." + t14[t14.index(" Sidahmed"):]
+log(14, "Text analytics on drilling reports has developed alongside operators' interest in extracting structured information from legacy narratives.", "Several studies have extracted structured information from the free text of drilling reports.", None, "opening sentence replaced (TJ review)")
+t17 = cur(17); a17 = t17.index("The present paper differs in three respects."); b17 = t17.index(" a stratified audit")
+T[17] = t17[:a17] + "The present paper differs in three respects: (1) it uses a deterministic, auditable classifier, trading model sophistication for transparency of every decision; (2) it works exclusively with a real, openly licensed archive; and (3) it pairs classification with" + t17[b17:]
+log(17, "three respects as three sentences", "three respects numbered (1), (2), (3) inline", None, "TJ review")
+
+# 3 Section 3.1
+sub(20, "The Volve field (block 15/9, Norwegian North Sea), operated by Equinor (formerly Statoil), was released as an open dataset after decommissioning (Equinor 2018). The DDR archive was extracted from the dataset's", "The DDR archive was extracted from the Volve dataset's", None, "sentence repeating the Volve introduction removed (TJ review)")
+
+# 4 Section 3.6 deleted
+delp(33, "Section 3.6 deleted (TJ review); it was the last subsection of Section 3, so no other subsection is renumbered")
+delp(34, "Section 3.6 deleted (TJ review)")
+
+# 6 and 7 Section 3.3
+sub(25, "Before matching, vulgar-fraction characters (½, ¼, ¾, ⅛) are replaced with ASCII equivalents, because drilling reports frequently express hole and casing sizes with these glyphs.",
+    "Before matching, fraction characters such as ½ and ¼, routine in the mixed units of drilling reports, are stored as single special characters that a pattern written as \"1/2\" does not match, so they are converted first.", None, "wording (TJ review)")
+delp(26, "paragraph on three classifier versions deleted: classifier versions are not named in the text (TJ review)")
+sub(28, "complete v3 pattern set", "complete pattern set", None, "no classifier versions named (TJ review)")
+
+# 9 Section 3.4 in plain language
+setp(29, "A stratified sample of 50 records was drawn from these 383. The unclassified reports were split into two strata, an early construction group (reports within 730 days of the wellbore's first report, 296 records) and a later production group (reports more than 730 days after it, 87 records; 296 + 87 = 383), and a random sample was drawn from each in proportion to its size: 39 construction-group and 11 production-group records (39 + 11 = 50). The random draw is recorded in the repository so the same sample can be drawn again; the rerun of the analysis from the raw files kept this sample and its groups, after confirming that each of the 50 records maps to exactly one DDR file. The author read each sampled report and labelled it construction if it described work that builds the well: drilling ahead, coring, running or cementing casing, setting plugs, fishing, or completion. Reports that only described handling the BOP or riser, tripping, waiting or production were labelled non-construction, unless they also named a hole or casing size.",
+     "v2 Section 3.4, second paragraph (stratified sample, seed, adjudication rule)", "audit.sample_size;audit.stratum_construction;audit.stratum_production;audit.sample_construction;audit.sample_production;audit.strata_cutoff_days;audit.frame_size",
+     "TJ review: plain-language description of the stratified sample and the labelling rule; the seed is no longer quoted; adjudicated replaced by labelled")
+
+# 14 Section 3.2, 3.5 and references
+sub(23, "(NOD 2026e)", "(NOD 2025)", "external.nod_guidelines_revision_date", "the guidelines are cited by their own revision (28 March 2025, stated in the document's revision history), not as a FactPages page (TJ review)")
+app(31, "All comparisons are against the current register as accessed in October 2026.", "data.nod_snapshot_date", "TJ review")
+IDX_E = [i for i in range(len(P)) if P[i].text.startswith("Norwegian Offshore Directorate. 2026e")]; assert len(IDX_E) == 1
+IDX_A = [i for i in range(len(P)) if P[i].text.startswith("Norwegian Offshore Directorate. 2026a")]; assert len(IDX_A) == 1
+sub(IDX_E[0], "2026e. Guidelines for Designation of Wells and Wellbores.", "2025. Guidelines for Designation of Wells and Wellbores (revision of 28 March 2025).", "external.nod_guidelines_revision_date", "TJ review: cited by its own revision date; 2026a to 2026d now denote FactPages pages only, each with an access date")
+
+# 12 Section 4: a real before and after phrase
+_ex = val("extract.encoding_example")
+sub(41, "(for example the character Ø)", f"(for example, the earlier table held '{_ex['earlier_table']}' where the raw file reads '{_ex['raw_file']}')", "extract.encoding_example", "real before and after phrase (TJ review)")
+sub(41, "the vulgar fraction one-half (½)", "the fraction character one-half (½)", None, "wording (TJ review)")
+
+# 5.1 and 5.2
+sub(44, "Applying v3 to all 1,759 DDRs", "Applying the classifier to all 1,759 DDRs", None, "no classifier versions named (TJ review)")
+subany("Phase distribution, v3 classifier", "Phase distribution", None, "no classifier versions named (TJ review)")
+OLD50 = cur(49)
+setp(49, "26 of the 50 sampled reports (52%) were construction work. Scaled to the 383-report frame this is about 199 reports, so a complete pattern set would classify about 85.4% of the 1,759 reports (95% confidence interval 82.5 to 88.3%). The arithmetic, including the stratum-weighted check, is in Appendix B.",
+     "v2 Section 5.2, arithmetic paragraph", "audit.construction_calls;audit.sample_size;audit.frame_size;audit.residual_miss_ddrs;audit.attainable_rate_pct;audit.attainable_ci_low_pct;audit.attainable_ci_high_pct",
+     "TJ review: plain result kept in the text; full arithmetic and the stratum-weighted check moved to Appendix B")
+subany("and the arithmetic is shown in the text.", "and the arithmetic is shown in Appendix B.", "registry.n_entries", "TJ review")
+
+# 13 Section 5.4: 15/9-19 S
+app(59, "The archive's reports for this wellbore are incomplete throughout, with 39 reports over 91 days (Table 6), and the cause cannot be determined from the records.", "duration.table", "TJ review: no cause is proposed")
+
+# limitations
+subany("but its effect was not separated from other pattern changes between versions.", "but its effect was not separated from other refinements of the pattern set.", None, "no classifier versions named (TJ review)")
+
+# post-processing of every original paragraph: table numbers (+2) and the labelling words
+for i in range(len(P)):
+    if i in DEL: continue
+    t = cur(i); nt = POST(t)
+    if nt != t: T[i] = nt
+log("Tables", "Tables 1 to 6", "Tables 3 to 8", None, "two tables were added in Section 3 (the example report, Table 1, and the phases, Table 2), so every later table number moves up by two; every reference in the text moves with it")
+log("Whole text", "adjudicated, adjudication, adjudications, adjudicator", "labelled, labelling, labels, labeller", None, "plain language (TJ review)")
+
 # flush the edited paragraphs
 for i, text in T.items():
     write_par(P[i], text)
+for i in sorted(DEL):
+    P[i]._p.getparent().remove(P[i]._p)
+P[IDX_A[0]]._p.addprevious(P[IDX_E[0]]._p)          # reference order: the 2025 guidelines come before the 2026 FactPages pages
 
 # figures replace the placeholders
 for i, fn, w in [(134, "figure1_depth_vs_time.png", 6.5), (136, "figure2_days_vs_depth.png", 6.0), (138, "figure3_td_validation.png", 5.2), (140, "figure4_spud_offset.png", 5.4)]:
@@ -232,6 +338,9 @@ W = nsdecls("w"); BORD = '<w:tcBorders><w:top w:val="single" w:color="808080" w:
 MAR = '<w:tcMar><w:top w:type="dxa" w:w="40"/><w:left w:type="dxa" w:w="80"/><w:bottom w:type="dxa" w:w="40"/><w:right w:type="dxa" w:w="80"/></w:tcMar>'
 
 
+TBLPR0 = copy.deepcopy(doc.tables[2]._tbl.tblPr)      # table properties of the existing tables, kept before new tables are inserted
+
+
 def make_table(header, rows, widths, hl=frozenset(), right=frozenset()):
     def cell(text, w, head=False, h=False, rt=False):
         shd = '<w:shd w:fill="E7E6E6" w:color="auto" w:val="clear"/>' if head else ""
@@ -245,7 +354,7 @@ def make_table(header, rows, widths, hl=frozenset(), right=frozenset()):
         xml += '<w:tr><w:trPr><w:cantSplit/></w:trPr>' + "".join(cell(c, widths[ci], h=(ri, ci) in hl, rt=ci in right) for ci, c in enumerate(row)) + "</w:tr>"
     grid = "".join('<w:gridCol w:w="%d"/>' % w for w in widths)
     tbl = parse_xml(f'<w:tbl {W}><w:tblGrid>{grid}</w:tblGrid>{xml}</w:tbl>')
-    tbl.insert(0, copy.deepcopy(doc.tables[2]._tbl.tblPr))
+    tbl.insert(0, copy.deepcopy(TBLPR0))
     return tbl
 
 
@@ -274,6 +383,33 @@ t4._tbl.addnext(tbl4); t4._tbl.getparent().remove(t4._tbl)
 note4 = new_par_after(tbl4, note_t, "Rules are applied in the order R1 (inherited), R5 (technical sidetrack), R2 (error), R3 (later campaign), R4 (exact), R6 (definitional offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7).")
 log("Table 4", "three columns (Outcome, Wellbores, Detail); category named Wellbore-identity conflation", "four columns with a Rule column; category named NOD date marks later campaign", "spud.rule_thresholds_days;spud.table4",
     "TJ review: rules moved from the text of Section 5.5 into the table; the technical-sidetrack rule now names the wellbores it applies to (15/9-19 BT2, 19 ST2 and the parent leg 19 B)")
+
+# ---- Table 1 (example report, Section 3.1) and Table 2 (phases, Section 3.3)
+ex = val("example.ddr"); DISP = {"Reservoir drilling": "12¼ in. and smaller hole", "Surface casing": "Surface hole and casing"}
+sumtxt = " ... ".join(ex["sum24Hr_fragments"]); fctxt = " ... ".join(ex["forecast24hr_fragments"]) + " ..."
+rows1 = [["wellbore", ex["wellbore"], "the wellbore the report belongs to"],
+         ["date_report", ex["date_report"], "the day the report covers"],
+         ["md (m)", fm(ex["md_m"]), "measured depth reached, along the hole"],
+         ["dTimSpud", ex["dTimSpud"], "spud date in the report header, the same in every report of the wellbore"],
+         ["md_kickoff", "absent", f"kick-off depth field: empty in this report, and populated in only {val('table1.md_kickoff_m.pct'):.2f}% of all reports"],
+         ["md_csg_last (m)", fdepth(ex["md_csg_last_m"]), "depth of the last casing shoe"],
+         ["forecast24hr", fctxt, "the plan for the next 24 hours"],
+         ["sum24Hr (abridged)", sumtxt, "free-text summary of the past 24 hours: the text the classifier reads"],
+         ["Phase assigned", f"{DISP.get(ex['phase'], ex['phase'])} (priority {ex['phase_priority']})", "the classifier's result: the 17 1/2 in. section matches the Intermediate drilling patterns, in either spelling of the size"]]
+tbl1 = make_table(["Field", "Value", "Meaning"], rows1, [1700, 4300, 3360])
+a1 = new_par_after(P[21]._p, body_t, "Table 1 shows one report as stored in the archive, abridged: the structured fields the pipeline uses and the free-text summary that the classifier reads. The example is a real construction report whose summary contains the one-half sign. Text is quoted in fragments of at most 15 words, and \"...\" marks omitted text.", renum=False)
+c1 = new_par_after(a1._p, cap_t, "Table 1: Example DDR as stored in the archive (abridged)", renum=False)
+c1._p.addnext(tbl1)
+n1 = new_par_after(tbl1, note_t, f"The summary has {ex['sum24Hr_words_total']} words, of which {ex['sum24Hr_words_shown']} are shown. Source file {ex['filename']}.", renum=False)
+log("Section 3.1", "(no example report)", "Table 1: one real report (15/9-F-5, 2007-12-21) with the fields explained", "example.ddr;table1.md_kickoff_m.pct", "TJ review: abridged example DDR")
+
+rows2 = [[str(r["priority"]), DISP.get(r["phase"], r["phase"]).replace(" / ", "/"), ", ".join(r["sizes_in"]) or "none", ", ".join(r["words"]) or "none"] for r in val("classifier.phase_table")]
+tbl2 = make_table(["Priority", "Phase", "Hole and casing sizes (in.)", "Example trigger words"], rows2, [800, 2400, 2100, 4060])
+a2 = new_par_after(P[25]._p, body_t, "Table 2 lists the 13 phases in priority order with representative triggers taken from the pattern table of the repository (outputs/stage4_priority_rules.csv). Sizes are matched in the spellings found in the reports, for example 17 1/2 or 17.5; words are matched without regard to case; each phase has further patterns that are not shown.", renum=False)
+c2 = new_par_after(a2._p, cap_t, "Table 2: Phases in priority order with representative triggers", renum=False)
+c2._p.addnext(tbl2)
+n2 = new_par_after(tbl2, note_t, "A report is assigned to the highest-priority phase with a match; a report that matches no pattern is Unclassified.", renum=False)
+log("Section 3.3", "(no phase table)", "Table 2: 13 phases, priority, sizes and trigger words from the frozen pattern table", "classifier.phase_table", "TJ review: generated from outputs/stage4_priority_rules.csv")
 
 # ---- Table 5 (kick-off) and the text around it
 kt = pd.DataFrame(val("kickoff.table"))
@@ -313,6 +449,12 @@ cb = new_par_after(P[98]._p, bullet_t, f"Sidetrack kick-off depths were recovere
 log("Conclusions (new bullet)", "(none)", "kick-off result for all 15 sidetracks, F-1 C 1,364 m", "kickoff.proposed_depth.15/9-F-1 C;kickoff.F-1_family_shared_hole_above_m", "new result")
 
 # draft banner after the affiliation note
+
+# ---- Appendix B: audit arithmetic
+hB = new_par_after(P[143]._p, P[142], "Appendix B: Audit Arithmetic", renum=False)
+pB1 = new_par_after(hB._p, P[143], "This appendix gives the arithmetic behind the attainable classification rate of Section 5.2.", renum=False)
+pB2 = new_par_after(pB1._p, P[143], POST(OLD50), renum=False)
+log("Appendix B (new)", "(arithmetic was in Section 5.2)", "full arithmetic and stratum-weighted check", "audit.sample_proportion;audit.wilson_low;audit.wilson_high;audit.scale_frame_over_total;audit.residual_miss;audit.observed_rate;audit.stratum_weighted_rate_pct", "TJ review: moved from Section 5.2")
 
 os.makedirs("manuscript", exist_ok=True)
 doc.save("manuscript/paper2_draft.docx")

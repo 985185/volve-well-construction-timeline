@@ -38,5 +38,14 @@ for c in ["sum24Hr", "forecast24hr"]:
 # committed result read by the registry (a comparison with the earlier table, so it is stored rather than recomputed from the earlier table)
 _mm = new[["filename", "sum24Hr"]].merge(old[["filename", "sum24hr"]], on="filename")
 n_enc = int(sum(1 for a, b in zip(_mm.sum24Hr.fillna(""), _mm.sum24hr.fillna("")) if (moji(b.strip()) == a.strip()) and moji(b) != b))
-json.dump({"sum24Hr_rows_with_encoding_error_in_earlier_table": n_enc, "rows_compared": len(_mm)}, open("outputs/stage2_encoding_summary.json", "w"), indent=1)
+# one real before/after phrase (at most 10 words each side): the first file, in file-name order, whose earlier text holds the garbled one-half sign
+_ex = None
+for _r in _mm.sort_values("filename").itertuples():
+    _o, _n = (_r.sum24hr or "").strip(), (_r.sum24Hr or "").strip()
+    if "\u00c2\u00bd" in _o and moji(_o) == _n:
+        _ow, _nw = _o.split(), _n.split(); _k = [i for i, w in enumerate(_ow) if "\u00c2\u00bd" in w][0]
+        _ex = {"filename": _r.filename, "earlier_table": " ".join(_ow[max(0, _k - 4):_k + 2]), "raw_file": " ".join(_nw[max(0, _k - 4):_k + 2])}
+        assert len(_ex["earlier_table"].split()) <= 10 and len(_ex["raw_file"].split()) <= 10
+        break
+json.dump({"sum24Hr_rows_with_encoding_error_in_earlier_table": n_enc, "rows_compared": len(_mm), "example": _ex}, open("outputs/stage2_encoding_summary.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 print("encoding-error rows in the earlier table (sum24Hr):", n_enc)
