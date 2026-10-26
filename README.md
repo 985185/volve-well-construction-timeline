@@ -94,6 +94,10 @@ The narrative of each stage (what ran, results, arithmetic, discrepancies) is in
 
 Phase labels: the classifier's internal names "Reservoir drilling" and "Surface casing" appear in the data files; the manuscript and figures display them as "12¼ in. and smaller hole" and "Surface hole and casing" (label-only change, patterns frozen; `notes/decisions.md`, item 49).
 
+## Checks before publishing
+
+`python -X utf8 src/prepush_scan.py` scans every tracked file for narrative text in data files (columns named `sum24Hr` or `forecast24hr`, quotations of more than 15 words; the manuscript docx and PDF are exempt), secrets and identifiers, and files over 50 MB, and exits with 1 if it finds anything.
+
 ## Repository layout
 
 ```

@@ -295,7 +295,7 @@ def _kw(s):
 add("classifier.phase_table", [dict(priority=int(r.priority), phase=r.phase, sizes_in=_sizes(r.size_patterns), words=_kw(r.keyword_patterns)) for r in ru.itertuples()],
     "Table 2: phases in priority order with representative hole and casing sizes (inches) and trigger words, derived from the frozen pattern table", "src/stage11_registry.py", "_sizes, _kw", ["outputs/stage4_priority_rules.csv", "src/classifier_v3.py"])
 add("literature.karnot_2025", {"ddrs": 701, "wells": 10, "npt_reduction_pct": 18.5}, "Figures of Karnot et al. (2025) quoted in Section 2: 701 DDRs from 10 wells; average reduction in non-productive time reported in field applications (%)",
-    "none (literature, as quoted in the author's review of 2026-10-26)", "not reproduced by code", [], note="EXTERNAL: from the cited paper, not checked by code")
+    "none (literature, as quoted in the author's review of 2026-10-26)", "not reproduced by code", [], note="EXTERNAL, VERIFIED against the source PDF of SPE-228268-MS (author check, 26 October 2026): 701 DDRs, 10 wells, the two quotations of Section 2 and the 18.5% figure; not reproduced by code")
 add("external.nod_guidelines_revision_date", "2025-03-28", "Latest revision of the NOD Guidelines for designation of wells and wellbores, from the revision history on page 1 of the PDF (the PDF metadata gives a creation date of 2025-04-04)",
     "none (NOD PDF read 2026-10-26)", "not reproduced by code", [], note="EXTERNAL: read from the PDF, not from the repository")
 
