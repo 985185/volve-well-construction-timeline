@@ -9,7 +9,7 @@ The branch `rerun-2026-10` is a clean rerun from the raw data. The state before 
 ## Licences
 
 - **Code:** Apache License 2.0 (`LICENSE`).
-- **Data:** the Volve data are disclosed by Equinor ASA under the Equinor Open Data Licence (https://www.equinor.com/energy/volve-data-sharing). This repository does **not** redistribute DDR narrative text. It holds file names, wellbore names, dates, depths, categories, calls and evidence quotes of 15 words or fewer (an ellipsis is not counted as a word). The raw DDR XML is not in the repository; obtain it as described below.
+- **Data:** the Volve data are disclosed by Equinor ASA under the Equinor Open Data Licence (https://www.equinor.com/energy/volve-data-sharing). This repository does **not** redistribute DDR narrative text. It holds file names, wellbore names, dates, depths, categories, calls and evidence quotes of 15 words or fewer in its data files (the manuscript quotes one complete report as an example) (an ellipsis is not counted as a word). The raw DDR XML is not in the repository; obtain it as described below.
 - **NOD data:** the FactPages wellbore exports are fetched from https://factpages.sodir.no and the export of 24 October 2026 is committed in `data/nod/` (see `data/nod/README.md` for the source, date and attribution). Derived comparison tables are in `outputs/`.
 
 ## Obtaining the raw DDR XML (Databricks Marketplace)

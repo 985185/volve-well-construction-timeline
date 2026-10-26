@@ -280,6 +280,22 @@ app(59, "The archive's reports for this wellbore are incomplete throughout, with
 # limitations
 subany("but its effect was not separated from other pattern changes between versions.", "but its effect was not separated from other refinements of the pattern set.", None, "no classifier versions named (TJ review)")
 
+# =========================================================================== TJ review, round 3
+# 2 Background: Karnot et al. (2025)
+IK = [i for i in range(len(P)) if cur(i).startswith("The nearest comparable published work is Karnot")]; assert len(IK) == 1
+setp(IK[0], "Karnot et al. (2025) combine change-point detection, semi-supervised natural language processing and sequence mining for root-cause analysis of non-productive time, applied to 701 DDRs from 10 wells. Their Dataset section states that \"all analyses used synthetic datasets constructed to emulate typical drilling records\" and that \"rigorous validation and quantitative performance assessment are left for future work\", although their abstract and conclusions also report an average 18.5% reduction in non-productive time in field applications.",
+     "v2 Section 2, Karnot et al. paragraph", "literature.karnot_2025", "TJ review round 3: description replaced; the two quotations are as given in the review (not checked against the paper by code)")
+subany("The common limitation across the published DDR work is that it relies on proprietary or synthetic data, so its results", "The common limitation across the published DDR work is that its data are proprietary or synthetic rather than an openly available archive, so its results", None, "kept consistent with the Karnot et al. description (TJ review round 3)")
+
+# 3 F-12
+IF = [i for i in range(len(P)) if cur(i).startswith("In the four error cases")]; assert len(IF) == 1
+tF = cur(IF[0]); a0 = tF.index("In the four error cases"); a1 = tF.index("Two sidetracks, 15/9-F-11 A")
+T[IF[0]] = tF[:a0] + "In the four error cases the structured spud_date contradicts the wellbore's own first report and its narrative by 91 to 340 days, while the first report and the NOD date agree with each other. 15/9-F-12 is the clearest example: the first report (14 June 2007), which describes making up the 36 in. hole opener, and the NOD entry date agree, and only the structured field (15 March 2007) disagrees. " + tF[a1:]
+log(IF[0], "three sources agree on 14 June 2007 (first DDR, narrative, NOD)", "the first report and the NOD entry date agree; the first report and its narrative are one document", "spud.F-12.witsml_spud;spud.F-12.first_ddr", "TJ review round 3: the first DDR and the free-text evidence are the same report, so 'three sources' overstated the agreement")
+
+# availability statement: the 15-word limit is for the repository's data files
+subany("and the repository holds only file names, dates, depths, categories and quotes of 15 words or fewer.", "and the data files of the repository hold only file names, dates, depths, categories and quotes of 15 words or fewer.", None, "the 15-word limit applies to data files, not to quotations in the manuscript (decision 67)")
+
 # post-processing of every original paragraph: table numbers (+2) and the labelling words
 for i in range(len(P)):
     if i in DEL: continue
@@ -386,22 +402,24 @@ log("Table 4", "three columns (Outcome, Wellbores, Detail); category named Wellb
 
 # ---- Table 1 (example report, Section 3.1) and Table 2 (phases, Section 3.3)
 ex = val("example.ddr"); DISP = {"Reservoir drilling": "12¼ in. and smaller hole", "Surface casing": "Surface hole and casing"}
-sumtxt = " ... ".join(ex["sum24Hr_fragments"]); fctxt = " ... ".join(ex["forecast24hr_fragments"]) + " ..."
+_full = " ".join(pd.read_parquet("data/interim/ddr.parquet", columns=["filename", "sum24Hr"]).set_index("filename").loc[ex["filename"], "sum24Hr"].split())
+assert len(_full.split()) == ex["sum24Hr_words_total"] and all(f in _full for f in ex["sum24Hr_fragments"])          # the full summary, checked against the registry
+sumtxt = "“" + _full + "”"; fctxt = " ... ".join(ex["forecast24hr_fragments"]) + " ..."
 rows1 = [["wellbore", ex["wellbore"], "the wellbore the report belongs to"],
          ["date_report", ex["date_report"], "the day the report covers"],
          ["md (m)", fm(ex["md_m"]), "measured depth reached, along the hole"],
          ["dTimSpud", ex["dTimSpud"], "spud date in the report header, the same in every report of the wellbore"],
-         ["md_kickoff", "absent", f"kick-off depth field: empty in this report, and populated in only {val('table1.md_kickoff_m.pct'):.2f}% of all reports"],
+         ["md_kickoff", "absent", "kick-off depth field: empty in this report, as in most reports (Table 3)"],
          ["md_csg_last (m)", fdepth(ex["md_csg_last_m"]), "depth of the last casing shoe"],
-         ["forecast24hr", fctxt, "the plan for the next 24 hours"],
-         ["sum24Hr (abridged)", sumtxt, "free-text summary of the past 24 hours: the text the classifier reads"],
+         ["forecast24hr (abridged)", fctxt, "the plan for the next 24 hours"],
+         ["sum24Hr", sumtxt, "free-text summary of the past 24 hours: the text the classifier reads"],
          ["Phase assigned", f"{DISP.get(ex['phase'], ex['phase'])} (priority {ex['phase_priority']})", "the classifier's result: the 17 1/2 in. section matches the Intermediate drilling patterns, in either spelling of the size"]]
 tbl1 = make_table(["Field", "Value", "Meaning"], rows1, [1700, 4300, 3360])
-a1 = new_par_after(P[21]._p, body_t, "Table 1 shows one report as stored in the archive, abridged: the structured fields the pipeline uses and the free-text summary that the classifier reads. The example is a real construction report whose summary contains the one-half sign. Text is quoted in fragments of at most 15 words, and \"...\" marks omitted text.", renum=False)
-c1 = new_par_after(a1._p, cap_t, "Table 1: Example DDR as stored in the archive (abridged)", renum=False)
+a1 = new_par_after(P[21]._p, body_t, "Table 1 shows one report as stored in the archive: the structured fields the pipeline uses and the free-text summary that the classifier reads, quoted in full. The example is a real construction report whose summary contains the one-half sign.", renum=False)
+c1 = new_par_after(a1._p, cap_t, "Table 1: Example DDR as stored in the archive", renum=False)
 c1._p.addnext(tbl1)
-n1 = new_par_after(tbl1, note_t, f"The summary has {ex['sum24Hr_words_total']} words, of which {ex['sum24Hr_words_shown']} are shown. Source file {ex['filename']}.", renum=False)
-log("Section 3.1", "(no example report)", "Table 1: one real report (15/9-F-5, 2007-12-21) with the fields explained", "example.ddr;table1.md_kickoff_m.pct", "TJ review: abridged example DDR")
+n1 = new_par_after(tbl1, note_t, f"Source: Equinor Volve dataset (Equinor 2018), file {ex['filename']}. The summary of {ex['sum24Hr_words_total']} words is quoted in full; the forecast is abridged. The kick-off field is empty in this report, as in most reports (Table 3).", renum=False)
+log("Section 3.1", "(no example report)", "Table 1: one real report (15/9-F-5, 2007-12-21), summary quoted in full, with the fields explained", "example.ddr;table1.md_kickoff_m.pct", "TJ review: abridged example DDR")
 
 rows2 = [[str(r["priority"]), DISP.get(r["phase"], r["phase"]).replace(" / ", "/"), ", ".join(r["sizes_in"]) or "none", ", ".join(r["words"]) or "none"] for r in val("classifier.phase_table")]
 tbl2 = make_table(["Priority", "Phase", "Hole and casing sizes (in.)", "Example trigger words"], rows2, [800, 2400, 2100, 4060])
@@ -449,6 +467,11 @@ cb = new_par_after(P[98]._p, bullet_t, f"Sidetrack kick-off depths were recovere
 log("Conclusions (new bullet)", "(none)", "kick-off result for all 15 sidetracks, F-1 C 1,364 m", "kickoff.proposed_depth.15/9-F-1 C;kickoff.F-1_family_shared_hole_above_m", "new result")
 
 # draft banner after the affiliation note
+
+# ---- Conclusions: summary paragraph before the numbered list (TJ review round 3, text exactly as supplied)
+IH = [i for i in range(len(P)) if P[i].style.name.startswith("Heading") and P[i].text.strip() == "8 Conclusions"]; assert len(IH) == 1
+concl = new_par_after(P[IH[0]]._p, body_t, "This paper shows three things. First, a field's daily drilling reports can be turned into a construction history that is checked against the regulator's register and whose error is measured, using a method anyone can inspect and rerun. Second, the structured fields of a WITSML archive cannot be trusted on their own: spud dates, kick-off depths and placeholder values all needed the narrative or the national register to correct them, and a kick-off read naively from the narrative can pick up the start of a hole section instead of the point where the sidetrack leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national register alone does not give a complete inventory of what was drilled: abandoned parent legs, shared upper hole and missing campaigns appear only when the reports are reconstructed. For anyone screening old wells for CO2 storage or decommissioning, the practical lesson is to reconstruct the well history from the reports before relying on either source alone.", renum=False)
+log("Conclusions", "(no summary paragraph)", "summary paragraph before the numbered list", "kickoff.proposed_depth.15/9-F-1 C", "TJ review round 3: text as supplied by the author")
 
 # ---- Appendix B: audit arithmetic
 hB = new_par_after(P[143]._p, P[142], "Appendix B: Audit Arithmetic", renum=False)

@@ -265,10 +265,10 @@ _fc = ['Complete handling of 17½" BHA. Rig up for running 13 3/8" casing']
 assert all(f in _xt for f in _frag) and all(f in _xr.forecast24hr for f in _fc) and all(len(f.split()) <= 15 for f in _frag + _fc)
 _xph = cl[cl.filename == _xr.filename].phase.iloc[0]
 add("example.ddr", {"filename": _xr.filename, "wellbore": _xr.wellbore.replace("NO ", ""), "date_report": _xr.date_report[:10], "md_m": float(_xr.md), "dTimSpud": _xr.dTimSpud[:10], "md_kickoff": None if pd.isna(_xr.md_kickoff) else _xr.md_kickoff,
-                    "md_csg_last_m": float(_xr.md_csg_last), "forecast24hr_fragments": _fc, "sum24Hr_fragments": _frag, "sum24Hr_words_shown": sum(len(f.split()) for f in _frag), "sum24Hr_words_total": len(_xt.split()),
+                    "md_csg_last_m": float(_xr.md_csg_last), "forecast24hr_fragments": _fc, "sum24Hr_fragments": _frag, "sum24Hr_words_total": len(_xt.split()), "sum24Hr_numbers_in_text": re.findall(r"\d[\d,]*\.?\d*", _xt),
                     "report_no": int(_xr.report_no), "phase": _xph, "phase_priority": int(ru[ru.phase == _xph].priority.iloc[0])},
     "Example DDR of Table 1: one real construction report whose narrative contains the one-half sign (fragments of at most 15 words)", "src/stage11_registry.py", "module level", [DDR, CL, "outputs/stage4_priority_rules.csv"],
-    note="the example was chosen by hand from the reports with a fraction glyph, a drilling phase and a narrative of 40 to 60 words; omitted text is not shown")
+    note="the example was chosen by hand from the reports with a fraction glyph, a drilling phase and a narrative of 40 to 60 words; the registry (a data file) holds fragments of at most 15 words and the numbers of the full summary; the manuscript quotes the full summary (decision 67)")
 
 
 def _sizes(s):
@@ -294,6 +294,8 @@ def _kw(s):
 
 add("classifier.phase_table", [dict(priority=int(r.priority), phase=r.phase, sizes_in=_sizes(r.size_patterns), words=_kw(r.keyword_patterns)) for r in ru.itertuples()],
     "Table 2: phases in priority order with representative hole and casing sizes (inches) and trigger words, derived from the frozen pattern table", "src/stage11_registry.py", "_sizes, _kw", ["outputs/stage4_priority_rules.csv", "src/classifier_v3.py"])
+add("literature.karnot_2025", {"ddrs": 701, "wells": 10, "npt_reduction_pct": 18.5}, "Figures of Karnot et al. (2025) quoted in Section 2: 701 DDRs from 10 wells; average reduction in non-productive time reported in field applications (%)",
+    "none (literature, as quoted in the author's review of 2026-10-26)", "not reproduced by code", [], note="EXTERNAL: from the cited paper, not checked by code")
 add("external.nod_guidelines_revision_date", "2025-03-28", "Latest revision of the NOD Guidelines for designation of wells and wellbores, from the revision history on page 1 of the PDF (the PDF metadata gives a creation date of 2025-04-04)",
     "none (NOD PDF read 2026-10-26)", "not reproduced by code", [], note="EXTERNAL: read from the PDF, not from the repository")
 
