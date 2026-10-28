@@ -1,0 +1,27 @@
+witsml_wellbore,witsml_max_md_m,nod_wellbore,nod_total_depth_m,match_method,diff_m,outcome
+NO 15/9-19 A,4131.0,15/9-19 A,4131.0,name,0.0,EXACT
+NO 15/9-19 B,3272.0,,,unmatched (NOD record of this name claimed by its technical sidetrack),,UNMATCHED
+NO 15/9-19 BT2,4250.0,15/9-19 B,4250.0,T2 sidetrack matched to NOD record with agreeing TD,0.0,EXACT
+NO 15/9-19 S,3353.0,15/9-19 S,3580.0,name,227.0,CLOSE_NOT_EXACT
+NO 15/9-19 ST2,4641.0,15/9-19 SR,4641.0,T2 sidetrack matched to NOD record with agreeing TD,0.0,EXACT
+NO 15/9-F-1,3632.0,15/9-F-1,3632.0,name,0.0,EXACT
+NO 15/9-F-1 A,3682.0,15/9-F-1 A,3682.0,name,0.0,EXACT
+NO 15/9-F-1 B,3465.0,15/9-F-1 B,3465.0,name,0.0,EXACT
+NO 15/9-F-1 C,4094.0,15/9-F-1 C,4094.0,name,0.0,EXACT
+NO 15/9-F-10,5331.0,15/9-F-10,5331.0,name,0.0,EXACT
+NO 15/9-F-11,347.0,,,unmatched (NOD record of this name claimed by its technical sidetrack),,UNMATCHED
+NO 15/9-F-11 A,3762.0,15/9-F-11 A,3762.0,name,0.0,EXACT
+NO 15/9-F-11 B,4770.0,15/9-F-11 B,4770.0,name,0.0,EXACT
+NO 15/9-F-11 T2,4562.1,15/9-F-11,4562.0,T2 sidetrack matched to NOD record with agreeing TD,0.1,EXACT
+NO 15/9-F-12,3520.0,15/9-F-12,3520.0,name,0.0,EXACT
+NO 15/9-F-14,3750.0,15/9-F-14,3750.0,name,0.0,EXACT
+NO 15/9-F-15,4090.0,15/9-F-15,4105.0,name,15.0,CLOSE_NOT_EXACT
+NO 15/9-F-15 A,4095.0,15/9-F-15 A,4095.0,name,0.0,EXACT
+NO 15/9-F-15 B,3497.0,15/9-F-15 B,3497.0,name,0.0,EXACT
+NO 15/9-F-15 C,3232.0,15/9-F-15 C,3232.0,name,0.0,EXACT
+NO 15/9-F-15 D,4685.0,15/9-F-15 D,4685.0,name,0.0,EXACT
+NO 15/9-F-4,3510.0,15/9-F-4,3510.0,name,0.0,EXACT
+NO 15/9-F-5,3792.0,15/9-F-5,3792.0,name,0.0,EXACT
+NO 15/9-F-7,1085.0,15/9-F-7,1085.0,name,0.0,EXACT
+NO 15/9-F-9,1085.0,15/9-F-9,1085.0,name,0.0,EXACT
+NO 15/9-F-9 A,1206.0,15/9-F-9 A,1206.0,name,0.0,EXACT

@@ -32,3 +32,18 @@ Thumbs.db
 
 # Databricks
 .databricks/
+.venv/
+inputs/databricks_export/
+data/raw/
+*.env
+
+# Regenerated from data/raw by code
+data/interim/
+
+# DDR narrative text must not be committed (licence decision, open item 7)
+outputs/audit_blind_review*.xlsx
+outputs/audit_*_filled*.xlsx
+outputs/audit_workbook*.xlsx
+
+# Local-only full-text originals (DDR narratives); never commit
+local_private/

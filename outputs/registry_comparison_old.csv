@@ -1,0 +1,35 @@
+old_key,old_value,new_id,new_value,relation
+total_ddrs,1759,data.n_ddrs,1759,SAME
+distinct_wellbores,26,data.n_wellbores,26,SAME
+duplicate_wellbore_date_report_pairs,0,data.duplicate_wellbore_date_pairs,0,SAME
+field_population_date_report,100.0,table1.date_report.pct,100.0,SAME
+field_population_spud_date,100.0,table1.spud_date_dtimspud.pct,100.0,SAME
+field_population_drill_complete,91.7,table1.drill_complete.pct,91.7,SAME
+field_population_operator,99.94,table1.operator.pct,99.94,SAME
+field_population_rig,100.0,table1.rig_npd_name_alias.pct,99.94,CHANGED
+field_population_md_m,80.78,table1.md_m_excluding_sentinel_and_zero.pct,80.78,SAME
+field_population_md_kickoff_m,14.1,table1.md_kickoff_m.pct,14.1,SAME
+field_population_md_csg_last_m,96.76,table1.md_csg_last_m.pct,96.76,SAME
+field_population_sum24hr_CORRECTED,95.9,table1.sum24hr_genuine_narrative.pct,95.85,SAME if 95.85 rounds to 95.9 (old registry rounds to one decimal)
+field_population_forecast24hr,100.0,table1.forecast24hr_genuine.pct,94.14,CHANGED
+encoding_issue_half_fraction_u00bd,61,unicode.half.ddrs,61,SAME
+encoding_issue_quarter_fraction_u00bc,10,unicode.quarter.ddrs,10,SAME
+stage4_partA_leak_check,0,,,NOT RERUN (re-testing the frozen patterns on the unclassified set is true by construction; 456 unclassified reproduced)
+stage4_discrepancy_literal_None_text,73,placeholders.none_sum24Hr,73,SAME
+stage6_partA_timeline_derivation,1421,timeline.rows,1421,SAME
+stage6_partB_well_inventory,26,data.n_wellbores,26,SAME
+nod_f7_f9_total_depth_reference_verified,1085.0,td.witsml_max_md.15/9-F-7,1085.0,SAME
+f1c_kickoff_validation_depth_m,3059,kickoff.proposed_depth.15/9-F-1 C,1364.0,"CHANGED (3,059 m was a section start; 1,364 m, author-approved)"
+sidetracks_kickoff_recovered_free_text,12,kickoff.method_counts,"{""depth in text"": 11, ""event in text, depth from md"": 3, ""depth sequence (narrative empty)",CHANGED (method definitions and the 15th sidetrack: see Stage 8)
+sidetracks_kickoff_recovered_depth_sequence,2,kickoff.method_counts,"{""depth in text"": 11, ""event in text, depth from md"": 3, ""depth sequence (narrative empty)",CHANGED (method definitions and the 15th sidetrack: see Stage 8)
+sidetracks_still_not_recoverable_stage1,1,kickoff.n_sidetracks,15,CHANGED (method definitions and the 15th sidetrack: see Stage 8)
+classifier_v3_verbatim_reproduction_SUCCESS,74.1% actual vs 74.1% target -- REPRODUCED EXACTLY,classifier.classified_pct,74.1,SAME (74.1)
+classifier_v3_verbatim_phase_distribution,"Unclassified=456(25.9%), Reservoir drilling=256(14.6%), Completion=228(13.0%), Liner/Casin",table2.reservoir_drilling.count,256,SAME (all 14 per-phase counts equal; table2 v2_count column)
+stage4_partB_category_counts,"BOP_RISER=147, EMPTY_RECORD=73, OTHER=63, GENERIC_TRIP=61, MUD_FLUID=35, WIRELINE_NON_TEST",audit.category.BOP_RISER,147,SAME
+stage4_partC_sampling_frame,"296 construction-era / 87 production-era = 383, allocated 39/11 = 50",audit.frame_size,383,"SAME (296 + 87 = 383, allocation 39 + 11)"
+stage4_partD_adjudication_results,"CONSTRUCTION=26, NON_CONSTRUCTION=24 (of 50)",audit.construction_calls,26,SAME
+stage4_partE_residual_miss_rate,87.6,audit.attainable_rate_pct,85.4,"CHANGED (old registry 87.6 used 456/1,759; v2 manuscript 85.4 uses 383/1,759; rerun 85.4)"
+stage4_partE_confidence_interval,"Wilson 95% CI on sample proportion: [38.5%, 65.2%]; propagated true-classification-rate CI",audit.wilson_low,0.385,"SAME lower bound; old registry propagated CI 84.1 to 91.0 used 456/1,759, rerun 82.5 to 88.3"
+stage3_partB_td_validation_summary,"22 EXACT, 2 CLOSE_NOT_EXACT, 2 UNMATCHED (of 26 total wellbores)",td.exact,22,SAME
+stage3_partC_spud_validation_summary,"EXACT_MATCH=7, DEFINITIONAL_OFFSET=8, WITSML_ERROR=4, WITSML_ERROR(structured field only)=",spud.exact,6,CHANGED: 15/9-F-11 Exact to Unresolved under the NOD pre-drill-else-main rule (decision 47); Exact 7 to 6 and Unresolved 4 to 5; other counts same (old WITSML_ERROR 4 + structured 2 = ERROR 4 + INHERITED 2)
+stage6_partC_figures,4,,,SAME (4 figures regenerated in Stage 10)

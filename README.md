@@ -1,96 +1,121 @@
-# Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: The Equinor Volve Dataset
+# Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports
 
-**Author:** Tejaswy Appalla (independent researcher)
-**Venue:** International Petroleum Technology Conference (IPTC) 2027, Bangkok, Thailand
-**Paper identifier:** IPTC-25544-MS
+**Paper:** T. Appalla (independent researcher), "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: A Complete Operational History of the Equinor Volve Dataset", IPTC 2027, paper IPTC-25544-MS.
 
-This repository contains the companion code and derived datasets for the paper above. The work reconstructs field-scale well construction timelines for 26 wellbores on the Equinor Volve field by deterministically classifying the free-text 24-hour summary field of 1,759 WITSML Daily Drilling Reports (DDRs) into 13 operational phase categories, audits the unclassified residual by stratified sampling, and validates the reconstruction against the Norwegian Offshore Directorate (NOD) FactPages.
+This repository is the reproducible pipeline behind the paper. It parses the 1,759 WITSML Daily Drilling Reports (DDRs) of the Equinor Volve field from the raw XML, classifies each report into one of 13 construction phases with a frozen rule-based classifier (v3), audits what the classifier misses, validates total depth and spud date against the Norwegian Offshore Directorate (NOD) FactPages, recovers sidetrack kick-off depths, and computes durations to total depth. Every number in the manuscript is produced by code in `src/` and traced in `outputs/numbers_registry.json` (one entry per number, with the producing script and function, the SHA-256 of the input files and a timestamp).
 
-## What this repository contains
+The branch `rerun-2026-10` is a clean rerun from the raw data. The state before the rerun is kept under `inputs/` for comparison.
 
-| Path | Contents |
-|---|---|
-| [`classifier_v3.py`](classifier_v3.py) | Standalone Python module: the verbatim v3 phase-classification pattern set (13 categories, priority-ordered regex), the Unicode fraction normaliser, and a `classify_ddr(text)` convenience wrapper. |
-| [`classifier_v3_sql.sql`](classifier_v3_sql.sql) | The equivalent SQL `CASE` expression, run against `workspace.default.volve_ddr_master` to produce the classified table reported in the paper. |
-| [`data/volve_timeline_dataset.csv`](data/volve_timeline_dataset.csv) | Per-DDR reconstructed timeline: wellbore, date, measured depth, and classified phase (1,421 rows with valid depth). |
-| [`data/well_inventory.csv`](data/well_inventory.csv) | Per-wellbore summary: DDR counts, spud/TD validation outcomes, dominant phases, sidetrack relationships, kick-off depths. |
-| [`data/phase_distribution.csv`](data/phase_distribution.csv) | Field-wide phase counts and percentages from the classifier output (n=1,759). |
-| [`data/td_validation.csv`](data/td_validation.csv) | Per-wellbore comparison of WITSML-reconstructed maximum measured depth against NOD official total depth. |
-| [`data/spud_validation.csv`](data/spud_validation.csv) | Per-wellbore comparison of WITSML spud date against NOD entry date, with discrepancy classification. |
-| [`data/sidetrack_relationships.csv`](data/sidetrack_relationships.csv) | Parent/child wellbore relationships and recovered kick-off depths. |
-| [`data/nod_volve_reference_development.csv`](data/nod_volve_reference_development.csv), [`data/nod_volve_reference_exploration.csv`](data/nod_volve_reference_exploration.csv) | Raw NOD FactPages Table View export rows for the Volve field wellbores, retrieved 2026-09-08 (see `nod_snapshot_20260908_metadata.json` for the exact export URLs and retrieval method). |
-| [`data/numbers_registry.json`](data/numbers_registry.json) | Every quantitative figure reported in the paper, with the query or derivation that produced it. This is the paper's single source of truth for all numbers. |
-| [`figures/`](figures/) | The four figure-generation scripts and their rendered PNG outputs. |
+## Licences
 
-## Data source
+- **Code:** Apache License 2.0 (`LICENSE`).
+- **Data:** the Volve data are disclosed by Equinor ASA under the Equinor Open Data Licence (https://www.equinor.com/energy/volve-data-sharing). This repository does **not** redistribute DDR narrative text. It holds file names, wellbore names, dates, depths, categories, calls and evidence quotes of 15 words or fewer in its data files (the manuscript quotes one complete report as an example) (an ellipsis is not counted as a word). The raw DDR XML is not in the repository; obtain it as described below.
+- **NOD data:** the FactPages wellbore exports are fetched from https://factpages.sodir.no and the export of 24 October 2026 is committed in `data/nod/` (see `data/nod/README.md` for the source, date and attribution). Derived comparison tables are in `outputs/`.
 
-All DDR-derived data in this repository is extracted from the [Equinor Volve open dataset](https://www.equinor.com/energy/volve-data-sharing), disclosed by Equinor ASA under its Open Data Licence. The extraction pipeline that parses the original WITSML 1.4.x XML into a flat table (`workspace.default.volve_ddr_master`, 1,759 DDRs across 26 wellbores) was not built by the author of this paper; this repository picks up from that already-extracted table, which is the paper's stated data source throughout. The raw WITSML XML volume itself was not directly accessible during this work.
+## Obtaining the raw DDR XML (Databricks Marketplace)
 
-The NOD (Norwegian Offshore Directorate, formerly NPD) reference data in `data/nod_volve_reference_*.csv` is a public-domain snapshot from the [NOD FactPages](https://factpages.sodir.no/), used only to independently validate total-depth and spud-date figures derived from the WITSML data.
+1. In a Databricks workspace, install the Equinor Volve listing from the Databricks Marketplace (provider `equinorasa`, share `equinoropendata_volve`). This creates the catalog `equinor_asa_volve_data_village` with schema `public` and the volume `volve`.
+2. Authenticate the Databricks CLI with a profile named `volve` (`databricks auth login --host <workspace-host> --profile volve`). Tokens and `~/.databrickscfg` are never committed.
+3. Download the DDR folder (about 21 MB). In Git Bash on Windows, prefix with `MSYS_NO_PATHCONV=1`:
 
-## Requirements
-
-- Python 3.10+
-- No third-party packages are required to run `classifier_v3.py` (standard library `re` only)
-- To reproduce `classifier_v3_sql.sql` against the source table, any Spark SQL environment (Databricks SQL warehouse or a standalone Spark session) with access to a table matching the `workspace.default.volve_ddr_master` schema (`filename`, `wellbore`, `date_report`, `md_m` [string, sentinel `'-999.99'` and `'0'` excluded before casting], `sum24hr`)
-
-## Quick start
-
-Classify a single DDR summary string in Python:
-
-```python
-from classifier_v3 import classify_ddr
-
-classify_ddr('DRLD 17 1/2" HOLE FROM 500M TO 620M.')
-# -> 'Intermediate drilling'
+```
+MSYS_NO_PATHCONV=1 databricks fs cp -r --overwrite --profile volve \
+  "dbfs:/Volumes/equinor_asa_volve_data_village/public/volve/Well_technical_data/Daily Drilling Report - XML Version" \
+  data/raw/ddr_xml/
 ```
 
-Reproduce the full classified table in a Spark SQL environment:
+4. Expected result: 1,759 XML files, 21,315,879 bytes in total. `src/stage1_manifest.py` writes `data/raw/manifest.csv` (path, sha256, bytes) and checks names and sizes against the Marketplace metadata catalog (`workspace.default.volve_metadata_catalog`).
 
-```sql
--- classifier_v3_sql.sql expects a source table with columns:
--- filename, wellbore, date_report, md_m, sum24hr
--- Edit the FROM clause at the bottom of the script to point at your table,
--- then run it directly.
+## Setup and inputs
+
+```
+python -m venv .venv
+.venv/Scripts/python -m pip install -r requirements.txt     # Windows; use .venv/bin/python elsewhere
 ```
 
-Load the pre-computed derived datasets directly (no classifier run required):
+The pipeline needs only two things:
 
-```python
-import pandas as pd
-timeline = pd.read_csv("data/volve_timeline_dataset.csv")
-wells = pd.read_csv("data/well_inventory.csv")
+1. **The Volve DDR XML** in `data/raw/ddr_xml/` (1,759 files, see above). It is not in the repository.
+2. **The files tracked in this repository**: `src/`, `inputs/`, the NOD wellbore snapshot in `data/nod/` (FactPages Table View exports retrieved 2026-10-24, committed with its metadata and attribution; the register changes over time, so a newer export may give different NOD comparison results and the registry values correspond to this snapshot), and the committed outputs that act as inputs (`outputs/audit_adjudications.csv`, `outputs/kickoff_signoff.xlsx`).
+
+## Reproducing everything
+
+From the repository root:
+
+```
+.venv/Scripts/python -X utf8 src/run_pipeline.py
 ```
 
-## Known limitations
+This runs every stage in order (extract, data quality, classification, timeline, audit, NOD validation, kick-off, durations, figures, registry, manuscript draft) in about a minute on a laptop and stops at the first failure. It was tested from a fresh clone with only the DDR XML added: all 235 registry values, all tables and figures, and the manuscript text came out identical to the committed ones (only timestamps and the SHA-256 of generated files differ in `outputs/numbers_registry.json`).
 
-Stated here as in the paper's own Limitations section:
+| Stage | Script(s) | Writes |
+|---|---|---|
+| 1 Fetch raw | `stage1_manifest.py`, `stage1_nod.py` | `data/raw/manifest.csv`, `data/nod/nod_snapshot_20261024_metadata.json` |
+| 2 Extract | `stage2_extract.py` | `data/interim/ddr.parquet` (raw strings, not tracked) |
+| 3 Data quality | `stage3_quality.py` | `outputs/stage3_*.csv` |
+| 4 Classify | `stage4_classify.py`, `stage4_rules_table.py` (classifier: `src/classifier_v3.py`, frozen) | `outputs/table2_phase_distribution.csv`, `outputs/stage4_priority_rules.*` |
+| 5 Timeline | `stage5_timeline.py` | `outputs/timeline.csv` (1,421 rows) |
+| 6 Audit | `stage6_prepare.py` (frame and strata), `stage6_estimates.py` (reads the published `outputs/audit_adjudications.csv`) | audit frame in `data/interim/`, estimates printed and registered |
+| 7 NOD validation | `stage7_td.py`, `stage7_spud.py` | `outputs/td_validation.csv`, `outputs/spud_validation.csv` |
+| 8 Kick-off | `stage8_f1c.py`, `stage8_kickoff.py`, `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv` |
+| 9 Duration | `stage9_duration.py` | `outputs/duration_table.csv`, `outputs/duration_family_summary.csv` |
+| 10 Figures | `stage10_fig2_index.py`, `figure1_depth_vs_time.py` to `figure4_spud_offset.py` | `outputs/figures/*.png` (300 dpi; read `outputs/` only) |
+| 11 Registry | `stage11_registry.py` | `outputs/numbers_registry.json` and comparison CSVs |
+| 12 Manuscript | `stage12_manuscript.py`, `stage12_changes.py`, `stage12_check.py` | `manuscript/paper2_draft.docx`, `manuscript/CHANGES.md`, `outputs/manuscript_registry_check.csv` |
 
-- **Single primary phase per DDR.** Each DDR is assigned exactly one phase label (its highest-priority pattern match). A report describing multiple activities in one day is not split; cementing in particular is likely underrepresented where it occurs as a secondary activity within a report classified under a higher-priority category.
-- **No depth interpolation.** Gaps in measured-depth coverage (excluded sentinel or missing `md_m` values) are left as gaps in the timeline dataset rather than interpolated.
-- **Kick-off depth not recoverable for all sidetracks.** Kick-off depth for NO 15/9-19 S could not be recovered from either free-text narrative or depth-sequence continuity; two further sidetracks rely on the weaker depth-sequence method rather than explicit free-text confirmation.
-- **F-1 / F-1C shared-interval ambiguity.** The F-1 family's kick-off depth is reported using the operational (DDR-derived) definition, which differs from a geometric definition NOD uses internally; both are correct for their own purposes but are not interchangeable.
-- **Audit sample size.** The stratified audit of the unclassified residual uses a fixed sample of n=50 records with seed 42; the resulting residual miss-rate estimate carries a Wilson 95% confidence interval, not a point guarantee.
-- **Two stratification-scheme artefacts.** Two wellbores' earliest recorded DDR dates do not reflect their true drilling-campaign start (an anomalous isolated first record for one wellbore, and a later re-entry/mobilization record for another), which can misassign a small number of genuinely construction-era records into the production-era stratum used for audit sampling.
-- **19-series naming discrepancy not fully reconciled.** WITSML "BT2" and "ST2" sidetrack suffixes for the 15/9-19 well series do not map one-to-one onto NOD's "B" and "SR" designations; this repository validates the mapping by total-depth agreement only and does not attempt full drilling-genealogy reconciliation.
-- **NOD reference data is a dated snapshot.** The NOD FactPages extract in `data/` reflects the state of that public register as of 2026-09-08 and may not match the live FactPages if NOD has since revised any record.
-- **No isolated Unicode-normalisation ablation.** The Unicode fraction normalisation step is applied unconditionally before classification; its standalone contribution to the classification rate (independent of the pattern-set changes between classifier versions) was not separately measured.
+**Optional verification steps** compare the rerun with the author's earlier Databricks tables or catalog. They print `SKIPPED` and exit normally when those files are absent, and **no reported number depends on running them**:
+
+- `stage1_expected.py` (set `VOLVE_FETCH_CATALOG=1` and a Databricks profile `volve`): checks file names and sizes against the Marketplace metadata catalog.
+- `stage2_diff.py`, `stage2_text_diff.py`, `stage4_faithfulness.py` and the comparison blocks inside `stage4_classify.py` and `stage6_prepare.py`: need `data/interim/old/*.parquet` (exported with `stage2_export_old.py` and `stage4_export_old_classified.py` from the earlier tables) or `local_private/old_audit/`, which hold narrative text and are not in the repository.
+- The few numbers that state these comparisons in the paper (103 narratives whose encoding was repaired, 1,303 classified on the earlier text, 0 mismatches, 0 phase changes) are read from their committed results (`outputs/stage2_encoding_summary.json`, `outputs/stage4_faithfulness_summary.json`, `outputs/stage4_faithfulness_phase_counts.csv`, `outputs/stage4_phase_changes_mojibake.csv`) and are flagged as such in the registry.
+
+Historical steps that are not part of the pipeline because they were run once and must not be rerun: `stage8b_signoff.py` and `stage8c_proposal.py` (they built the kick-off sign-off workbook that the author has since signed off; both refuse to overwrite it), `stage6_publish_adjudications.py` (author side, builds the published adjudication file), `stage7_spud_evidence.py` (writes narrative snippets to `local_private/` only), and the report builders `stage8_report.py`, `stage8c_report.py`, `stage9_report.py`.
+
+The narrative of each stage (what ran, results, arithmetic, discrepancies) is in `reports/STAGE_<n>.md`; decisions taken by the author are logged in `notes/decisions.md`; suspected classifier gaps (the classifier is frozen) are in `notes/classifier_gaps.md`.
+
+## Where each manuscript table and figure comes from
+
+| Item | Source file | Script |
+|---|---|---|
+| Table 1, field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
+| Table 2, phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
+| Priority order and hole-size rules (Section 3.3) | `outputs/stage4_priority_rules.md` | `stage4_rules_table.py` |
+| Audit estimates (Section 5.2) | `outputs/audit_adjudications.csv` and registry entries `audit.*` | `stage6_estimates.py`, `stage11_registry.py` |
+| Timeline dataset (Section 5.3) | `outputs/timeline.csv` | `stage5_timeline.py` |
+| Table 3, total depth | `outputs/td_validation.csv` | `stage7_td.py` |
+| Table 4, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
+| Table 5, kick-off depths | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
+| Table 6, durations | `outputs/duration_table.csv` | `stage9_duration.py` |
+| Fig. 1 | `outputs/figures/figure1_depth_vs_time.png` | `figure1_depth_vs_time.py` |
+| Fig. 2 | `outputs/figures/figure2_days_vs_depth.png` | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |
+| Fig. 3 | `outputs/figures/figure3_td_validation.png` | `figure3_td_validation.py` |
+| Fig. 4 | `outputs/figures/figure4_spud_offset.png` | `figure4_spud_offset.py` |
+| Every number in the text | `outputs/numbers_registry.json` | `stage11_registry.py`; checked by `stage12_check.py` |
+
+Phase labels: the classifier's internal names "Reservoir drilling" and "Surface casing" appear in the data files; the manuscript and figures display them as "12¼ in. and smaller hole" and "Surface hole and casing" (label-only change, patterns frozen; `notes/decisions.md`, item 49).
+
+## Checks before publishing
+
+`python -X utf8 src/prepush_scan.py` scans every tracked file for narrative text in data files (columns named `sum24Hr` or `forecast24hr`, quotations of more than 15 words; the manuscript docx and PDF are exempt), secrets and identifiers, and files over 50 MB, and exits with 1 if it finds anything.
+
+## Repository layout
+
+```
+inputs/        state before the rerun: v2 manuscript, old registry, old audit adjudications, classifier v3 source, old figures
+data/raw/      raw DDR XML and manifest (not tracked)
+data/nod/      NOD wellbore snapshot of 2026-10-24 with README and metadata (tracked)
+data/interim/  extracted and intermediate tables (not tracked, regenerated by code)
+src/           one module per stage
+outputs/       timeline, tables, figures, audit and kick-off files, numbers_registry.json
+reports/       STAGE_<n>.md, one per stage
+notes/         decisions.md (log of author decisions), classifier_gaps.md
+manuscript/    updated manuscript draft and the number-by-number change log (CHANGES.md)
+```
+
+## How AI was used
+
+The pipeline was built and run with Claude Code (Anthropic). Sidetrack kick-off depths were proposed by the AI tool and reviewed and approved by the author in `outputs/kickoff_signoff.xlsx`; the 50 audit adjudications were made by the author. See the AI disclosure in the manuscript.
 
 ## Citation
 
-```bibtex
-@inproceedings{appalla2027volve,
-  author    = {Appalla, Tejaswy},
-  title     = {Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: The Equinor Volve Dataset},
-  booktitle = {International Petroleum Technology Conference},
-  year      = {2027},
-  address   = {Bangkok, Thailand},
-  note      = {IPTC-25544-MS}
-}
-```
-
-See also [`CITATION.cff`](CITATION.cff).
-
-## Licence
-
-Apache License 2.0 -- see [`LICENSE`](LICENSE).
+See `CITATION.cff`.

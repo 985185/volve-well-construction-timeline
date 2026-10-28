@@ -1,0 +1,11 @@
+Column,Populated_%,Count,Notes
+date_report,100.0,1759,
+spud_date (dTimSpud),100.0,1759,
+rig (NPD Name alias),99.94,1758,1 record missing (1980 sentinel)
+forecast24hr (genuine),94.14,1656,"103 literal ""None"" strings excluded"
+operator,99.94,1758,
+md_csg_last_m,96.76,1702,
+sum24Hr (genuine narrative),95.85,1686,73 literal None excluded
+drill_complete,91.7,1613,
+md_m (excluding sentinel and zero),80.78,1421,
+md_kickoff_m,14.1,248,

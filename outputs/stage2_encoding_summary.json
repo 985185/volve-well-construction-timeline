@@ -1,0 +1,9 @@
+{
+ "sum24Hr_rows_with_encoding_error_in_earlier_table": 103,
+ "rows_compared": 1759,
+ "example": {
+  "filename": "15_9_F_12_2007_07_07.xml",
+  "earlier_table": "due to double 3 Â½\" DP",
+  "raw_file": "due to double 3 ½\" DP"
+ }
+}
