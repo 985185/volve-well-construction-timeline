@@ -338,6 +338,10 @@ i = ix("Two records were assigned to a stratum"); t = cur(i)
 T[i] = t.replace("to a stratum that does not reflect", "to a group that does not reflect").replace("production-era stratum", "production group")
 log(i, "stratum, production-era stratum", "group, production group", None, "final review: construction group and production group")
 
+# 3.4 plain words for the category names (code labels stay in repository files)
+subany("(for example BOP_RISER, GENERIC_TRIP, PRODUCTION_MON, and EMPTY_RECORD)", "(for example BOP and riser handling, generic trips, production monitoring, and empty records)", None, "final review: plain words in Section 3.4")
+subany("The 73 records in EMPTY_RECORD have a sum24Hr field", "The 73 empty records have a sum24Hr field", None, "final review: plain words in Section 3.4")
+
 # 3 Section 5.6 definition
 subany("The kick-off depth of a sidetrack is the depth at which it leaves its parent wellbore. Kick-off here means", "Kick-off here means", None, "final review: one definition sentence")
 subany("is consistent with the latter and is not used. It was read from the parent's last", "is consistent with the latter and is not used. The kick-off depth was read from the parent's last", None, "final review: the dangling pronoun fixed")
@@ -453,7 +457,7 @@ def fp(prefix):
     hits = [p for p in P if p.text.startswith(prefix)]; assert len(hits) == 1, (prefix, len(hits)); return hits[0]
 
 
-ABB = [("BHA", "bottom-hole assembly", "heading"), ("DP", "drill pipe", "DDR"), ("EZSV", "EZ Drill squeeze valve (cement retainer)", "DP"), ("LWD", "logging while drilling", "EZSV"),
+ABB = [("BHA", "bottom-hole assembly", "heading"), ("DP", "drill pipe", "DDR"), ("EZSV", "drillable cement retainer or bridge plug (Halliburton trade name)", "DP"), ("LWD", "logging while drilling", "EZSV"),
        ("MT", "metric tonnes", "MD"), ("MWD", "measurement while drilling", "MT"), ("POOH", "pull out of hole", "P&A"), ("SG", "specific gravity", "RKB"),
        ("VSP", "vertical seismic profile", "TVD"), ("WOW", "waiting on weather", "WITSML")]
 anchor_of = {"heading": [p for p in P if p.style.name.startswith("Heading") and p.text.strip() == "Abbreviations"][0]}

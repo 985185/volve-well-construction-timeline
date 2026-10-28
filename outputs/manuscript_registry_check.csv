@@ -125,9 +125,9 @@ p27,17.5,17.5,in registry,"lings found in the reports, for example 17 1/2 or 17.
 p28,2,2.0,in registry,Table 2: Phases in priority order wit
 p30,3.4,3.4,in registry,3.4 Stratified Audit of the Uncla
 p31,147,147.0,in registry,"argest category is BOP and marine riser handling (147 of 456 records, 32.2%). The 7"
-p31,456,456.0,in registry,"category is BOP and marine riser handling (147 of 456 records, 32.2%). The 73 recor"
-p31,32.2%,32.2,in registry,"OP and marine riser handling (147 of 456 records, 32.2%). The 73 records in EMPTY_REC"
-p31,73,73.0,in registry,"e riser handling (147 of 456 records, 32.2%). The 73 records in EMPTY_RECORD have"
+p31,456,456.0,in registry,"category is BOP and marine riser handling (147 of 456 records, 32.2%). The 73 empty"
+p31,32.2%,32.2,in registry,"OP and marine riser handling (147 of 456 records, 32.2%). The 73 empty records have a"
+p31,73,73.0,in registry,"e riser handling (147 of 456 records, 32.2%). The 73 empty records have a sum24Hr"
 p31,4,4.0,in registry,"eld containing the literal string ""None"" (Section 4) and cannot be classified by"
 p31,383,383.0,in registry,"ey were excluded from the sampling frame, leaving 383 records."
 p32,50,50.0,in registry,A stratified sample of 50 records was drawn from these
