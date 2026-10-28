@@ -96,8 +96,12 @@ def RENUM(t):                      # two tables were added in Section 3, so the 
 ADJ = [("adjudications", "labels"), ("adjudication", "labelling"), ("adjudicator", "labeller"), ("adjudicated", "labelled")]
 
 
+FRACG = {"1/2": "½", "1/4": "¼", "3/4": "¾", "3/8": "⅜", "5/8": "⅝"}
+
+
 def POST(t):
     t = RENUM(t)
+    t = re.sub(r"(\d+) (\d/\d) in\.", lambda m: m.group(1) + FRACG[m.group(2)] + " in.", t)      # hole sizes in running text: 17 1/2 in. becomes 17½ in.
     for a, b in ADJ: t = t.replace(a, b)
     return t
 
@@ -304,6 +308,67 @@ for i in range(len(P)):
 log("Tables", "Tables 1 to 6", "Tables 3 to 8", None, "two tables were added in Section 3 (the example report, Table 1, and the phases, Table 2), so every later table number moves up by two; every reference in the text moves with it")
 log("Whole text", "adjudicated, adjudication, adjudications, adjudicator", "labelled, labelling, labels, labeller", None, "plain language (TJ review)")
 
+# =========================================================================== final review fixes (28 October 2026)
+def ix(prefix):
+    hits = [i for i in range(len(P)) if i not in DEL and cur(i).startswith(prefix)]
+    assert len(hits) == 1, (prefix, hits)
+    return hits[0]
+
+
+# 1 no earlier extraction / analysis / table, except one sentence in 5.1
+i = ix("A character-level survey of sum24Hr"); t = cur(i); k = t.index("The raw files declare the ISO-8859-1")
+T[i] = t[:k] + f"The raw files declare the ISO-8859-1 character encoding; reading them with the wrong encoding turns ½ into Â½ (for example '{_ex['earlier_table']}' instead of '{_ex['raw_file']}'), so the encoding must be set explicitly."
+log(i, t[k:], T[i][k:], "extract.encoding_example", "final review: the encoding point rephrased as a lesson for users; the comparison with the earlier table and the count of 103 removed")
+i = ix("Applying the classifier to all 1,759 DDRs"); t = cur(i); a = t.index("The ported classifier was first checked"); b = t.index("Table 4 gives")
+T[i] = t[:a] + "The classifier was also checked against an independent earlier extraction of the same archive by the author, with identical results for all 1,759 reports. " + t[b:]
+log(i, t[a:b], "The classifier was also checked against an independent earlier extraction of the same archive by the author, with identical results for all 1,759 reports.", "classifier.faithfulness_classified_on_old_text;classifier.faithfulness_row_mismatches", "final review: the one remaining mention of the earlier extraction")
+subany("; recomputing the dataset from the raw XML gave the same 1,421 rows as the earlier analysis, identical in every column.", ".", "timeline.rows", "final review: comparison with the earlier analysis removed")
+subany(" The days_from_first_ddr column of the dataset is unchanged from the earlier analysis.", "", None, "final review: sentence removed")
+subany("Comparisons with the author's earlier extraction are reported but are not needed to reproduce any figure.", "The check against the author's earlier extraction (Section 5.1) is reported but is not needed to reproduce any figure.", None, "final review: matches the single mention in Section 5.1")
+
+# 2 and 6 Section 5.2 merged; construction group and production group; plain words
+i49 = ix("Of the 50 sampled records"); i50 = ix("26 of the 50 sampled reports"); i51 = ix("The 73 EMPTY_RECORD DDRs")
+setp(i49, "Of the 50 sampled reports, 26 (52%) were labelled construction and 24 (48%) non-construction. The construction group (39 reports) split 23 construction to 16 non-construction, and the production group (11 reports) split 3 to 8. The 26 construction reports that the classifier missed fall into three kinds: genuine drilling reported without a hole size (9); other operations, such as hydraulic fracturing or fishing, with no corresponding pattern (10); and non-standard terms, such as \"CMT\" for cement (7); 9 + 10 + 7 = 26. Scaled to the 383-report frame, this is about 199 reports, so a complete pattern set would classify about 85.4% of the 1,759 reports (95% confidence interval 82.5 to 88.3%). The arithmetic, including the stratum-weighted check, is in Appendix B.",
+     "Section 5.2, two paragraphs (counts and plain result)", "audit.construction_calls;audit.sample_size;audit.sample_construction;audit.sample_production;audit.construction_calls_construction_era;audit.construction_calls_production_era;audit.miss_reason.NO_HOLE_SIZE;audit.miss_reason.OTHER_MISS;audit.miss_reason.NONSTANDARD_TERMINOLOGY;audit.residual_miss_ddrs;audit.attainable_rate_pct;audit.attainable_ci_low_pct;audit.attainable_ci_high_pct",
+     "final review: the two paragraphs merged so that 26 of 50 appears once; construction group and production group; code labels replaced by plain words")
+delp(i50, "merged into the first paragraph of Section 5.2 (final review)")
+sub(i51, "The 73 EMPTY_RECORD DDRs are excluded", "The 73 DDRs whose narrative is the literal string \"None\" are excluded", None, "final review: plain words instead of the code label")
+subany("were labelled NON_CONSTRUCTION, so the attainable rate", "were labelled non-construction, so the attainable rate", None, "final review: plain words")
+i = ix("Two records were assigned to a stratum"); t = cur(i)
+T[i] = t.replace("to a stratum that does not reflect", "to a group that does not reflect").replace("production-era stratum", "production group")
+log(i, "stratum, production-era stratum", "group, production group", None, "final review: construction group and production group")
+
+# 3 Section 5.6 definition
+subany("The kick-off depth of a sidetrack is the depth at which it leaves its parent wellbore. Kick-off here means", "Kick-off here means", None, "final review: one definition sentence")
+subany("is consistent with the latter and is not used. It was read from the parent's last", "is consistent with the latter and is not used. The kick-off depth was read from the parent's last", None, "final review: the dangling pronoun fixed")
+
+# 4 Section 3.3
+i = ix("Each DDR's sum24Hr narrative is classified"); t = cur(i)
+a = t.index("Before matching, fraction characters"); b = t.index("The priority order is the order listed above.")
+t = t[:a] + "Fraction characters such as ½ and ¼, routine in the mixed units of drilling reports, are stored as single special characters that a pattern written as \"1/2\" does not match, so they are converted to that form before matching. " + t[b:]
+a = t.index("Hole and casing size separate the drilling phases:"); b = t.index("the remaining phases are matched on keywords alone. ") + len("the remaining phases are matched on keywords alone. ")
+T[i] = t[:a] + t[b:]
+log(i, "fraction sentence; list of hole and casing sizes", "fraction sentence rewritten; the size list deleted (Table 2 carries it)", "classifier.phase_table", "final review")
+
+# 8 Abstract
+app(ix("Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; where NOD"), "The results show that neither the structured fields nor the national register alone gives a complete well history; the narrative reports are needed to correct both.", None, "final review: closing sentence of the abstract")
+
+# reference verification, in-text (28 October 2026)
+sub(ix("Several studies have extracted"), "Hoffimann et al. (2017) applied deep natural language processing to classify sentences in drilling reports from hundreds of wells in a single field as", "Hoffimann et al. (2018) applied deep natural language processing to classify sentences in 9,670 daily reports from a field of 303 wells as", "literature.hoffimann_2018", "published SPE version cited (SPE-191505-MS, 2018); description with the verified figures (author check, 28 October 2026)")
+i = ix("Several studies have extracted"); t = cur(i); k = t.index("Zhang et al. (2022) compared")
+T[i] = t[:k] + "Zhang et al. (2022) built a rule-based detector for five unscheduled events (stuck pipe, lost circulation, water influx, gas influx and H2S) in about 128,000 free-text remarks from daily mud reports; the rule-based model was precise but missed events, with accuracy falling to 65.18% on a larger test set, and a hybrid that used its output to train a weakly supervised deep learning model improved detection by more than 20 percentage points."
+log(i, t[k:], T[i][k:], "literature.zhang_2022", "description corrected against the source PDF (author check, 28 October 2026)")
+sub(ix("The Volve dataset itself"), "Tunkiel et al. (2020)", "Tunkiel et al. (2021)", None, "year corrected (J Pet Sci Eng 196: 108069, 2021; author check, 28 October 2026)")
+app(ix("The common limitation across the published DDR work"), "The audit in this paper measures the same weakness of rule-based classification, the events it misses, directly on the unclassified residual.", "literature.zhang_2022", "added with the corrected Zhang et al. description")
+
+# 10 hole sizes in running text: 17 1/2 in. becomes 17½ in. (quotations are not touched: they carry inch marks, not 'in.')
+GL = {"1/2": "½", "1/4": "¼", "3/4": "¾", "3/8": "⅜", "5/8": "⅝"}
+for j in range(len(P)):
+    if j in DEL: continue
+    tj = cur(j); nj = re.sub(r"(\d+) (\d/\d) in\.", lambda m: m.group(1) + GL[m.group(2)] + " in.", tj)
+    if nj != tj: T[j] = nj; log(j, "17 1/2 in. style", "17½ in. style", None, "final review: hole sizes written with the fraction character in running text")
+
+
 # flush the edited paragraphs
 for i, text in T.items():
     write_par(P[i], text)
@@ -382,6 +447,36 @@ def fdiff(x):
 
 body_t, head_t, cap_t, note_t, bullet_t = P[48], P[53], P[55], P[56], P[98]
 
+
+# ---- Abbreviations (final review) and reference entries (verified against the source PDFs, 28 October 2026)
+def fp(prefix):
+    hits = [p for p in P if p.text.startswith(prefix)]; assert len(hits) == 1, (prefix, len(hits)); return hits[0]
+
+
+ABB = [("BHA", "bottom-hole assembly", "heading"), ("DP", "drill pipe", "DDR"), ("EZSV", "EZ Drill squeeze valve (cement retainer)", "DP"), ("LWD", "logging while drilling", "EZSV"),
+       ("MT", "metric tonnes", "MD"), ("MWD", "measurement while drilling", "MT"), ("POOH", "pull out of hole", "P&A"), ("SG", "specific gravity", "RKB"),
+       ("VSP", "vertical seismic profile", "TVD"), ("WOW", "waiting on weather", "WITSML")]
+anchor_of = {"heading": [p for p in P if p.style.name.startswith("Heading") and p.text.strip() == "Abbreviations"][0]}
+tmpl = fp("BOP  =")
+for abbr, exp, after in ABB:
+    anc = anchor_of[after] if after in anchor_of else fp(after + "  =")
+    anchor_of[abbr] = new_par_after(anc._p, tmpl, f"{abbr}  =  {exp}", renum=False)
+log("Abbreviations", "BOP, CI, DDR, MD, NOD, P&A, RKB, TD, TVD, WITSML", "adds BHA, DP, EZSV, LWD, MT, MWD, POOH, SG, VSP, WOW", None, "final review: abbreviations used in the quotations and in Table 2")
+
+
+def ref_run_sub(prefix, old, new):
+    p = fp(prefix)
+    for r in p.runs:
+        if old in r.text: r.text = r.text.replace(old, new); return
+    raise AssertionError((prefix, old))
+
+
+write_par(fp("Hoffimann, J."), "Hoffimann, J., Mao, Y., Wesley, A., and Taylor, A. 2018. Sequence Mining and Pattern Analysis in Drilling Reports with Deep Natural Language Processing. Presented at the SPE Annual Technical Conference and Exhibition, Dallas, Texas, USA, 24–26 September. SPE-191505-MS. https://doi.org/10.2118/191505-MS.")
+ref_run_sub("Tunkiel, A.T.", "2020.", "2021.")
+ref_run_sub("Priyadarshy, S.", "Houston, Texas, USA. OTC-27918-MS", "Houston, Texas, USA, 1–4 May. OTC-27918-MS")
+ref_run_sub("Sidahmed, M.", "The Woodlands, Texas, USA. SPE-173429-MS", "The Woodlands, Texas, USA, 3–5 March. SPE-173429-MS")
+log("References", "Hoffimann 2017 (arXiv); Tunkiel 2020; Priyadarshy and Sidahmed without conference days", "Hoffimann 2018 (SPE-191505-MS); Tunkiel 2021; conference days added (1-4 May; 3-5 March)", None, "all references verified against the source PDFs by the author on 28 October 2026 (decision 73)")
+
 # ---- Table 4 rebuilt with a Rule column (the category rules moved out of the text of Section 5.5)
 RULE = {"Exact agreement": "R4: WITSML date within 1 day of the NOD date, and the first report or free-text spud follows it by at most 1 day.",
         "Definitional offset": "R6: WITSML date within 8 days of the NOD date, and the free-text operational start follows it by 2 to 20 days. R5: a parent leg whose NOD record is claimed by a technical sidetrack and that has no free-text spud date of its own (15/9-19 B).",
@@ -413,7 +508,7 @@ rows1 = [["wellbore", ex["wellbore"], "the wellbore the report belongs to"],
          ["md_csg_last (m)", fdepth(ex["md_csg_last_m"]), "depth of the last casing shoe"],
          ["forecast24hr (abridged)", fctxt, "the plan for the next 24 hours"],
          ["sum24Hr", sumtxt, "free-text summary of the past 24 hours: the text the classifier reads"],
-         ["Phase assigned", f"{DISP.get(ex['phase'], ex['phase'])} (priority {ex['phase_priority']})", "the classifier's result: the 17 1/2 in. section matches the Intermediate drilling patterns, in either spelling of the size"]]
+         ["Phase assigned", f"{DISP.get(ex['phase'], ex['phase'])} (priority {ex['phase_priority']})", "the classifier's result: the 17½ in. section matches the Intermediate drilling patterns, in either spelling of the size"]]
 tbl1 = make_table(["Field", "Value", "Meaning"], rows1, [1700, 4300, 3360])
 a1 = new_par_after(P[21]._p, body_t, "Table 1 shows one report as stored in the archive: the structured fields the pipeline uses and the free-text summary that the classifier reads, quoted in full. The example is a real construction report whose summary contains the one-half sign.", renum=False)
 c1 = new_par_after(a1._p, cap_t, "Table 1: Example DDR as stored in the archive", renum=False)
@@ -421,7 +516,9 @@ c1._p.addnext(tbl1)
 n1 = new_par_after(tbl1, note_t, f"Source: Equinor Volve dataset (Equinor 2018), file {ex['filename']}. The summary of {ex['sum24Hr_words_total']} words is quoted in full; the forecast is abridged. The kick-off field is empty in this report, as in most reports (Table 3).", renum=False)
 log("Section 3.1", "(no example report)", "Table 1: one real report (15/9-F-5, 2007-12-21), summary quoted in full, with the fields explained", "example.ddr;table1.md_kickoff_m.pct", "TJ review: abridged example DDR")
 
-rows2 = [[str(r["priority"]), DISP.get(r["phase"], r["phase"]).replace(" / ", "/"), ", ".join(r["sizes_in"]) or "none", ", ".join(r["words"]) or "none"] for r in val("classifier.phase_table")]
+GLYPH = {"1/2": "\u00bd", "1/4": "\u00bc", "3/4": "\u00be", "3/8": "\u215c", "5/8": "\u215d"}
+READ = {"tagged sea bt": "tagged sea bottom"}           # the pattern matches the abbreviation seen in the report ("Tagged sea btm"); shown in full
+rows2 = [[str(r["priority"]), DISP.get(r["phase"], r["phase"]).replace(" / ", "/"), ", ".join(re.sub(r"(\d+) (\d/\d)", lambda m: m.group(1) + GLYPH[m.group(2)], x) for x in r["sizes_in"]) or "none", ", ".join(READ.get(x, x) for x in r["words"]) or "(size only)"] for r in val("classifier.phase_table")]
 tbl2 = make_table(["Priority", "Phase", "Hole and casing sizes (in.)", "Example trigger words"], rows2, [800, 2400, 2100, 4060])
 a2 = new_par_after(P[25]._p, body_t, "Table 2 lists the 13 phases in priority order with representative triggers taken from the pattern table of the repository (outputs/stage4_priority_rules.csv). Sizes are matched in the spellings found in the reports, for example 17 1/2 or 17.5; words are matched without regard to case; each phase has further patterns that are not shown.", renum=False)
 c2 = new_par_after(a2._p, cap_t, "Table 2: Phases in priority order with representative triggers", renum=False)
@@ -440,7 +537,7 @@ tbl5 = make_table(["Sidetrack", "Parent", "Kick-off depth (m MD)", "Method", "NO
 A = new_par_after(P[67]._p, body_t, f"All 15 sidetracks by designation (15/9-19 A, 19 B, 19 BT2 and 19 ST2, F-1 A, F-1 B and F-1 C, F-9 A, F-11 A, F-11 B and F-11 T2, and F-15 A to F-15 D) yielded a kick-off depth (Table 5). For 11 the depth is written in the narrative; for 3 (15/9-F-1 A, F-1 B and F-15 D) the narrative names the kick-off event but not the depth, which is taken from the measured depth of the same report; for 1 (15/9-19 ST2) both reports at the transition are empty and the depth is the measured depth there, the weakest case. For 15/9-F-1 C the last F-1 B report of 22 February 2014 reads \"Commenced time drilling to1364 m. 50% formation obtained at 1364 m.\", and the first F-1 C report drills 17 1/2 in. hole from that depth, so the kick-off is 1,364 m. The depth of 3,059 m that the narratives report on 13 March 2014 is the start of the 8 1/2 in. section, after casing was run, not the kick-off. 15/9-19 A is a sidetrack whose kick-off is the top of a milled window at 2,178 m (window milled from 2,178 to 2,183 m), a depth that NOD also records.")
 cap5 = new_par_after(A._p, cap_t, "Table 5: Sidetrack kick-off depths, 15 sidetracks")
 cap5._p.addnext(tbl5)
-note5 = new_par_after(tbl5, note_t, f"Depths are m MD. NOD minus DDR is NOD's wlbKickOffPoint minus the recovered depth; blank where NOD has no value. 15/9-19 A: NOD lists 15/9-19 S as its parent wellbore. 15/9-19 S exists as a WITSML wellbore (reports of 1992), but the NOD record that ends on the day 15/9-19 A was entered (15/9-19 SR2, 18 to 25 July 1997) has no WITSML wellbore, so no WITSML parent report precedes the 15/9-19 A reports and its kick-off depth is read from those reports.")
+note5 = new_par_after(tbl5, note_t, f"Depths are m MD. NOD minus DDR is NOD's wlbKickOffPoint minus the recovered depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML reports, so the kick-off is read from the 15/9-19 A reports.")
 log("Section 5.6", "(no kick-off table)", "Table 5: sidetrack, parent, kick-off depth, method, NOD value, difference, confidence", "kickoff.table;kickoff.method_counts;kickoff.nod_comparison", "new table from the kick-off table (author-approved, no highlighting)")
 log("Section 5.6", "Twelve free-text and two depth-sequence recoveries; 15th sidetrack unidentified; the F-1 C example 'Drilled and oriented 8 1/2\" from 3059 m'",
     "11 depth in text, 3 event in text with depth from md, 1 depth sequence; 15 recovered; F-1 C 1,364 m; 3,059 m is the 8 1/2 in. section start; 19 A (2,178 m) is the 15th sidetrack",
@@ -480,10 +577,11 @@ pB2 = new_par_after(pB1._p, P[143], POST(OLD50), renum=False)
 log("Appendix B (new)", "(arithmetic was in Section 5.2)", "full arithmetic and stratum-weighted check", "audit.sample_proportion;audit.wilson_low;audit.wilson_high;audit.scale_frame_over_total;audit.residual_miss;audit.observed_rate;audit.stratum_weighted_rate_pct", "TJ review: moved from Section 5.2")
 
 os.makedirs("manuscript", exist_ok=True)
-doc.save("manuscript/paper2_draft.docx")
+OUT = os.environ.get("VOLVE_DRAFT_OUT", "manuscript/paper2_draft.docx")      # normally the tracked draft; another path when Word holds the file open
+doc.save(OUT)
 
 # =========================================================================== CHANGES.md and the checks
-d2 = docx.Document("manuscript/paper2_draft.docx")
+d2 = docx.Document(OUT)
 hl_texts = []
 for p in d2.paragraphs:
     for r in p.runs:
@@ -498,4 +596,4 @@ open_notes = [t for _, t in hl_texts if t.startswith("[TJ:")]
 prov = [t for _, t in hl_texts if not t.startswith("[TJ:")]
 assert not prov, f"unexpected highlighted text: {prov}"      # no kick-off value carries highlighting after the author sign-off
 json.dump(dict(log=LOG, resolved=RESOLVED, open_notes=open_notes, highlighted_non_note_runs=prov), open("data/interim/stage12_log.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-print("saved manuscript/paper2_draft.docx |", len(LOG), "log entries |", len(RESOLVED), "resolved notes |", len(open_notes), "open notes |", len(prov), "highlighted values")
+print("saved", OUT, "|", len(LOG), "log entries |", len(RESOLVED), "resolved notes |", len(open_notes), "open notes |", len(prov), "highlighted values")

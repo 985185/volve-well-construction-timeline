@@ -213,6 +213,8 @@ extract.encoding_example,"{""filename"": ""15_9_F_12_2007_07_07.xml"", ""earlier
 example.ddr,"{""filename"": ""15_9_F_5_2007_12_21.xml"", ""wellbore"": ""15/9-F-5"", ""date_report"": ""2007-12-21"", ""md_m"": 1415.0, ""dTimSpud"":",null,NEW,"the example was chosen by hand from the reports with a fraction glyph, a drilling phase and a narrative of 40 to 60 words; the registry (a data file) holds fragments of at most 15 words and the numbers of the full summary; the manuscript quotes the full summary (decision 67)"
 classifier.phase_table,"[{""priority"": 1, ""phase"": ""Spud / Conductor"", ""sizes_in"": [""36"", ""30""], ""words"": [""spud"", ""tagged sea bt""]}, {""priority""",null,NEW,
 literature.karnot_2025,"{""ddrs"": 701, ""wells"": 10, ""npt_reduction_pct"": 18.5}",null,NEW,"EXTERNAL, VERIFIED against the source PDF of SPE-228268-MS (author check, 26 October 2026): 701 DDRs, 10 wells, the two quotations of Section 2 and the 18.5% figure; not reproduced by code"
+literature.zhang_2022,"{""events"": 5, ""remarks"": 128000, ""accuracy_larger_test_set_pct"": 65.18, ""hybrid_improvement_pp"": 20}",null,NEW,"EXTERNAL, VERIFIED against the source PDF of SPE-208779-MS (author check, 28 October 2026); not reproduced by code"
+literature.hoffimann_2018,"{""daily_reports"": 9670, ""wells"": 303}",null,NEW,"EXTERNAL, VERIFIED against the source PDF of SPE-191505-MS (author check, 28 October 2026); not reproduced by code"
 external.nod_guidelines_revision_date,"""2025-03-28""",null,NEW,"EXTERNAL: read from the PDF, not from the repository"
 audit.ci_level_pct,95,95,SAME,
 audit.strata_cutoff_days,730,730,SAME,
@@ -238,4 +240,4 @@ duration.gap_flag_rule,"""elapsed days to TD greater than 2 x reports to TD""",n
 duration.n_gap_flagged,7,null,NEW,
 duration.indicative_only,"[""15/9-19 B"", ""15/9-F-11""]",null,NEW,
 data.xml_declared_encoding,"{""none declared (ASCII only)"": 336, ""ISO-8859-1"": 1423}",null,NEW,
-registry.n_entries,240,59,CHANGED,v2 registry had 59 entries
+registry.n_entries,242,59,CHANGED,v2 registry had 59 entries

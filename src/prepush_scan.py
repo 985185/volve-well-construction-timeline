@@ -63,7 +63,7 @@ def raw_texts(f):
 for f in files:
     if os.path.getsize(f) > 50 * 1024 * 1024 or f.startswith(FORBIDDEN_DIRS): findings["c_big_or_forbidden"].append(f)
     if os.path.basename(f) in ("claude_desktop_config.json", ".mcp.json", ".databrickscfg", ".env") or f.startswith(".claude/"): findings["b_secrets"].append((f, "configuration file tracked"))
-    for t in raw_texts(f):
+    for t in ([] if f == "src/prepush_scan.py" else raw_texts(f)):      # the scan script holds the patterns themselves
         m = SECRET.search(t)
         if m: findings["b_secrets"].append((f, m.group(0)[:40]))
         for v in LOCAL:

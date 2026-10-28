@@ -5,7 +5,8 @@ import subprocess
 import sys
 
 L = json.load(open("data/interim/stage12_log.json", encoding="utf-8"))
-chk = subprocess.run([sys.executable, "-X", "utf8", "src/stage12_check.py"], capture_output=True, text=True).stdout.strip().splitlines()
+import os
+chk = subprocess.run([sys.executable, "-X", "utf8", "src/stage12_check.py"] + ([os.environ["VOLVE_DRAFT_OUT"]] if os.environ.get("VOLVE_DRAFT_OUT") else []), capture_output=True, text=True).stdout.strip().splitlines()
 reg = json.load(open("outputs/numbers_registry.json", encoding="utf-8"))
 cut = lambda s, n=330: s if len(s) <= n else s[:n].rstrip() + " ..."
 
