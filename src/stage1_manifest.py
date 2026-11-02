@@ -24,4 +24,8 @@ print("not starting with '<':", [r[0] for r in rows if not r[3]][:5])
 with open("data/raw/manifest.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f); w.writerow(["path", "sha256", "bytes"])
     w.writerows((r[0], r[1], r[2]) for r in rows)
+    PDF = "data/raw/ddr_pdf_example"                       # the original PDF of the example report of Table 1 and Fig. 1 (author side, not in the repository)
+    if os.path.isdir(PDF):
+        for n in sorted(os.listdir(PDF)):
+            b = open(os.path.join(PDF, n), "rb").read(); w.writerow([f"{PDF}/{n}", hashlib.sha256(b).hexdigest(), len(b)])
 print("distinct sha256:", len({r[1] for r in rows}))

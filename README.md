@@ -86,10 +86,11 @@ The narrative of each stage (what ran, results, arithmetic, discrepancies) is in
 | Table 4, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
 | Table 5, kick-off depths | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
 | Table 6, durations | `outputs/duration_table.csv` | `stage9_duration.py` |
-| Fig. 1 | `outputs/figures/figure1_depth_vs_time.png` | `figure1_depth_vs_time.py` |
-| Fig. 2 | `outputs/figures/figure2_days_vs_depth.png` | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |
-| Fig. 3 | `outputs/figures/figure3_td_validation.png` | `figure3_td_validation.py` |
-| Fig. 4 | `outputs/figures/figure4_spud_offset.png` | `figure4_spud_offset.py` |
+| Fig. 1 | `outputs/figures/example_ddr_crop.png` (page of the original Daily Drilling Report PDF of the report of Table 1; the PDF is not in the repository) | `render_example_ddr.py` (author side, needs PyMuPDF and the PDF) |
+| Fig. 2 | `outputs/figures/figure1_depth_vs_time.png` | `figure1_depth_vs_time.py` |
+| Fig. 3 | `outputs/figures/figure2_days_vs_depth.png` | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |
+| Fig. 4 | `outputs/figures/figure3_td_validation.png` | `figure3_td_validation.py` |
+| Fig. 5 | `outputs/figures/figure4_spud_offset.png` | `figure4_spud_offset.py` |
 | Every number in the text | `outputs/numbers_registry.json` | `stage11_registry.py`; checked by `stage12_check.py` |
 
 Phase labels: the classifier's internal names "Reservoir drilling" and "Surface casing" appear in the data files; the manuscript and figures display them as "12¼ in. and smaller hole" and "Surface hole and casing" (label-only change, patterns frozen; `notes/decisions.md`, item 49).

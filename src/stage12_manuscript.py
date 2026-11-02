@@ -119,7 +119,8 @@ def delp(i, reason):
     DEL.add(i)
 
 
-def RENUM(t):                      # two tables were added in Section 3, so the old Tables 1 to 6 become 3 to 8
+def RENUM(t):                      # two tables were added in Section 3, so the old Tables 1 to 6 become 3 to 8; one figure was added, so the old Figs 1 to 4 become 2 to 5
+    t = re.sub(r"\bFig\. ([1-4])\b", lambda m: f"Fig. {int(m.group(1)) + 1}", t)
     return re.sub(r"\bTable ([1-6])\b", lambda m: f"Table {int(m.group(1)) + 2}", t)
 
 
@@ -544,22 +545,30 @@ log("Table 4", "three columns (Outcome, Wellbores, Detail); category named Wellb
 ex = val("example.ddr"); DISP = {"Reservoir drilling": "12¼ in. and smaller hole", "Surface casing": "Surface hole and casing"}
 _full = " ".join(pd.read_parquet("data/interim/ddr.parquet", columns=["filename", "sum24Hr"]).set_index("filename").loc[ex["filename"], "sum24Hr"].split())
 assert len(_full.split()) == ex["sum24Hr_words_total"] and all(f in _full for f in ex["sum24Hr_fragments"])          # the full summary, checked against the registry
-sumtxt = "“" + _full + "”"; fctxt = " ... ".join(ex["forecast24hr_fragments"]) + " ..."
+sumtxt = "“" + _full + "”"; fctxt = ex["forecast24hr"]
 rows1 = [["wellbore", ex["wellbore"], "the wellbore the report belongs to"],
          ["date_report", ex["date_report"], "the day the report covers"],
          ["md (m)", fm(ex["md_m"]), "measured depth reached, along the hole"],
          ["dTimSpud", ex["dTimSpud"], "spud date in the report header, the same in every report of the wellbore"],
          ["md_kickoff", "absent", "kick-off depth field: empty in this report, as in most reports (Table 3)"],
          ["md_csg_last (m)", fdepth(ex["md_csg_last_m"]), "depth of the last casing shoe"],
-         ["forecast24hr (abridged)", fctxt, "the plan for the next 24 hours"],
+         ["forecast24hr", fctxt, "the plan for the next 24 hours"],
          ["sum24Hr", sumtxt, "free-text summary of the past 24 hours: the text the classifier reads"],
-         ["Phase assigned", f"{DISP.get(ex['phase'], ex['phase'])} (priority {ex['phase_priority']})", "the classifier's result: the 17½ in. section matches the Intermediate drilling patterns, in either spelling of the size"]]
+         ["Phase assigned", f"{DISP.get(ex['phase'], ex['phase'])} (priority {ex['phase_priority']})", "the classifier's result: the 12¼ in. hole matches the pattern of that phase"]]
 tbl1 = make_table(["Field", "Value", "Meaning"], rows1, [1700, 4300, 3360])
-a1 = new_par_after(P[21]._p, body_t, "Table 1 shows one report as stored in the archive: the structured fields the pipeline uses and the free-text summary that the classifier reads, quoted in full. The example is a real construction report whose summary contains the one-half sign.", renum=False)
+a1 = new_par_after(P[21]._p, body_t, "Table 1 shows one report as stored in the archive: the structured fields the pipeline uses and the free-text summary that the classifier reads, quoted in full. Fig. 1 shows the same report as a page of the original PDF version of the Daily Drilling Report.", renum=False)
 c1 = new_par_after(a1._p, cap_t, "Table 1: Example DDR as stored in the archive", renum=False)
 c1._p.addnext(tbl1)
-n1 = new_par_after(tbl1, note_t, f"Source: Equinor Volve dataset (Equinor 2018), file {ex['filename']}. The summary of {ex['sum24Hr_words_total']} words is quoted in full; the forecast is abridged. The kick-off field is empty in this report, as in most reports (Table 3).", renum=False)
-log("Section 3.1", "(no example report)", "Table 1: one real report (15/9-F-5, 2007-12-21), summary quoted in full, with the fields explained", "example.ddr;table1.md_kickoff_m.pct", "TJ review: abridged example DDR")
+n1 = new_par_after(tbl1, note_t, f"Source: Equinor Volve dataset (Equinor 2018), file {ex['filename']}. The summary of {ex['sum24Hr_words_total']} words and the forecast are quoted in full. The kick-off field is empty in this report, as in most reports (Table 3).", renum=False)
+_img = P[134]._p                                         # the first figure paragraph (image) and its caption are the templates
+fig1 = copy.deepcopy(_img); n1._p.addnext(fig1)
+fig1p = Paragraph(fig1, P[134]._parent)
+for _r in list(fig1p.runs): fig1.remove(_r._r)
+fig1p.add_run().add_picture("outputs/figures/example_ddr_crop.png", width=Inches(6.5))
+fig1p.paragraph_format.keep_with_next = True
+fcap = new_par_after(fig1, P[135], "Fig. 1: Page of the original Daily Drilling Report for " + ex["wellbore"] + ", 23 November 2013 (Equinor Volve dataset, PDF version). Table 1 shows the same report as stored in the WITSML archive.", renum=False)
+fcap.paragraph_format.keep_with_next = None
+log("Section 3.1", "(no example report)", "Table 1: one real report (15/9-F-15 D, 2013-11-23), summary quoted in full, with the fields explained; Fig. 1 shows its original PDF page", "example.ddr;table1.md_kickoff_m.pct", "TJ review: abridged example DDR")
 
 GLYPH = {"1/2": "\u00bd", "1/4": "\u00bc", "3/4": "\u00be", "3/8": "\u215c", "5/8": "\u215d"}
 READ = {"tagged sea bt": "tagged sea bottom"}           # the pattern matches the abbreviation seen in the report ("Tagged sea btm"); shown in full

@@ -91,702 +91,710 @@ p18,24,24.0,in registry,"last_m), operational parameters and the free-text 24-ho
 p19,999.99,999.99,in registry,"ring and contains two placeholders, the literal '-999.99' (a missing-value sentinel) a"
 p19,0,0.0,in registry,9.99' (a missing-value sentinel) and the literal '0'. Both were excluded and the
 p20,1,1.0,in registry,Table 1 shows a real construction rep
+p20,1,1.0,in registry,free-text summary that the classifier reads. Fig. 1 shows the same report as a pa
 p21,1,1.0,in registry,Table 1: Example DDR as stored in the
-p22,2018,2018.0,in registry,"Source: Equinor Volve dataset (Equinor 2018), file 15_9_F_5_2007_12_21.xm"
-p22,15,15.0,in registry,"ource: Equinor Volve dataset (Equinor 2018), file 15_9_F_5_2007_12_21.xml. The sum"
-p22,49,49.0,in registry,"18), file 15_9_F_5_2007_12_21.xml. The summary of 49 words is quoted in full; the"
+p22,2018,2018.0,in registry,"Source: Equinor Volve dataset (Equinor 2018), file 15_9_F_15_D_2013_11_23"
+p22,15,15.0,in registry,"ource: Equinor Volve dataset (Equinor 2018), file 15_9_F_15_D_2013_11_23.xml. The"
+p22,51,51.0,in registry,", file 15_9_F_15_D_2013_11_23.xml. The summary of 51 words and the forecast are qu"
 p22,3,3.0,in registry,"s empty in this report, as in most reports (Table 3)."
-p23,3.2,3.2,ignored: section number,3.2 Wellbore Designation
-p24,2025,2025.0,in registry,"gnation guidelines of the national regulator (NOD 2025). The suffix ""S"" marks an exp"
-p24,15,15.0,in registry,"archive uses the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/"
-p24,9,9.0,in registry,"hive uses the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-"
-p24,19,19.0,in registry,"ve uses the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-1"
-p24,15,15.0,in registry,"the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, an"
-p24,9,9.0,in registry,"technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and"
-p24,19,19.0,in registry,"echnical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and non"
-p24,15,15.0,in registry,"detrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and none of them a"
-p24,9,9.0,in registry,"rack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and none of them app"
-p24,11,11.0,in registry,"designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and none of them appears"
-p24,5.4,5.4,ignored: section number,aming mismatch between the two registers (Section 5.4).
-p25,3.3,3.3,ignored: section number,3.3 Phase Classification
-p26,13,13.0,in registry,"signs the sum24Hr narrative of each DDR to one of 13 phases: Spud/Conductor, Surfa"
-p26,12,12.0,in registry,"sing, Intermediate drilling, Intermediate casing, 12¼ in. and smaller hole, Liner/"
-p26,1,1.0,in registry,"move/Setup. Each phase has a fixed priority from 1 (highest) to 13 (lowest), in"
-p26,13,13.0,in registry,"ch phase has a fixed priority from 1 (highest) to 13 (lowest), in the order listed"
-p26,1,1.0,in registry,"gle special characters that a pattern written as ""1/2"" does not match. They are c"
-p26,2,2.0,in registry,"e special characters that a pattern written as ""1/2"" does not match. They are con"
-p26,12,12.0,in registry,attern group matches. On Volve platform wells the 12¼ in. hole is usually the sect
-p27,2,2.0,in registry,Table 2 gives the 13 phases in priori
-p27,13,13.0,in registry,Table 2 gives the 13 phases in priority order with
-p27,17,17.0,in registry,"n the spellings found in the reports, for example 17 1/2 or 17.5, and words in any"
-p27,1,1.0,in registry,"he spellings found in the reports, for example 17 1/2 or 17.5, and words in any c"
-p27,2,2.0,in registry,"spellings found in the reports, for example 17 1/2 or 17.5, and words in any cas"
-p27,17.5,17.5,in registry,"lings found in the reports, for example 17 1/2 or 17.5, and words in any case. Each"
-p28,2,2.0,in registry,Table 2: Phases in priority order wit
-p30,3.4,3.4,in registry,3.4 Stratified Audit of the Uncla
-p31,147,147.0,in registry,"nd marine riser handling is the largest category (147 of 456 records, 32.2%). The 7"
-p31,456,456.0,in registry,"ne riser handling is the largest category (147 of 456 records, 32.2%). The 73 empty"
-p31,32.2%,32.2,in registry,"ling is the largest category (147 of 456 records, 32.2%). The 73 empty records have a"
-p31,73,73.0,in registry,"largest category (147 of 456 records, 32.2%). The 73 empty records have a sum24Hr"
-p31,4,4.0,in registry,"eld that holds the literal string ""None"" (Section 4). No text method can classify"
-p31,383,383.0,in registry,"were excluded from the sampling frame, which left 383 records."
-p32,50,50.0,in registry,A stratified sample of 50 records was drawn from the 38
-p32,383.,383.0,in registry,tratified sample of 50 records was drawn from the 383. The unclassified reports were
-p32,730,730.0,in registry,"rata, an early construction group (reports within 730 days of the wellbore's first"
-p32,296,296.0,in registry,"s within 730 days of the wellbore's first report, 296 records) and a later producti"
-p32,730,730.0,in registry,") and a later production group (reports more than 730 days after it, 87 records), a"
-p32,87,87.0,in registry,"ction group (reports more than 730 days after it, 87 records), and a random sample"
-p32,39,39.0,in registry,"le was drawn from each in proportion to its size, 39 records from the construction"
-p32,11,11.0,in registry,"size, 39 records from the construction group and 11 from the production group. Th"
-p33,3.5,3.5,ignored: section number,3.5 External Validation Against N
-p34,2026,2026.0,in registry,ud date were compared with the NOD FactPages (NOD 2026a). The Table View export was
-p34,15,15.0,in registry,"all technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, bo"
-p34,9,9.0,in registry,"l technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both"
-p34,19,19.0,in registry,"technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,"
-p34,15,15.0,in registry,"tracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19"
-p34,9,9.0,in registry,"cks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 S"
-p34,19,19.0,in registry,"s, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2"
-p34,"4,250",4250.0,in registry,"ched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19"
-p34,15,15.0,in registry,"epth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, b"
-p34,9,9.0,in registry,"h (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, bot"
-p34,19,19.0,in registry,"(15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4"
-p34,15,15.0,in registry,"o NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15"
-p34,9,9.0,in registry,"OD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9"
-p34,19,19.0,in registry,"15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-"
-p34,"4,641",4641.0,in registry,"both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15"
-p34,15,15.0,in registry,"15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4"
-p34,9,9.0,in registry,"/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,5"
-p34,11,11.0,in registry,"9 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1"
-p34,15,15.0,in registry,"15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0"
-p34,9,9.0,in registry,"9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m"
-p34,"11,",11.0,in registry,"SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m). The"
-p34,"4,562.1",4562.1,in registry,"both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m). The export"
-p34,"4,562.0",4562.0,in registry,"and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m). The export was retrieved"
-p34,24,24.0,in registry,"2.1 m and 4,562.0 m). The export was retrieved on 24 October 2026. Its rows for th"
-p34,2026.,2026.0,in registry,",562.0 m). The export was retrieved on 24 October 2026. Its rows for the Volve wellbo"
-p34,8,8.0,in registry,s rows for the Volve wellbores match an export of 8 September 2026 except for the
-p34,2026,2026.0,in registry,he Volve wellbores match an export of 8 September 2026 except for the register's own
-p34,2026.,2026.0,in registry,ainst the current register as accessed in October 2026.
-p35,15,15.0,in registry,In the 15/9-19 series the DDR narrative
-p35,9,9.0,in registry,In the 15/9-19 series the DDR narratives
-p35,19,19.0,in registry,In the 15/9-19 series the DDR narratives des
-p35,2026,2026.0,in registry,"designations, and the NOD wellbore histories (NOD 2026b, 2026c, 2026d) are consisten"
-p35,2026,2026.0,in registry,"tions, and the NOD wellbore histories (NOD 2026b, 2026c, 2026d) are consistent with"
-p35,2026,2026.0,in registry,"and the NOD wellbore histories (NOD 2026b, 2026c, 2026d) are consistent with them. T"
-p35,15,15.0,in registry,"26d) are consistent with them. The drillstring in 15/9-19 B became stuck at 3,272"
-p35,9,9.0,in registry,") are consistent with them. The drillstring in 15/9-19 B became stuck at 3,272 m."
-p35,19,19.0,in registry,"are consistent with them. The drillstring in 15/9-19 B became stuck at 3,272 m. Th"
-p35,"3,272",3272.0,in registry,"hem. The drillstring in 15/9-19 B became stuck at 3,272 m. The string was backed off"
-p35,"2,911",2911.0,in registry,"ck plug was set, and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first"
-p35,15,15.0,in registry,"set, and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first report"
-p35,9,9.0,in registry,"t, and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first report re"
-p35,19,19.0,in registry,"and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first report reads"
-p35,15,15.0,in registry,"se first report reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S follow"
-p35,9,9.0,in registry,"first report reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed"
-p35,19,19.0,in registry,"rst report reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed th"
-p35,15,15.0,in registry,"reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed the same sequ"
-p35,9,9.0,in registry,"ds ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed the same sequen"
-p35,19,19.0,in registry,"""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed the same sequence,"
-p35,"2,741",2741.0,in registry,"e same sequence, with stuck pipe at approximately 2,741 m, a backed-off and cut strin"
-p35,"1,536",1536.0,in registry,"FOR SIDE TRACK"") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cas"
-p35,15,15.0,in registry,"RACK"") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cases NOD r"
-p35,9,9.0,in registry,"K"") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cases NOD rec"
-p35,19,19.0,in registry,") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cases NOD record"
-p36,4,4.0,in registry,4 Data Quality
-p37,"1,759",1759.0,in registry,"en WITSML-derived columns was surveyed across all 1,759 DDRs (Table 3)."
-p37,3,3.0,in registry,"columns was surveyed across all 1,759 DDRs (Table 3)."
-p38,3,3.0,in registry,Table 3: Field population survey (n =
-p38,"1,759",1759.0,in registry,"Table 3: Field population survey (n = 1,759 DDRs)"
-p39,"1,759,",1759.0,in registry,"Percentages are count / 1,759, rounded to two decimal places"
-p40,14.10%,14.1,in registry,"he structured kick-off field is populated in only 14.10% of rows (248 of 1,759), so si"
-p40,248,248.0,in registry,"ck-off field is populated in only 14.10% of rows (248 of 1,759), so sidetrack kick-"
-p40,"1,759",1759.0,in registry,"field is populated in only 14.10% of rows (248 of 1,759), so sidetrack kick-off depth"
-p40,5.6,5.6,ignored: section number,the narratives and from depth sequences (Section 5.6).
-p41,100%,100.0,in registry,"A standard null-or-blank check reports 100% population for sum24Hr, but 7"
-p41,73,73.0,in registry,"nk check reports 100% population for sum24Hr, but 73 records hold the literal stri"
-p41,73,73.0,in registry,"ing ""None"". The string sits in the source XML, in 73 of the 1,759 files, and is a"
-p41,"1,759",1759.0,in registry,". The string sits in the source XML, in 73 of the 1,759 files, and is a placeholder o"
-p41,95.85%,95.85,in registry,"etect it, and the genuine narrative population is 95.85% (1,686 of 1,759). The same pl"
-p41,"1,686",1686.0,in registry,", and the genuine narrative population is 95.85% (1,686 of 1,759). The same placehold"
-p41,"1,759",1759.0,in registry,"genuine narrative population is 95.85% (1,686 of 1,759). The same placeholder fills"
-p41,103,103.0,in registry,".85% (1,686 of 1,759). The same placeholder fills 103 forecast24hr values, which le"
-p41,94.14%,94.14,in registry,"es, which leaves a genuine forecast population of 94.14% (1,656 of 1,759). The archive"
-p41,"1,656",1656.0,in registry,"h leaves a genuine forecast population of 94.14% (1,656 of 1,759). The archive holds"
-p41,"1,759",1759.0,in registry,"a genuine forecast population of 94.14% (1,656 of 1,759). The archive holds 515 place"
-p41,515,515.0,in registry,"ion of 94.14% (1,656 of 1,759). The archive holds 515 placeholder values across all"
-p41,331,331.0,in registry,"er values across all extracted fields, made up of 331 depth sentinels, 7 zero depth"
-p41,7,7.0,in registry,"extracted fields, made up of 331 depth sentinels, 7 zero depths, 176 literal ""Non"
-p41,176,176.0,in registry,"s, made up of 331 depth sentinels, 7 zero depths, 176 literal ""None"" strings (73 na"
-p41,73,73.0,in registry,"inels, 7 zero depths, 176 literal ""None"" strings (73 narratives and 103 forecasts)"
-p41,103,103.0,in registry,"hs, 176 literal ""None"" strings (73 narratives and 103 forecasts) and one date senti"
-p42,61,61.0,in registry,"tter for classification, the one-half sign (½) in 61 DDRs (82 occurrences) and the"
-p42,82,82.0,in registry,"classification, the one-half sign (½) in 61 DDRs (82 occurrences) and the one-quar"
-p42,10,10.0,in registry,(82 occurrences) and the one-quarter sign (¼) in 10 DDRs (14 occurrences). Both a
-p42,14,14.0,in registry,rrences) and the one-quarter sign (¼) in 10 DDRs (14 occurrences). Both are normal
-p42,8859,8859.0,in registry,"e pattern matching. The raw files declare the ISO-8859-1 character encoding, and rea"
-p42,1,1.0,in registry,"tern matching. The raw files declare the ISO-8859-1 character encoding, and readi"
-p42,3,3.0,in registry,"oding turns ½ into Â½ (for example 'due to double 3 Â½"" DP' for 'due to double 3"
-p42,3,3.0,in registry,"ample 'due to double 3 Â½"" DP' for 'due to double 3 ½"" DP'). The encoding must th"
-p42,15,15.0,in registry,citly. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (
-p42,9,9.0,in registry,ly. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (fi
-p42,19,19.0,in registry,. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (filen
-p42,1,1.0,in registry,er anomaly is a single record for 15/9-19 A dated 1 January 1980 (filename 15_9_1
-p42,1980,1980.0,in registry,is a single record for 15/9-19 A dated 1 January 1980 (filename 15_9_19_A_1980_01_0
-p42,15,15.0,in registry,"cord for 15/9-19 A dated 1 January 1980 (filename 15_9_19_A_1980_01_01.xml, narrat"
-p42,17.6,17.6,in registry,"_01_01.xml, narrative ""None"", no measured depth), 17.6 years before the first genuin"
-p42,25,25.0,in registry,efore the first genuine report of the wellbore on 25 July 1997. It is a date senti
-p42,1997.,1997.0,in registry,e first genuine report of the wellbore on 25 July 1997. It is a date sentinel.
-p43,5,5.0,in registry,5 Results
-p44,5.1,5.1,ignored: section number,5.1 Classification Rate
-p45,"1,303",1303.0,in registry,"The classifier assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and"
-p45,"1,759",1759.0,in registry,"The classifier assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 u"
-p45,74.1%,74.1,in registry,"ifier assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 unclassified"
-p45,456,456.0,in registry,"ase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 unclassified (25.9%) (Table 4"
-p45,25.9%,25.9,in registry,"e 1,759 DDRs (74.1%) and leaves 456 unclassified (25.9%) (Table 4). The classifier wa"
-p45,4,4.0,in registry,74.1%) and leaves 456 unclassified (25.9%) (Table 4). The classifier was also che
-p45,"1,759",1759.0,in registry,"ive by the author, with identical results for all 1,759 reports. Fig. 1 shows the cla"
-p45,1,1.0,in registry,"ith identical results for all 1,759 reports. Fig. 1 shows the classified phases o"
-p46,4,4.0,in registry,Table 4: Phase distribution
-p47,100.0%,100.0,in registry,rounded independently and may not sum to exactly 100.0%.
-p48,5.2,5.2,ignored: section number,5.2 Stratified Audit and Attainab
-p49,85.4%,85.4,in registry,"A complete pattern set would classify about 85.4% of the 1,759 reports (95% con"
-p49,"1,759",1759.0,in registry,"ete pattern set would classify about 85.4% of the 1,759 reports (95% confidence inter"
-p49,95%,95.0,in registry,"would classify about 85.4% of the 1,759 reports (95% confidence interval 82.5 to 8"
-p49,82.5,82.5,in registry,".4% of the 1,759 reports (95% confidence interval 82.5 to 88.3%). Of the 50 sampled"
-p49,88.3%,88.3,in registry,"he 1,759 reports (95% confidence interval 82.5 to 88.3%). Of the 50 sampled reports,"
-p49,50,50.0,in registry,"s (95% confidence interval 82.5 to 88.3%). Of the 50 sampled reports, 26 (52%) wer"
-p49,26,26.0,in registry,"terval 82.5 to 88.3%). Of the 50 sampled reports, 26 (52%) were labelled construct"
-p49,52%,52.0,in registry,"al 82.5 to 88.3%). Of the 50 sampled reports, 26 (52%) were labelled construction a"
-p49,24,24.0,in registry,"reports, 26 (52%) were labelled construction and 24 (48%) non-construction. The c"
-p49,48%,48.0,in registry,"orts, 26 (52%) were labelled construction and 24 (48%) non-construction. The constr"
-p49,39,39.0,in registry,4 (48%) non-construction. The construction group (39 reports) split 23 constructio
-p49,23,23.0,in registry,uction. The construction group (39 reports) split 23 construction to 16 non-constr
-p49,16,16.0,in registry,"ction group (39 reports) split 23 construction to 16 non-construction, and the pro"
-p49,11,11.0,in registry,"to 16 non-construction, and the production group (11 reports) split 3 to 8. Of the"
-p49,3,3.0,in registry,"tion, and the production group (11 reports) split 3 to 8. Of the 26 construction"
-p49,8.,8.0,in registry,and the production group (11 reports) split 3 to 8. Of the 26 construction report
-p49,26,26.0,in registry,roduction group (11 reports) split 3 to 8. Of the 26 construction reports that the
-p49,9,9.0,in registry,"construction reports that the classifier missed, 9 reported genuine drilling wit"
-p49,10,10.0,in registry,"9 reported genuine drilling without a hole size, 10 described other operations wi"
-p49,7,7.0,in registry,"ern, such as hydraulic fracturing or fishing, and 7 used non-standard terms, such"
-p49,383,383.0,in registry,"rd terms, such as ""CMT"" for cement. Scaled to the 383-report frame, the 26 correspo"
-p49,26,26.0,in registry,""" for cement. Scaled to the 383-report frame, the 26 correspond to about 199 repor"
-p49,199,199.0,in registry,"the 383-report frame, the 26 correspond to about 199 reports. The arithmetic, incl"
-p50,73,73.0,in registry,No text method can classify the 73 DDRs whose narrative is the l
-p50,4.2%,4.2,in registry,"e, and even a perfect pattern set leaves at least 4.2% of DDRs (73/1,759) unclassifi"
-p50,73,73.0,in registry,"perfect pattern set leaves at least 4.2% of DDRs (73/1,759) unclassified."
-p50,"1,759",1759.0,in registry,"fect pattern set leaves at least 4.2% of DDRs (73/1,759) unclassified."
-p51,5.3,5.3,in registry,5.3 Timeline Dataset
-p52,"1,421",1421.0,in registry,"The timeline dataset holds 1,421 rows, one for each DDR with a"
-p52,"1,759",1759.0,in registry,"ne for each DDR with a genuine md_m value. Of the 1,759 DDRs, 331 carry the sentinel"
-p52,331,331.0,in registry,"DDR with a genuine md_m value. Of the 1,759 DDRs, 331 carry the sentinel and 7 the"
-p52,7,7.0,in registry,"ue. Of the 1,759 DDRs, 331 carry the sentinel and 7 the zero value. Each row give"
-p52,2,2.0,in registry,st row with a usable depth in each wellbore. Fig. 2 plots report number against m
-p52,26,26.0,in registry,lots report number against measured depth for all 26 wellbores. The report number
-p52,1980,1980.0,in registry,"ts every DDR of a wellbore from its first report (1980 sentinel excluded), with or w"
-p52,8.,8.0,in registry,"depth, and so matches the reports to TD in Table 8. Only reports with a valid dep"
-p53,5.4,5.4,ignored: section number,5.4 Total Depth Validation
-p54,26,26.0,in registry,"lbore was compared with NOD's total depth for all 26 wellbores (Table 5, Fig. 3)."
-p54,"5,",5.0,in registry,"ith NOD's total depth for all 26 wellbores (Table 5, Fig. 3)."
-p54,3,3.0,in registry,"s total depth for all 26 wellbores (Table 5, Fig. 3)."
-p55,5,5.0,in registry,"Table 5: Total depth validation, all"
-p55,26,26.0,in registry,"Table 5: Total depth validation, all 26 wellbores"
-p56,0.5,0.5,in registry,Exact: difference of 0.5 m or less.
-p57,26,26.0,in registry,"Of the 26 wellbores, 24 have a defensib"
-p57,24,24.0,in registry,"Of the 26 wellbores, 24 have a defensible NOD counter"
-p57,22,22.0,in registry,"lbores, 24 have a defensible NOD counterpart, and 22 of these agree exactly on tot"
-p57,15,15.0,in registry,"rt, and 22 of these agree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%)"
-p57,9,9.0,in registry,and 22 of these agree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%) a
-p57,15,15.0,in registry,22 of these agree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%) and 15
-p57,15,15.0,in registry,gree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227
-p57,0.4%,0.4,in registry,xactly on total depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Amon
-p57,15,15.0,in registry,total depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19
-p57,9,9.0,in registry,al depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F
-p57,19,19.0,in registry,depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F-se
-p57,227,227.0,in registry,15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F-series well
-p57,19,19.0,in registry,by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F-series wellbores matched by
-p57,18,18.0,in registry,"he 19 F-series wellbores matched by literal name, 18 (94.7%) agree exactly, and 15"
-p57,94.7%,94.7,in registry,"9 F-series wellbores matched by literal name, 18 (94.7%) agree exactly, and 15/9-F-15"
-p57,15,15.0,in registry,"ed by literal name, 18 (94.7%) agree exactly, and 15/9-F-15 is again the exception"
-p57,9,9.0,in registry,"by literal name, 18 (94.7%) agree exactly, and 15/9-F-15 is again the exception."
-p57,15,15.0,in registry,"iteral name, 18 (94.7%) agree exactly, and 15/9-F-15 is again the exception. 15/9-"
-p57,15,15.0,in registry,"ee exactly, and 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a to"
-p57,9,9.0,in registry,"exactly, and 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a tota"
-p57,7,7.0,in registry,"tly, and 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total de"
-p57,15,15.0,in registry,nd 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of
-p57,9,9.0,in registry,"15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of 1,"
-p57,9,9.0,in registry,"-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085"
-p57,"1,085",1085.0,in registry,"ion. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085 m, and NOD independently reco"
-p57,"1,085",1085.0,in registry,"l depth of 1,085 m, and NOD independently records 1,085 m for each, which rules out a"
-p58,19,19.0,in registry,"h-based matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no"
-p58,19,19.0,in registry,"matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate"
-p58,11,11.0,in registry,"ach WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate NOD entry"
-p58,19,19.0,in registry,"of the sidetrack against the parent designation (19 B, 19 SR, F-11). The WITSML p"
-p58,19,19.0,in registry,"e sidetrack against the parent designation (19 B, 19 SR, F-11). The WITSML parent"
-p58,11,11.0,in registry,"ck against the parent designation (19 B, 19 SR, F-11). The WITSML parent records t"
-p58,15,15.0,in registry,"TSML parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-"
-p58,9,9.0,in registry,"L parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11"
-p58,19,19.0,in registry,"parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at"
-p58,"3,272",3272.0,in registry,"ecords that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are"
-p58,15,15.0,in registry,"end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs"
-p58,9,9.0,in registry,"short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs a"
-p58,11,11.0,in registry,"rt of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs abando"
-p58,347,347.0,in registry,"that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs abandoned whe"
-p58,15,15.0,in registry,have no NOD counterpart. The stuck-pipe event of 15/9-19 B is documented in the n
-p58,9,9.0,in registry,ve no NOD counterpart. The stuck-pipe event of 15/9-19 B is documented in the nar
-p58,19,19.0,in registry,no NOD counterpart. The stuck-pipe event of 15/9-19 B is documented in the narrat
-p58,3.5,3.5,ignored: section number,"15/9-19 B is documented in the narrative (Section 3.5), and the designation itself"
-p58,15,15.0,in registry,"), and the designation itself is the evidence for 15/9-F-11. The operator's WITSML"
-p58,9,9.0,in registry,and the designation itself is the evidence for 15/9-F-11. The operator's WITSML s
-p58,11.,11.0,in registry,the designation itself is the evidence for 15/9-F-11. The operator's WITSML system
-p59,15,15.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m"
-p59,9,9.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m s"
-p59,19,19.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m shor"
-p59,"3,353",3353.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m short of NOD's struc"
-p59,227,227.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m short of NOD's structured t"
-p59,"3,580.0",3580.0,in registry,"3 m, 227 m short of NOD's structured total depth (3,580.0 m). The well was an original"
-p59,"3,569.0",3569.0,in registry,"re history records it as temporarily suspended at 3,569.0 m (2,394.0 m TVD RKB), immedi"
-p59,"2,394.0",2394.0,in registry,"records it as temporarily suspended at 3,569.0 m (2,394.0 m TVD RKB), immediately above"
-p59,2026,2026.0,in registry,"VD RKB), immediately above the Heimdal sands (NOD 2026d), which is 216 m deeper than"
-p59,216,216.0,in registry,"ely above the Heimdal sands (NOD 2026d), which is 216 m deeper than the last WITSML"
-p59,11.0,11.0,in registry,h is 216 m deeper than the last WITSML depth. The 11.0 m difference between the two
-p59,5,5.0,in registry,"values lies within the register itself, and Table 5 uses the structured field for"
-p59,15,15.0,in registry,"reports for the final drilling and suspension of 15/9-19 S, and the 227 m gap ref"
-p59,9,9.0,in registry,"ports for the final drilling and suspension of 15/9-19 S, and the 227 m gap refle"
-p59,19,19.0,in registry,"rts for the final drilling and suspension of 15/9-19 S, and the 227 m gap reflects"
-p59,227,227.0,in registry,"nal drilling and suspension of 15/9-19 S, and the 227 m gap reflects those missing"
-p59,39,39.0,in registry,"e reports it does hold are incomplete throughout, 39 reports over 91 days (Table 8"
-p59,91,91.0,in registry,"s hold are incomplete throughout, 39 reports over 91 days (Table 8), and the recor"
-p59,8,8.0,in registry,"mplete throughout, 39 reports over 91 days (Table 8), and the records do not show"
-p60,5.5,5.5,ignored: section number,5.5 Spud Date Validation
-p61,6,6.0,in registry,"ing, and otherwise the NOD main entry date. Table 6 summarises the outcome and Fi"
-p61,4,4.0,in registry,try date. Table 6 summarises the outcome and Fig. 4 plots the offset by category.
-p61,15,15.0,in registry,"s whose archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), t"
-p61,9,9.0,in registry,"hose archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the"
-p61,"4,",4.0,in registry,"archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the firs"
-p61,"5,",5.0,in registry,"ive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first rep"
-p61,14,14.0,in registry,"ontains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report f"
-p61,15,15.0,in registry,"he NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report falls on t"
-p61,"4,",4.0,in registry,"report falls on that date, or one day later for F-4, which supports the pre-drill"
-p61,6,6.0,in registry,"llbore, and the rules in the Rule column of Table 6 were formalised afterwards to"
-p61,25,25.0,in registry,"nments. Applied mechanically, the rules reproduce 25 of the 26 assignments. The ex"
-p61,26,26.0,in registry,"plied mechanically, the rules reproduce 25 of the 26 assignments. The exception is"
-p61,15,15.0,in registry,"roduce 25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Ex"
-p61,9,9.0,in registry,"uce 25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Exac"
-p61,"11,",11.0,in registry,"25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Exact by i"
-p61,6,6.0,in registry,under the rule. NOD records a pre-drill campaign (6 to 17 April 2012) that is abs
-p61,17,17.0,in registry,the rule. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent fr
-p61,2012,2012.0,in registry,. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR
-p61,2013,2013.0,in registry,"is absent from the DDR archive, and the archive's 2013 reports describe a fresh spud"
-p61,30,30.0,in registry,"describe a fresh spud from seabed, including the 30-inch conductor. The records d"
-p62,6,6.0,in registry,Table 6: Spud date validation outcome
-p63,15,15.0,in registry,"nal offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
-p63,9,9.0,in registry,"offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
-p63,19,19.0,in registry,"ffset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
-p63,9,9.0,in registry,"R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
-p63,11,11.0,in registry,"solved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
-p65,91,91.0,in registry,"iffers from the first report and its narrative by 91 to 340 days, while the first"
-p65,340,340.0,in registry,"from the first report and its narrative by 91 to 340 days, while the first report"
-p65,15,15.0,in registry,st report and the NOD date agree with each other. 15/9-F-12 is the clearest case.
-p65,9,9.0,in registry,report and the NOD date agree with each other. 15/9-F-12 is the clearest case. It
-p65,12,12.0,in registry,rt and the NOD date agree with each other. 15/9-F-12 is the clearest case. Its fir
-p65,14,14.0,in registry,15/9-F-12 is the clearest case. Its first report (14 June 2007) describes making u
-p65,2007,2007.0,in registry,2 is the clearest case. Its first report (14 June 2007) describes making up the 36 i
-p65,36,36.0,in registry,rst report (14 June 2007) describes making up the 36 in. hole opener and agrees wi
-p65,15,15.0,in registry,"he NOD entry date, and only the structured field (15 March 2007) disagrees. Two si"
-p65,2007,2007.0,in registry,"try date, and only the structured field (15 March 2007) disagrees. Two sidetracks, 1"
-p65,15,15.0,in registry,"field (15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, ca"
-p65,9,9.0,in registry,"eld (15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carr"
-p65,11,11.0,in registry,"(15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a s"
-p65,15,15.0,in registry,"2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date"
-p65,9,9.0,in registry,"07) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date id"
-p65,11,11.0,in registry,"disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date identic"
-p65,15,15.0,in registry,"y an inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig"
-p65,9,9.0,in registry,"n inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig."
-p65,11,11.0,in registry,"herited field value. NOD does not register 15/9-F-11 T2 separately, and Fig. 4 exc"
-p65,4,4.0,in registry,"es not register 15/9-F-11 T2 separately, and Fig. 4 excludes it for that reason."
-p66,15,15.0,in registry,The spud date of 15/9-F-1 needed particular care.
-p66,9,9.0,in registry,The spud date of 15/9-F-1 needed particular care. I
-p66,1,1.0,in registry,The spud date of 15/9-F-1 needed particular care. Its W
-p66,28,28.0,in registry,F-1 needed particular care. Its WITSML spud_date (28 November 2007) falls four day
-p66,2007,2007.0,in registry,articular care. Its WITSML spud_date (28 November 2007) falls four days before its f
-p66,2,2.0,in registry,"ember 2007) falls four days before its first DDR (2 December 2007), which narrate"
-p66,2007,2007.0,in registry,"falls four days before its first DDR (2 December 2007), which narrates drilling 36"
-p66,36,36.0,in registry,"st DDR (2 December 2007), which narrates drilling 36 in. hole from the seabed, an"
-p66,2007,2007.0,in registry,n ordinary gap between spud and first report. The 2007 reports cover the top hole on
-p66,226,226.0,in registry,"er the top hole only (four reports, maximum depth 226 m). The well was drilled to i"
-p66,"3,632",3632.0,in registry,"26 m). The well was drilled to its total depth of 3,632 m in the 2013 campaign, whose"
-p66,2013,2013.0,in registry,"was drilled to its total depth of 3,632 m in the 2013 campaign, whose first report"
-p66,22,22.0,in registry,"3,632 m in the 2013 campaign, whose first report (22 July 2013) is one day before"
-p66,2013,2013.0,in registry,"in the 2013 campaign, whose first report (22 July 2013) is one day before the NOD en"
-p66,23,23.0,in registry,July 2013) is one day before the NOD entry date (23 July 2013). NOD records no pr
-p66,2013,2013.0,in registry,13) is one day before the NOD entry date (23 July 2013). NOD records no pre-drill da
-p66,2007,2007.0,in registry,"July 2013). NOD records no pre-drill date for the 2007 work, unlike F-4, F-5, F-14 a"
-p66,"4,",4.0,in registry,"rds no pre-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD d"
-p66,"5,",5.0,in registry,"o pre-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date t"
-p66,14,14.0,in registry,"-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date theref"
-p66,15.,15.0,in registry,"te for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date therefore marks"
-p67,5.6,5.6,ignored: section number,5.6 Sidetrack Kick-Off Depth Reco
-p68,15,15.0,in registry,to build angle; the structured kick-off field of 15/9-19 S (562 m in all its repo
-p68,9,9.0,in registry,build angle; the structured kick-off field of 15/9-19 S (562 m in all its report
-p68,19,19.0,in registry,uild angle; the structured kick-off field of 15/9-19 S (562 m in all its reports)
-p68,562,562.0,in registry,ngle; the structured kick-off field of 15/9-19 S (562 m in all its reports) is cons
-p69,15,15.0,in registry,A kick-off depth was recovered for all 15 sidetracks (Table 7). The dep
-p69,7,7.0,in registry,depth was recovered for all 15 sidetracks (Table 7). The depth is written in the
-p69,11,11.0,in registry,"ble 7). The depth is written in the narrative for 11 of them. For 3 (15/9-F-1 A, F"
-p69,3,3.0,in registry,"h is written in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D"
-p69,15,15.0,in registry,"s written in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) th"
-p69,9,9.0,in registry,"ritten in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the"
-p69,1,1.0,in registry,"en in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the narr"
-p69,1,1.0,in registry,"he narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the narrative n"
-p69,15,15.0,in registry,"ve for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the narrative names the ki"
-p69,15,15.0,in registry,n from the measured depth of the same report. For 15/9-19 ST2 both reports at the
-p69,9,9.0,in registry,rom the measured depth of the same report. For 15/9-19 ST2 both reports at the tr
-p69,19,19.0,in registry,m the measured depth of the same report. For 15/9-19 ST2 both reports at the trans
-p69,1,1.0,in registry,"h makes it the weakest case. The last report of F-1 B (22 February 2014) reads ""C"
-p69,22,22.0,in registry,"es it the weakest case. The last report of F-1 B (22 February 2014) reads ""Commenc"
-p69,2014,2014.0,in registry,"akest case. The last report of F-1 B (22 February 2014) reads ""Commenced time drilli"
-p69,50%,50.0,in registry,"ry 2014) reads ""Commenced time drilling to1364 m. 50% formation obtained at 1364 m."
-p69,1364,1364.0,in registry,"time drilling to1364 m. 50% formation obtained at 1364 m."", and the first report of"
-p69,1,1.0,in registry,"n obtained at 1364 m."", and the first report of F-1 C drills 17½ in. hole from th"
-p69,17,17.0,in registry,"at 1364 m."", and the first report of F-1 C drills 17½ in. hole from that depth, so"
-p69,"1,364",1364.0,in registry,"e from that depth, so the well was sidetracked at 1,364 m. The narratives report 3,05"
-p69,"3,059",3059.0,in registry,"was sidetracked at 1,364 m. The narratives report 3,059 m on 13 March 2014, but that"
-p69,13,13.0,in registry,"cked at 1,364 m. The narratives report 3,059 m on 13 March 2014, but that depth ma"
-p69,"2014,",2014.0,in registry,",364 m. The narratives report 3,059 m on 13 March 2014, but that depth marks the star"
-p69,8,8.0,in registry,"March 2014, but that depth marks the start of the 8½ in. section after casing was"
-p69,15,15.0,in registry,½ in. section after casing was run. The sidetrack 15/9-19 A kicked off at the top
-p69,9,9.0,in registry,n. section after casing was run. The sidetrack 15/9-19 A kicked off at the top of
-p69,19,19.0,in registry,section after casing was run. The sidetrack 15/9-19 A kicked off at the top of a
-p69,"2,178",2178.0,in registry,"-19 A kicked off at the top of a milled window at 2,178 m (window milled from 2,178 t"
-p69,"2,178",2178.0,in registry,"of a milled window at 2,178 m (window milled from 2,178 to 2,183 m), a depth that NOD"
-p69,"2,183",2183.0,in registry,"ed window at 2,178 m (window milled from 2,178 to 2,183 m), a depth that NOD also rec"
-p70,7,7.0,in registry,"Table 7: Sidetrack kick-off depths, 1"
-p70,15,15.0,in registry,"Table 7: Sidetrack kick-off depths, 15 sidetracks"
-p71,15,15.0,in registry,ed depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-
-p71,9,9.0,in registry,depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-en
-p71,19,19.0,in registry,pth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-entry
-p71,15,15.0,in registry,15/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-
-p71,9,9.0,in registry,/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19
-p71,19,19.0,in registry,-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR
-p71,15,15.0,in registry,"he re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML"
-p71,9,9.0,in registry,"re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML r"
-p71,19,19.0,in registry,"-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML repo"
-p71,1997,1997.0,in registry,"rom which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML reports, so th"
-p71,15,15.0,in registry,"WITSML reports, so the kick-off is read from the 15/9-19 A reports."
-p71,9,9.0,in registry,"TSML reports, so the kick-off is read from the 15/9-19 A reports."
-p71,19,19.0,in registry,"ML reports, so the kick-off is read from the 15/9-19 A reports."
-p72,15,15.0,in registry,No kick-off depth exists for 15/9-19 S. Its earliest narrativ
-p72,9,9.0,in registry,No kick-off depth exists for 15/9-19 S. Its earliest narratives
-p72,19,19.0,in registry,No kick-off depth exists for 15/9-19 S. Its earliest narratives de
-p73,10,10.0,in registry,ffPoint agrees with the recovered depth to within 10 m for 10 of the 12 sidetracks
-p73,10,10.0,in registry,grees with the recovered depth to within 10 m for 10 of the 12 sidetracks for whic
-p73,12,12.0,in registry,the recovered depth to within 10 m for 10 of the 12 sidetracks for which it is av
-p73,6,6.0,in registry,"t is available. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-1"
-p73,15,15.0,in registry,"s available. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A,"
-p73,9,9.0,in registry,"vailable. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F"
-p73,19,19.0,in registry,"ilable. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15"
-p73,1,1.0,in registry,"It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and"
-p73,1,1.0,in registry,"ls the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D)"
-p73,15,15.0,in registry,"recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differ"
-p73,15,15.0,in registry,"d depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10"
-p73,15,15.0,in registry,"6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10 m or less f"
-p73,10,10.0,in registry,"A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A,"
-p73,4,4.0,in registry,", F-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B a"
-p73,15,15.0,in registry,"-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F"
-p73,9,9.0,in registry,"B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-1"
-p73,9,9.0,in registry,"nd F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C)"
-p73,11,11.0,in registry,"D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C) and by"
-p73,11,11.0,in registry,"fers by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C) and by more for"
-p73,15,15.0,in registry,"m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19"
-p73,2,2.0,in registry,"F-9 A, F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B,"
-p73,15,15.0,in registry,"A, F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13"
-p73,9,9.0,in registry,"F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m)"
-p73,19,19.0,in registry,"-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). N"
-p73,31,31.0,in registry,"F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has"
-p73,15,15.0,in registry,"B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no ki"
-p73,9,9.0,in registry,"nd F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick"
-p73,1,1.0,in registry,"-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick-off"
-p73,13,13.0,in registry,") and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick-off value"
-p73,3,3.0,in registry,"B, 13 m). NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11"
-p73,15,15.0,in registry,"13 m). NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2)"
-p73,9,9.0,in registry,"m). NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2)."
-p73,19,19.0,in registry,". NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2). The"
-p73,19,19.0,in registry,"s no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2). The least c"
-p73,11,11.0,in registry,"value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2). The least certain depths"
-p73,15,15.0,in registry,"19 ST2 and F-11 T2). The least certain depths are 15/9-19 ST2, which rests on the"
-p73,9,9.0,in registry,"ST2 and F-11 T2). The least certain depths are 15/9-19 ST2, which rests on the me"
-p73,19,19.0,in registry,"2 and F-11 T2). The least certain depths are 15/9-19 ST2, which rests on the measu"
-p73,15,15.0,in registry,"ST2, which rests on the measured depth alone, and 15/9-F-11 B, where cement and ne"
-p73,9,9.0,in registry,", which rests on the measured depth alone, and 15/9-F-11 B, where cement and new"
-p73,11,11.0,in registry,"ich rests on the measured depth alone, and 15/9-F-11 B, where cement and new forma"
-p73,"2,531",2531.0,in registry,"where cement and new formation were drilled from 2,531 to 2,589 m and the end of the"
-p73,"2,589",2589.0,in registry,"ment and new formation were drilled from 2,531 to 2,589 m and the end of the interval"
-p74,5.7,5.7,in registry,5.7 Duration to Total Depth
-p75,8,8.0,in registry,Table 8 gives the duration of each we
-p75,1980,1980.0,in registry,ation of each wellbore from its first report (the 1980 date sentinel excluded) to th
-p75,5.,5.0,in registry,"eached, which is the maximum valid depth of Table 5. It lists the elapsed calendar"
-p75,7,7.0,in registry,is total depth minus the kick-off depth of Table 7 for the 15 sidetracks and tot
-p75,15,15.0,in registry,depth minus the kick-off depth of Table 7 for the 15 sidetracks and total depth fo
-p75,"11,",11.0,in registry,"r the 15 sidetracks and total depth for the other 11, and the rate divides it by th"
-p75,26,26.0,in registry,"d differ where the archive has gaps. Seven of the 26 wellbores, whose elapsed days"
-p75,15,15.0,in registry,"sed days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F"
-p75,9,9.0,in registry,"days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-1"
-p75,19,19.0,in registry,"ays exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 a"
-p75,"1,",1.0,in registry,"ed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15)"
-p75,"4,",4.0,in registry,"ice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1"
-p75,"5,",5.0,in registry,"heir reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reac"
-p75,"9,",9.0,in registry,"reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches i"
-p75,14,14.0,in registry,"ts, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its to"
-p75,15,15.0,in registry,"lagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth"
-p75,1,1.0,in registry,"(15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth of 3,"
-p75,"3,632",3632.0,in registry,"9, F-14 and F-15). F-1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 da"
-p75,17,17.0,in registry,"F-15). F-1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 days after"
-p75,"2013,",2013.0,in registry,"1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 days after its first re"
-p75,"2,085",2085.0,in registry,"hes its total depth of 3,632 m on 17 August 2013, 2,085 days after its first report o"
-p75,2,2.0,in registry,"August 2013, 2,085 days after its first report on 2 December 2007, in 31 reports,"
-p75,"2007,",2007.0,in registry,", 2,085 days after its first report on 2 December 2007, in 31 reports, four of them f"
-p75,31,31.0,in registry,"ays after its first report on 2 December 2007, in 31 reports, four of them from 20"
-p75,2007.,2007.0,in registry,"2 December 2007, in 31 reports, four of them from 2007. The totals of 15/9-19 B (3,27"
-p75,15,15.0,in registry,"31 reports, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-1"
-p75,9,9.0,in registry,"reports, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11"
-p75,19,19.0,in registry,"ports, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (34"
-p75,"3,272",3272.0,in registry,"four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are"
-p75,15,15.0,in registry,"from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths"
-p75,9,9.0,in registry,"om 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths o"
-p75,11,11.0,in registry,"007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an"
-p75,347,347.0,in registry,"The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an aband"
-p75,5.4,5.4,ignored: section number,epths of an abandoned parent leg or stub (Section 5.4) and make their durations ind
-p75,5.6,5.6,ignored: section number,detracks depend on the kick-off depths of Section 5.6. The rates are per reported d
-p75,1,1.0,in registry,"on 5.6. The rates are per reported day, and for F-1 they mix two campaigns. Per-p"
-p76,8,8.0,in registry,Table 8: Duration to total depth (TD)
-p76,26,26.0,in registry,"Duration to total depth (TD) and drilled length, 26 wellbores"
-p77,7,7.0,in registry,TD. Drilled length is total depth minus the Table 7 kick-off depth for sidetracks
-p78,6,6.0,in registry,6 Discussion
-p79,6.1,6.1,ignored: section number,6.1 What the Dataset Supports
-p80,"1,421",1421.0,in registry,"The 1,421-row depth-time-phase dataset"
-p80,2,2.0,in registry,directly. Depth-versus-report-count curves (Fig. 2) allow wellbores drilled from
-p80,199,199.0,in registry,"missing. At the attainable-rate estimate, roughly 199 DDRs of construction content"
-p80,8,8.0,in registry,"ling progress reported without a hole size. Table 8 offers elapsed days, reports"
-p81,6.2,6.2,ignored: section number,6.2 Data-Quality Lessons for WITS
-p83,999.99,999.99,in registry,"lder values pass null tests. The depth sentinel '-999.99', the zero string '0', the st"
-p83,0,0.0,in registry,"s. The depth sentinel '-999.99', the zero string '0', the string ""None"" (in the n"
-p83,515,515.0,in registry,and forecast fields) and the date sentinel affect 515 field values.
-p84,1,1.0,in registry,A date sentinel (1 January 1980) shifts the enti
-p84,1980,1980.0,in registry,A date sentinel (1 January 1980) shifts the entire drilling c
-p86,14.10%,14.1,in registry,"he structured kick-off field is populated in only 14.10% of rows, which forces the rec"
-p89,6.3,6.3,ignored: section number,6.3 Relevance to Records-Based Sc
-p90,15,15.0,in registry,"Abandoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-"
-p90,9,9.0,in registry,"ndoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11"
-p90,19,19.0,in registry,"oned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to"
-p90,"3,272",3272.0,in registry,"ent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exi"
-p90,15,15.0,in registry,"ow technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physic"
-p90,9,9.0,in registry,"technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physical"
-p90,11,11.0,in registry,"nical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physically bu"
-p90,347,347.0,in registry,"sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physically but have"
-p90,15,15.0,in registry,"sical interval, such as the four wellbores of the 15/9-F-1 family, which share the"
-p90,9,9.0,in registry,"al interval, such as the four wellbores of the 15/9-F-1 family, which share the h"
-p90,1,1.0,in registry,"nterval, such as the four wellbores of the 15/9-F-1 family, which share the hole"
-p90,"1,364",1364.0,in registry,"f the 15/9-F-1 family, which share the hole above 1,364 m MD, are not independent pen"
-p90,15,15.0,in registry,"depths. The archive can also stop, as it does for 15/9-19 S, which has no reports"
-p90,9,9.0,in registry,"ths. The archive can also stop, as it does for 15/9-19 S, which has no reports co"
-p90,19,19.0,in registry,"s. The archive can also stop, as it does for 15/9-19 S, which has no reports cover"
-p90,227,227.0,in registry,"5/9-19 S, which has no reports covering its final 227 m. A screening assessment sho"
-p91,6.4,6.4,ignored: section number,6.4 Transferability
-p92,1.4,1.4,in registry,llbore-matching logic transfer directly to WITSML 1.4-series drillReport archives (
-p92,1.4,1.4,in registry,L 1.4-series drillReport archives (tested here on 1.4.0.0). The pattern set is tune
-p93,7,7.0,in registry,7 Limitations
-p95,50,50.0,in registry,ative with respect to those phases. The sample of 50 was labelled by a single revi
-p95,82.5,82.5,in registry,ter-rater agreement was measured. The interval of 82.5 to 88.3% reflects the modest
-p95,88.3%,88.3,in registry,r agreement was measured. The interval of 82.5 to 88.3% reflects the modest sample si
-p96,1980,1980.0,in registry,ough both were labelled correctly on content. The 1980 date sentinel of 15/9-19 A pl
-p96,15,15.0,in registry,d correctly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilli
-p96,9,9.0,in registry,orrectly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilling
-p96,19,19.0,in registry,rectly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilling of
-p96,1997,1997.0,in registry,t. The 1980 date sentinel of 15/9-19 A places the 1997 drilling of that wellbore in
-p96,2013,2013.0,in registry,"of that wellbore in the production group, and the 2013 drilling campaign reports of"
-p96,15,15.0,in registry,"group, and the 2013 drilling campaign reports of 15/9-F-1 also fall into the prod"
-p96,9,9.0,in registry,"oup, and the 2013 drilling campaign reports of 15/9-F-1 also fall into the produc"
-p96,1,1.0,in registry,and the 2013 drilling campaign reports of 15/9-F-1 also fall into the production
-p98,15,15.0,in registry,"ne rule, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured dept"
-p98,9,9.0,in registry,"rule, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth"
-p98,19,19.0,in registry,"le, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth alo"
-p98,15,15.0,in registry,"ence, 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of ce"
-p98,9,9.0,in registry,"e, 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of ceme"
-p98,11,11.0,in registry,5/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of cement an
-p98,"2,531",2531.0,in registry,"-11 B on an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kic"
-p98,"2,589",2589.0,in registry,"an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kick-off poi"
-p98,15,15.0,in registry,"t for three sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1"
-p98,9,9.0,in registry,"or three sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B"
-p98,1,1.0,in registry,"hree sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and"
-p98,"1,",1.0,in registry,"cks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share"
-p98,1,1.0,in registry,"The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the"
-p98,1,1.0,in registry,"r wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole a"
-p98,1,1.0,in registry,"s of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole above 1,364"
-p98,"1,364",1364.0,in registry,"F-1, F-1 A, F-1 B and F-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1"
-p98,"1,",1.0,in registry,"and F-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it abov"
-p98,1,1.0,in registry,"-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it above ap"
-p98,1,1.0,in registry,"e the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it above approximatel"
-p98,"2,617",2617.0,in registry,"F-1, F-1 A and F-1 B share it above approximately 2,617 to 2,620 m MD. Any formation-"
-p98,"2,620",2620.0,in registry,"A and F-1 B share it above approximately 2,617 to 2,620 m MD. Any formation-level ana"
-p98,8,8.0,in registry,lapsed time to total depth (the gap flag in Table 8).
-p99,61,61.0,in registry,"on the classification rate. The survey finds ½ in 61 DDRs and ¼ in 10, and the nor"
-p99,"10,",10.0,in registry,"tion rate. The survey finds ½ in 61 DDRs and ¼ in 10, and the normalisation handles"
-p100,22,22.0,in registry,The near-exact agreement with NOD on total depth (22 of 24) indicates that the dep
-p100,24,24.0,in registry,ar-exact agreement with NOD on total depth (22 of 24) indicates that the depth fie
-p101,8,8.0,in registry,8 Conclusions
-p102,"3,059",3059.0,in registry,"the point where the sidetrack leaves its parent (3,059 m against 1,364 m for 15/9-F-"
-p102,"1,364",1364.0,in registry,"the sidetrack leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the"
-p102,15,15.0,in registry,"ck leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national"
-p102,9,9.0,in registry,"leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national r"
-p102,1,1.0,in registry,"es its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national regis"
-p104,13,13.0,in registry,"A deterministic, 13-phase rule-based classifier a"
-p104,"1,303",1303.0,in registry,"rministic, 13-phase rule-based classifier assigns 1,303 of 1,759 Volve WITSML DDRs (7"
-p104,"1,759",1759.0,in registry,", 13-phase rule-based classifier assigns 1,303 of 1,759 Volve WITSML DDRs (74.1%) to"
-p104,74.1%,74.1,in registry,"ssifier assigns 1,303 of 1,759 Volve WITSML DDRs (74.1%) to a construction phase, wit"
-p105,52%,52.0,in registry,A stratified audit finds that 52% of the sampled unclassified n
-p105,85.4%,85.4,in registry,es an estimated attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The m
-p105,95%,95.0,in registry,stimated attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The main g
-p105,82.5,82.5,in registry,d attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The main gaps are
-p105,88.3%,88.3,in registry,able classification rate of 85.4% (95% CI 82.5 to 88.3%). The main gaps are drilling
-p106,22,22.0,in registry,al depth agrees exactly with the NOD register for 22 of 24 matched wellbores. The
-p106,24,24.0,in registry,th agrees exactly with the NOD register for 22 of 24 matched wellbores. The two di
-p106,15,15.0,in registry,"22 of 24 matched wellbores. The two differences, 15 m on 15/9-F-15 and a records-"
-p106,15,15.0,in registry,"4 matched wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage"
-p106,9,9.0,in registry,"atched wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage g"
-p106,15,15.0,in registry,"ed wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage gap of"
-p106,227,227.0,in registry,", 15 m on 15/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both expl"
-p106,15,15.0,in registry,"15/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained."
-p106,9,9.0,in registry,"/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained."
-p106,19,19.0,in registry,"-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained."
-p109,15,15.0,in registry,Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule. 15/9-
-p109,15,15.0,in registry,"were recovered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,"
-p109,9,9.0,in registry,"e recovered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,36"
-p109,1,1.0,in registry,"covered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,364 m,"
-p109,"1,364",1364.0,in registry,"tracks by one rule. 15/9-F-1 C was sidetracked at 1,364 m, and 3,059 m marks the star"
-p109,"3,059",3059.0,in registry,"rule. 15/9-F-1 C was sidetracked at 1,364 m, and 3,059 m marks the start of its 8½ i"
-p109,8,8.0,in registry,"ed at 1,364 m, and 3,059 m marks the start of its 8½ in. section. The four wellbo"
-p109,15,15.0,in registry,of its 8½ in. section. The four wellbores of the 15/9-F-1 family share their hole
-p109,9,9.0,in registry,its 8½ in. section. The four wellbores of the 15/9-F-1 family share their hole a
-p109,1,1.0,in registry,8½ in. section. The four wellbores of the 15/9-F-1 family share their hole above
-p109,"1,364",1364.0,in registry,"res of the 15/9-F-1 family share their hole above 1,364 m."
-p110,515,515.0,in registry,Placeholder values that pass a null test affect 515 field values in the archive a
-p111,"1,421",1421.0,in registry,"The resulting 1,421-row depth-time-phase dataset"
-p115,15,15.0,in registry,"the tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F"
-p115,9,9.0,in registry,"e tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-1"
-p115,19,19.0,in registry,"tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B"
-p115,15,15.0,in registry,"first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and"
-p115,9,9.0,in registry,"rst proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and ke"
-p115,9,9.0,in registry,"proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept t"
-p115,15,15.0,in registry,"s for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlie"
-p115,9,9.0,in registry,"or three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier"
-p115,11,11.0,in registry,"hree sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier value"
-p115,15,15.0,in registry,"B) and kept the earlier values, then reviewed all 15 depths and approved every one"
-p115,50,50.0,in registry,"ved every one without change. The author made all 50 audit labels, reviewed all AI"
-p117,"1,421",1421.0,in registry,"classifier, the extraction and analysis code, the 1,421-row timeline dataset, the aud"
-p117,985185,985185.0,ignored: identifier,t produced it are available at https://github.com/985185/volve-well-construction-timel
-p117,15,15.0,in registry,"le names, dates, depths, categories and quotes of 15 words or fewer. The check aga"
-p117,5.1,5.1,ignored: section number,against the author's earlier extraction (Section 5.1) is reported but is not neede
-p156,1,1.0,in registry,Fig. 1: Depth versus time for four r
-p158,2,2.0,in registry,Fig. 2: Report number (1 = the wellb
-p158,1,1.0,in registry,Fig. 2: Report number (1 = the wellbore's first report
-p158,8,8.0,in registry,"the wellbore's first report, as counted in Table 8) versus measured depth for al"
-p158,26,26.0,in registry,"counted in Table 8) versus measured depth for all 26 wellbores, coloured by hole s"
-p160,3,3.0,in registry,Fig. 3: Reconstructed WITSML maximum
-p160,24,24.0,in registry,"WITSML maximum MD versus NOD total depth for the 24 matched wellbores, with 1:1 r"
-p160,1,1.0,in registry,"OD total depth for the 24 matched wellbores, with 1:1 reference line. The two unm"
-p160,1,1.0,in registry,"total depth for the 24 matched wellbores, with 1:1 reference line. The two unmat"
-p160,15,15.0,in registry,1:1 reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not
-p160,9,9.0,in registry,1 reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not p
-p160,19,19.0,in registry,reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plot
-p160,15,15.0,in registry,line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.
-p160,9,9.0,in registry,ne. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.
-p160,11,11.0,in registry,The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.
-p162,4,4.0,in registry,Fig. 4: Spud date offset (WITSML spu
-p162,25,25.0,in registry,"recorded, otherwise the NOD main entry date) for 25 wellbores, coloured by valida"
-p162,15,15.0,in registry,"ores, coloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is"
-p162,9,9.0,in registry,"s, coloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is c"
-p162,1,1.0,in registry,"oloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is clipp"
-p162,"2,064",2064.0,in registry,"validation category. The bar of 15/9-F-1 (offset -2,064 days) is clipped at -400 days"
-p162,400,400.0,in registry,"r of 15/9-F-1 (offset -2,064 days) is clipped at -400 days and labelled with its va"
-p162,15,15.0,in registry,clipped at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because
-p162,9,9.0,in registry,pped at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because N
-p162,11,11.0,in registry,at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because NOD do
-p164,242,242.0,in registry,"the numbers registry published in the repository (242 entries, each with the produc"
-p164,256,256.0,in registry,"h with the producing script and function, the SHA-256 of its input files and an exe"
-p164,5.2,5.2,ignored: section number,cution timestamp). The audit estimates in Section 5.2 are derived arithmetically fr
-p166,5.2,5.2,ignored: section number,ind the attainable classification rate of Section 5.2.
-p167,26,26.0,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-sco"
-p167,50,50.0,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-score"
-p167,0.520,0.52,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-score 95% inte"
-p167,95%,95.0,in registry,"proportion is 26/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. T"
-p167,0.385,0.385,in registry,"6/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. The sample comes fr"
-p167,0.652,0.652,in registry,"520, with a Wilson-score 95% interval of 0.385 to 0.652. The sample comes from the 38"
-p167,383,383.0,in registry,rval of 0.385 to 0.652. The sample comes from the 383 records with a genuine narrat
-p167,456,456.0,in registry,"he 383 records with a genuine narrative among the 456 unclassified records, and the"
-p167,383,383.0,in registry,"ecords, and the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated"
-p167,"1,759",1759.0,in registry,"ds, and the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated resid"
-p167,0.2177,0.2177,in registry,"the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated residual miss"
-p167,0.520,0.52,in registry,"83/1,759 = 0.2177. The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 pe"
-p167,0.2177,0.2177,in registry,"= 0.2177. The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage"
-p167,0.1132,0.1132,in registry,". The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (a"
-p167,11.3,11.3,in registry,"ated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (approximat"
-p167,199,199.0,in registry,"0.1132, or 11.3 percentage points (approximately 199 DDRs). Adding the observed ra"
-p167,"1,303",1303.0,in registry,"pproximately 199 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an esti"
-p167,"1,759",1759.0,in registry,"mately 199 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an estimated"
-p167,0.7408,0.7408,in registry,"99 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an estimated attainabl"
-p167,85.4%,85.4,in registry,es an estimated attainable classification rate of 85.4%. Propagating the Wilson inter
-p167,0.7408,0.7408,in registry,e of 85.4%. Propagating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and
-p167,0.385,0.385,in registry,%. Propagating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 +
-p167,0.2177,0.2177,in registry,gating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 ×
-p167,0.825,0.825,in registry,e Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 =
-p167,0.7408,0.7408,in registry,"nterval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 9"
-p167,0.652,0.652,in registry,"ives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% inter"
-p167,0.2177,0.2177,in registry,"408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82"
-p167,0.883,0.883,in registry,"85 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88"
-p167,95%,95.0,in registry,"77 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88.3%. We"
-p167,82.5,82.5,in registry,".7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88.3%. Weighting the two s"
-p167,88.3%,88.3,in registry,"0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88.3%. Weighting the two strata by"
-p167,296,296.0,in registry,ghting the two strata by their population shares (296/383 and 87/383) gives a sampl
-p167,383,383.0,in registry,ng the two strata by their population shares (296/383 and 87/383) gives a sample pr
-p167,87,87.0,in registry,wo strata by their population shares (296/383 and 87/383) gives a sample proportio
-p167,383,383.0,in registry,strata by their population shares (296/383 and 87/383) gives a sample proportion of
-p167,0.518,0.518,in registry,(296/383 and 87/383) gives a sample proportion of 0.518 and an attainable rate of 85.
-p167,85.3%,85.3,in registry,ple proportion of 0.518 and an attainable rate of 85.3%. The result does not depend o
-table 1 r1 c1,15,15.0,in registry,15/9-F-5
-table 1 r1 c1,9,9.0,in registry,15/9-F-5
-table 1 r1 c1,5,5.0,in registry,15/9-F-5
-table 1 r2 c1,2007,2007.0,in registry,2007-12-21
-table 1 r2 c1,12,12.0,in registry,2007-12-21
-table 1 r2 c1,21,21.0,in registry,2007-12-21
-table 1 r3 c1,"1,415",1415.0,in registry,"1,415"
-table 1 r4 c1,2007,2007.0,in registry,2007-11-11
-table 1 r4 c1,11,11.0,in registry,2007-11-11
-table 1 r4 c1,11,11.0,in registry,2007-11-11
+p24,1,1.0,in registry,Fig. 1: Page of the original Daily D
+p24,15,15.0,in registry,"1: Page of the original Daily Drilling Report for 15/9-F-15 D, 23 November 2013 (E"
+p24,9,9.0,in registry,"Page of the original Daily Drilling Report for 15/9-F-15 D, 23 November 2013 (Equ"
+p24,15,15.0,in registry,"of the original Daily Drilling Report for 15/9-F-15 D, 23 November 2013 (Equinor"
+p24,23,23.0,in registry,"e original Daily Drilling Report for 15/9-F-15 D, 23 November 2013 (Equinor Volve"
+p24,2013,2013.0,in registry,"aily Drilling Report for 15/9-F-15 D, 23 November 2013 (Equinor Volve dataset, PDF v"
+p24,1,1.0,in registry,"2013 (Equinor Volve dataset, PDF version). Table 1 shows the same report as stor"
+p25,3.2,3.2,ignored: section number,3.2 Wellbore Designation
+p26,2025,2025.0,in registry,"gnation guidelines of the national regulator (NOD 2025). The suffix ""S"" marks an exp"
+p26,15,15.0,in registry,"archive uses the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/"
+p26,9,9.0,in registry,"hive uses the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-"
+p26,19,19.0,in registry,"ve uses the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-1"
+p26,15,15.0,in registry,"the technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, an"
+p26,9,9.0,in registry,"technical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and"
+p26,19,19.0,in registry,"echnical-sidetrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and non"
+p26,15,15.0,in registry,"detrack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and none of them a"
+p26,9,9.0,in registry,"rack designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and none of them app"
+p26,11,11.0,in registry,"designations 15/9-19 BT2, 15/9-19 ST2 and 15/9-F-11 T2, and none of them appears"
+p26,5.4,5.4,ignored: section number,aming mismatch between the two registers (Section 5.4).
+p27,3.3,3.3,ignored: section number,3.3 Phase Classification
+p28,13,13.0,in registry,"signs the sum24Hr narrative of each DDR to one of 13 phases: Spud/Conductor, Surfa"
+p28,12,12.0,in registry,"sing, Intermediate drilling, Intermediate casing, 12¼ in. and smaller hole, Liner/"
+p28,1,1.0,in registry,"move/Setup. Each phase has a fixed priority from 1 (highest) to 13 (lowest), in"
+p28,13,13.0,in registry,"ch phase has a fixed priority from 1 (highest) to 13 (lowest), in the order listed"
+p28,1,1.0,in registry,"gle special characters that a pattern written as ""1/2"" does not match. They are c"
+p28,2,2.0,in registry,"e special characters that a pattern written as ""1/2"" does not match. They are con"
+p28,12,12.0,in registry,attern group matches. On Volve platform wells the 12¼ in. hole is usually the sect
+p29,2,2.0,in registry,Table 2 gives the 13 phases in priori
+p29,13,13.0,in registry,Table 2 gives the 13 phases in priority order with
+p29,17,17.0,in registry,"n the spellings found in the reports, for example 17 1/2 or 17.5, and words in any"
+p29,1,1.0,in registry,"he spellings found in the reports, for example 17 1/2 or 17.5, and words in any c"
+p29,2,2.0,in registry,"spellings found in the reports, for example 17 1/2 or 17.5, and words in any cas"
+p29,17.5,17.5,in registry,"lings found in the reports, for example 17 1/2 or 17.5, and words in any case. Each"
+p30,2,2.0,in registry,Table 2: Phases in priority order wit
+p32,3.4,3.4,in registry,3.4 Stratified Audit of the Uncla
+p33,147,147.0,in registry,"nd marine riser handling is the largest category (147 of 456 records, 32.2%). The 7"
+p33,456,456.0,in registry,"ne riser handling is the largest category (147 of 456 records, 32.2%). The 73 empty"
+p33,32.2%,32.2,in registry,"ling is the largest category (147 of 456 records, 32.2%). The 73 empty records have a"
+p33,73,73.0,in registry,"largest category (147 of 456 records, 32.2%). The 73 empty records have a sum24Hr"
+p33,4,4.0,in registry,"eld that holds the literal string ""None"" (Section 4). No text method can classify"
+p33,383,383.0,in registry,"were excluded from the sampling frame, which left 383 records."
+p34,50,50.0,in registry,A stratified sample of 50 records was drawn from the 38
+p34,383.,383.0,in registry,tratified sample of 50 records was drawn from the 383. The unclassified reports were
+p34,730,730.0,in registry,"rata, an early construction group (reports within 730 days of the wellbore's first"
+p34,296,296.0,in registry,"s within 730 days of the wellbore's first report, 296 records) and a later producti"
+p34,730,730.0,in registry,") and a later production group (reports more than 730 days after it, 87 records), a"
+p34,87,87.0,in registry,"ction group (reports more than 730 days after it, 87 records), and a random sample"
+p34,39,39.0,in registry,"le was drawn from each in proportion to its size, 39 records from the construction"
+p34,11,11.0,in registry,"size, 39 records from the construction group and 11 from the production group. Th"
+p35,3.5,3.5,ignored: section number,3.5 External Validation Against N
+p36,2026,2026.0,in registry,ud date were compared with the NOD FactPages (NOD 2026a). The Table View export was
+p36,15,15.0,in registry,"all technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, bo"
+p36,9,9.0,in registry,"l technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both"
+p36,19,19.0,in registry,"technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,"
+p36,15,15.0,in registry,"tracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19"
+p36,9,9.0,in registry,"cks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 S"
+p36,19,19.0,in registry,"s, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2"
+p36,"4,250",4250.0,in registry,"ched by depth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19"
+p36,15,15.0,in registry,"epth (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, b"
+p36,9,9.0,in registry,"h (15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, bot"
+p36,19,19.0,in registry,"(15/9-19 BT2 to NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4"
+p36,15,15.0,in registry,"o NOD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15"
+p36,9,9.0,in registry,"OD 15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9"
+p36,19,19.0,in registry,"15/9-19 B, both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-"
+p36,"4,641",4641.0,in registry,"both 4,250 m; 15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15"
+p36,15,15.0,in registry,"15/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4"
+p36,9,9.0,in registry,"/9-19 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,5"
+p36,11,11.0,in registry,"9 ST2 to NOD 15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1"
+p36,15,15.0,in registry,"15/9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0"
+p36,9,9.0,in registry,"9-19 SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m"
+p36,"11,",11.0,in registry,"SR, both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m). The"
+p36,"4,562.1",4562.1,in registry,"both 4,641 m; and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m). The export"
+p36,"4,562.0",4562.0,in registry,"and 15/9-F-11 T2 to NOD 15/9-F-11, 4,562.1 m and 4,562.0 m). The export was retrieved"
+p36,24,24.0,in registry,"2.1 m and 4,562.0 m). The export was retrieved on 24 October 2026. Its rows for th"
+p36,2026.,2026.0,in registry,",562.0 m). The export was retrieved on 24 October 2026. Its rows for the Volve wellbo"
+p36,8,8.0,in registry,s rows for the Volve wellbores match an export of 8 September 2026 except for the
+p36,2026,2026.0,in registry,he Volve wellbores match an export of 8 September 2026 except for the register's own
+p36,2026.,2026.0,in registry,ainst the current register as accessed in October 2026.
+p37,15,15.0,in registry,In the 15/9-19 series the DDR narrative
+p37,9,9.0,in registry,In the 15/9-19 series the DDR narratives
+p37,19,19.0,in registry,In the 15/9-19 series the DDR narratives des
+p37,2026,2026.0,in registry,"designations, and the NOD wellbore histories (NOD 2026b, 2026c, 2026d) are consisten"
+p37,2026,2026.0,in registry,"tions, and the NOD wellbore histories (NOD 2026b, 2026c, 2026d) are consistent with"
+p37,2026,2026.0,in registry,"and the NOD wellbore histories (NOD 2026b, 2026c, 2026d) are consistent with them. T"
+p37,15,15.0,in registry,"26d) are consistent with them. The drillstring in 15/9-19 B became stuck at 3,272"
+p37,9,9.0,in registry,") are consistent with them. The drillstring in 15/9-19 B became stuck at 3,272 m."
+p37,19,19.0,in registry,"are consistent with them. The drillstring in 15/9-19 B became stuck at 3,272 m. Th"
+p37,"3,272",3272.0,in registry,"hem. The drillstring in 15/9-19 B became stuck at 3,272 m. The string was backed off"
+p37,"2,911",2911.0,in registry,"ck plug was set, and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first"
+p37,15,15.0,in registry,"set, and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first report"
+p37,9,9.0,in registry,"t, and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first report re"
+p37,19,19.0,in registry,"and new hole was kicked off from 2,911 m as 15/9-19 BT2, whose first report reads"
+p37,15,15.0,in registry,"se first report reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S follow"
+p37,9,9.0,in registry,"first report reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed"
+p37,19,19.0,in registry,"rst report reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed th"
+p37,15,15.0,in registry,"reads ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed the same sequ"
+p37,9,9.0,in registry,"ds ""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed the same sequen"
+p37,19,19.0,in registry,"""REPORTING TRANSFERRED FROM 15/9-19B"". Well 15/9-19 S followed the same sequence,"
+p37,"2,741",2741.0,in registry,"e same sequence, with stuck pipe at approximately 2,741 m, a backed-off and cut strin"
+p37,"1,536",1536.0,in registry,"FOR SIDE TRACK"") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cas"
+p37,15,15.0,in registry,"RACK"") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cases NOD r"
+p37,9,9.0,in registry,"K"") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cases NOD rec"
+p37,19,19.0,in registry,") and new hole from approximately 1,536 m as 15/9-19 ST2. In both cases NOD record"
+p38,4,4.0,in registry,4 Data Quality
+p39,"1,759",1759.0,in registry,"en WITSML-derived columns was surveyed across all 1,759 DDRs (Table 3)."
+p39,3,3.0,in registry,"columns was surveyed across all 1,759 DDRs (Table 3)."
+p40,3,3.0,in registry,Table 3: Field population survey (n =
+p40,"1,759",1759.0,in registry,"Table 3: Field population survey (n = 1,759 DDRs)"
+p41,"1,759,",1759.0,in registry,"Percentages are count / 1,759, rounded to two decimal places"
+p42,14.10%,14.1,in registry,"he structured kick-off field is populated in only 14.10% of rows (248 of 1,759), so si"
+p42,248,248.0,in registry,"ck-off field is populated in only 14.10% of rows (248 of 1,759), so sidetrack kick-"
+p42,"1,759",1759.0,in registry,"field is populated in only 14.10% of rows (248 of 1,759), so sidetrack kick-off depth"
+p42,5.6,5.6,ignored: section number,the narratives and from depth sequences (Section 5.6).
+p43,100%,100.0,in registry,"A standard null-or-blank check reports 100% population for sum24Hr, but 7"
+p43,73,73.0,in registry,"nk check reports 100% population for sum24Hr, but 73 records hold the literal stri"
+p43,73,73.0,in registry,"ing ""None"". The string sits in the source XML, in 73 of the 1,759 files, and is a"
+p43,"1,759",1759.0,in registry,". The string sits in the source XML, in 73 of the 1,759 files, and is a placeholder o"
+p43,95.85%,95.85,in registry,"etect it, and the genuine narrative population is 95.85% (1,686 of 1,759). The same pl"
+p43,"1,686",1686.0,in registry,", and the genuine narrative population is 95.85% (1,686 of 1,759). The same placehold"
+p43,"1,759",1759.0,in registry,"genuine narrative population is 95.85% (1,686 of 1,759). The same placeholder fills"
+p43,103,103.0,in registry,".85% (1,686 of 1,759). The same placeholder fills 103 forecast24hr values, which le"
+p43,94.14%,94.14,in registry,"es, which leaves a genuine forecast population of 94.14% (1,656 of 1,759). The archive"
+p43,"1,656",1656.0,in registry,"h leaves a genuine forecast population of 94.14% (1,656 of 1,759). The archive holds"
+p43,"1,759",1759.0,in registry,"a genuine forecast population of 94.14% (1,656 of 1,759). The archive holds 515 place"
+p43,515,515.0,in registry,"ion of 94.14% (1,656 of 1,759). The archive holds 515 placeholder values across all"
+p43,331,331.0,in registry,"er values across all extracted fields, made up of 331 depth sentinels, 7 zero depth"
+p43,7,7.0,in registry,"extracted fields, made up of 331 depth sentinels, 7 zero depths, 176 literal ""Non"
+p43,176,176.0,in registry,"s, made up of 331 depth sentinels, 7 zero depths, 176 literal ""None"" strings (73 na"
+p43,73,73.0,in registry,"inels, 7 zero depths, 176 literal ""None"" strings (73 narratives and 103 forecasts)"
+p43,103,103.0,in registry,"hs, 176 literal ""None"" strings (73 narratives and 103 forecasts) and one date senti"
+p44,61,61.0,in registry,"tter for classification, the one-half sign (½) in 61 DDRs (82 occurrences) and the"
+p44,82,82.0,in registry,"classification, the one-half sign (½) in 61 DDRs (82 occurrences) and the one-quar"
+p44,10,10.0,in registry,(82 occurrences) and the one-quarter sign (¼) in 10 DDRs (14 occurrences). Both a
+p44,14,14.0,in registry,rrences) and the one-quarter sign (¼) in 10 DDRs (14 occurrences). Both are normal
+p44,8859,8859.0,in registry,"e pattern matching. The raw files declare the ISO-8859-1 character encoding, and rea"
+p44,1,1.0,in registry,"tern matching. The raw files declare the ISO-8859-1 character encoding, and readi"
+p44,3,3.0,in registry,"oding turns ½ into Â½ (for example 'due to double 3 Â½"" DP' for 'due to double 3"
+p44,3,3.0,in registry,"ample 'due to double 3 Â½"" DP' for 'due to double 3 ½"" DP'). The encoding must th"
+p44,15,15.0,in registry,citly. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (
+p44,9,9.0,in registry,ly. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (fi
+p44,19,19.0,in registry,. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (filen
+p44,1,1.0,in registry,er anomaly is a single record for 15/9-19 A dated 1 January 1980 (filename 15_9_1
+p44,1980,1980.0,in registry,is a single record for 15/9-19 A dated 1 January 1980 (filename 15_9_19_A_1980_01_0
+p44,15,15.0,in registry,"cord for 15/9-19 A dated 1 January 1980 (filename 15_9_19_A_1980_01_01.xml, narrat"
+p44,17.6,17.6,in registry,"_01_01.xml, narrative ""None"", no measured depth), 17.6 years before the first genuin"
+p44,25,25.0,in registry,efore the first genuine report of the wellbore on 25 July 1997. It is a date senti
+p44,1997.,1997.0,in registry,e first genuine report of the wellbore on 25 July 1997. It is a date sentinel.
+p45,5,5.0,in registry,5 Results
+p46,5.1,5.1,ignored: section number,5.1 Classification Rate
+p47,"1,303",1303.0,in registry,"The classifier assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and"
+p47,"1,759",1759.0,in registry,"The classifier assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 u"
+p47,74.1%,74.1,in registry,"ifier assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 unclassified"
+p47,456,456.0,in registry,"ase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 unclassified (25.9%) (Table 4"
+p47,25.9%,25.9,in registry,"e 1,759 DDRs (74.1%) and leaves 456 unclassified (25.9%) (Table 4). The classifier wa"
+p47,4,4.0,in registry,74.1%) and leaves 456 unclassified (25.9%) (Table 4). The classifier was also che
+p47,"1,759",1759.0,in registry,"ive by the author, with identical results for all 1,759 reports. Fig. 2 shows the cla"
+p47,2,2.0,in registry,"ith identical results for all 1,759 reports. Fig. 2 shows the classified phases o"
+p48,4,4.0,in registry,Table 4: Phase distribution
+p49,100.0%,100.0,in registry,rounded independently and may not sum to exactly 100.0%.
+p50,5.2,5.2,ignored: section number,5.2 Stratified Audit and Attainab
+p51,85.4%,85.4,in registry,"A complete pattern set would classify about 85.4% of the 1,759 reports (95% con"
+p51,"1,759",1759.0,in registry,"ete pattern set would classify about 85.4% of the 1,759 reports (95% confidence inter"
+p51,95%,95.0,in registry,"would classify about 85.4% of the 1,759 reports (95% confidence interval 82.5 to 8"
+p51,82.5,82.5,in registry,".4% of the 1,759 reports (95% confidence interval 82.5 to 88.3%). Of the 50 sampled"
+p51,88.3%,88.3,in registry,"he 1,759 reports (95% confidence interval 82.5 to 88.3%). Of the 50 sampled reports,"
+p51,50,50.0,in registry,"s (95% confidence interval 82.5 to 88.3%). Of the 50 sampled reports, 26 (52%) wer"
+p51,26,26.0,in registry,"terval 82.5 to 88.3%). Of the 50 sampled reports, 26 (52%) were labelled construct"
+p51,52%,52.0,in registry,"al 82.5 to 88.3%). Of the 50 sampled reports, 26 (52%) were labelled construction a"
+p51,24,24.0,in registry,"reports, 26 (52%) were labelled construction and 24 (48%) non-construction. The c"
+p51,48%,48.0,in registry,"orts, 26 (52%) were labelled construction and 24 (48%) non-construction. The constr"
+p51,39,39.0,in registry,4 (48%) non-construction. The construction group (39 reports) split 23 constructio
+p51,23,23.0,in registry,uction. The construction group (39 reports) split 23 construction to 16 non-constr
+p51,16,16.0,in registry,"ction group (39 reports) split 23 construction to 16 non-construction, and the pro"
+p51,11,11.0,in registry,"to 16 non-construction, and the production group (11 reports) split 3 to 8. Of the"
+p51,3,3.0,in registry,"tion, and the production group (11 reports) split 3 to 8. Of the 26 construction"
+p51,8.,8.0,in registry,and the production group (11 reports) split 3 to 8. Of the 26 construction report
+p51,26,26.0,in registry,roduction group (11 reports) split 3 to 8. Of the 26 construction reports that the
+p51,9,9.0,in registry,"construction reports that the classifier missed, 9 reported genuine drilling wit"
+p51,10,10.0,in registry,"9 reported genuine drilling without a hole size, 10 described other operations wi"
+p51,7,7.0,in registry,"ern, such as hydraulic fracturing or fishing, and 7 used non-standard terms, such"
+p51,383,383.0,in registry,"rd terms, such as ""CMT"" for cement. Scaled to the 383-report frame, the 26 correspo"
+p51,26,26.0,in registry,""" for cement. Scaled to the 383-report frame, the 26 correspond to about 199 repor"
+p51,199,199.0,in registry,"the 383-report frame, the 26 correspond to about 199 reports. The arithmetic, incl"
+p52,73,73.0,in registry,No text method can classify the 73 DDRs whose narrative is the l
+p52,4.2%,4.2,in registry,"e, and even a perfect pattern set leaves at least 4.2% of DDRs (73/1,759) unclassifi"
+p52,73,73.0,in registry,"perfect pattern set leaves at least 4.2% of DDRs (73/1,759) unclassified."
+p52,"1,759",1759.0,in registry,"fect pattern set leaves at least 4.2% of DDRs (73/1,759) unclassified."
+p53,5.3,5.3,in registry,5.3 Timeline Dataset
+p54,"1,421",1421.0,in registry,"The timeline dataset holds 1,421 rows, one for each DDR with a"
+p54,"1,759",1759.0,in registry,"ne for each DDR with a genuine md_m value. Of the 1,759 DDRs, 331 carry the sentinel"
+p54,331,331.0,in registry,"DDR with a genuine md_m value. Of the 1,759 DDRs, 331 carry the sentinel and 7 the"
+p54,7,7.0,in registry,"ue. Of the 1,759 DDRs, 331 carry the sentinel and 7 the zero value. Each row give"
+p54,3,3.0,in registry,st row with a usable depth in each wellbore. Fig. 3 plots report number against m
+p54,26,26.0,in registry,lots report number against measured depth for all 26 wellbores. The report number
+p54,1980,1980.0,in registry,"ts every DDR of a wellbore from its first report (1980 sentinel excluded), with or w"
+p54,8.,8.0,in registry,"depth, and so matches the reports to TD in Table 8. Only reports with a valid dep"
+p55,5.4,5.4,ignored: section number,5.4 Total Depth Validation
+p56,26,26.0,in registry,"lbore was compared with NOD's total depth for all 26 wellbores (Table 5, Fig. 4)."
+p56,"5,",5.0,in registry,"ith NOD's total depth for all 26 wellbores (Table 5, Fig. 4)."
+p56,4,4.0,in registry,"s total depth for all 26 wellbores (Table 5, Fig. 4)."
+p57,5,5.0,in registry,"Table 5: Total depth validation, all"
+p57,26,26.0,in registry,"Table 5: Total depth validation, all 26 wellbores"
+p58,0.5,0.5,in registry,Exact: difference of 0.5 m or less.
+p59,26,26.0,in registry,"Of the 26 wellbores, 24 have a defensib"
+p59,24,24.0,in registry,"Of the 26 wellbores, 24 have a defensible NOD counter"
+p59,22,22.0,in registry,"lbores, 24 have a defensible NOD counterpart, and 22 of these agree exactly on tot"
+p59,15,15.0,in registry,"rt, and 22 of these agree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%)"
+p59,9,9.0,in registry,and 22 of these agree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%) a
+p59,15,15.0,in registry,22 of these agree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%) and 15
+p59,15,15.0,in registry,gree exactly on total depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227
+p59,0.4%,0.4,in registry,xactly on total depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Amon
+p59,15,15.0,in registry,total depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19
+p59,9,9.0,in registry,al depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F
+p59,19,19.0,in registry,depth. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F-se
+p59,227,227.0,in registry,15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F-series well
+p59,19,19.0,in registry,by 15 m (0.4%) and 15/9-19 S by 227 m. Among the 19 F-series wellbores matched by
+p59,18,18.0,in registry,"he 19 F-series wellbores matched by literal name, 18 (94.7%) agree exactly, and 15"
+p59,94.7%,94.7,in registry,"9 F-series wellbores matched by literal name, 18 (94.7%) agree exactly, and 15/9-F-15"
+p59,15,15.0,in registry,"ed by literal name, 18 (94.7%) agree exactly, and 15/9-F-15 is again the exception"
+p59,9,9.0,in registry,"by literal name, 18 (94.7%) agree exactly, and 15/9-F-15 is again the exception."
+p59,15,15.0,in registry,"iteral name, 18 (94.7%) agree exactly, and 15/9-F-15 is again the exception. 15/9-"
+p59,15,15.0,in registry,"ee exactly, and 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a to"
+p59,9,9.0,in registry,"exactly, and 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a tota"
+p59,7,7.0,in registry,"tly, and 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total de"
+p59,15,15.0,in registry,nd 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of
+p59,9,9.0,in registry,"15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of 1,"
+p59,9,9.0,in registry,"-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085"
+p59,"1,085",1085.0,in registry,"ion. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085 m, and NOD independently reco"
+p59,"1,085",1085.0,in registry,"l depth of 1,085 m, and NOD independently records 1,085 m for each, which rules out a"
+p60,19,19.0,in registry,"h-based matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no"
+p60,19,19.0,in registry,"matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate"
+p60,11,11.0,in registry,"ach WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate NOD entry"
+p60,19,19.0,in registry,"of the sidetrack against the parent designation (19 B, 19 SR, F-11). The WITSML p"
+p60,19,19.0,in registry,"e sidetrack against the parent designation (19 B, 19 SR, F-11). The WITSML parent"
+p60,11,11.0,in registry,"ck against the parent designation (19 B, 19 SR, F-11). The WITSML parent records t"
+p60,15,15.0,in registry,"TSML parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-"
+p60,9,9.0,in registry,"L parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11"
+p60,19,19.0,in registry,"parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at"
+p60,"3,272",3272.0,in registry,"ecords that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are"
+p60,15,15.0,in registry,"end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs"
+p60,9,9.0,in registry,"short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs a"
+p60,11,11.0,in registry,"rt of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs abando"
+p60,347,347.0,in registry,"that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs abandoned whe"
+p60,15,15.0,in registry,have no NOD counterpart. The stuck-pipe event of 15/9-19 B is documented in the n
+p60,9,9.0,in registry,ve no NOD counterpart. The stuck-pipe event of 15/9-19 B is documented in the nar
+p60,19,19.0,in registry,no NOD counterpart. The stuck-pipe event of 15/9-19 B is documented in the narrat
+p60,3.5,3.5,ignored: section number,"15/9-19 B is documented in the narrative (Section 3.5), and the designation itself"
+p60,15,15.0,in registry,"), and the designation itself is the evidence for 15/9-F-11. The operator's WITSML"
+p60,9,9.0,in registry,and the designation itself is the evidence for 15/9-F-11. The operator's WITSML s
+p60,11.,11.0,in registry,the designation itself is the evidence for 15/9-F-11. The operator's WITSML system
+p61,15,15.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m"
+p61,9,9.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m s"
+p61,19,19.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m shor"
+p61,"3,353",3353.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m short of NOD's struc"
+p61,227,227.0,in registry,"The WITSML series of 15/9-19 S ends at 3,353 m, 227 m short of NOD's structured t"
+p61,"3,580.0",3580.0,in registry,"3 m, 227 m short of NOD's structured total depth (3,580.0 m). The well was an original"
+p61,"3,569.0",3569.0,in registry,"re history records it as temporarily suspended at 3,569.0 m (2,394.0 m TVD RKB), immedi"
+p61,"2,394.0",2394.0,in registry,"records it as temporarily suspended at 3,569.0 m (2,394.0 m TVD RKB), immediately above"
+p61,2026,2026.0,in registry,"VD RKB), immediately above the Heimdal sands (NOD 2026d), which is 216 m deeper than"
+p61,216,216.0,in registry,"ely above the Heimdal sands (NOD 2026d), which is 216 m deeper than the last WITSML"
+p61,11.0,11.0,in registry,h is 216 m deeper than the last WITSML depth. The 11.0 m difference between the two
+p61,5,5.0,in registry,"values lies within the register itself, and Table 5 uses the structured field for"
+p61,15,15.0,in registry,"reports for the final drilling and suspension of 15/9-19 S, and the 227 m gap ref"
+p61,9,9.0,in registry,"ports for the final drilling and suspension of 15/9-19 S, and the 227 m gap refle"
+p61,19,19.0,in registry,"rts for the final drilling and suspension of 15/9-19 S, and the 227 m gap reflects"
+p61,227,227.0,in registry,"nal drilling and suspension of 15/9-19 S, and the 227 m gap reflects those missing"
+p61,39,39.0,in registry,"e reports it does hold are incomplete throughout, 39 reports over 91 days (Table 8"
+p61,91,91.0,in registry,"s hold are incomplete throughout, 39 reports over 91 days (Table 8), and the recor"
+p61,8,8.0,in registry,"mplete throughout, 39 reports over 91 days (Table 8), and the records do not show"
+p62,5.5,5.5,ignored: section number,5.5 Spud Date Validation
+p63,6,6.0,in registry,"ing, and otherwise the NOD main entry date. Table 6 summarises the outcome and Fi"
+p63,5,5.0,in registry,try date. Table 6 summarises the outcome and Fig. 5 plots the offset by category.
+p63,15,15.0,in registry,"s whose archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), t"
+p63,9,9.0,in registry,"hose archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the"
+p63,"4,",4.0,in registry,"archive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the firs"
+p63,"5,",5.0,in registry,"ive contains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first rep"
+p63,14,14.0,in registry,"ontains the NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report f"
+p63,15,15.0,in registry,"he NOD pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report falls on t"
+p63,"4,",4.0,in registry,"report falls on that date, or one day later for F-4, which supports the pre-drill"
+p63,6,6.0,in registry,"llbore, and the rules in the Rule column of Table 6 were formalised afterwards to"
+p63,25,25.0,in registry,"nments. Applied mechanically, the rules reproduce 25 of the 26 assignments. The ex"
+p63,26,26.0,in registry,"plied mechanically, the rules reproduce 25 of the 26 assignments. The exception is"
+p63,15,15.0,in registry,"roduce 25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Ex"
+p63,9,9.0,in registry,"uce 25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Exac"
+p63,"11,",11.0,in registry,"25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Exact by i"
+p63,6,6.0,in registry,under the rule. NOD records a pre-drill campaign (6 to 17 April 2012) that is abs
+p63,17,17.0,in registry,the rule. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent fr
+p63,2012,2012.0,in registry,. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR
+p63,2013,2013.0,in registry,"is absent from the DDR archive, and the archive's 2013 reports describe a fresh spud"
+p63,30,30.0,in registry,"describe a fresh spud from seabed, including the 30-inch conductor. The records d"
+p64,6,6.0,in registry,Table 6: Spud date validation outcome
+p65,15,15.0,in registry,"nal offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
+p65,9,9.0,in registry,"offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
+p65,19,19.0,in registry,"ffset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
+p65,9,9.0,in registry,"R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
+p65,11,11.0,in registry,"solved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
+p67,91,91.0,in registry,"iffers from the first report and its narrative by 91 to 340 days, while the first"
+p67,340,340.0,in registry,"from the first report and its narrative by 91 to 340 days, while the first report"
+p67,15,15.0,in registry,st report and the NOD date agree with each other. 15/9-F-12 is the clearest case.
+p67,9,9.0,in registry,report and the NOD date agree with each other. 15/9-F-12 is the clearest case. It
+p67,12,12.0,in registry,rt and the NOD date agree with each other. 15/9-F-12 is the clearest case. Its fir
+p67,14,14.0,in registry,15/9-F-12 is the clearest case. Its first report (14 June 2007) describes making u
+p67,2007,2007.0,in registry,2 is the clearest case. Its first report (14 June 2007) describes making up the 36 i
+p67,36,36.0,in registry,rst report (14 June 2007) describes making up the 36 in. hole opener and agrees wi
+p67,15,15.0,in registry,"he NOD entry date, and only the structured field (15 March 2007) disagrees. Two si"
+p67,2007,2007.0,in registry,"try date, and only the structured field (15 March 2007) disagrees. Two sidetracks, 1"
+p67,15,15.0,in registry,"field (15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, ca"
+p67,9,9.0,in registry,"eld (15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carr"
+p67,11,11.0,in registry,"(15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a s"
+p67,15,15.0,in registry,"2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date"
+p67,9,9.0,in registry,"07) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date id"
+p67,11,11.0,in registry,"disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date identic"
+p67,15,15.0,in registry,"y an inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig"
+p67,9,9.0,in registry,"n inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig."
+p67,11,11.0,in registry,"herited field value. NOD does not register 15/9-F-11 T2 separately, and Fig. 5 exc"
+p67,5,5.0,in registry,"es not register 15/9-F-11 T2 separately, and Fig. 5 excludes it for that reason."
+p68,15,15.0,in registry,The spud date of 15/9-F-1 needed particular care.
+p68,9,9.0,in registry,The spud date of 15/9-F-1 needed particular care. I
+p68,1,1.0,in registry,The spud date of 15/9-F-1 needed particular care. Its W
+p68,28,28.0,in registry,F-1 needed particular care. Its WITSML spud_date (28 November 2007) falls four day
+p68,2007,2007.0,in registry,articular care. Its WITSML spud_date (28 November 2007) falls four days before its f
+p68,2,2.0,in registry,"ember 2007) falls four days before its first DDR (2 December 2007), which narrate"
+p68,2007,2007.0,in registry,"falls four days before its first DDR (2 December 2007), which narrates drilling 36"
+p68,36,36.0,in registry,"st DDR (2 December 2007), which narrates drilling 36 in. hole from the seabed, an"
+p68,2007,2007.0,in registry,n ordinary gap between spud and first report. The 2007 reports cover the top hole on
+p68,226,226.0,in registry,"er the top hole only (four reports, maximum depth 226 m). The well was drilled to i"
+p68,"3,632",3632.0,in registry,"26 m). The well was drilled to its total depth of 3,632 m in the 2013 campaign, whose"
+p68,2013,2013.0,in registry,"was drilled to its total depth of 3,632 m in the 2013 campaign, whose first report"
+p68,22,22.0,in registry,"3,632 m in the 2013 campaign, whose first report (22 July 2013) is one day before"
+p68,2013,2013.0,in registry,"in the 2013 campaign, whose first report (22 July 2013) is one day before the NOD en"
+p68,23,23.0,in registry,July 2013) is one day before the NOD entry date (23 July 2013). NOD records no pr
+p68,2013,2013.0,in registry,13) is one day before the NOD entry date (23 July 2013). NOD records no pre-drill da
+p68,2007,2007.0,in registry,"July 2013). NOD records no pre-drill date for the 2007 work, unlike F-4, F-5, F-14 a"
+p68,"4,",4.0,in registry,"rds no pre-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD d"
+p68,"5,",5.0,in registry,"o pre-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date t"
+p68,14,14.0,in registry,"-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date theref"
+p68,15.,15.0,in registry,"te for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date therefore marks"
+p69,5.6,5.6,ignored: section number,5.6 Sidetrack Kick-Off Depth Reco
+p70,15,15.0,in registry,to build angle; the structured kick-off field of 15/9-19 S (562 m in all its repo
+p70,9,9.0,in registry,build angle; the structured kick-off field of 15/9-19 S (562 m in all its report
+p70,19,19.0,in registry,uild angle; the structured kick-off field of 15/9-19 S (562 m in all its reports)
+p70,562,562.0,in registry,ngle; the structured kick-off field of 15/9-19 S (562 m in all its reports) is cons
+p71,15,15.0,in registry,A kick-off depth was recovered for all 15 sidetracks (Table 7). The dep
+p71,7,7.0,in registry,depth was recovered for all 15 sidetracks (Table 7). The depth is written in the
+p71,11,11.0,in registry,"ble 7). The depth is written in the narrative for 11 of them. For 3 (15/9-F-1 A, F"
+p71,3,3.0,in registry,"h is written in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D"
+p71,15,15.0,in registry,"s written in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) th"
+p71,9,9.0,in registry,"ritten in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the"
+p71,1,1.0,in registry,"en in the narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the narr"
+p71,1,1.0,in registry,"he narrative for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the narrative n"
+p71,15,15.0,in registry,"ve for 11 of them. For 3 (15/9-F-1 A, F-1 B and F-15 D) the narrative names the ki"
+p71,15,15.0,in registry,n from the measured depth of the same report. For 15/9-19 ST2 both reports at the
+p71,9,9.0,in registry,rom the measured depth of the same report. For 15/9-19 ST2 both reports at the tr
+p71,19,19.0,in registry,m the measured depth of the same report. For 15/9-19 ST2 both reports at the trans
+p71,1,1.0,in registry,"h makes it the weakest case. The last report of F-1 B (22 February 2014) reads ""C"
+p71,22,22.0,in registry,"es it the weakest case. The last report of F-1 B (22 February 2014) reads ""Commenc"
+p71,2014,2014.0,in registry,"akest case. The last report of F-1 B (22 February 2014) reads ""Commenced time drilli"
+p71,50%,50.0,in registry,"ry 2014) reads ""Commenced time drilling to1364 m. 50% formation obtained at 1364 m."
+p71,1364,1364.0,in registry,"time drilling to1364 m. 50% formation obtained at 1364 m."", and the first report of"
+p71,1,1.0,in registry,"n obtained at 1364 m."", and the first report of F-1 C drills 17½ in. hole from th"
+p71,17,17.0,in registry,"at 1364 m."", and the first report of F-1 C drills 17½ in. hole from that depth, so"
+p71,"1,364",1364.0,in registry,"e from that depth, so the well was sidetracked at 1,364 m. The narratives report 3,05"
+p71,"3,059",3059.0,in registry,"was sidetracked at 1,364 m. The narratives report 3,059 m on 13 March 2014, but that"
+p71,13,13.0,in registry,"cked at 1,364 m. The narratives report 3,059 m on 13 March 2014, but that depth ma"
+p71,"2014,",2014.0,in registry,",364 m. The narratives report 3,059 m on 13 March 2014, but that depth marks the star"
+p71,8,8.0,in registry,"March 2014, but that depth marks the start of the 8½ in. section after casing was"
+p71,15,15.0,in registry,½ in. section after casing was run. The sidetrack 15/9-19 A kicked off at the top
+p71,9,9.0,in registry,n. section after casing was run. The sidetrack 15/9-19 A kicked off at the top of
+p71,19,19.0,in registry,section after casing was run. The sidetrack 15/9-19 A kicked off at the top of a
+p71,"2,178",2178.0,in registry,"-19 A kicked off at the top of a milled window at 2,178 m (window milled from 2,178 t"
+p71,"2,178",2178.0,in registry,"of a milled window at 2,178 m (window milled from 2,178 to 2,183 m), a depth that NOD"
+p71,"2,183",2183.0,in registry,"ed window at 2,178 m (window milled from 2,178 to 2,183 m), a depth that NOD also rec"
+p72,7,7.0,in registry,"Table 7: Sidetrack kick-off depths, 1"
+p72,15,15.0,in registry,"Table 7: Sidetrack kick-off depths, 15 sidetracks"
+p73,15,15.0,in registry,ed depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-
+p73,9,9.0,in registry,depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-en
+p73,19,19.0,in registry,pth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-entry
+p73,15,15.0,in registry,15/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-
+p73,9,9.0,in registry,/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19
+p73,19,19.0,in registry,-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR
+p73,15,15.0,in registry,"he re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML"
+p73,9,9.0,in registry,"re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML r"
+p73,19,19.0,in registry,"-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML repo"
+p73,1997,1997.0,in registry,"rom which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML reports, so th"
+p73,15,15.0,in registry,"WITSML reports, so the kick-off is read from the 15/9-19 A reports."
+p73,9,9.0,in registry,"TSML reports, so the kick-off is read from the 15/9-19 A reports."
+p73,19,19.0,in registry,"ML reports, so the kick-off is read from the 15/9-19 A reports."
+p74,15,15.0,in registry,No kick-off depth exists for 15/9-19 S. Its earliest narrativ
+p74,9,9.0,in registry,No kick-off depth exists for 15/9-19 S. Its earliest narratives
+p74,19,19.0,in registry,No kick-off depth exists for 15/9-19 S. Its earliest narratives de
+p75,10,10.0,in registry,ffPoint agrees with the recovered depth to within 10 m for 10 of the 12 sidetracks
+p75,10,10.0,in registry,grees with the recovered depth to within 10 m for 10 of the 12 sidetracks for whic
+p75,12,12.0,in registry,the recovered depth to within 10 m for 10 of the 12 sidetracks for which it is av
+p75,6,6.0,in registry,"t is available. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-1"
+p75,15,15.0,in registry,"s available. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A,"
+p75,9,9.0,in registry,"vailable. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F"
+p75,19,19.0,in registry,"ilable. It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15"
+p75,1,1.0,in registry,"It equals the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and"
+p75,1,1.0,in registry,"ls the recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D)"
+p75,15,15.0,in registry,"recovered depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differ"
+p75,15,15.0,in registry,"d depth for 6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10"
+p75,15,15.0,in registry,"6 (15/9-19 A, F-1 A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10 m or less f"
+p75,10,10.0,in registry,"A, F-1 C, F-15 A, F-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A,"
+p75,4,4.0,in registry,", F-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B a"
+p75,15,15.0,in registry,"-15 B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F"
+p75,9,9.0,in registry,"B and F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-1"
+p75,9,9.0,in registry,"nd F-15 D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C)"
+p75,11,11.0,in registry,"D), differs by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C) and by"
+p75,11,11.0,in registry,"fers by 10 m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C) and by more for"
+p75,15,15.0,in registry,"m or less for 4 (15/9-F-9 A, F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19"
+p75,2,2.0,in registry,"F-9 A, F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B,"
+p75,15,15.0,in registry,"A, F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13"
+p75,9,9.0,in registry,"F-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m)"
+p75,19,19.0,in registry,"-11 A, F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). N"
+p75,31,31.0,in registry,"F-11 B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has"
+p75,15,15.0,in registry,"B and F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no ki"
+p75,9,9.0,in registry,"nd F-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick"
+p75,1,1.0,in registry,"-15 C) and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick-off"
+p75,13,13.0,in registry,") and by more for 2 (15/9-19 B, 31 m; 15/9-F-1 B, 13 m). NOD has no kick-off value"
+p75,3,3.0,in registry,"B, 13 m). NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11"
+p75,15,15.0,in registry,"13 m). NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2)"
+p75,9,9.0,in registry,"m). NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2)."
+p75,19,19.0,in registry,". NOD has no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2). The"
+p75,19,19.0,in registry,"s no kick-off value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2). The least c"
+p75,11,11.0,in registry,"value for the other 3 (15/9-19 BT2, 19 ST2 and F-11 T2). The least certain depths"
+p75,15,15.0,in registry,"19 ST2 and F-11 T2). The least certain depths are 15/9-19 ST2, which rests on the"
+p75,9,9.0,in registry,"ST2 and F-11 T2). The least certain depths are 15/9-19 ST2, which rests on the me"
+p75,19,19.0,in registry,"2 and F-11 T2). The least certain depths are 15/9-19 ST2, which rests on the measu"
+p75,15,15.0,in registry,"ST2, which rests on the measured depth alone, and 15/9-F-11 B, where cement and ne"
+p75,9,9.0,in registry,", which rests on the measured depth alone, and 15/9-F-11 B, where cement and new"
+p75,11,11.0,in registry,"ich rests on the measured depth alone, and 15/9-F-11 B, where cement and new forma"
+p75,"2,531",2531.0,in registry,"where cement and new formation were drilled from 2,531 to 2,589 m and the end of the"
+p75,"2,589",2589.0,in registry,"ment and new formation were drilled from 2,531 to 2,589 m and the end of the interval"
+p76,5.7,5.7,in registry,5.7 Duration to Total Depth
+p77,8,8.0,in registry,Table 8 gives the duration of each we
+p77,1980,1980.0,in registry,ation of each wellbore from its first report (the 1980 date sentinel excluded) to th
+p77,5.,5.0,in registry,"eached, which is the maximum valid depth of Table 5. It lists the elapsed calendar"
+p77,7,7.0,in registry,is total depth minus the kick-off depth of Table 7 for the 15 sidetracks and tot
+p77,15,15.0,in registry,depth minus the kick-off depth of Table 7 for the 15 sidetracks and total depth fo
+p77,"11,",11.0,in registry,"r the 15 sidetracks and total depth for the other 11, and the rate divides it by th"
+p77,26,26.0,in registry,"d differ where the archive has gaps. Seven of the 26 wellbores, whose elapsed days"
+p77,15,15.0,in registry,"sed days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F"
+p77,9,9.0,in registry,"days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-1"
+p77,19,19.0,in registry,"ays exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 a"
+p77,"1,",1.0,in registry,"ed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15)"
+p77,"4,",4.0,in registry,"ice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1"
+p77,"5,",5.0,in registry,"heir reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reac"
+p77,"9,",9.0,in registry,"reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches i"
+p77,14,14.0,in registry,"ts, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its to"
+p77,15,15.0,in registry,"lagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth"
+p77,1,1.0,in registry,"(15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth of 3,"
+p77,"3,632",3632.0,in registry,"9, F-14 and F-15). F-1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 da"
+p77,17,17.0,in registry,"F-15). F-1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 days after"
+p77,"2013,",2013.0,in registry,"1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 days after its first re"
+p77,"2,085",2085.0,in registry,"hes its total depth of 3,632 m on 17 August 2013, 2,085 days after its first report o"
+p77,2,2.0,in registry,"August 2013, 2,085 days after its first report on 2 December 2007, in 31 reports,"
+p77,"2007,",2007.0,in registry,", 2,085 days after its first report on 2 December 2007, in 31 reports, four of them f"
+p77,31,31.0,in registry,"ays after its first report on 2 December 2007, in 31 reports, four of them from 20"
+p77,2007.,2007.0,in registry,"2 December 2007, in 31 reports, four of them from 2007. The totals of 15/9-19 B (3,27"
+p77,15,15.0,in registry,"31 reports, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-1"
+p77,9,9.0,in registry,"reports, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11"
+p77,19,19.0,in registry,"ports, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (34"
+p77,"3,272",3272.0,in registry,"four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are"
+p77,15,15.0,in registry,"from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths"
+p77,9,9.0,in registry,"om 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths o"
+p77,11,11.0,in registry,"007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an"
+p77,347,347.0,in registry,"The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an aband"
+p77,5.4,5.4,ignored: section number,epths of an abandoned parent leg or stub (Section 5.4) and make their durations ind
+p77,5.6,5.6,ignored: section number,detracks depend on the kick-off depths of Section 5.6. The rates are per reported d
+p77,1,1.0,in registry,"on 5.6. The rates are per reported day, and for F-1 they mix two campaigns. Per-p"
+p78,8,8.0,in registry,Table 8: Duration to total depth (TD)
+p78,26,26.0,in registry,"Duration to total depth (TD) and drilled length, 26 wellbores"
+p79,7,7.0,in registry,TD. Drilled length is total depth minus the Table 7 kick-off depth for sidetracks
+p80,6,6.0,in registry,6 Discussion
+p81,6.1,6.1,ignored: section number,6.1 What the Dataset Supports
+p82,"1,421",1421.0,in registry,"The 1,421-row depth-time-phase dataset"
+p82,3,3.0,in registry,directly. Depth-versus-report-count curves (Fig. 3) allow wellbores drilled from
+p82,199,199.0,in registry,"missing. At the attainable-rate estimate, roughly 199 DDRs of construction content"
+p82,8,8.0,in registry,"ling progress reported without a hole size. Table 8 offers elapsed days, reports"
+p83,6.2,6.2,ignored: section number,6.2 Data-Quality Lessons for WITS
+p85,999.99,999.99,in registry,"lder values pass null tests. The depth sentinel '-999.99', the zero string '0', the st"
+p85,0,0.0,in registry,"s. The depth sentinel '-999.99', the zero string '0', the string ""None"" (in the n"
+p85,515,515.0,in registry,and forecast fields) and the date sentinel affect 515 field values.
+p86,1,1.0,in registry,A date sentinel (1 January 1980) shifts the enti
+p86,1980,1980.0,in registry,A date sentinel (1 January 1980) shifts the entire drilling c
+p88,14.10%,14.1,in registry,"he structured kick-off field is populated in only 14.10% of rows, which forces the rec"
+p91,6.3,6.3,ignored: section number,6.3 Relevance to Records-Based Sc
+p92,15,15.0,in registry,"Abandoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-"
+p92,9,9.0,in registry,"ndoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11"
+p92,19,19.0,in registry,"oned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to"
+p92,"3,272",3272.0,in registry,"ent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exi"
+p92,15,15.0,in registry,"ow technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physic"
+p92,9,9.0,in registry,"technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physical"
+p92,11,11.0,in registry,"nical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physically bu"
+p92,347,347.0,in registry,"sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physically but have"
+p92,15,15.0,in registry,"sical interval, such as the four wellbores of the 15/9-F-1 family, which share the"
+p92,9,9.0,in registry,"al interval, such as the four wellbores of the 15/9-F-1 family, which share the h"
+p92,1,1.0,in registry,"nterval, such as the four wellbores of the 15/9-F-1 family, which share the hole"
+p92,"1,364",1364.0,in registry,"f the 15/9-F-1 family, which share the hole above 1,364 m MD, are not independent pen"
+p92,15,15.0,in registry,"depths. The archive can also stop, as it does for 15/9-19 S, which has no reports"
+p92,9,9.0,in registry,"ths. The archive can also stop, as it does for 15/9-19 S, which has no reports co"
+p92,19,19.0,in registry,"s. The archive can also stop, as it does for 15/9-19 S, which has no reports cover"
+p92,227,227.0,in registry,"5/9-19 S, which has no reports covering its final 227 m. A screening assessment sho"
+p93,6.4,6.4,ignored: section number,6.4 Transferability
+p94,1.4,1.4,in registry,llbore-matching logic transfer directly to WITSML 1.4-series drillReport archives (
+p94,1.4,1.4,in registry,L 1.4-series drillReport archives (tested here on 1.4.0.0). The pattern set is tune
+p95,7,7.0,in registry,7 Limitations
+p97,50,50.0,in registry,ative with respect to those phases. The sample of 50 was labelled by a single revi
+p97,82.5,82.5,in registry,ter-rater agreement was measured. The interval of 82.5 to 88.3% reflects the modest
+p97,88.3%,88.3,in registry,r agreement was measured. The interval of 82.5 to 88.3% reflects the modest sample si
+p98,1980,1980.0,in registry,ough both were labelled correctly on content. The 1980 date sentinel of 15/9-19 A pl
+p98,15,15.0,in registry,d correctly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilli
+p98,9,9.0,in registry,orrectly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilling
+p98,19,19.0,in registry,rectly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilling of
+p98,1997,1997.0,in registry,t. The 1980 date sentinel of 15/9-19 A places the 1997 drilling of that wellbore in
+p98,2013,2013.0,in registry,"of that wellbore in the production group, and the 2013 drilling campaign reports of"
+p98,15,15.0,in registry,"group, and the 2013 drilling campaign reports of 15/9-F-1 also fall into the prod"
+p98,9,9.0,in registry,"oup, and the 2013 drilling campaign reports of 15/9-F-1 also fall into the produc"
+p98,1,1.0,in registry,and the 2013 drilling campaign reports of 15/9-F-1 also fall into the production
+p100,15,15.0,in registry,"ne rule, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured dept"
+p100,9,9.0,in registry,"rule, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth"
+p100,19,19.0,in registry,"le, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth alo"
+p100,15,15.0,in registry,"ence, 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of ce"
+p100,9,9.0,in registry,"e, 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of ceme"
+p100,11,11.0,in registry,5/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of cement an
+p100,"2,531",2531.0,in registry,"-11 B on an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kic"
+p100,"2,589",2589.0,in registry,"an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kick-off poi"
+p100,15,15.0,in registry,"t for three sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1"
+p100,9,9.0,in registry,"or three sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B"
+p100,1,1.0,in registry,"hree sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and"
+p100,"1,",1.0,in registry,"cks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share"
+p100,1,1.0,in registry,"The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the"
+p100,1,1.0,in registry,"r wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole a"
+p100,1,1.0,in registry,"s of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole above 1,364"
+p100,"1,364",1364.0,in registry,"F-1, F-1 A, F-1 B and F-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1"
+p100,"1,",1.0,in registry,"and F-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it abov"
+p100,1,1.0,in registry,"-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it above ap"
+p100,1,1.0,in registry,"e the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it above approximatel"
+p100,"2,617",2617.0,in registry,"F-1, F-1 A and F-1 B share it above approximately 2,617 to 2,620 m MD. Any formation-"
+p100,"2,620",2620.0,in registry,"A and F-1 B share it above approximately 2,617 to 2,620 m MD. Any formation-level ana"
+p100,8,8.0,in registry,lapsed time to total depth (the gap flag in Table 8).
+p101,61,61.0,in registry,"on the classification rate. The survey finds ½ in 61 DDRs and ¼ in 10, and the nor"
+p101,"10,",10.0,in registry,"tion rate. The survey finds ½ in 61 DDRs and ¼ in 10, and the normalisation handles"
+p102,22,22.0,in registry,The near-exact agreement with NOD on total depth (22 of 24) indicates that the dep
+p102,24,24.0,in registry,ar-exact agreement with NOD on total depth (22 of 24) indicates that the depth fie
+p103,8,8.0,in registry,8 Conclusions
+p104,"3,059",3059.0,in registry,"the point where the sidetrack leaves its parent (3,059 m against 1,364 m for 15/9-F-"
+p104,"1,364",1364.0,in registry,"the sidetrack leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the"
+p104,15,15.0,in registry,"ck leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national"
+p104,9,9.0,in registry,"leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national r"
+p104,1,1.0,in registry,"es its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national regis"
+p106,13,13.0,in registry,"A deterministic, 13-phase rule-based classifier a"
+p106,"1,303",1303.0,in registry,"rministic, 13-phase rule-based classifier assigns 1,303 of 1,759 Volve WITSML DDRs (7"
+p106,"1,759",1759.0,in registry,", 13-phase rule-based classifier assigns 1,303 of 1,759 Volve WITSML DDRs (74.1%) to"
+p106,74.1%,74.1,in registry,"ssifier assigns 1,303 of 1,759 Volve WITSML DDRs (74.1%) to a construction phase, wit"
+p107,52%,52.0,in registry,A stratified audit finds that 52% of the sampled unclassified n
+p107,85.4%,85.4,in registry,es an estimated attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The m
+p107,95%,95.0,in registry,stimated attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The main g
+p107,82.5,82.5,in registry,d attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The main gaps are
+p107,88.3%,88.3,in registry,able classification rate of 85.4% (95% CI 82.5 to 88.3%). The main gaps are drilling
+p108,22,22.0,in registry,al depth agrees exactly with the NOD register for 22 of 24 matched wellbores. The
+p108,24,24.0,in registry,th agrees exactly with the NOD register for 22 of 24 matched wellbores. The two di
+p108,15,15.0,in registry,"22 of 24 matched wellbores. The two differences, 15 m on 15/9-F-15 and a records-"
+p108,15,15.0,in registry,"4 matched wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage"
+p108,9,9.0,in registry,"atched wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage g"
+p108,15,15.0,in registry,"ed wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage gap of"
+p108,227,227.0,in registry,", 15 m on 15/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both expl"
+p108,15,15.0,in registry,"15/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained."
+p108,9,9.0,in registry,"/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained."
+p108,19,19.0,in registry,"-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained."
+p111,15,15.0,in registry,Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule. 15/9-
+p111,15,15.0,in registry,"were recovered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,"
+p111,9,9.0,in registry,"e recovered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,36"
+p111,1,1.0,in registry,"covered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,364 m,"
+p111,"1,364",1364.0,in registry,"tracks by one rule. 15/9-F-1 C was sidetracked at 1,364 m, and 3,059 m marks the star"
+p111,"3,059",3059.0,in registry,"rule. 15/9-F-1 C was sidetracked at 1,364 m, and 3,059 m marks the start of its 8½ i"
+p111,8,8.0,in registry,"ed at 1,364 m, and 3,059 m marks the start of its 8½ in. section. The four wellbo"
+p111,15,15.0,in registry,of its 8½ in. section. The four wellbores of the 15/9-F-1 family share their hole
+p111,9,9.0,in registry,its 8½ in. section. The four wellbores of the 15/9-F-1 family share their hole a
+p111,1,1.0,in registry,8½ in. section. The four wellbores of the 15/9-F-1 family share their hole above
+p111,"1,364",1364.0,in registry,"res of the 15/9-F-1 family share their hole above 1,364 m."
+p112,515,515.0,in registry,Placeholder values that pass a null test affect 515 field values in the archive a
+p113,"1,421",1421.0,in registry,"The resulting 1,421-row depth-time-phase dataset"
+p117,15,15.0,in registry,"the tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F"
+p117,9,9.0,in registry,"e tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-1"
+p117,19,19.0,in registry,"tool's first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B"
+p117,15,15.0,in registry,"first proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and"
+p117,9,9.0,in registry,"rst proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and ke"
+p117,9,9.0,in registry,"proposals for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept t"
+p117,15,15.0,in registry,"s for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlie"
+p117,9,9.0,in registry,"or three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier"
+p117,11,11.0,in registry,"hree sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier value"
+p117,15,15.0,in registry,"B) and kept the earlier values, then reviewed all 15 depths and approved every one"
+p117,50,50.0,in registry,"ved every one without change. The author made all 50 audit labels, reviewed all AI"
+p119,"1,421",1421.0,in registry,"classifier, the extraction and analysis code, the 1,421-row timeline dataset, the aud"
+p119,985185,985185.0,ignored: identifier,t produced it are available at https://github.com/985185/volve-well-construction-timel
+p119,15,15.0,in registry,"le names, dates, depths, categories and quotes of 15 words or fewer. The check aga"
+p119,5.1,5.1,ignored: section number,against the author's earlier extraction (Section 5.1) is reported but is not neede
+p158,2,2.0,in registry,Fig. 2: Depth versus time for four r
+p160,3,3.0,in registry,Fig. 3: Report number (1 = the wellb
+p160,1,1.0,in registry,Fig. 3: Report number (1 = the wellbore's first report
+p160,8,8.0,in registry,"the wellbore's first report, as counted in Table 8) versus measured depth for al"
+p160,26,26.0,in registry,"counted in Table 8) versus measured depth for all 26 wellbores, coloured by hole s"
+p162,4,4.0,in registry,Fig. 4: Reconstructed WITSML maximum
+p162,24,24.0,in registry,"WITSML maximum MD versus NOD total depth for the 24 matched wellbores, with 1:1 r"
+p162,1,1.0,in registry,"OD total depth for the 24 matched wellbores, with 1:1 reference line. The two unm"
+p162,1,1.0,in registry,"total depth for the 24 matched wellbores, with 1:1 reference line. The two unmat"
+p162,15,15.0,in registry,1:1 reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not
+p162,9,9.0,in registry,1 reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not p
+p162,19,19.0,in registry,reference line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plot
+p162,15,15.0,in registry,line. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.
+p162,9,9.0,in registry,ne. The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.
+p162,11,11.0,in registry,The two unmatched wellbores (15/9-19 B and 15/9-F-11) are not plotted.
+p164,5,5.0,in registry,Fig. 5: Spud date offset (WITSML spu
+p164,25,25.0,in registry,"recorded, otherwise the NOD main entry date) for 25 wellbores, coloured by valida"
+p164,15,15.0,in registry,"ores, coloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is"
+p164,9,9.0,in registry,"s, coloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is c"
+p164,1,1.0,in registry,"oloured by validation category. The bar of 15/9-F-1 (offset -2,064 days) is clipp"
+p164,"2,064",2064.0,in registry,"validation category. The bar of 15/9-F-1 (offset -2,064 days) is clipped at -400 days"
+p164,400,400.0,in registry,"r of 15/9-F-1 (offset -2,064 days) is clipped at -400 days and labelled with its va"
+p164,15,15.0,in registry,clipped at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because
+p164,9,9.0,in registry,pped at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because N
+p164,11,11.0,in registry,at -400 days and labelled with its value. 15/9-F-11 T2 is excluded because NOD do
+p166,243,243.0,in registry,"the numbers registry published in the repository (243 entries, each with the produc"
+p166,256,256.0,in registry,"h with the producing script and function, the SHA-256 of its input files and an exe"
+p166,5.2,5.2,ignored: section number,cution timestamp). The audit estimates in Section 5.2 are derived arithmetically fr
+p168,5.2,5.2,ignored: section number,ind the attainable classification rate of Section 5.2.
+p169,26,26.0,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-sco"
+p169,50,50.0,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-score"
+p169,0.520,0.52,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-score 95% inte"
+p169,95%,95.0,in registry,"proportion is 26/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. T"
+p169,0.385,0.385,in registry,"6/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. The sample comes fr"
+p169,0.652,0.652,in registry,"520, with a Wilson-score 95% interval of 0.385 to 0.652. The sample comes from the 38"
+p169,383,383.0,in registry,rval of 0.385 to 0.652. The sample comes from the 383 records with a genuine narrat
+p169,456,456.0,in registry,"he 383 records with a genuine narrative among the 456 unclassified records, and the"
+p169,383,383.0,in registry,"ecords, and the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated"
+p169,"1,759",1759.0,in registry,"ds, and the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated resid"
+p169,0.2177,0.2177,in registry,"the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated residual miss"
+p169,0.520,0.52,in registry,"83/1,759 = 0.2177. The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 pe"
+p169,0.2177,0.2177,in registry,"= 0.2177. The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage"
+p169,0.1132,0.1132,in registry,". The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (a"
+p169,11.3,11.3,in registry,"ated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (approximat"
+p169,199,199.0,in registry,"0.1132, or 11.3 percentage points (approximately 199 DDRs). Adding the observed ra"
+p169,"1,303",1303.0,in registry,"pproximately 199 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an esti"
+p169,"1,759",1759.0,in registry,"mately 199 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an estimated"
+p169,0.7408,0.7408,in registry,"99 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an estimated attainabl"
+p169,85.4%,85.4,in registry,es an estimated attainable classification rate of 85.4%. Propagating the Wilson inter
+p169,0.7408,0.7408,in registry,e of 85.4%. Propagating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and
+p169,0.385,0.385,in registry,%. Propagating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 +
+p169,0.2177,0.2177,in registry,gating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 ×
+p169,0.825,0.825,in registry,e Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 =
+p169,0.7408,0.7408,in registry,"nterval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 9"
+p169,0.652,0.652,in registry,"ives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% inter"
+p169,0.2177,0.2177,in registry,"408 + 0.385 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82"
+p169,0.883,0.883,in registry,"85 × 0.2177 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88"
+p169,95%,95.0,in registry,"77 = 0.825 and 0.7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88.3%. We"
+p169,82.5,82.5,in registry,".7408 + 0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88.3%. Weighting the two s"
+p169,88.3%,88.3,in registry,"0.652 × 0.2177 = 0.883, a 95% interval of 82.5 to 88.3%. Weighting the two strata by"
+p169,296,296.0,in registry,ghting the two strata by their population shares (296/383 and 87/383) gives a sampl
+p169,383,383.0,in registry,ng the two strata by their population shares (296/383 and 87/383) gives a sample pr
+p169,87,87.0,in registry,wo strata by their population shares (296/383 and 87/383) gives a sample proportio
+p169,383,383.0,in registry,strata by their population shares (296/383 and 87/383) gives a sample proportion of
+p169,0.518,0.518,in registry,(296/383 and 87/383) gives a sample proportion of 0.518 and an attainable rate of 85.
+p169,85.3%,85.3,in registry,ple proportion of 0.518 and an attainable rate of 85.3%. The result does not depend o
+table 1 r1 c1,15,15.0,in registry,15/9-F-15 D
+table 1 r1 c1,9,9.0,in registry,15/9-F-15 D
+table 1 r1 c1,15,15.0,in registry,15/9-F-15 D
+table 1 r2 c1,2013,2013.0,in registry,2013-11-23
+table 1 r2 c1,11,11.0,in registry,2013-11-23
+table 1 r2 c1,23,23.0,in registry,2013-11-23
+table 1 r3 c1,"2,961",2961.0,in registry,"2,961"
+table 1 r4 c1,2013,2013.0,in registry,2013-11-10
+table 1 r4 c1,11,11.0,in registry,2013-11-10
+table 1 r4 c1,10,10.0,in registry,2013-11-10
 table 1 r5 c2,3,3.0,in registry,": empty in this report, as in most reports (Table 3)"
-table 1 r6 c1,220.8,220.8,in registry,220.8
-table 1 r7 c1,17,17.0,in registry,"Complete handling of 17½"" BHA. Rig up for running 13"
-table 1 r7 c1,13,13.0,in registry,"Complete handling of 17½"" BHA. Rig up for running 13 3/8"" casing ..."
-table 1 r7 c1,3,3.0,in registry,"plete handling of 17½"" BHA. Rig up for running 13 3/8"" casing ..."
-table 1 r7 c1,8,8.0,in registry,"ete handling of 17½"" BHA. Rig up for running 13 3/8"" casing ..."
+table 1 r6 c1,"2,612",2612.0,in registry,"2,612"
+table 1 r7 c1,12,12.0,in registry,"Drill 12 1/4"" hole to section TD at ap"
+table 1 r7 c1,1,1.0,in registry,"Drill 12 1/4"" hole to section TD at appr"
+table 1 r7 c1,4,4.0,in registry,"Drill 12 1/4"" hole to section TD at approx"
+table 1 r7 c1,3300,3300.0,in registry,"Drill 12 1/4"" hole to section TD at approx. 3300 m MD."
 table 1 r7 c2,24,24.0,in registry,the plan for the next 24 hours
-table 1 r8 c1,17,17.0,in registry,"“Drilled 17 1/2"" section from 1101 m to 1"
-table 1 r8 c1,1,1.0,in registry,"“Drilled 17 1/2"" section from 1101 m to 141"
-table 1 r8 c1,2,2.0,in registry,"“Drilled 17 1/2"" section from 1101 m to 1415"
-table 1 r8 c1,1101,1101.0,in registry,"“Drilled 17 1/2"" section from 1101 m to 1415 m MD. Circulated we"
-table 1 r8 c1,1415,1415.0,in registry,"“Drilled 17 1/2"" section from 1101 m to 1415 m MD. Circulated well clean."
-table 1 r8 c1,1.40,1.4,in registry,"15 m MD. Circulated well clean. Displaced well to 1.40 SG mud. POOH with 17½"" BHA. H"
-table 1 r8 c1,17,17.0,in registry,"l clean. Displaced well to 1.40 SG mud. POOH with 17½"" BHA. Had tight spot at 1123"
-table 1 r8 c1,1123,1123.0,in registry,".40 SG mud. POOH with 17½"" BHA. Had tight spot at 1123 m, rotated through. Tight spo"
-table 1 r8 c1,"796,",796.0,in registry,"t spot at 1123 m, rotated through. Tight spots at 796, 775, 519 and 481m, pulled thr"
-table 1 r8 c1,"775,",775.0,in registry,"t at 1123 m, rotated through. Tight spots at 796, 775, 519 and 481m, pulled through"
-table 1 r8 c1,519,519.0,in registry,"1123 m, rotated through. Tight spots at 796, 775, 519 and 481m, pulled through with"
-table 1 r8 c1,481,481.0,in registry,"rotated through. Tight spots at 796, 775, 519 and 481m, pulled through with 10-15 M"
-table 1 r8 c1,10,10.0,in registry,"ts at 796, 775, 519 and 481m, pulled through with 10-15 MT overpull. Rack back BHA"
-table 1 r8 c1,15,15.0,in registry,"at 796, 775, 519 and 481m, pulled through with 10-15 MT overpull. Rack back BHA.”"
+table 1 r8 c1,"1,55",155.0,in registry,"“Performed FIT to 1,55 sg EMW. Drilled 12 1/4"" hole"
+table 1 r8 c1,12,12.0,in registry,"“Performed FIT to 1,55 sg EMW. Drilled 12 1/4"" hole from 2623 m to 2961"
+table 1 r8 c1,1,1.0,in registry,"“Performed FIT to 1,55 sg EMW. Drilled 12 1/4"" hole from 2623 m to 2961 m"
+table 1 r8 c1,4,4.0,in registry,"“Performed FIT to 1,55 sg EMW. Drilled 12 1/4"" hole from 2623 m to 2961 m t"
+table 1 r8 c1,2623,2623.0,in registry,"med FIT to 1,55 sg EMW. Drilled 12 1/4"" hole from 2623 m to 2961 m through Ty Fm int"
+table 1 r8 c1,2961,2961.0,in registry,"1,55 sg EMW. Drilled 12 1/4"" hole from 2623 m to 2961 m through Ty Fm into Shetland"
+table 1 r8 c1,10,10.0,in registry,"ackground concentration throughout section. Built 10 3/4"" and 9 5/8"" casing stands"
+table 1 r8 c1,3,3.0,in registry,"ground concentration throughout section. Built 10 3/4"" and 9 5/8"" casing stands o"
+table 1 r8 c1,4,4.0,in registry,"ound concentration throughout section. Built 10 3/4"" and 9 5/8"" casing stands off"
+table 1 r8 c1,9,9.0,in registry,"ncentration throughout section. Built 10 3/4"" and 9 5/8"" casing stands offline. R"
+table 1 r8 c1,5,5.0,in registry,"entration throughout section. Built 10 3/4"" and 9 5/8"" casing stands offline. Rac"
+table 1 r8 c1,8,8.0,in registry,"tration throughout section. Built 10 3/4"" and 9 5/8"" casing stands offline. Racke"
+table 1 r8 c1,30,30.0,in registry,"/4"" and 9 5/8"" casing stands offline. Racked back 30 stands in derrick.”"
 table 1 r8 c2,24,24.0,in registry,free-text summary of the past 24 hours: the text the classifie
-table 1 r9 c1,3,3.0,in registry,Intermediate drilling (priority 3)
-table 1 r9 c2,17,17.0,in registry,the classifier's result: the 17½ in. section matches the Inte
+table 1 r9 c1,12,12.0,in registry,12¼ in. and smaller hole (priori
+table 1 r9 c1,5,5.0,in registry,12¼ in. and smaller hole (priority 5)
+table 1 r9 c2,12,12.0,in registry,the classifier's result: the 12¼ in. hole matches the pattern
 table 2 r1 c0,1,1.0,in registry,1
 table 2 r1 c2,"36,",36.0,in registry,"36, 30"
 table 2 r1 c2,30,30.0,in registry,"36, 30"

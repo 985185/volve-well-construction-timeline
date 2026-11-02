@@ -258,17 +258,21 @@ _enc2 = json.load(open("outputs/stage2_encoding_summary.json", encoding="utf-8")
 add("extract.encoding_example", _enc2, "One real before/after phrase from the 103 repaired narratives (earlier table against raw file, at most 10 words each); comparison with the earlier extraction", S2, "stage2_text_diff.py (optional verification, committed result)", ["outputs/stage2_encoding_summary.json"],
     note="comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)")
 
-_xr = d[d.filename == "15_9_F_5_2007_12_21.xml"].iloc[0]
-_xt = _xr.sum24Hr
-_frag = ['Drilled 17 1/2" section from 1101 m to 1415 m MD. Circulated well clean.', 'POOH with 17½" BHA. Had tight spot at 1123 m, rotated through.', 'Tight spots at 796, 775, 519 and 481m, pulled through with 10-15 MT overpull.']
-_fc = ['Complete handling of 17½" BHA. Rig up for running 13 3/8" casing']
-assert all(f in _xt for f in _frag) and all(f in _xr.forecast24hr for f in _fc) and all(len(f.split()) <= 15 for f in _frag + _fc)
+_xr = d[d.filename == "15_9_F_15_D_2013_11_23.xml"].iloc[0]
+_xw = " ".join(_xr.sum24Hr.split()).split()
+_frag = [" ".join(_xw[:12]), " ".join(_xw[22:34]), " ".join(_xw[-8:])]                       # three fragments of at most 15 words; the registry (a data file) does not hold the whole summary
+_fc = " ".join(_xr.forecast24hr.split())
+assert all(f in " ".join(_xw) for f in _frag) and len(_fc.split()) <= 15 and all(len(f.split()) <= 15 for f in _frag)
 _xph = cl[cl.filename == _xr.filename].phase.iloc[0]
 add("example.ddr", {"filename": _xr.filename, "wellbore": _xr.wellbore.replace("NO ", ""), "date_report": _xr.date_report[:10], "md_m": float(_xr.md), "dTimSpud": _xr.dTimSpud[:10], "md_kickoff": None if pd.isna(_xr.md_kickoff) else _xr.md_kickoff,
-                    "md_csg_last_m": float(_xr.md_csg_last), "forecast24hr_fragments": _fc, "sum24Hr_fragments": _frag, "sum24Hr_words_total": len(_xt.split()), "sum24Hr_numbers_in_text": re.findall(r"\d[\d,]*\.?\d*", _xt),
+                    "md_csg_last_m": float(_xr.md_csg_last), "forecast24hr": _fc, "sum24Hr_fragments": _frag, "sum24Hr_words_total": len(_xw), "sum24Hr_numbers_in_text": re.findall(r"\d[\d,]*\.?\d*", _xr.sum24Hr),
                     "report_no": int(_xr.report_no), "phase": _xph, "phase_priority": int(ru[ru.phase == _xph].priority.iloc[0])},
-    "Example DDR of Table 1: one real construction report whose narrative contains the one-half sign (fragments of at most 15 words)", "src/stage11_registry.py", "module level", [DDR, CL, "outputs/stage4_priority_rules.csv"],
-    note="the example was chosen by hand from the reports with a fraction glyph, a drilling phase and a narrative of 40 to 60 words; the registry (a data file) holds fragments of at most 15 words and the numbers of the full summary; the manuscript quotes the full summary (decision 67)")
+    "Example DDR of Table 1 and Fig. 1: one real construction report (15/9-F-15 D, 23 November 2013); the forecast in full and fragments of at most 15 words of the summary", "src/stage11_registry.py", "module level", [DDR, CL, "outputs/stage4_priority_rules.csv"],
+    note="the registry (a data file) holds fragments of at most 15 words and the numbers of the full summary; the manuscript quotes the full summary (decision 67)")
+add("figure.example_ddr_pdf", {"file": "15_9_F_15_D_2013_11_23.pdf", "folder": "Well_technical_data/Daily Drilling report - PDF Version", "bytes": 36493, "sha256": "bc59025d695547d15463ecb0f849a44319c77a7070c7bde22740d6b0878a260b", "pages": 2,
+                              "rendered": "page 1 at 200 dpi, crop x 30 to 565 pt and y 38 to 340 pt (src/render_example_ddr.py)", "image": "outputs/figures/example_ddr_crop.png"},
+    "Source of Fig. 1: the original Daily Drilling Report PDF of the report of Table 1 (size equal to the catalog entry of the Volve metadata catalog; the PDF is not in the repository)", "src/render_example_ddr.py", "module level (author side)", [],
+    note="EXTERNAL: the PDF came from a local copy of the Volve files (F15D_DDR_PDFs); its size equals the catalog file_size_bytes; hash recorded in data/raw/manifest.csv on the author's machine")
 
 
 def _sizes(s):
