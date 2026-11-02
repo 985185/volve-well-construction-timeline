@@ -5,6 +5,7 @@ import copy
 import json
 import os
 import re
+import sys
 from xml.sax.saxutils import escape
 
 import docx
@@ -69,6 +70,7 @@ def write_par(p, text):
 
 def new_par_after(anchor_el, template_p, text, renum=True):
     text = POST(text) if renum else text
+    text = restyle(text)
     el = copy.deepcopy(template_p._p); anchor_el.addnext(el)
     par = Paragraph(el, template_p._parent); write_par(par, text); return par
 
@@ -82,6 +84,34 @@ def val(k):
 
 
 DEL = set()                    # paragraphs deleted at flush time
+
+# ---- style revision (see src/stage12_style_text.py and manuscript/style_diff.md): sentence-level rewrites with guards
+sys.path.insert(0, "src")
+from stage12_style_text import STYLE
+STYLE_USED, STYLE_LOG = set(), []
+_NUM = re.compile(r"\d[\d,]*\.?\d*")
+_QD = re.compile(r"(?<![\w.,;:!?/])\"(?=[A-Za-z0-9])([^\"]{3,}?)\"(?=[\s.,;:)]|$)")
+_QS = re.compile(r"(?<![\w.,;:!?])'([^']{8,}?)'(?=[\s.,;:)]|$)")
+_REF = re.compile(r"Table \d+|Fig\. \d+|Section \d(?:\.\d)?|Appendix [AB]")
+
+
+_CITE = re.compile(r"\((?:[A-Z][A-Za-z.&-]*(?: [A-Za-z.&-]+)* )?(?:19|20)\d\d[a-e]?(?:, (?:19|20)\d\d[a-e]?)*\)")      # citation years such as (Zhang et al. 2022) are not content numbers
+
+
+def _nums(t): return {x.replace(",", "").rstrip(".") for x in _NUM.findall(_CITE.sub("", t))}
+
+
+def restyle(old):
+    hits = [k for k, (sec, prefix, new) in enumerate(STYLE) if old.startswith(prefix)]
+    if not hits: return old
+    assert len(hits) == 1, ("ambiguous style prefix", old[:60], hits)
+    sec, prefix, new = STYLE[hits[0]]; STYLE_USED.add(hits[0])
+    assert _nums(new) <= _nums(old), ("number not in the old text", sec, sorted(_nums(new) - _nums(old)), new[:80])
+    for q in _QD.findall(old) + _QS.findall(old): assert q in new, ("quotation changed or dropped", sec, q)
+    assert set(_REF.findall(new)) <= set(_REF.findall(old)), ("reference added", sec, set(_REF.findall(new)) - set(_REF.findall(old)))
+    assert "—" not in new, "em dash"
+    STYLE_LOG.append(dict(section=sec, old=old, new=new, removed_numbers=sorted(_nums(old) - _nums(new)), dropped_refs=sorted(set(_REF.findall(old)) - set(_REF.findall(new)))))
+    return new
 
 
 def delp(i, reason):
@@ -372,6 +402,17 @@ for j in range(len(P)):
     tj = cur(j); nj = re.sub(r"(\d+) (\d/\d) in\.", lambda m: m.group(1) + GL[m.group(2)] + " in.", tj)
     if nj != tj: T[j] = nj; log(j, "17 1/2 in. style", "17½ in. style", None, "final review: hole sizes written with the fraction character in running text")
 
+# the author's own edits in Word (kept when the draft is rebuilt): the author line, and the affiliation note deleted
+sub(1, "T. Appalla, Independent Researcher", "Tejaswy Appalla", None, "the author's edit in Word (2026-10-28): author line")
+delp(3, "the author deleted the affiliation note in Word (2026-10-28)")
+
+# style revision pass over the original paragraphs
+for j in range(len(P)):
+    if j in DEL: continue
+    tj = cur(j); nj = restyle(tj)
+    if nj != tj: T[j] = nj
+log("Whole text", "draft wording", "sentence-level style revision of the body text (Sections 1 to 8)", None, "style revision of 2026-11-02: no number, table, figure, reference or quotation changed; the Abstract, the opening paragraph of the Conclusions, the AI disclosure and the availability statement untouched (yellow notes mark the first two); old and new text in manuscript/style_diff.md")
+
 
 # flush the edited paragraphs
 for i, text in T.items():
@@ -572,6 +613,10 @@ log("Conclusions (new bullet)", "(none)", "kick-off result for all 15 sidetracks
 # ---- Conclusions: summary paragraph before the numbered list (TJ review round 3, text exactly as supplied)
 IH = [i for i in range(len(P)) if P[i].style.name.startswith("Heading") and P[i].text.strip() == "8 Conclusions"]; assert len(IH) == 1
 concl = new_par_after(P[IH[0]]._p, body_t, "This paper shows three things. First, a field's daily drilling reports can be turned into a construction history that is checked against the regulator's register and whose error is measured, using a method anyone can inspect and rerun. Second, the structured fields of a WITSML archive cannot be trusted on their own: spud dates, kick-off depths and placeholder values all needed the narrative or the national register to correct them, and a kick-off read naively from the narrative can pick up the start of a hole section instead of the point where the sidetrack leaves its parent (3,059 m against 1,364 m for 15/9-F-1 C). Third, the national register alone does not give a complete inventory of what was drilled: abandoned parent legs, shared upper hole and missing campaigns appear only when the reports are reconstructed. For anyone screening old wells for CO2 storage or decommissioning, the practical lesson is to reconstruct the well history from the reports before relying on either source alone.", renum=False)
+# yellow notes: the Abstract and the opening paragraph of the Conclusions are left for the author to rewrite (style revision, 2026-11-02)
+_ab = [p for p in P if p.style.name.startswith("Heading") and p.text.strip() == "Abstract"][0]
+new_par_after(_ab._p, body_t, "⟦[TJ: rewrite in your own words]⟧", renum=False)
+new_par_after(concl._p, body_t, "⟦[TJ: rewrite in your own words]⟧", renum=False)
 log("Conclusions", "(no summary paragraph)", "summary paragraph before the numbered list", "kickoff.proposed_depth.15/9-F-1 C", "TJ review round 3: text as supplied by the author")
 
 # ---- Appendix B: audit arithmetic
@@ -580,6 +625,17 @@ pB1 = new_par_after(hB._p, P[143], "This appendix gives the arithmetic behind th
 pB2 = new_par_after(pB1._p, P[143], POST(OLD50), renum=False)
 log("Appendix B (new)", "(arithmetic was in Section 5.2)", "full arithmetic and stratum-weighted check", "audit.sample_proportion;audit.wilson_low;audit.wilson_high;audit.scale_frame_over_total;audit.residual_miss;audit.observed_rate;audit.stratum_weighted_rate_pct", "TJ review: moved from Section 5.2")
 
+assert STYLE_USED == set(range(len(STYLE))), ("style entries not applied", [STYLE[k][1][:50] for k in set(range(len(STYLE))) - STYLE_USED])
+_sent = lambda t: re.split(r"(?<=[.!?])\s+(?=[A-Z0-9(‘“\"'])", t.strip())
+_md = ["# Style revision: old and new text by section", "", "Sentence by sentence, as built by `src/stage12_manuscript.py` from `src/stage12_style_text.py`. Numbers, quotations, table and figure references are checked by the script (no number or reference is added; "
+       "every quotation is kept). Numbers or references that no longer appear in a paragraph are listed under it; they are repeats of arithmetic or of a reference given elsewhere.", ""]
+_cur = None
+for e in STYLE_LOG:
+    if e["section"] != _cur: _cur = e["section"]; _md += [f"## {_cur}", ""]
+    o, n = _sent(e["old"]), _sent(e["new"])
+    _md += ["| Old | New |", "|---|---|", "| " + "<br><br>".join(f"{k + 1}. " + x.replace("|", "\|") for k, x in enumerate(o)) + " | " + "<br><br>".join(f"{k + 1}. " + x.replace("|", "\|") for k, x in enumerate(n)) + " |", ""]
+    if e["removed_numbers"] or e["dropped_refs"]: _md += [f"Not repeated in the new text: numbers {e['removed_numbers']}, references {e['dropped_refs']}.", ""]
+open("manuscript/style_diff.md", "w", encoding="utf-8", newline="\n").write("\n".join(_md))
 os.makedirs("manuscript", exist_ok=True)
 OUT = os.environ.get("VOLVE_DRAFT_OUT", "manuscript/paper2_draft.docx")      # normally the tracked draft; another path when Word holds the file open
 doc.save(OUT)
