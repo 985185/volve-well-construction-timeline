@@ -59,22 +59,20 @@ p13,701,701.0,in registry,non-productive time and apply the combination to 701 D
 p13,10,10.0,in registry,e time and apply the combination to 701 DDRs from 10 wells. Their Dataset section
 p13,18.5%,18.5,in registry,ct and conclusions nevertheless report an average 18.5% reduction in non-productive t
 p14,2021,2021.0,ignored: year,benchmark for drilling analytics. Tunkiel et al. (2021) derived a reference dataset
-p15,1,1.0,in registry,"eproduce or extend its results. The present work (1) uses a deterministic, audita"
+p15,1,1.0,in registry,"ucing or extending its results. The present work (1) uses a deterministic, audita"
 p15,2,2.0,in registry,"phistication for transparency of every decision, (2) works exclusively with a rea"
 p15,3,3.0,in registry,"sively with a real, openly licensed archive, and (3) pairs classification with a"
 p15,1927,1927.0,ignored: year,"ampling frame and a Wilson-score interval (Wilson 1927), and with validation of tota"
-p15,2022,2022.0,in registry,"s of rule-based classification that Zhang et al. (2022) report, namely the events it"
+p15,2022,2022.0,in registry,"is paper measures the weakness that Zhang et al. (2022) report, the events a rule-ba"
 p16,3,3.0,in registry,3 Data and Methods
 p17,3.1,3.1,ignored: section number,3.1 Data Source and Extraction
 p18,"1,759",1759.0,in registry,"The 1,759 WITSML 1.4.0.0 XML files of t"
 p18,1.4,1.4,in registry,"The 1,759 WITSML 1.4.0.0 XML files of the Volve da"
 p18,"21,315,879",21315879.0,in registry,"59 WITSML 1.4.0.0 XML files of the Volve dataset (21,315,879 bytes, each recorded with a S"
 p18,256,256.0,in registry,"taset (21,315,879 bytes, each recorded with a SHA-256 hash) were extracted into a s"
-p18,26,26.0,in registry,duplicate wellbore and date pairs. The rows cover 26 wellbores in 11 well families
-p18,11,11.0,in registry,"re and date pairs. The rows cover 26 wellbores in 11 well families, namely the exp"
-p18,15,15.0,in registry,"in 11 well families, namely the exploration well 15/9-19 and the platform wells 1"
-p18,9,9.0,in registry,"11 well families, namely the exploration well 15/9-19 and the platform wells 15/"
-p18,19,19.0,in registry,"1 well families, namely the exploration well 15/9-19 and the platform wells 15/9-F"
+p18,15,15.0,in registry,d date pairs. The rows cover the exploration well 15/9-19 and the platform wells 1
+p18,9,9.0,in registry,ate pairs. The rows cover the exploration well 15/9-19 and the platform wells 15/
+p18,19,19.0,in registry,e pairs. The rows cover the exploration well 15/9-19 and the platform wells 15/9-F
 p18,15,15.0,in registry,"e exploration well 15/9-19 and the platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-"
 p18,9,9.0,in registry,"xploration well 15/9-19 and the platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10"
 p18,"1,",1.0,in registry,"ration well 15/9-19 and the platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-1"
@@ -82,11 +80,13 @@ p18,"4,",4.0,in registry,"n well 15/9-19 and the platform wells 15/9-F-1, F-4, F
 p18,"5,",5.0,in registry,"l 15/9-19 and the platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F"
 p18,"7,",7.0,in registry,"9-19 and the platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 a"
 p18,"9,",9.0,in registry,"and the platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-"
-p18,"10,",10.0,in registry,"he platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15. Th"
-p18,"11,",11.0,in registry,"tform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15. The colu"
-p18,"12,",12.0,in registry,"wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15. The columns in"
-p18,14,14.0,in registry,"15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15. The columns include"
-p18,15.,15.0,in registry,"F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15. The columns include the sourc"
+p18,"10,",10.0,in registry,"he platform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15, wh"
+p18,"11,",11.0,in registry,"tform wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15, which ma"
+p18,"12,",12.0,in registry,"wells 15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15, which make up"
+p18,14,14.0,in registry,"15/9-F-1, F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15, which make up 26 we"
+p18,"15,",15.0,in registry,"F-4, F-5, F-7, F-9, F-10, F-11, F-12, F-14 and F-15, which make up 26 wellbores in"
+p18,26,26.0,in registry,"9, F-10, F-11, F-12, F-14 and F-15, which make up 26 wellbores in 11 well families"
+p18,11,11.0,in registry,"-12, F-14 and F-15, which make up 26 wellbores in 11 well families. The columns in"
 p18,24,24.0,in registry,"last_m), operational parameters and the free-text 24-hour narrative (sum24Hr). Eve"
 p19,999.99,999.99,in registry,"ring and contains two placeholders, the literal '-999.99' (a missing-value sentinel) a"
 p19,0,0.0,in registry,9.99' (a missing-value sentinel) and the literal '0'. Both were excluded and the
@@ -113,8 +113,8 @@ p26,13,13.0,in registry,"signs the sum24Hr narrative of each DDR to one of 13 ph
 p26,12,12.0,in registry,"sing, Intermediate drilling, Intermediate casing, 12¼ in. and smaller hole, Liner/"
 p26,1,1.0,in registry,"move/Setup. Each phase has a fixed priority from 1 (highest) to 13 (lowest), in"
 p26,13,13.0,in registry,"ch phase has a fixed priority from 1 (highest) to 13 (lowest), in the order listed"
-p26,1,1.0,in registry,"gle special characters that a pattern written as ""1/2"" does not match, so they ar"
-p26,2,2.0,in registry,"e special characters that a pattern written as ""1/2"" does not match, so they are"
+p26,1,1.0,in registry,"gle special characters that a pattern written as ""1/2"" does not match. They are c"
+p26,2,2.0,in registry,"e special characters that a pattern written as ""1/2"" does not match. They are con"
 p26,12,12.0,in registry,attern group matches. On Volve platform wells the 12¼ in. hole is usually the sect
 p27,2,2.0,in registry,Table 2 gives the 13 phases in priori
 p27,13,13.0,in registry,Table 2 gives the 13 phases in priority order with
@@ -128,7 +128,7 @@ p31,147,147.0,in registry,"nd marine riser handling is the largest category (147
 p31,456,456.0,in registry,"ne riser handling is the largest category (147 of 456 records, 32.2%). The 73 empty"
 p31,32.2%,32.2,in registry,"ling is the largest category (147 of 456 records, 32.2%). The 73 empty records have a"
 p31,73,73.0,in registry,"largest category (147 of 456 records, 32.2%). The 73 empty records have a sum24Hr"
-p31,4,4.0,in registry,"eld that holds the literal string ""None"" (Section 4), so no text method can class"
+p31,4,4.0,in registry,"eld that holds the literal string ""None"" (Section 4). No text method can classify"
 p31,383,383.0,in registry,"were excluded from the sampling frame, which left 383 records."
 p32,50,50.0,in registry,A stratified sample of 50 records was drawn from the 38
 p32,383.,383.0,in registry,tratified sample of 50 records was drawn from the 383. The unclassified reports were
@@ -138,7 +138,6 @@ p32,730,730.0,in registry,") and a later production group (reports more than 730
 p32,87,87.0,in registry,"ction group (reports more than 730 days after it, 87 records), and a random sample"
 p32,39,39.0,in registry,"le was drawn from each in proportion to its size, 39 records from the construction"
 p32,11,11.0,in registry,"size, 39 records from the construction group and 11 from the production group. Th"
-p32,50,50.0,in registry,kept this sample and its groups after each of the 50 records was confirmed to map
 p33,3.5,3.5,ignored: section number,3.5 External Validation Against N
 p34,2026,2026.0,in registry,ud date were compared with the NOD FactPages (NOD 2026a). The Table View export was
 p34,15,15.0,in registry,"all technical sidetracks, were matched by depth (15/9-19 BT2 to NOD 15/9-19 B, bo"
@@ -205,19 +204,19 @@ p40,"1,759",1759.0,in registry,"field is populated in only 14.10% of rows (248 o
 p40,5.6,5.6,ignored: section number,the narratives and from depth sequences (Section 5.6).
 p41,100%,100.0,in registry,"A standard null-or-blank check reports 100% population for sum24Hr, but 7"
 p41,73,73.0,in registry,"nk check reports 100% population for sum24Hr, but 73 records hold the literal stri"
-p41,73,73.0,in registry,"string ""None"". The string sits in the source XML (73 of the 1,759 files contain it"
-p41,"1,759",1759.0,in registry,"ne"". The string sits in the source XML (73 of the 1,759 files contain it), so the arc"
+p41,73,73.0,in registry,"ing ""None"". The string sits in the source XML, in 73 of the 1,759 files, and is a"
+p41,"1,759",1759.0,in registry,". The string sits in the source XML, in 73 of the 1,759 files, and is a placeholder o"
 p41,95.85%,95.85,in registry,"etect it, and the genuine narrative population is 95.85% (1,686 of 1,759). The same pl"
 p41,"1,686",1686.0,in registry,", and the genuine narrative population is 95.85% (1,686 of 1,759). The same placehold"
 p41,"1,759",1759.0,in registry,"genuine narrative population is 95.85% (1,686 of 1,759). The same placeholder fills"
 p41,103,103.0,in registry,".85% (1,686 of 1,759). The same placeholder fills 103 forecast24hr values, which le"
-p41,94.14%,94.14,in registry,"es, which leaves a genuine forecast population of 94.14% (1,656 of 1,759). Across all"
-p41,"1,656",1656.0,in registry,"h leaves a genuine forecast population of 94.14% (1,656 of 1,759). Across all extract"
-p41,"1,759",1759.0,in registry,"a genuine forecast population of 94.14% (1,656 of 1,759). Across all extracted fields"
-p41,515,515.0,in registry,"9). Across all extracted fields the archive holds 515 placeholder values, namely 33"
-p41,331,331.0,in registry,"the archive holds 515 placeholder values, namely 331 depth sentinels, 7 zero depth"
-p41,7,7.0,in registry,"5 placeholder values, namely 331 depth sentinels, 7 zero depths, 176 literal ""Non"
-p41,176,176.0,in registry,"alues, namely 331 depth sentinels, 7 zero depths, 176 literal ""None"" strings (73 na"
+p41,94.14%,94.14,in registry,"es, which leaves a genuine forecast population of 94.14% (1,656 of 1,759). The archive"
+p41,"1,656",1656.0,in registry,"h leaves a genuine forecast population of 94.14% (1,656 of 1,759). The archive holds"
+p41,"1,759",1759.0,in registry,"a genuine forecast population of 94.14% (1,656 of 1,759). The archive holds 515 place"
+p41,515,515.0,in registry,"ion of 94.14% (1,656 of 1,759). The archive holds 515 placeholder values across all"
+p41,331,331.0,in registry,"er values across all extracted fields, made up of 331 depth sentinels, 7 zero depth"
+p41,7,7.0,in registry,"extracted fields, made up of 331 depth sentinels, 7 zero depths, 176 literal ""Non"
+p41,176,176.0,in registry,"s, made up of 331 depth sentinels, 7 zero depths, 176 literal ""None"" strings (73 na"
 p41,73,73.0,in registry,"inels, 7 zero depths, 176 literal ""None"" strings (73 narratives and 103 forecasts)"
 p41,103,103.0,in registry,"hs, 176 literal ""None"" strings (73 narratives and 103 forecasts) and one date senti"
 p42,61,61.0,in registry,"tter for classification, the one-half sign (½) in 61 DDRs (82 occurrences) and the"
@@ -227,7 +226,7 @@ p42,14,14.0,in registry,rrences) and the one-quarter sign (¼) in 10 DDRs (14 oc
 p42,8859,8859.0,in registry,"e pattern matching. The raw files declare the ISO-8859-1 character encoding, and rea"
 p42,1,1.0,in registry,"tern matching. The raw files declare the ISO-8859-1 character encoding, and readi"
 p42,3,3.0,in registry,"oding turns ½ into Â½ (for example 'due to double 3 Â½"" DP' for 'due to double 3"
-p42,3,3.0,in registry,"ample 'due to double 3 Â½"" DP' for 'due to double 3 ½"" DP'), so the encoding has"
+p42,3,3.0,in registry,"ample 'due to double 3 Â½"" DP' for 'due to double 3 ½"" DP'). The encoding must th"
 p42,15,15.0,in registry,citly. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (
 p42,9,9.0,in registry,ly. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (fi
 p42,19,19.0,in registry,. One further anomaly is a single record for 15/9-19 A dated 1 January 1980 (filen
@@ -318,7 +317,7 @@ p57,15,15.0,in registry,nd 15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F
 p57,9,9.0,in registry,"15/9-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of 1,"
 p57,9,9.0,in registry,"-F-15 is again the exception. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085"
 p57,"1,085",1085.0,in registry,"ion. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085 m, and NOD independently reco"
-p57,"1,085",1085.0,in registry,"l depth of 1,085 m, and NOD independently records 1,085 m for each, so the shared val"
+p57,"1,085",1085.0,in registry,"l depth of 1,085 m, and NOD independently records 1,085 m for each, which rules out a"
 p58,19,19.0,in registry,"h-based matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no"
 p58,19,19.0,in registry,"matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate"
 p58,11,11.0,in registry,"ach WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate NOD entry"
@@ -352,10 +351,10 @@ p59,2026,2026.0,in registry,"VD RKB), immediately above the Heimdal sands (NOD 2
 p59,216,216.0,in registry,"ely above the Heimdal sands (NOD 2026d), which is 216 m deeper than the last WITSML"
 p59,11.0,11.0,in registry,h is 216 m deeper than the last WITSML depth. The 11.0 m difference between the two
 p59,5,5.0,in registry,"values lies within the register itself, and Table 5 uses the structured field for"
-p59,15,15.0,in registry,"reports for the final drilling and suspension of 15/9-19 S, so the 227 m gap refl"
-p59,9,9.0,in registry,"ports for the final drilling and suspension of 15/9-19 S, so the 227 m gap reflec"
-p59,19,19.0,in registry,"rts for the final drilling and suspension of 15/9-19 S, so the 227 m gap reflects"
-p59,227,227.0,in registry,"inal drilling and suspension of 15/9-19 S, so the 227 m gap reflects missing record"
+p59,15,15.0,in registry,"reports for the final drilling and suspension of 15/9-19 S, and the 227 m gap ref"
+p59,9,9.0,in registry,"ports for the final drilling and suspension of 15/9-19 S, and the 227 m gap refle"
+p59,19,19.0,in registry,"rts for the final drilling and suspension of 15/9-19 S, and the 227 m gap reflects"
+p59,227,227.0,in registry,"nal drilling and suspension of 15/9-19 S, and the 227 m gap reflects those missing"
 p59,39,39.0,in registry,"e reports it does hold are incomplete throughout, 39 reports over 91 days (Table 8"
 p59,91,91.0,in registry,"s hold are incomplete throughout, 39 reports over 91 days (Table 8), and the recor"
 p59,8,8.0,in registry,"mplete throughout, 39 reports over 91 days (Table 8), and the records do not show"
@@ -379,7 +378,7 @@ p61,6,6.0,in registry,under the rule. NOD records a pre-drill campaign (6 to 17 
 p61,17,17.0,in registry,the rule. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent fr
 p61,2012,2012.0,in registry,. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR
 p61,2013,2013.0,in registry,"is absent from the DDR archive, and the archive's 2013 reports describe a fresh spud"
-p61,30,30.0,in registry,"describe a fresh spud from seabed, including the 30-inch conductor, so the record"
+p61,30,30.0,in registry,"describe a fresh spud from seabed, including the 30-inch conductor. The records d"
 p62,6,6.0,in registry,Table 6: Spud date validation outcome
 p63,15,15.0,in registry,"nal offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
 p63,9,9.0,in registry,"offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7)."
@@ -402,10 +401,10 @@ p65,11,11.0,in registry,"(15 March 2007) disagrees. Two sidetracks, 15/9-F-11 A 
 p65,15,15.0,in registry,"2007) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date"
 p65,9,9.0,in registry,"07) disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date id"
 p65,11,11.0,in registry,"disagrees. Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date identic"
-p65,15,15.0,in registry,"y an inherited field value. NOD does not register 15/9-F-11 T2 separately, so Fig."
-p65,9,9.0,in registry,"n inherited field value. NOD does not register 15/9-F-11 T2 separately, so Fig. 4"
-p65,11,11.0,in registry,"herited field value. NOD does not register 15/9-F-11 T2 separately, so Fig. 4 excl"
-p65,4,4.0,in registry,"oes not register 15/9-F-11 T2 separately, so Fig. 4 excludes it."
+p65,15,15.0,in registry,"y an inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig"
+p65,9,9.0,in registry,"n inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig."
+p65,11,11.0,in registry,"herited field value. NOD does not register 15/9-F-11 T2 separately, and Fig. 4 exc"
+p65,4,4.0,in registry,"es not register 15/9-F-11 T2 separately, and Fig. 4 excludes it for that reason."
 p66,15,15.0,in registry,The spud date of 15/9-F-1 needed particular care.
 p66,9,9.0,in registry,The spud date of 15/9-F-1 needed particular care. I
 p66,1,1.0,in registry,The spud date of 15/9-F-1 needed particular care. Its W
@@ -557,7 +556,7 @@ p75,15,15.0,in registry,"from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F
 p75,9,9.0,in registry,"om 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths o"
 p75,11,11.0,in registry,"007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an"
 p75,347,347.0,in registry,"The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an aband"
-p75,5.4,5.4,ignored: section number,"epths of an abandoned parent leg or stub (Section 5.4), so their durations are indi"
+p75,5.4,5.4,ignored: section number,epths of an abandoned parent leg or stub (Section 5.4) and make their durations ind
 p75,5.6,5.6,ignored: section number,detracks depend on the kick-off depths of Section 5.6. The rates are per reported d
 p75,1,1.0,in registry,"on 5.6. The rates are per reported day, and for F-1 they mix two campaigns. Per-p"
 p76,8,8.0,in registry,Table 8: Duration to total depth (TD)
@@ -575,7 +574,7 @@ p83,0,0.0,in registry,"s. The depth sentinel '-999.99', the zero string '0', the
 p83,515,515.0,in registry,and forecast fields) and the date sentinel affect 515 field values.
 p84,1,1.0,in registry,A date sentinel (1 January 1980) shifts the enti
 p84,1980,1980.0,in registry,A date sentinel (1 January 1980) shifts the entire drilling c
-p86,14.10%,14.1,in registry,"he structured kick-off field is populated in only 14.10% of rows, so sidetrack geometr"
+p86,14.10%,14.1,in registry,"he structured kick-off field is populated in only 14.10% of rows, which forces the rec"
 p89,6.3,6.3,ignored: section number,6.3 Relevance to Records-Based Sc
 p90,15,15.0,in registry,"Abandoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-"
 p90,9,9.0,in registry,"ndoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11"
@@ -720,22 +719,22 @@ p166,5.2,5.2,ignored: section number,ind the attainable classification rate of S
 p167,26,26.0,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-sco"
 p167,50,50.0,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-score"
 p167,0.520,0.52,in registry,"The sample proportion is 26/50 = 0.520, with a Wilson-score 95% inte"
-p167,95%,95.0,in registry,"proportion is 26/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. B"
-p167,0.385,0.385,in registry,"6/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. Because the sample"
-p167,0.652,0.652,in registry,"520, with a Wilson-score 95% interval of 0.385 to 0.652. Because the sample was drawn"
-p167,383,383.0,in registry,5 to 0.652. Because the sample was drawn from the 383 records with a genuine narrat
-p167,456,456.0,in registry,"oportion is scaled by that population, not by all 456 unclassified records: 383/1,7"
-p167,383,383.0,in registry,"population, not by all 456 unclassified records: 383/1,759 = 0.2177, so the estima"
-p167,"1,759",1759.0,in registry,"ulation, not by all 456 unclassified records: 383/1,759 = 0.2177, so the estimated re"
-p167,0.2177,0.2177,in registry,"not by all 456 unclassified records: 383/1,759 = 0.2177, so the estimated residual mi"
-p167,0.520,0.52,in registry,"1,759 = 0.2177, so the estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 pe"
-p167,0.2177,0.2177,in registry,"0.2177, so the estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage"
-p167,0.1132,0.1132,in registry,"o the estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (a"
+p167,95%,95.0,in registry,"proportion is 26/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. T"
+p167,0.385,0.385,in registry,"6/50 = 0.520, with a Wilson-score 95% interval of 0.385 to 0.652. The sample comes fr"
+p167,0.652,0.652,in registry,"520, with a Wilson-score 95% interval of 0.385 to 0.652. The sample comes from the 38"
+p167,383,383.0,in registry,rval of 0.385 to 0.652. The sample comes from the 383 records with a genuine narrat
+p167,456,456.0,in registry,"he 383 records with a genuine narrative among the 456 unclassified records, and the"
+p167,383,383.0,in registry,"ecords, and the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated"
+p167,"1,759",1759.0,in registry,"ds, and the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated resid"
+p167,0.2177,0.2177,in registry,"the proportion is therefore scaled by 383/1,759 = 0.2177. The estimated residual miss"
+p167,0.520,0.52,in registry,"83/1,759 = 0.2177. The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 pe"
+p167,0.2177,0.2177,in registry,"= 0.2177. The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage"
+p167,0.1132,0.1132,in registry,". The estimated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (a"
 p167,11.3,11.3,in registry,"ated residual miss is 0.520 × 0.2177 = 0.1132, or 11.3 percentage points (approximat"
-p167,199,199.0,in registry,"0.1132, or 11.3 percentage points (approximately 199 DDRs). Adding this to the obs"
-p167,"1,303",1303.0,in registry,"tely 199 DDRs). Adding this to the observed rate (1,303/1,759 = 0.7408) gives an esti"
-p167,"1,759",1759.0,in registry,"99 DDRs). Adding this to the observed rate (1,303/1,759 = 0.7408) gives an estimated"
-p167,0.7408,0.7408,in registry,". Adding this to the observed rate (1,303/1,759 = 0.7408) gives an estimated attainabl"
+p167,199,199.0,in registry,"0.1132, or 11.3 percentage points (approximately 199 DDRs). Adding the observed ra"
+p167,"1,303",1303.0,in registry,"pproximately 199 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an esti"
+p167,"1,759",1759.0,in registry,"mately 199 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an estimated"
+p167,0.7408,0.7408,in registry,"99 DDRs). Adding the observed rate (1,303/1,759 = 0.7408) gives an estimated attainabl"
 p167,85.4%,85.4,in registry,es an estimated attainable classification rate of 85.4%. Propagating the Wilson inter
 p167,0.7408,0.7408,in registry,e of 85.4%. Propagating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and
 p167,0.385,0.385,in registry,%. Propagating the Wilson interval gives 0.7408 + 0.385 × 0.2177 = 0.825 and 0.7408 +
@@ -753,7 +752,7 @@ p167,383,383.0,in registry,ng the two strata by their population shares (296/383
 p167,87,87.0,in registry,wo strata by their population shares (296/383 and 87/383) gives a sample proportio
 p167,383,383.0,in registry,strata by their population shares (296/383 and 87/383) gives a sample proportion of
 p167,0.518,0.518,in registry,(296/383 and 87/383) gives a sample proportion of 0.518 and an attainable rate of 85.
-p167,85.3%,85.3,in registry,"ple proportion of 0.518 and an attainable rate of 85.3%, so the result does not depen"
+p167,85.3%,85.3,in registry,ple proportion of 0.518 and an attainable rate of 85.3%. The result does not depend o
 table 1 r1 c1,15,15.0,in registry,15/9-F-5
 table 1 r1 c1,9,9.0,in registry,15/9-F-5
 table 1 r1 c1,5,5.0,in registry,15/9-F-5

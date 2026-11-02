@@ -157,7 +157,7 @@ The kick-off depths were proposed by an AI tool and signed off by the author in 
 
 `src/stage12_check.py` (output `outputs/manuscript_registry_check.csv`):
 
-    tokens: 1602 {'in registry': 1573, 'ignored': 29} | em dashes: 0
+    tokens: 1601 {'in registry': 1572, 'ignored': 29} | em dashes: 0
     Empty DataFrame
     Columns: [where, token, context]
     Index: []

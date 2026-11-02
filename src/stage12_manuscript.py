@@ -636,6 +636,35 @@ for e in STYLE_LOG:
     _md += ["| Old | New |", "|---|---|", "| " + "<br><br>".join(f"{k + 1}. " + x.replace("|", "\|") for k, x in enumerate(o)) + " | " + "<br><br>".join(f"{k + 1}. " + x.replace("|", "\|") for k, x in enumerate(n)) + " |", ""]
     if e["removed_numbers"] or e["dropped_refs"]: _md += [f"Not repeated in the new text: numbers {e['removed_numbers']}, references {e['dropped_refs']}.", ""]
 open("manuscript/style_diff.md", "w", encoding="utf-8", newline="\n").write("\n".join(_md))
+# ---- author-owned blocks: the Abstract and the opening paragraphs of the Conclusions are rewritten by the author in Word. When the author's saved file holds a text
+# that differs from the generated one, a rebuild keeps the author's version (the saved file is read before anything is written).
+def _blocks(d):
+    ps = d.paragraphs
+    head = lambda t: [i for i, q in enumerate(ps) if q.style.name.startswith("Heading") and q.text.strip() == t]
+    ia, ic = head("Abstract"), head("8 Conclusions")
+    if len(ia) != 1 or len(ic) != 1: return None
+    a, c = [], []
+    i = ia[0] + 1
+    while i < len(ps) and not ps[i].style.name.startswith("Heading"): a.append(ps[i]); i += 1
+    i = ic[0] + 1
+    while i < len(ps) and ps[i].style.name != "List Paragraph" and not ps[i].style.name.startswith("Heading"): c.append(ps[i]); i += 1
+    return a, c
+
+
+_AUTHOR_FILE = os.environ.get("VOLVE_AUTHOR_FILE", "manuscript/paper2_draft.docx")
+if os.path.exists(_AUTHOR_FILE):
+    try: _ext, _gen = _blocks(docx.Document(_AUTHOR_FILE)), _blocks(doc)
+    except Exception as _e: _ext = _gen = None; print("author file not read:", _e)
+    if _ext and _gen:
+        _t = lambda blk: [q.text.strip() for q in blk if not q.text.strip().startswith("[TJ: rewrite")]
+        for _name, _k in (("Abstract", 0), ("opening paragraph of the Conclusions", 1)):
+            if _t(_ext[_k]) != _t(_gen[_k]) and _t(_ext[_k]):
+                _first = _gen[_k][0]._p
+                for _q in _ext[_k]: _first.addprevious(copy.deepcopy(_q._p))
+                for _q in _gen[_k]: _q._p.getparent().remove(_q._p)
+                log("Author's text", f"generated {_name}", f"{_name} as saved by the author in Word, kept", None, "carried over from the saved draft (the author rewrites these in Word)")
+                print("kept the author's", _name)
+
 os.makedirs("manuscript", exist_ok=True)
 OUT = os.environ.get("VOLVE_DRAFT_OUT", "manuscript/paper2_draft.docx")      # normally the tracked draft; another path when Word holds the file open
 doc.save(OUT)
