@@ -48,3 +48,4 @@ outputs/audit_workbook*.xlsx
 # Local-only full-text originals (DDR narratives); never commit
 local_private/
 outputs/classified_audit_*.xlsx
+manuscript/bangkok#2.docx
