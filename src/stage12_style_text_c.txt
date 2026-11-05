@@ -1,0 +1,44 @@
+@@ 6.1 What the Dataset Supports | The 1,421-row depth-time-phase dataset converts
+The 1,421-row depth-time-phase dataset can be queried directly. Depth-versus-report-count curves (Fig. 3) allow wellbores drilled from the same platform to be compared, phase durations can be extracted for offset-well planning, and the classified phases locate casing, cementing and P&A operations in time and depth for each wellbore. Because the classifier is deterministic and the audit quantifies its residual, a user can bound how much of any phase-based statistic is missing. At the attainable-rate estimate, roughly 199 DDRs of construction content remain unassigned, mostly drilling progress reported without a hole size. Table 8 offers elapsed days, reports and metres per report-day to total depth for each wellbore as a first benchmark, and the gap flag marks wellbores whose elapsed time cannot be read as drilling time.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | Several characteristics of this archive would mislead
+Five characteristics of this archive would mislead an analysis that took the structured fields at face value, and each is likely to recur in other WITSML archives.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | Placeholder values that pass null tests
+Placeholder values pass null tests. The depth sentinel '-999.99', the zero string '0', the string "None" (in the narrative and forecast fields) and the date sentinel affect 515 field values.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | A date sentinel (1 January 1980) that, if treated
+A date sentinel (1 January 1980) shifts the entire drilling campaign of a wellbore into the wrong era of any time-based analysis if it is treated as a genuine first report.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | Structured spud dates that contradict
+Structured spud dates contradict the first report of the same wellbore in four wellbores and are inherited from the parent in two sidetracks.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | A structured kick-off field populated in only 14.10%
+The structured kick-off field is populated in only 14.10% of rows, which forces the recovery of sidetrack geometry from the narrative.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | Technical-sidetrack designations that have no counterpart
+Technical-sidetrack designations have no counterpart in the national register, and a join on wellbore name silently drops the valid records.
+@@ 6.2 Data-Quality Lessons for WITSML Archive Users | None of these is an error
+None of these invalidates the archive, but each needs an explicit rule, and the rules used here are published with the code.
+@@ 6.3 Relevance to Records-Based Screening of Legacy Wellbores | Assessments of depleted fields for CO2 storage
+Assessments of depleted fields for CO2 storage, and decommissioning reviews generally, rely on an inventory of existing wellbores and on evidence of how each was constructed and abandoned. The reconstruction shows that a national register alone gives an incomplete inventory in three ways. Abandoned parent legs below technical sidetracks (15/9-19 B to 3,272 m and 15/9-F-11 to 347 m) exist physically but have no register entry of their own. Wellbores that share a physical interval, such as the four wellbores of the 15/9-F-1 family, which share the hole above 1,364 m MD, are not independent penetrations above their kick-off depths. The archive can also stop, as it does for 15/9-19 S, which has no reports covering its final 227 m. A screening assessment should record such a gap as an evidence gap without inferring the missing history. The phase-classified timeline is a starting point for locating the casing, cementing and plugging records that such an assessment needs.
+@@ 6.4 Transferability | The audit protocol, the placeholder checks
+The audit protocol, the placeholder checks and the wellbore-matching logic transfer directly to WITSML 1.4-series drillReport archives (tested here on 1.4.0.0). The pattern set is tuned to the English-language narratives and abbreviations of one operator over the life of one field, Applying it elsewhere requires a pattern review. The audit should be repeated to measure the new residual, since the Volve figure cannot be assumed to carry over.
+@@ 7 Limitations | The classifier assigns a single primary phase
+The classifier assigns a single primary phase to each DDR. A DDR that narrates both drilling progress and cementing takes the higher-priority drilling phase. The Cementing count therefore underrepresents the days on which cementing occurred alongside another operation.
+@@ 7 Limitations | The audit labelled construction content only
+The audit labelled construction content only. Unclassified records that describe operations belonging to non-construction phases of the classifier, for example waiting or rig moves, were labelled non-construction, which makes the attainable rate conservative with respect to those phases. The sample of 50 was labelled by a single reviewer, the author, and no inter-rater agreement was measured. The interval of 82.5 to 88.3% reflects the modest sample size.
+@@ 7 Limitations | Two records were assigned to a group
+Two sampled records sit in a group that does not match their operational context, although both were labelled correctly on content. The 1980 date sentinel of 15/9-19 A places the 1997 drilling of that wellbore in the production group, and the 2013 drilling campaign reports of 15/9-F-1 also fall into the production group.
+@@ 7 Limitations | The timeline includes only DDRs
+The timeline includes only DDRs with a genuine measured depth and applies no interpolation. A discontinuity where a run of DDRs carries a placeholder value marks missing data and allows no conclusion about drilling activity in that period.
+@@ 7 Limitations | Kick-off depths were read from the narratives by one rule
+Kick-off depths were read from the narratives by one rule, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth alone and 15/9-F-11 B on an interval of cement and new formation (2,531 to 2,589 m). NOD gives no kick-off point for three sidetracks. The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it above approximately 2,617 to 2,620 m MD. Any formation-level analysis that treats them as independent must account for this. Metres per report-day are rates per reported day, and gaps between reports in the archive affect the elapsed time to total depth (the gap flag in Table 8).
+@@ 7 Limitations | No isolated ablation was run
+No isolated ablation was run for the effect of Unicode normalisation on the classification rate. The survey finds ½ in 61 DDRs and ¼ in 10, and the normalisation handles both, but its effect was not separated from other refinements of the pattern set.
+@@ 7 Limitations | The analysis starts from the raw XML
+The analysis starts from the raw XML, which the published code extracts with every field kept as a raw string, and an extraction error would still propagate to every result. The near-exact agreement with NOD on total depth (22 of 24) indicates that the depth fields were extracted faithfully.
+@@ 8 Conclusions | A stratified audit found that 52%
+A stratified audit finds that 52% of the sampled unclassified narratives describe construction operations, which gives an estimated attainable classification rate of 85.4% (95% CI 82.5 to 88.3%). The main gaps are drilling progress reported without a hole size, non-standard abbreviations, and fishing and fracturing operations.
+@@ 8 Conclusions | Reconstructed total depth agrees exactly
+Reconstructed total depth agrees exactly with the NOD register for 22 of 24 matched wellbores. The two differences, 15 m on 15/9-F-15 and a records-coverage gap of 227 m on 15/9-19 S, are both explained.
+@@ 8 Conclusions | Every naming mismatch between the WITSML archive
+Every naming mismatch between the WITSML archive and the national register follows the Norwegian technical-sidetrack convention. Parent legs abandoned below technical sidetracks exist physically but have no register entry of their own.
+@@ 8 Conclusions | The structured spud date should not be used
+The structured spud date needs checking against the first DDR. Four wellbores carry data-entry errors, two sidetracks carry inherited values, and one apparent error is a NOD entry date that marks a later drilling campaign.
+@@ 8 Conclusions | Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; for
+Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule. 15/9-F-1 C was sidetracked at 1,364 m, and 3,059 m marks the start of its 8½ in. section. The four wellbores of the 15/9-F-1 family share their hole above 1,364 m.

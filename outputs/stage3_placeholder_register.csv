@@ -1,0 +1,14 @@
+field,literal_None,sentinel_-999.99,zero_depth,empty_but_present,date_sentinel_1980,placeholder_cells,absent_tag_not_counted,other_generic_placeholder_like
+well,0,0,0,0,0,0,0,0
+wellbore,0,0,0,0,0,0,0,0
+date_report,0,0,0,0,1,1,0,0
+dTimSpud,0,0,0,0,0,0,0,0
+md,0,331,7,0,0,338,0,0
+md_kickoff,0,0,0,0,0,0,1511,0
+md_csg_last,0,0,0,0,0,0,57,0
+rig,0,0,0,0,0,0,1,0
+operator,0,0,0,0,0,0,1,0
+forecast24hr,103,0,0,0,0,103,0,8
+drill_complete,0,0,0,0,0,0,146,0
+sum24Hr,73,0,0,0,0,73,0,0
+TOTAL,176,331,7,0,1,515,1716,8

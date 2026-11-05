@@ -1,0 +1,7 @@
+pandas
+pyarrow
+lxml
+matplotlib
+databricks-sdk
+python-docx
+openpyxl

@@ -1,0 +1,15 @@
+,v2_table,ported_on_old_text,same
+Cementing,100,100,True
+Completion,228,228,True
+Intermediate casing,82,82,True
+Intermediate drilling,77,77,True
+Liner / Casing run,144,144,True
+Logging / Testing,93,93,True
+P&A,41,41,True
+Reservoir drilling,256,256,True
+Rig move / Setup,38,38,True
+Spud / Conductor,52,52,True
+Surface casing,66,66,True
+Unclassified,456,456,True
+Waiting / Downtime,120,120,True
+Workover,6,6,True

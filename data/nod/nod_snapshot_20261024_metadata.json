@@ -1,0 +1,56 @@
+{
+ "retrieval_date": "2026-10-24",
+ "files": {
+  "development": {
+   "path": "data/nod/wellbore_development_all_20261024.csv",
+   "bytes": 4080420,
+   "sha256": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
+   "total_rows": 6286,
+   "volve_subset_rows": 22,
+   "sept_subset_rows": 22,
+   "only_in_new": [],
+   "only_in_sept": [],
+   "rows_changed_vs_sept": [
+    "15/9-F-1",
+    "15/9-F-1 A",
+    "15/9-F-1 B",
+    "15/9-F-1 C",
+    "15/9-F-4",
+    "15/9-F-5",
+    "15/9-F-7",
+    "15/9-F-9",
+    "15/9-F-9 A",
+    "15/9-F-10",
+    "15/9-F-10 A",
+    "15/9-F-10 B",
+    "15/9-F-11",
+    "15/9-F-11 A",
+    "15/9-F-11 B",
+    "15/9-F-12",
+    "15/9-F-14",
+    "15/9-F-15",
+    "15/9-F-15 A",
+    "15/9-F-15 B",
+    "15/9-F-15 C",
+    "15/9-F-15 D"
+   ]
+  },
+  "exploration": {
+   "path": "data/nod/wellbore_exploration_all_20261024.csv",
+   "bytes": 1732088,
+   "sha256": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
+   "total_rows": 2200,
+   "volve_subset_rows": 5,
+   "sept_subset_rows": 5,
+   "only_in_new": [],
+   "only_in_sept": [],
+   "rows_changed_vs_sept": [
+    "15/9-19 A",
+    "15/9-19 B",
+    "15/9-19 S",
+    "15/9-19 SR",
+    "15/9-19 SR2"
+   ]
+  }
+ }
+}
