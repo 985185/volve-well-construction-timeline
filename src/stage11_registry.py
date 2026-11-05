@@ -348,6 +348,75 @@ add("duration.gap_flag_rule", "elapsed days to TD greater than 2 x reports to TD
 add("duration.n_gap_flagged", int(dw.gap_flag.sum()), "Wellbores with the gap flag", S9, "module level", [DU])
 add("duration.indicative_only", dw[dw.indicative_only].wellbore.tolist(), "Wellbores whose TD is an abandoned parent leg or stub (indicative only)", S9, "module level", [DU])
 
+# ---------------------------------------------------------------- external review round (November 2026)
+DI = "outputs/audit_design_interval.json"; CAS = "outputs/classified_audit_agreement_summary.json"; CAG = "outputs/classified_audit_agreement.csv"; RE = "outputs/review_evidence.json"
+S6D = "src/stage6_design_interval.py"; S6A = "src/stage6_classified_agreement.py"; SRE = "src/review_evidence.py"
+di = json.load(open(DI)); cas = json.load(open(CAS)); rev = json.load(open(RE))
+c_, p_ = di["strata"]["construction_era"], di["strata"]["production_era"]
+add("audit.design_proportion_pct", round(100 * di["p_stratified"], 1), "Design-based (stratum-weighted) proportion of construction among the 383 framed reports, percent", S6D, "module level", [AA, AF], note="NEW (external review): headline audit estimate; the Wilson figures remain as a comparison")
+add("audit.design_proportion", round(di["p_stratified"], 3), "Design-based proportion (fraction)", S6D, "module level", [AA, AF])
+add("audit.design_z", 1.96, "Normal quantile of the 95% interval", S6D, "module level", [AA, AF])
+add("audit.design_variance", round(di["variance"], 4), "Design-based variance of the stratified proportion, sum of W^2 (1 - f) p (1 - p) / (n - 1)", S6D, "module level", [AA, AF])
+add("audit.design_se", round(di["se"], 3), "Design-based standard error of the stratified proportion", S6D, "module level", [AA, AF])
+add("audit.design_ci_low_pct", round(100 * di["ci"][0], 1), "Design-based 95% interval (normal approximation), lower bound of the proportion, percent", S6D, "module level", [AA, AF])
+add("audit.design_ci_high_pct", round(100 * di["ci"][1], 1), "Design-based 95% interval (normal approximation), upper bound of the proportion, percent", S6D, "module level", [AA, AF])
+add("audit.design_weight_construction", round(c_["W"], 3), "Stratum weight, construction group (296/383)", S6D, "module level", [AA, AF])
+add("audit.design_weight_production", round(p_["W"], 3), "Stratum weight, production group (87/383)", S6D, "module level", [AA, AF])
+add("audit.design_p_construction_pct", round(100 * c_["p"], 1), "Construction proportion in the construction group (23/39), percent", S6D, "module level", [AA, AF])
+add("audit.design_p_production_pct", round(100 * p_["p"], 1), "Construction proportion in the production group (3/11), percent", S6D, "module level", [AA, AF])
+add("audit.design_sampling_fraction_construction_pct", round(100 * c_["f"], 1), "Sampling fraction, construction group (39/296), percent", S6D, "module level", [AA, AF])
+add("audit.design_sampling_fraction_production_pct", round(100 * p_["f"], 1), "Sampling fraction, production group (11/87), percent", S6D, "module level", [AA, AF])
+add("audit.design_arithmetic", dict(W_construction=round(c_["W"], 4), W_production=round(p_["W"], 4), p_construction=round(c_["p"], 4), p_production=round(p_["p"], 4), p_stratified=round(di["p_stratified"], 4), variance=round(di["variance"], 4), se=round(di["se"], 4), ci_low=round(di["ci"][0], 3), ci_high=round(di["ci"][1], 3), residual=round(di["p_stratified"] * 383 / 1759, 4), recovery_ci_low=round(di["recovery"] and di["recovery_ci"][0], 3), recovery_ci_high=round(di["recovery_ci"][1], 3)), "Values printed in the design-based arithmetic of Appendix B", S6D, "module level", [AA, AF, CL])
+add("audit.recoverable_coverage_pct", round(100 * di["recovery"], 1), "Estimated recoverable coverage, design-based: 1,303/1,759 + stratified proportion x 383/1,759, percent", S6D, "module level", [AA, AF, CL], 85.4, note="v2 headline was 85.4 (Wilson, unstratified); the design-based estimate is used from the external review")
+add("audit.recoverable_coverage_ci_low_pct", round(100 * di["recovery_ci"][0], 1), "Estimated recoverable coverage, lower 95% bound (design-based)", S6D, "module level", [AA, AF, CL], 82.5)
+add("audit.recoverable_coverage_ci_high_pct", round(100 * di["recovery_ci"][1], 1), "Estimated recoverable coverage, upper 95% bound (design-based)", S6D, "module level", [AA, AF, CL], 88.3)
+add("audit.recoverable_residual_ddrs", round(di["p_stratified"] * 383), "Design-based estimate of construction reports among the 383 framed reports", S6D, "module level", [AA, AF], 199)
+add("audit.recoverable_residual_pp", round(100 * di["p_stratified"] * 383 / 1759, 1), "Design-based residual in percentage points of 1,759", S6D, "module level", [AA, AF], 11.3)
+# single-report blind agreement (author labels, 52 classified reports, 4 per phase)
+add("agreement.n", cas["n"], "Classified reports labelled blind by the author (4 per phase, 13 phases)", S6A, "module level", [CAG], note="NEW (external review): single-report blind agreement, secondary result")
+add("agreement.agree", cas["agree"], "Labels equal to the assigned phase", S6A, "module level", [CAG])
+add("agreement.pct", cas["agree_pct"], "Single-report blind agreement, percent (30/52)", S6A, "module level", [CAG])
+add("agreement.wilson_low_pct", cas["wilson_low_pct"], "Wilson 95% lower bound, percent", S6A, "wilson()", [CAG])
+add("agreement.wilson_high_pct", cas["wilson_high_pct"], "Wilson 95% upper bound, percent", S6A, "wilson()", [CAG])
+add("agreement.weighted_pct", cas["weighted_pct"], "Frequency-weighted agreement: phase agreement rates weighted by the phase share of the 1,303 classified reports, percent", S6A, "module level", [CAG, CL])
+add("agreement.per_phase", cas["per_phase"], "Agreement per phase: [agreeing, sampled] (names as in the paper)", S6A, "module level", [CAG])
+add("agreement.causes_proposed", cas["causes_proposed"], "Causes of the 22 disagreements, proposed from the narratives (the author's note column was empty); two are unexplained", S6A, "CAUSE", [CAG], note="indicative: assigned by the AI tool from the narratives, not by the author; the author accepted the table as indicative")
+add("agreement.seed", cas["seed"], "Random seed of the draw (random.Random(seed).sample, 4 per phase, pools sorted by filename)", "src/stage6_classified_audit.py", "module level", [CAG])
+# total depth: name-matched and depth-matched wellbores reported separately
+_nm = td[td.match_method == "name"]; _dm = td[td.match_method.str.startswith("T2")]
+add("td.name_matched", len(_nm), "Wellbores matched to NOD by name", S7T, "module level", [TD], note="NEW (external review): 24 matched = 21 by name + 3 by depth")
+add("td.name_matched_within_0p5", int((_nm.outcome == "EXACT").sum()), "Name-matched wellbores within 0.5 m", S7T, "module level", [TD])
+add("td.name_matched_outside", sorted(_nm[_nm.outcome != "EXACT"].witsml_wellbore.str.replace("NO ", "")), "Name-matched wellbores that differ by more than 0.5 m", S7T, "module level", [TD])
+add("td.depth_matched", len(_dm), "Technical sidetracks matched to NOD by depth", S7T, "module level", [TD])
+add("td.depth_matched_within_0p5", int((_dm.outcome == "EXACT").sum()), "Depth-matched sidetracks within 0.5 m (by construction of the match)", S7T, "module level", [TD])
+add("td.f15_nod_td_m", rev["f15_nod_td_m"], "NOD total depth, 15/9-F-15 (m)", SRE, "module level", [RE, NODD])
+add("td.f15_reports_state_td_m", rev["f15_td_stated_m"], "Total depth stated in the narrative of the report of 2008-11-28, 15/9-F-15 (m)", SRE, "has()", [RE, DDR])
+add("td.f15_report_drilled_from_m", rev["f15_td_report_drilled_from_m"], "The F-15 report of 2008-11-28 states the 8 1/2 in. hole drilled from this depth to TD (m)", SRE, "has()", [RE, DDR])
+add("td.f15_reports_mentioning_4105", rev["f15_reports_mentioning_4105"], "F-15 reports (narrative or forecast) that mention 4,105 m", SRE, "module level", [RE, DDR])
+# 15/9-19 series events (Section 3.5)
+add("s19.packed_off_m", rev["s19_packed_off_m"], "15/9-19 S: hole packed off at this depth on 1992-12-10 (m)", SRE, "has()", [RE, DDR])
+add("s19.cutter_detonated_m", rev["s19_cutter_detonated_m"], "15/9-19 S: cutter detonated at this depth on 1992-12-12, pipe not free (m)", SRE, "has()", [RE, DDR])
+add("s19.pipe_cut_m", rev["s19_pipe_cut_m"], "15/9-19 S: pipe cut at this depth on 1992-12-13 (m)", SRE, "has()", [RE, DDR])
+add("s19.backoff_mentions", rev["s19_backoff_mentions"], "Mentions of a backoff in the 15/9-19 S and 15/9-19 ST2 narratives", SRE, "module level", [RE, DDR])
+add("b19.string_cut_m", rev["b19_string_cut_m"], "15/9-19 B: drill string cut at this depth on 1997-11-30, after a backoff attempt that released the string too high (m)", SRE, "has()", [RE, DDR])
+add("b19.sidetrack_plug_m", rev["b19_sidetrack_plug_m"], "15/9-19 B: sidetrack plug set between these depths on 1997-12-04 (m)", SRE, "has()", [RE, DDR])
+add("kickoff.19ST2.range_m", [rev["st2_cement_drilled_out_m"], rev["st2_md_at_transition_m"]], "15/9-19 ST2 kick-off lies between the depth to which cement was drilled out (1,486 m, 1992-12-18) and the MD at the transition (1,536 m, 1992-12-19)", SRE, "has()", [RE, DDR], note="LOW confidence; the table depth stays 1,536 m")
+add("kickoff.19ST2.cement_plugs_m", rev["s19_cement_plugs_m"], "15/9-19 S: three cement plugs set before the sidetrack (m, top and bottom)", SRE, "has()", [RE, DDR])
+# casing sizes (Section 3.3) and the Hugin Formation
+add("casing.14in_ddrs", rev["casing_14in_ddrs"], "DDR narratives that mention 14 in. casing (any spelling)", SRE, "module level", [RE, DDR])
+add("casing.14in_wellbores", rev["casing_14in_wellbores"], "Wellbores with 14 in. casing mentions", SRE, "module level", [RE, DDR])
+add("casing.10_3_4in_ddrs", rev["casing_10_3_4in_ddrs"], "DDR narratives that mention 10 3/4 in. casing (any spelling)", SRE, "module level", [RE, DDR])
+add("casing.10_3_4in_wellbores", rev["casing_10_3_4in_wellbores"], "Wellbores with 10 3/4 in. casing mentions", SRE, "module level", [RE, DDR])
+add("casing.10_3_4in_tieback_or_combination_ddrs", rev["casing_10_3_4in_with_tieback_or_9_5_8_combination_ddrs"], "10 3/4 in. mentions that also mention a tie-back or the 9 5/8 x 10 3/4 in. combination", SRE, "module level", [RE, DDR])
+add("hugin.f4_pressure_point_md_m", rev["f4_hugin_pressure_point_md_m"], "15/9-F-4: pressure samples taken in the Hugin Formation at this MD (m), 2008-02-27, in the 8 1/2 in. section", SRE, "has()", [RE, DDR])
+add("hugin.f4_12_25in_section_td_m", rev["f4_12_25in_section_td_m"], "15/9-F-4: the 12 1/4 in. section ended at this depth (m), 2007-10-29", SRE, "has()", [RE, DDR])
+# kick-off: order of preference and parent chain
+_win = kt.evidence_quote.fillna("").str.contains("window", case=False) & (kt.method == "depth in text")
+add("kickoff.order_step_counts", {"1 stated depth": int(((kt.method == "depth in text") & ~_win).sum()), "2 milled-window top": int(_win.sum()), "3 event named, report MD": int((kt.method == "event in text, depth from md").sum()), "4 MD at transition, narrative empty": int((kt.method == "depth sequence (narrative empty)").sum())},
+    "Kick-off depths by step of the order of preference", S8, "SPEC", [KT])
+_dep = kp.final_depth_m
+add("kickoff.shallower_than_parent_kickoff", [w for w in _dep.index if kt.loc[w, "parent"] in _dep.index and _dep[w] < _dep[kt.loc[w, "parent"]]], "Sidetracks whose kick-off is shallower than the kick-off of their designated parent (they leave the hole shared with earlier wellbores of the family)", S8, "SPEC", [KT, KP])
+
 # ---------------------------------------------------------------- write registry
 import glob
 _enc = {}

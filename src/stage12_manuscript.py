@@ -415,6 +415,119 @@ for j in range(len(P)):
 log("Whole text", "draft wording", "sentence-level style revision of the body text (Sections 1 to 8)", None, "style revision of 2026-11-02: no number, table, figure, reference or quotation changed; the Abstract, the opening paragraph of the Conclusions, the AI disclosure and the availability statement untouched (yellow notes mark the first two); old and new text in manuscript/style_diff.md")
 
 
+# =========================================================================== external review round (5 November 2026): original paragraphs, after the style revision
+# New Section references use the old numbering of Section 5 (5.3 to 5.7); a pass at the end shifts them by one when the new Section 5.3 (phase label agreement) is inserted.
+# '@AGR@' stands for the number of the new subsection (replaced at the end).
+RV = "external review (5 November 2026)"
+agr = val("agreement.per_phase"); cs = val("agreement.causes_proposed")
+_ord = sorted(agr.items(), key=lambda kv: (-kv[1][0], kv[0]))
+_ph = ", ".join(f"{k} {v[0]}" for k, v in _ord)
+
+# title
+sub(0, "A Complete Operational History of the Equinor Volve Dataset", "An Auditable Reconstruction of the Equinor Volve Dataset", None, RV + ": title")
+
+# abstract
+sub(ix("Daily Drilling Reports (DDRs) are the most complete operational record"), "and no such timeline has been published for an openly available field dataset.", "and, to the author's knowledge, no such timeline has been published for an openly available field dataset.", None, RV + ": novelty claim qualified")
+iab = ix("A deterministic, priority-ordered, rule-based classifier assigns")
+setp(iab, "A deterministic, priority-ordered, rule-based classifier assigns each DDR's 24-hour narrative to one of 13 phases. It assigns a phase to 1,303 DDRs, a coverage of 74.1%. A stratified audit of 50 records, drawn from the 383 unclassified DDRs that carry a genuine narrative, found 26 (52%) describing construction operations the classifier missed: drilling progress reported without a hole size, non-standard abbreviations, and operations such as fishing and fracturing for which no pattern exists. "
+     "An engineer who labelled 52 of the classified reports, each read on its own as the classifier reads it, agreed with the classifier on 30 of 52 (58%). Many days cannot be assigned a phase without the neighbouring reports, which a single-report classifier does not see. The main causes of disagreement were keywords that appear incidentally in a report, campaign context, and whipstock and window milling that the classifier assigns to Workover.",
+     "abstract paragraph on the classifier and the audit", "classifier.classified_pct;audit.construction_calls;agreement.agree;agreement.n;agreement.pct", RV + ": 74.1% is coverage; the estimated recoverable coverage leaves the abstract; single-report agreement and its framing added")
+sub(ix("Of 24 wellbores with a defensible NOD counterpart"), "Of 24 wellbores with a defensible NOD counterpart, 22 agree exactly on total depth. 15/9-F-15 differs by 15 m, and 15/9-19 S differs by 227 m because the DDR archive does not cover that wellbore's final drilling.",
+    "Of 21 wellbores matched to NOD by name, 19 agree on total depth within 0.5 m, and the 3 technical sidetracks matched by depth agree as well. 15/9-F-15 differs by 15 m, for a cause that remains unresolved, and 15/9-19 S differs by 227 m because the DDR archive does not cover that wellbore's final drilling.",
+    "td.name_matched;td.name_matched_within_0p5;td.depth_matched", RV + ": depth validation split into name-matched and depth-matched wellbores; F-15 unresolved")
+sub(ix("Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; where NOD"), "an open depth-time-phase dataset of 1,421 records, with per-wellbore durations to total depth, published with the classifier code. It supports days-versus-depth benchmarking and records-based screening",
+    "an open depth-time-phase dataset of 1,421 records (the DDRs with a valid measured depth, of 1,759 in all), with per-wellbore elapsed days and reports to total depth, published with the classifier code. It supports the comparison of wellbores by reports against depth and records-based screening",
+    "timeline.rows;data.n_ddrs", RV + ": 1,421 against 1,759 explained; no benchmarking claim")
+sub(ix("Sidetrack kick-off depths were recovered for all 15 sidetracks by one rule; where NOD"), "recovered for all 15 sidetracks by one rule;", "recovered for all 15 sidetracks by a fixed order of preference;", None, RV)
+
+# 3.3 and Section 3.5
+sub(ix("The classifier assigns the sum24Hr narrative of each DDR"), "On Volve platform wells the 12¼ in. hole is usually the section above the reservoir.",
+    "On Volve platform wells the 12¼ in. hole usually ends above the reservoir (Hugin Formation); in 15/9-F-4, for example, the 12¼ in. section ended at 2,770 m MD and pressure samples were taken in the Hugin Formation at 3,417.5 m MD, in the 8½ in. section.",
+    "hugin.f4_pressure_point_md_m;hugin.f4_12_25in_section_td_m", RV + ": reservoir position stated with the F-4 evidence; no Hugin top depth is given because the archive holds none")
+sub(ix("In the 15/9-19 series the DDR narratives describe"), "became stuck at 3,272 m. The string was backed off and cut, a sidetrack plug was set, and new hole was kicked off from 2,911 m as 15/9-19 BT2,",
+    "became stuck at 3,272 m. A backoff attempt released the string too high, the string was cut at 3,164 m, a sidetrack plug was set between 2,983 and 2,835 m, and new hole was drilled from 2,911 m as 15/9-19 BT2,",
+    "b19.string_cut_m;b19.sidetrack_plug_m", RV + ": 15/9-19 B events checked against the narratives")
+sub(ix("In the 15/9-19 series the DDR narratives describe"), "Well 15/9-19 S followed the same sequence, with stuck pipe at approximately 2,741 m, a backed-off and cut string, sidetrack language in the narrative (\"MU BHA FOR SIDE TRACK\") and new hole from approximately 1,536 m as 15/9-19 ST2.",
+    "Well 15/9-19 S followed a similar sequence. The hole packed off at 2,732 m and attempts to work the pipe free were made at 2,741 m, a cutter was detonated at 2,658 m, the pipe was cut at 2,516 m, three cement plugs were set (the last from 1,543 to 1,430 m), and the narrative uses sidetrack language (\"MU BHA FOR SIDE TRACK\"). Cement was then drilled out to 1,486 m, and new hole was drilled as 15/9-19 ST2 from a depth between 1,486 m and 1,536 m, the measured depth of the first ST2 report.",
+    "s19.packed_off_m;s19.stuck_pipe_depth_m;s19.cutter_detonated_m;s19.pipe_cut_m;kickoff.19ST2.cement_plugs_m;kickoff.19ST2.range_m", RV + ": the narratives support a cut string and no backoff for 15/9-19 S; 2,741 m kept as the depth of the attempts to free the pipe")
+
+# 5.1 coverage
+sub(ix("5.1 Classification Rate"), "Classification Rate", "Coverage", None, RV + ": 74.1% is coverage")
+i51 = ix("The classifier assigns a phase to 1,303 of the 1,759 DDRs")
+sub(i51, "assigns a phase to 1,303 of the 1,759 DDRs (74.1%) and leaves 456 unclassified (25.9%) (Table 4).", "assigns a phase to 1,303 of the 1,759 DDRs, a coverage of 74.1%, and leaves 456 unclassified (25.9%) (Table 4). Coverage is the share of reports that match a pattern. It does not measure whether the phase is correct (Section @AGR@).", None, RV + ": coverage defined")
+sub(i51, "classified phases on the depth-versus-time curves of four representative wellbores.", "classified phases on the depth-versus-time curves of representative wellbores in four panels. The phase colours are single-report labels.", None, RV)
+app(ix("Percentages are rounded independently"), "Phases are single-report labels assigned by the classifier (Section @AGR@).", None, RV + ": Table 4 caveat")
+
+# 5.2 estimated recoverable coverage (design-based)
+sub(ix("5.2 Stratified Audit and Attainable Classification Rate"), "Attainable Classification Rate", "Estimated Recoverable Coverage", None, RV)
+setp(ix("A complete pattern set would classify"), "Of the 50 sampled reports, 26 (52%) were labelled construction and 24 (48%) non-construction. The construction group (39 reports) split 23 construction to 16 non-construction, and the production group (11 reports) split 3 to 8. Of the 26 construction reports that the classifier missed, 9 reported genuine drilling without a hole size, 10 described other operations with no corresponding pattern, such as hydraulic fracturing or fishing, and 7 used non-standard terms, such as \"CMT\" for cement. "
+     "Weighting the two groups by their share of the 383-report frame gives 51.8% construction (design-based 95% interval 39.1 to 64.5%, normal approximation, with only 11 records in the production group), which corresponds to about 198 reports. The estimated recoverable coverage is therefore 85.3% (95% interval 82.6 to 88.1%): the share of the 1,759 reports that would carry a phase if the patterns also caught the construction content of the unclassified reports. It estimates how much construction content the patterns leave unassigned and does not guarantee that a recovered report would receive the correct phase. The arithmetic, with the Wilson interval for comparison, is in Appendix B.",
+     "Section 5.2, first paragraph", "audit.design_proportion_pct;audit.design_ci_low_pct;audit.design_ci_high_pct;audit.recoverable_residual_ddrs;audit.recoverable_coverage_pct;audit.recoverable_coverage_ci_low_pct;audit.recoverable_coverage_ci_high_pct;audit.construction_calls;audit.miss_reason.NO_HOLE_SIZE;audit.miss_reason.OTHER_MISS;audit.miss_reason.NONSTANDARD_TERMINOLOGY",
+     RV + ": design-based estimate (stratum-weighted, finite-population correction) replaces the Wilson figures, which move to Appendix B; named estimated recoverable coverage")
+sub(ix("No text method can classify the 73 DDRs"), "They are excluded from the attainable rate, and even a perfect pattern set", "They are excluded from the recoverable coverage, and even a perfect pattern set", None, RV)
+
+# 5.4 total depth (old numbering)
+i54 = ix("Of the 26 wellbores, 24 have a defensible NOD counterpart")
+setp(i54, "Of the 26 wellbores, 21 are matched to NOD by name, 3 technical sidetracks are matched by depth and 2 parent legs are unmatched (below). Of the 21 name-matched wellbores, 19 agree on total depth within 0.5 m. 15/9-F-15 differs by 15 m (0.4%) and 15/9-19 S by 227 m. The reports state the total depth of 15/9-F-15 as 4,090 m (\"Drilled 8 1/2\" hole from 3889m to 4090m (TD).\"), NOD records 4,105 m, and the cause of the 15 m difference is unresolved. Among the 19 F-series wellbores matched by literal name, 18 (94.7%) agree within 0.5 m, and 15/9-F-15 is again the exception. The 3 depth-matched sidetracks agree by construction of the match. 15/9-F-7 and 15/9-F-9 share a total depth of 1,085 m, and NOD independently records 1,085 m for each, which rules out a duplication in the extraction.",
+     "Section 5.4, second paragraph", "td.name_matched;td.name_matched_within_0p5;td.depth_matched;td.diff.15/9-F-15;td.diff.15/9-19 S;td.f15_nod_td_m;td.f15_reports_state_td_m;td.f15_reports_mentioning_4105;td.fseries_name_matched_n;td.fseries_name_matched_exact;td.fseries_name_matched_exact_pct",
+     RV + ": 19 of 21 name-matched wellbores within 0.5 m, depth-matched sidetracks reported separately; F-15 cause unresolved, evidence from the reports")
+sub(ix("Exact: difference of 0.5 m or less."), "Exact: difference of 0.5 m or less.", "Within 0.5 m: difference of 0.5 m or less. The three technical sidetracks (15/9-19 BT2, 19 ST2 and F-11 T2) have no NOD record of their own and are matched to the NOD record whose total depth agrees. Agreement within 0.5 m is therefore the matching condition for them.", "td.depth_matched;td.depth_matched_within_0p5", RV)
+
+# 5.5 spud: F-11 final category stated once
+sub(ix("Spud date was compared across three sources"), "Applied mechanically, the rules reproduce 25 of the 26 assignments. The exception is 15/9-F-11, which was assigned Exact by inspection and is unresolved under the rule. NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR archive, and the archive's 2013 reports describe a fresh spud from seabed, including the 30-inch conductor. The records do not show how the two campaigns relate.",
+    "The final category of 15/9-F-11 is Unresolved: NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR archive, and the archive's 2013 reports describe a fresh spud from seabed, including the 30-inch conductor. The records do not show how the two campaigns relate. The earlier call of Exact, made by inspection, was not retained.",
+    "spud.unresolved;spud.F-11.predrill_period", RV + ": F-11 final category stated once; the earlier inspection call is not retained")
+
+# 5.6 kick-off: fixed order of preference, precedence and confidence
+i56 = ix("Kick-off depth was recovered from the DDRs")
+sub(i56, "One rule was applied to all sidetracks, and the depth was read from the last report of the parent and the first report of the sidetrack. The kick-off is the depth at which the narrative first reports new formation or departure from the parent hole. Where the narrative states none, it is the depth at which the kick-off or window was started, and for casing exits by a milled window it is the top of the window. Where the narrative is empty, it is the measured depth at the parent-to-child transition.",
+    "The depth was read from the last report of the parent and the first report of the sidetrack, in a fixed order of preference: (1) a depth stated for the point where the narrative first reports new formation or departure from the parent hole, or where the kick-off started; (2) for a casing exit by a milled window, the top of the window; (3) where the narrative names the kick-off event but gives no depth, the measured depth of the same report; (4) where the narrative is empty, the measured depth at the parent-to-child transition. The first step with evidence is used. A milled window gives a window interval and no single departure depth. Step 2 therefore applies to it. Confidence follows from the evidence: HIGH where the narrative states the depth together with the departure or the window top, MEDIUM where it states the start of the kick-off or the event without a departure depth, and LOW where the evidence is an interval or the narrative is empty. These definitions describe the grades assigned in Table 7.",
+    "kickoff.order_step_counts", RV + ": the one rule replaced by an explicit order of preference with precedence and confidence definitions")
+sub(ix("NOD's wlbKickOffPoint agrees with the recovered depth"), "15/9-19 ST2, which rests on the measured depth alone,", "15/9-19 ST2, which lies between 1,486 and 1,536 m and rests on the measured depth at the transition,", "kickoff.19ST2.range_m", RV)
+
+# 5.7 duration (old numbering) and 6.1
+sub(ix("The 1,421-row depth-time-phase dataset can be queried directly."), "allow wellbores drilled from the same platform to be compared, phase durations can be extracted for offset-well planning, and the classified phases locate casing, cementing and P&A operations in time and depth for each wellbore.",
+    "allow wellbores drilled from the same platform to be compared, and the classified phases locate casing, cementing and P&A operations in time and depth for each wellbore as single-report labels. Phase counts and durations should not be used directly for offset-well planning, because the phases are single-report labels that agree with an engineer's labels on 58% of the sampled reports (Section @AGR@) and the archive has gaps.", "agreement.pct", RV + ": offset-well planning claim removed")
+sub(ix("The 1,421-row depth-time-phase dataset can be queried directly."), "a user can bound how much of any phase-based statistic is missing. At the attainable-rate estimate, roughly 199 DDRs of construction content remain unassigned, mostly drilling progress reported without a hole size. Table 8 offers elapsed days, reports and metres per report-day to total depth for each wellbore as a first benchmark, and the gap flag marks wellbores whose elapsed time cannot be read as drilling time.",
+    "a user can bound how much of any phase-based statistic is missing: roughly 198 reports with construction content remain unassigned, mostly drilling progress reported without a hole size. Table 8 gives elapsed days, reports and metres per report to total depth for each wellbore. Metres per report is not a rate of penetration. It includes non-drilling days, gaps between reports and, for 15/9-F-1, two campaigns. The gap flag marks wellbores whose elapsed time cannot be read as drilling time.",
+    "audit.recoverable_residual_ddrs", RV + ": m per report, with the statement that it is not a rate of penetration; recoverable coverage")
+
+# 6.3 shared-hole principle
+sub(ix("Assessments of depleted fields for CO2 storage"), "Wellbores that share a physical interval, such as the four wellbores of the 15/9-F-1 family, which share the hole above 1,364 m MD, are not independent penetrations above their kick-off depths.",
+    "A sidetrack shares the hole of its parent above its kick-off depth. The wellbores of one family are therefore not independent penetrations above that depth. The 15/9-F-1 family shares the hole above 1,364 m MD, the five wellbores of the 15/9-F-15 family share it above about 1,380 m MD, and 15/9-19 S, ST2 and A share it above the kick-off of each sidetrack (15/9-19 ST2 leaves 15/9-19 S between 1,486 and 1,536 m, and 15/9-19 A leaves it, according to NOD, at 2,178 m).",
+    "kickoff.F-1_family_shared_hole_above_m;kickoff.19ST2.range_m", RV + ": shared-hole principle stated generally with three examples")
+
+# 6.4 comma splice
+sub(ix("The audit protocol, the placeholder checks"), "of one operator over the life of one field, Applying it elsewhere", "of one operator over the life of one field. Applying it elsewhere", None, RV + ": comma splice")
+
+# 7 Limitations
+sub(ix("The classifier assigns a single primary phase to each DDR."), "The Cementing count therefore underrepresents the days on which cementing occurred alongside another operation.",
+    "The Cementing count therefore underrepresents the days on which cementing occurred alongside another operation. Each report is also classified on its own, without the neighbouring reports or the state of the campaign. An engineer who labelled 52 classified reports on the same terms agreed with the classifier on 30 (58%; Section @AGR@). The labels came from one person, the author, and the causes of the disagreements were assigned from the narratives.", "agreement.agree;agreement.n;agreement.pct", RV + ": limitation on single-report classification")
+sub(ix("The audit labelled construction content only."), "which makes the attainable rate conservative with respect to those phases.", "which makes the recoverable coverage conservative with respect to those phases. The coverage counts construction content found in unclassified reports and does not guarantee that a recovered report would receive the correct phase.", None, RV)
+sub(ix("The audit labelled construction content only."), "The interval of 82.5 to 88.3% reflects the modest sample size.", "The design-based interval of 82.6 to 88.1% reflects the modest sample size and rests on a normal approximation, which is optimistic with 11 records in one group.", "audit.recoverable_coverage_ci_low_pct;audit.recoverable_coverage_ci_high_pct", RV)
+i100 = ix("Kick-off depths were read from the narratives by one rule")
+sub(i100, "Kick-off depths were read from the narratives by one rule, and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth alone and", "Kick-off depths were read from the narratives in a fixed order of preference (Section 5.6), and two of them rest on weaker evidence, 15/9-19 ST2 on the measured depth at the transition (between 1,486 and 1,536 m) and", "kickoff.19ST2.range_m", RV)
+sub(i100, "The four wellbores of the 15/9-F-1 family (F-1, F-1 A, F-1 B and F-1 C) share the hole above 1,364 m MD, and F-1, F-1 A and F-1 B share it above approximately 2,617 to 2,620 m MD. Any formation-level analysis that treats them as independent must account for this. Metres per report-day are rates per reported day, and gaps between reports in the archive affect the elapsed time to total depth (the gap flag in Table 8).",
+    "A sidetrack shares the hole of its parent above its kick-off depth. The four wellbores of the 15/9-F-1 family share the hole above 1,364 m MD (F-1, F-1 A and F-1 B share it above approximately 2,617 to 2,620 m MD), the five wellbores of the 15/9-F-15 family share it above about 1,380 m MD, and the same holds for 15/9-19 S, ST2 and A. Any formation-level analysis that treats these wellbores as independent must account for this. Metres per report are not rates of penetration, and gaps between reports in the archive affect the elapsed time to total depth (the gap flag in Table 8).",
+    "kickoff.F-1_family_shared_hole_above_m;kickoff.F-1_F-1A_F-1B_shared_hole_above_m", RV + ": shared-hole principle stated generally; m per report")
+sub(ix("No isolated ablation was run"), "on the classification rate.", "on coverage.", None, RV)
+sub(ix("The analysis starts from the raw XML"), "The near-exact agreement with NOD on total depth (22 of 24) indicates", "The agreement with NOD on total depth (19 of 21 name-matched wellbores within 0.5 m) indicates", "td.name_matched;td.name_matched_within_0p5", RV)
+
+# 8 Conclusions (the opening paragraph is left for the author)
+sub(ix("A deterministic, 13-phase rule-based classifier assigns"), "assigns 1,303 of 1,759 Volve WITSML DDRs (74.1%) to a construction phase,", "assigns a phase to 1,303 of 1,759 Volve WITSML DDRs, a coverage of 74.1%,", None, RV + ": coverage")
+sub(ix("A stratified audit finds that 52%"), "which gives an estimated attainable classification rate of 85.4% (95% CI 82.5 to 88.3%).", "which gives an estimated recoverable coverage of 85.3% (95% CI 82.6 to 88.1%).", "audit.recoverable_coverage_pct;audit.recoverable_coverage_ci_low_pct;audit.recoverable_coverage_ci_high_pct", RV + ": design-based estimate")
+setp(ix("Reconstructed total depth agrees exactly"), "Reconstructed total depth agrees with the NOD register within 0.5 m for 19 of 21 wellbores matched by name, and for the 3 technical sidetracks matched by depth. The two differences are 227 m on 15/9-19 S, where the archive holds no reports for the final drilling, and 15 m on 15/9-F-15, whose cause is unresolved.",
+     "Conclusions bullet on total depth", "td.name_matched;td.name_matched_within_0p5;td.depth_matched;td.diff.15/9-F-15;td.diff.15/9-19 S", RV + ": F-15 is no longer called explained")
+sub(ix("Future work should enlarge the audit sample"), "close the identified pattern gaps,", "close the identified pattern gaps, classify each report together with its neighbouring reports and the state of the campaign,", None, RV)
+
+
+# figure captions
+sub(ix("Fig. 2: Depth versus time for four representative wellbores"), "Depth versus time for four representative wellbores, coloured by classified phase.", "Depth versus time for six wellbores in four panels (15/9-19 S; 15/9-F-14; 15/9-F-1, F-1 B and F-1 C; 15/9-F-7), coloured by the phase assigned to each report. The phases are single-report labels.", None, RV + ": caption matches the panels")
+sub(ix("Fig. 3: Report number"), "(other phases and unclassified reports in grey).", "(other phases and unclassified reports in grey). The counts in the legend are reports with a valid depth only, and the phases are single-report labels.", None, RV)
+sub(ix("Fig. 4: Reconstructed WITSML maximum MD"), "are not plotted.", "are not plotted. Circles mark the 21 wellbores matched by name and diamonds the 3 technical sidetracks matched by depth.", "td.name_matched;td.depth_matched", RV + ": distinct markers for depth-matched sidetracks")
+sub(ix("Fig. 5: Spud date offset"), "is excluded because NOD does not register it separately.", "is excluded because NOD does not register it separately. A dot marks the end of every bar and makes zero-day offsets visible, and 15/9-F-11 is shown as Unresolved.", None, RV + ": zero-length bars visible; F-11 Unresolved")
+
+
 # flush the edited paragraphs
 for i, text in T.items():
     write_par(P[i], text)
@@ -456,7 +569,7 @@ log("Table 2", "Reservoir drilling; Surface casing", "12¼ in. and smaller hole;
 t4 = doc.tables[3]
 set_cell(t4.rows[1].cells[1], "6"); set_cell(t4.rows[1].cells[2], "15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D")
 set_cell(t4.rows[2].cells[2], "Administrative spud precedes operational start by days to weeks (15/9-19 B, F-1 A, F-1 B, F-1 C, F-5, F-9 A, F-11 B, F-14)")
-set_cell(t4.rows[6].cells[1], "5"); set_cell(t4.rows[6].cells[2], "15/9-19 BT2, 19 S, 19 ST2, F-9, F-11 (NOD records a pre-drill campaign, 6 to 17 April 2012, that is absent from the DDR archive; the 2013 reports describe a fresh spud from seabed, so the relationship between the campaigns cannot be determined from these records)")
+set_cell(t4.rows[6].cells[1], "5"); set_cell(t4.rows[6].cells[2], "15/9-19 BT2, 19 S, 19 ST2, F-9, F-11 (for F-11 see the text)")
 log("Table 4, row Unresolved", "4, 15/9-19 series", "5: 15/9-19 BT2, 19 S, 19 ST2, F-9, F-11", "spud.unresolved", "correction of the v2 detail cell (19 B is a definitional offset, F-9 is unresolved) and 15/9-F-11 moves from Exact to Unresolved under the NOD pre-drill-else-main rule (decision 47)")
 log("Table 4, row Exact", "7", "6: 15/9-19 A, F-10, F-15 A, F-15 B, F-15 C, F-15 D", "spud.exact", "15/9-F-11 moves to Unresolved under the NOD pre-drill-else-main rule (decision 47)")
 log("Table 4, row Definitional offset", "(no wellbores listed)", "wellbores listed", "spud.definitional_offset", "detail added from the spud table")
@@ -499,15 +612,15 @@ def fp(prefix):
     hits = [p for p in P if p.text.startswith(prefix)]; assert len(hits) == 1, (prefix, len(hits)); return hits[0]
 
 
-ABB = [("BHA", "bottom-hole assembly", "heading"), ("DP", "drill pipe", "DDR"), ("EZSV", "drillable cement retainer or bridge plug (Halliburton trade name)", "DP"), ("LWD", "logging while drilling", "EZSV"),
-       ("MT", "metric tonnes", "MD"), ("MWD", "measurement while drilling", "MT"), ("POOH", "pull out of hole", "P&A"), ("SG", "specific gravity", "RKB"),
+ABB = [("BHA", "bottom-hole assembly", "heading"), ("DP", "drill pipe", "DDR"), ("EMW", "equivalent mud weight", "DP"), ("EZSV", "drillable cement retainer or bridge plug (Halliburton trade name)", "EMW"), ("FIT", "formation integrity test", "EZSV"), ("LCM", "lost circulation material", "FIT"), ("LWD", "logging while drilling", "LCM"),
+       ("MWD", "measurement while drilling", "MD"), ("SG", "specific gravity", "RKB"),
        ("VSP", "vertical seismic profile", "TVD"), ("WOW", "waiting on weather", "WITSML")]
 anchor_of = {"heading": [p for p in P if p.style.name.startswith("Heading") and p.text.strip() == "Abbreviations"][0]}
 tmpl = fp("BOP  =")
 for abbr, exp, after in ABB:
     anc = anchor_of[after] if after in anchor_of else fp(after + "  =")
     anchor_of[abbr] = new_par_after(anc._p, tmpl, f"{abbr}  =  {exp}", renum=False)
-log("Abbreviations", "BOP, CI, DDR, MD, NOD, P&A, RKB, TD, TVD, WITSML", "adds BHA, DP, EZSV, LWD, MT, MWD, POOH, SG, VSP, WOW", None, "final review: abbreviations used in the quotations and in Table 2")
+log("Abbreviations", "BOP, CI, DDR, MD, NOD, P&A, RKB, TD, TVD, WITSML", "adds BHA, DP, EMW, EZSV, FIT, LCM, LWD, MWD, SG, VSP, WOW (MT and POOH, no longer used in the text, are not listed)", None, "final review: abbreviations used in the quotations and in Table 2")
 
 
 def ref_run_sub(prefix, old, new):
@@ -525,11 +638,11 @@ log("References", "Hoffimann 2017 (arXiv); Tunkiel 2020; Priyadarshy and Sidahme
 
 # ---- Table 4 rebuilt with a Rule column (the category rules moved out of the text of Section 5.5)
 RULE = {"Exact agreement": "R4: WITSML date within 1 day of the NOD date, and the first report or free-text spud follows it by at most 1 day.",
-        "Definitional offset": "R6: WITSML date within 8 days of the NOD date, and the free-text operational start follows it by 2 to 20 days. R5: a parent leg whose NOD record is claimed by a technical sidetrack and that has no free-text spud date of its own (15/9-19 B).",
+        "Definitional offset": "R6: WITSML date within 8 days of the NOD date, and the free-text operational start follows it by 2 to 20 days. R5a: a parent leg whose NOD record is claimed by a technical sidetrack and that has no free-text spud date of its own (15/9-19 B).",
         "WITSML data-entry error": "R2: WITSML date differs from the first report or free-text spud by more than 30 days, while the NOD date agrees with them within 3 days.",
         "NOD date marks later campaign": "R3: WITSML date within 7 days of the first report, but more than 1 year from the NOD date.",
         "Inherited parent spud date": "R1: the sidetrack carries the same spud date as its parent.",
-        "Unresolved": "R5: a technical sidetrack whose NOD record is its parent leg's (15/9-19 BT2 with 19 B, 19 ST2 with 19 SR). R7: any wellbore that no other rule fits."}
+        "Unresolved": "R5b: a technical sidetrack whose NOD record is its parent leg's (15/9-19 BT2 with 19 B, 19 ST2 with 19 SR). R7: any wellbore that no other rule fits."}
 rows4 = []
 for r in t4.rows[1:]:
     c = [x.text for x in r.cells]
@@ -537,7 +650,7 @@ for r in t4.rows[1:]:
     rows4.append([c[0], c[1], RULE.get(c[0], ""), c[2]])
 tbl4 = make_table(["Outcome", "Wellbores", "Rule", "Detail"], rows4, [1700, 800, 3900, 2960])
 t4._tbl.addnext(tbl4); t4._tbl.getparent().remove(t4._tbl)
-note4 = new_par_after(tbl4, note_t, "Rules are applied in the order R1 (inherited), R5 (technical sidetrack), R2 (error), R3 (later campaign), R4 (exact), R6 (definitional offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7).")
+note4 = new_par_after(tbl4, note_t, "Rules are applied in the order R1 (inherited), R5a (parent leg) and R5b (technical sidetrack), R2 (error), R3 (later campaign), R4 (exact), R6 (definitional offset), R7 (unresolved). Unresolved includes 15/9-19 S, F-9 and F-11 (R7).")
 log("Table 4", "three columns (Outcome, Wellbores, Detail); category named Wellbore-identity conflation", "four columns with a Rule column; category named NOD date marks later campaign", "spud.rule_thresholds_days;spud.table4",
     "TJ review: rules moved from the text of Section 5.5 into the table; the technical-sidetrack rule now names the wellbores it applies to (15/9-19 BT2, 19 ST2 and the parent leg 19 B)")
 
@@ -577,7 +690,7 @@ tbl2 = make_table(["Priority", "Phase", "Hole and casing sizes (in.)", "Example 
 a2 = new_par_after(P[25]._p, body_t, "Table 2 lists the 13 phases in priority order with representative triggers taken from the pattern table of the repository (outputs/stage4_priority_rules.csv). Sizes are matched in the spellings found in the reports, for example 17 1/2 or 17.5; words are matched without regard to case; each phase has further patterns that are not shown.", renum=False)
 c2 = new_par_after(a2._p, cap_t, "Table 2: Phases in priority order with representative triggers", renum=False)
 c2._p.addnext(tbl2)
-n2 = new_par_after(tbl2, note_t, "A report is assigned to the highest-priority phase with a match; a report that matches no pattern is Unclassified.", renum=False)
+n2 = new_par_after(tbl2, note_t, "A report is assigned to the highest-priority phase with a match; a report that matches no pattern is Unclassified. The triggers shown are simplified: the actual expressions impose context and distance limits (for example, a size must lie close to the word hole or casing), and all of them are listed in src/classifier_v3.py. Both casing sizes in the table occur in the reports: 14 in. in %d DDRs (%s) and 10¾ in. in %d DDRs (%d wellbores), %d of which also mention a tie-back or the combined 9⅝ x 10¾ in. string." % (val("casing.14in_ddrs"), ", ".join(val("casing.14in_wellbores")), val("casing.10_3_4in_ddrs"), len(val("casing.10_3_4in_wellbores")), val("casing.10_3_4in_tieback_or_combination_ddrs")), renum=False)
 log("Section 3.3", "(no phase table)", "Table 2: 13 phases, priority, sizes and trigger words from the frozen pattern table", "classifier.phase_table", "TJ review: generated from outputs/stage4_priority_rules.csv")
 
 # ---- Table 5 (kick-off) and the text around it
@@ -587,11 +700,14 @@ rows5 = []
 for ri, r in enumerate(kt.itertuples()):
     parent = "15/9-19 S (per NOD)" if str(r.parent).startswith("none") else r.parent
     rows5.append([r.sidetrack, parent, fdepth(r.ddr_kickoff_depth_m), MET[r.method], "" if pd.isna(r.nod_wlbKickOffPoint_m) else fdepth(r.nod_wlbKickOffPoint_m), fdiff(r.nod_minus_ddr_m), r.confidence])
+for _r in rows5:
+    if _r[0] == "15/9-19 ST2": _r[2] = "%s to %s" % tuple(fdepth(x) for x in val("kickoff.19ST2.range_m"))
+    if _r[0] == "15/9-F-11 B": _r[3] = "end of stated interval (%s to %s m)" % tuple(fm(x) for x in val("kickoff.F-11 B.interval_m"))
 tbl5 = make_table(["Sidetrack", "Parent", "Kick-off depth (m MD)", "Method", "NOD kick-off (m)", "NOD minus DDR (m)", "Confidence"], rows5, [1350, 1500, 1050, 2260, 900, 1100, 1200], right={2, 4, 5})
 A = new_par_after(P[67]._p, body_t, f"All 15 sidetracks by designation (15/9-19 A, 19 B, 19 BT2 and 19 ST2, F-1 A, F-1 B and F-1 C, F-9 A, F-11 A, F-11 B and F-11 T2, and F-15 A to F-15 D) yielded a kick-off depth (Table 5). For 11 the depth is written in the narrative; for 3 (15/9-F-1 A, F-1 B and F-15 D) the narrative names the kick-off event but not the depth, which is taken from the measured depth of the same report; for 1 (15/9-19 ST2) both reports at the transition are empty and the depth is the measured depth there, the weakest case. For 15/9-F-1 C the last F-1 B report of 22 February 2014 reads \"Commenced time drilling to1364 m. 50% formation obtained at 1364 m.\", and the first F-1 C report drills 17 1/2 in. hole from that depth, so the kick-off is 1,364 m. The depth of 3,059 m that the narratives report on 13 March 2014 is the start of the 8 1/2 in. section, after casing was run, not the kick-off. 15/9-19 A is a sidetrack whose kick-off is the top of a milled window at 2,178 m (window milled from 2,178 to 2,183 m), a depth that NOD also records.")
 cap5 = new_par_after(A._p, cap_t, "Table 5: Sidetrack kick-off depths, 15 sidetracks")
 cap5._p.addnext(tbl5)
-note5 = new_par_after(tbl5, note_t, f"Depths are m MD. NOD minus DDR is NOD's wlbKickOffPoint minus the recovered depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML reports, so the kick-off is read from the 15/9-19 A reports.")
+note5 = new_par_after(tbl5, note_t, f"Depths are m MD. NOD minus DDR is NOD's wlbKickOffPoint minus the recovered depth; blank where NOD has no value. NOD lists 15/9-19 S as the parent; the re-entry from which 15/9-19 A was drilled (NOD 15/9-19 SR2, 1997) has no WITSML reports, so the kick-off is read from the 15/9-19 A reports. Parent follows the designation chain, each sidetrack being listed under the wellbore designated before it. " + ", ".join(val("kickoff.shallower_than_parent_kickoff")[:-1]).replace("15/9-", "") + " and " + val("kickoff.shallower_than_parent_kickoff")[-1].replace("15/9-", "") + " kick off at a depth shallower than the kick-off of that parent and leave the hole shared with earlier wellbores of their family (Section 6.3). For 15/9-19 ST2 the range runs from the depth to which cement was drilled out to the measured depth at the transition, and Table 8 uses 1,536 m.")
 log("Section 5.6", "(no kick-off table)", "Table 5: sidetrack, parent, kick-off depth, method, NOD value, difference, confidence", "kickoff.table;kickoff.method_counts;kickoff.nod_comparison", "new table from the kick-off table (author-approved, no highlighting)")
 log("Section 5.6", "Twelve free-text and two depth-sequence recoveries; 15th sidetrack unidentified; the F-1 C example 'Drilled and oriented 8 1/2\" from 3059 m'",
     "11 depth in text, 3 event in text with depth from md, 1 depth sequence; 15 recovered; F-1 C 1,364 m; 3,059 m is the 8 1/2 in. section start; 19 A (2,178 m) is the 15th sidetrack",
@@ -604,7 +720,7 @@ for ri, r in enumerate(dt.itertuples()):
     src = dl if r.wellbore in dl.index else do
     ind = r.wellbore in val("duration.indicative_only")
     rows6.append([r.wellbore + (" (indicative)" if ind else ""), r.first_ddr, fdepth(r.td_md_m), r.td_date, fm(r.elapsed_days_to_td), fm(r.ddrs_to_td), "yes" if r.gap_flag else "", fdepth(src.loc[r.wellbore, "drilled_length_m"]), fm(src.loc[r.wellbore, "m_per_report_day"], 1)])
-tbl6 = make_table(["Wellbore", "First report", "TD (m)", "TD reached", "Elapsed days to TD", "Reports to TD", "Gap flag", "Drilled length (m)", "m per report-day"], rows6, [1650, 1050, 800, 1050, 900, 800, 650, 1230, 1230], right={2, 4, 5, 7, 8})
+tbl6 = make_table(["Wellbore", "First report", "TD (m)", "TD reached", "Elapsed days to TD", "Reports to TD", "Gap flag", "Drilled length (m)", "m per report"], rows6, [1650, 1050, 800, 1050, 900, 800, 650, 1230, 1230], right={2, 4, 5, 7, 8})
 h57 = new_par_after(P[69]._p, head_t, "5.7 Duration to Total Depth")
 a57 = new_par_after(h57._p, body_t, f"Table 6 gives, for each wellbore, the first report (the 1980 date sentinel excluded), the date total depth was first reached (the maximum valid depth of Table 3), the elapsed calendar days from the first report to that date, the number of reports in that span (inclusive), the drilled length (total depth minus the kick-off depth of Table 5 for the 15 sidetracks, total depth for the other 11) and metres per report-day (drilled length divided by the number of reports). Elapsed days and reports agree where a wellbore was reported daily and differ where the archive has gaps; wellbores whose elapsed days exceed twice their reports are flagged. Seven of the 26 are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth of 3,632 m on 17 August 2013, 2,085 days after its first report on 2 December 2007, in 31 reports, four of them from 2007. 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) end at the depth of an abandoned parent leg or stub (Section 5.4), so their durations are indicative only. Drilled lengths and rates for sidetracks depend on the kick-off depths of Section 5.6; rates are per reported day, not per elapsed day, and for F-1 they mix two campaigns. Per-phase report counts for each wellbore and well family are published with the duration table.")
 cap6 = new_par_after(a57._p, cap_t, "Table 6: Duration to total depth (TD) and drilled length, 26 wellbores")
@@ -633,6 +749,97 @@ hB = new_par_after(P[143]._p, P[142], "Appendix B: Audit Arithmetic", renum=Fals
 pB1 = new_par_after(hB._p, P[143], "This appendix gives the arithmetic behind the attainable classification rate of Section 5.2.", renum=False)
 pB2 = new_par_after(pB1._p, P[143], POST(OLD50), renum=False)
 log("Appendix B (new)", "(arithmetic was in Section 5.2)", "full arithmetic and stratum-weighted check", "audit.sample_proportion;audit.wilson_low;audit.wilson_high;audit.scale_frame_over_total;audit.residual_miss;audit.observed_rate;audit.stratum_weighted_rate_pct", "TJ review: moved from Section 5.2")
+
+# =========================================================================== external review round (5 November 2026): code-built paragraphs, tables, numbering
+def pedit(par, old, new, rid, reason):
+    t = par.text; assert t.count(old) == 1, (old[:70], t.count(old))
+    write_par(par, t.replace(old, new)); LOG.append(dict(location="Section 5.6/5.7 and table notes", old=old[:160], new=new, id=rid or "", reason=RV + ": " + reason))
+
+
+# Section 5.6, the text around Table 7
+pedit(A, "The depth is written in the narrative for 11 of them.", "The depth is written in the narrative for 11 of them (step 1 for 9 and step 2 for 2).", "kickoff.order_step_counts", "steps of the order of preference")
+pedit(A, "and the depth is taken from the measured depth of the same report. For 15/9-19 ST2 both reports at the transition are empty. The depth is the measured depth there, which makes it the weakest case.",
+      "and the depth is taken from the measured depth of the same report (step 3). For 15/9-19 ST2 both reports at the transition are empty (step 4). The kick-off lies between 1,486 m, the depth to which the parent drilled cement the day before, and 1,536 m, the measured depth at the transition. Three cement plugs had been set above it, the last from 1,543 to 1,430 m, and the confidence is LOW.",
+      "kickoff.19ST2.range_m;kickoff.19ST2.cement_plugs_m", "15/9-19 ST2 reported as a range")
+pedit(A, "reads \"Commenced time drilling to1364 m.", "reads \"Commenced time drilling to1364 [sic] m.", None, "[sic] for the missing space in the report")
+# Section 5.7
+pedit(a57, "the drilled length and the metres per report-day.", "the drilled length and the metres per report.", None, "m per report")
+pedit(a57, "and the rate divides it by the number of reports.", "and metres per report divides it by the number of reports.", None, "m per report")
+pedit(a57, "The rates are per reported day, and for F-1 they mix two campaigns.", "Metres per report is not a rate of penetration. It includes non-drilling days, gaps between reports and, for F-1, two campaigns.", None, "not a rate of penetration")
+pedit(a57, "Drilled lengths and rates for sidetracks depend", "Drilled lengths and metres per report for sidetracks depend", None, "m per report")
+pedit(cb, "by one rule.", "by a fixed order of preference.", None, "order of preference")
+pedit(note6, "from the rig datum", "from the rotary kelly bushing (RKB)", None, "datum named")
+
+# Table 5 (total depth): outcome words and the depth-matched sidetracks
+t5 = [t for t in doc.tables if t.rows[0].cells[0].text.startswith("Wellbore (WITSML)")]; assert len(t5) == 1
+for row in t5[0].rows[1:]:
+    c = [x.text for x in row.cells]
+    if c[5].startswith("Technical sidetrack, matched to"):
+        set_cell(row.cells[4], "Within 0.5 m (by depth)"); set_cell(row.cells[5], c[5].replace("matched to", "matched by depth to"))
+    elif c[4] == "Exact": set_cell(row.cells[4], "Within 0.5 m")
+    elif c[4] == "Close": set_cell(row.cells[4], "More than 0.5 m")
+    if c[0] == "15/9-F-15": set_cell(row.cells[5], "TD stated as 4,090 m in the reports; cause of the 15 m difference unresolved")
+log("Table 5", "Outcome Exact / Close", "Within 0.5 m (by depth for the three technical sidetracks) / More than 0.5 m", "td.name_matched;td.depth_matched", RV + ": depth-matched sidetracks reported separately; F-15 note")
+
+# Appendix B: design-based arithmetic first, the Wilson figures as a comparison
+da = val("audit.design_arithmetic"); wl = val("audit.sample_proportion")
+pedit(pB1, "attainable classification rate", "estimated recoverable coverage", None, "Appendix B")
+write_par(pB2, f"The two groups were sampled in near-proportion to their size (39 of 296, {val('audit.design_sampling_fraction_construction_pct')}%, and 11 of 87, {val('audit.design_sampling_fraction_production_pct')}%). The sample proportions of construction reports are 23/39 = {da['p_construction']:.4f} and 3/11 = {da['p_production']:.4f}, and the group weights are 296/383 = {da['W_construction']:.4f} and 87/383 = {da['W_production']:.4f}. "
+          f"The stratified proportion is therefore {da['W_construction']:.4f} × {da['p_construction']:.4f} + {da['W_production']:.4f} × {da['p_production']:.4f} = {da['p_stratified']:.4f}. Its variance is the sum over the two groups of W² (1 − f) p (1 − p) / (n − 1), where f is the sampling fraction. The sum is {da['variance']:.4f}, the standard error is {da['se']:.4f}, and the 95% interval is {da['p_stratified']:.4f} ± 1.96 × {da['se']:.4f}, or {da['ci_low']:.3f} to {da['ci_high']:.3f} (normal approximation, with only 11 records in the production group). "
+          f"The sample comes from the 383 records with a genuine narrative among the 456 unclassified records, and the proportion is scaled by 383/1,759 = {val('audit.scale_frame_over_total'):.4f}. The estimated residual is {da['p_stratified']:.4f} × {val('audit.scale_frame_over_total'):.4f} = {da['residual']:.4f}, or {val('audit.recoverable_residual_pp')} percentage points (approximately {val('audit.recoverable_residual_ddrs')} DDRs). "
+          f"Adding the observed coverage (1,303/1,759 = {val('audit.observed_rate'):.4f}) gives an estimated recoverable coverage of {val('audit.recoverable_coverage_pct')}%. Scaling the interval in the same way gives {val('audit.observed_rate'):.4f} + {da['ci_low']:.3f} × {val('audit.scale_frame_over_total'):.4f} = {da['recovery_ci_low']:.3f} and {val('audit.observed_rate'):.4f} + {da['ci_high']:.3f} × {val('audit.scale_frame_over_total'):.4f} = {da['recovery_ci_high']:.3f}, a 95% interval of {val('audit.recoverable_coverage_ci_low_pct')} to {val('audit.recoverable_coverage_ci_high_pct')}%.")
+pWil = new_par_after(pB2._p, P[143], f"For comparison, the unstratified sample proportion is 26/50 = {wl:.3f} with a Wilson-score 95% interval of {val('audit.wilson_low'):.3f} to {val('audit.wilson_high'):.3f}. Scaling by {val('audit.scale_frame_over_total'):.4f} gives a residual of {val('audit.residual_miss'):.4f} (approximately {val('audit.residual_miss_ddrs')} DDRs) and an estimated recoverable coverage of {val('audit.attainable_rate_pct')}%, with the interval {val('audit.observed_rate'):.4f} + {val('audit.wilson_low'):.3f} × {val('audit.scale_frame_over_total'):.4f} = {val('audit.observed_rate') + val('audit.wilson_low') * val('audit.scale_frame_over_total'):.3f} and {val('audit.observed_rate'):.4f} + {val('audit.wilson_high'):.3f} × {val('audit.scale_frame_over_total'):.4f} = {val('audit.observed_rate') + val('audit.wilson_high') * val('audit.scale_frame_over_total'):.3f}, or {val('audit.attainable_ci_low_pct')} to {val('audit.attainable_ci_high_pct')}%. The two estimates differ by 0.1 percentage point.", renum=False)
+log("Appendix B", "attainable classification rate 85.4% (Wilson) with the stratum-weighted check 85.3%", "design-based estimated recoverable coverage 85.3% (82.6 to 88.1%), Wilson 85.4% (82.5 to 88.3%) as a comparison", "audit.design_arithmetic;audit.recoverable_coverage_pct;audit.attainable_rate_pct", RV)
+
+# abbreviations: drop any that the text no longer uses
+_abp = [p for p in doc.paragraphs if re.match(r"^\S+  =  ", p.text)]
+_body = " ".join(p.text for p in doc.paragraphs if p not in _abp) + " " + " ".join(c.text for t in doc.tables for r in t.rows for c in r.cells)
+for p in _abp:
+    ab = p.text.split("  =  ")[0]
+    if not re.search(r"(?<![A-Za-z])" + re.escape(ab) + r"(?![A-Za-z])", _body, re.I):
+        log("Abbreviations", p.text, "(removed: not used in the text)", None, RV); p._p.getparent().remove(p._p)
+
+# Section numbering: the new Section 5.3 (phase label agreement) moves the old 5.3 to 5.7 up by one
+_SECRE = re.compile(r"(Sections? )5\.([3-7])\b"); _HEAD = re.compile(r"^5\.([3-7])(?= )")
+def _all_pars(d):
+    for p in d.paragraphs: yield p
+    for t in d.tables:
+        for r in t.rows:
+            for c in r.cells:
+                for p in c.paragraphs: yield p
+_n_ref = _n_head = 0
+for p in _all_pars(doc):
+    for r in p.runs:
+        t0 = r.text; t1 = _SECRE.sub(lambda m: m.group(1) + "5." + str(int(m.group(2)) + 1), t0)
+        if p.style.name.startswith("Heading 2"): t1 = _HEAD.sub(lambda m: "5." + str(int(m.group(1)) + 1), t1)
+        if t1 != t0: r.text = t1; _n_ref += t0 != t1 and not p.style.name.startswith("Heading"); _n_head += p.style.name.startswith("Heading")
+print("section references shifted:", _n_ref, "| headings shifted:", _n_head)
+assert _n_head == 5, _n_head
+log("Section 5", "5.3 Timeline Dataset to 5.7 Duration to Total Depth", "5.4 to 5.8; the new Section 5.3 is Phase Label Agreement", None, RV + ": new subsection inserted; every reference to Sections 5.3 to 5.7 moves with it")
+
+# the new Section 5.3
+_h = [p for p in doc.paragraphs if p.style.name.startswith("Heading 2") and p.text.startswith("5.4 Timeline Dataset")]; assert len(_h) == 1
+_prev = _h[0]._p.getprevious()
+_cs = val("agreement.causes_proposed"); _CK = {"inc": "incidental keyword", "ctx": "campaign context", "win": "whipstock or window milling under Workover", "sch": "phase-scheme ambiguity", "mix": "mixed day", "unx": "unclear from the text (author to say)"}
+assert sum(_cs.values()) == 22 and set(_cs) == set(_CK.values())
+_ph_txt = ", ".join(f"{k} {v[0]}" for k, v in sorted(val("agreement.per_phase").items(), key=lambda kv: (-kv[1][0], kv[0])))
+_s53 = [("5.3 Phase Label Agreement", head_t),
+        ("The classified phases were checked with a second audit. Four reports were drawn at random from each of the 13 phases, 52 of the 1,303 classified reports, with the seed recorded in the repository. The author labelled the main operation of each day from the report alone, without seeing the assigned phase, which is how the classifier reads it.", body_t),
+        (f"An engineer labelling the same single reports agreed with the classifier on {val('agreement.agree')} of {val('agreement.n')} ({round(val('agreement.pct'))}%); many days cannot be assigned a phase without the neighbouring reports, which a single-report classifier does not see. The Wilson 95% interval is {val('agreement.wilson_low_pct')} to {val('agreement.wilson_high_pct')}%, and the agreement is {val('agreement.weighted_pct')}% when the rate of each phase is weighted by the share of the 1,303 classified reports that the phase holds. Agreement by phase, out of four reports each, was {_ph_txt}. All four sampled Cementing reports and all four Workover reports disagreed.", body_t),
+        (f"Read against the report texts, {_cs[_CK['inc']]} of the 22 disagreements involve a keyword that appears incidentally while the main operation is another, {_cs[_CK['ctx']]} depend on campaign context (for example, pulling tubing during an abandonment campaign, or waiting on weather before retrieving a riser), {_cs[_CK['win']]} are whipstock or window milling that the classifier assigns to Workover and the author labelled Intermediate drilling, {_cs[_CK['sch']]} are casing runs that the size-based phase names place in Intermediate casing and the author labelled Liner/Casing run, {_cs[_CK['mix']]} is a day that mixes waiting and rigging up, and {_cs[_CK['unx']]} are unexplained. The causes were assigned from the narratives and are indicative. The author did not assign them. Coverage (Section 5.1) counts the reports that carry a phase, and the agreement shows how far the phase describes a report read on its own. Table 4 and the phase colours in Figs. 2 and 3 should be read as single-report labels.", body_t)]
+_anc = _prev
+for _txt, _tp in _s53:
+    _np = new_par_after(_anc, _tp, _txt, renum=False); _anc = _np._p
+log("Section 5.3 (new)", "(no phase label agreement)", "single-report blind agreement 30 of 52, Wilson interval, frequency-weighted agreement, agreement by phase, causes of disagreement", "agreement.agree;agreement.n;agreement.pct;agreement.wilson_low_pct;agreement.wilson_high_pct;agreement.weighted_pct;agreement.per_phase;agreement.causes_proposed", RV + ": secondary result with the framing agreed with the author")
+# a bullet in the Conclusions
+_ib = ix("A stratified audit finds that 52%")
+new_par_after(P[_ib]._p, bullet_t, f"An engineer labelling 52 classified reports one at a time agreed with the classifier on {val('agreement.agree')} ({round(val('agreement.pct'))}%; {val('agreement.weighted_pct')}% when weighted by phase size). Many days cannot be assigned a phase without the neighbouring reports, which a single-report classifier does not see. The main causes of disagreement were incidental keywords, campaign context, and whipstock and window milling classified as Workover.", renum=False)
+log("Conclusions (new bullet)", "(none)", "single-report agreement", "agreement.agree;agreement.pct;agreement.weighted_pct", RV)
+for p in _all_pars(doc):
+    for r in p.runs:
+        if "@AGR@" in r.text: r.text = r.text.replace("@AGR@", "5.3")
+assert not any("@AGR@" in p.text for p in _all_pars(doc))
+doc.core_properties.title = "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset"
 
 assert STYLE_USED == set(range(len(STYLE))), ("style entries not applied", [STYLE[k][1][:50] for k in set(range(len(STYLE))) - STYLE_USED])
 _sent = lambda t: re.split(r"(?<=[.!?])\s+(?=[A-Z0-9(‘“\"'])", t.strip())

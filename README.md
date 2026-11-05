@@ -1,6 +1,6 @@
-# Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports
+# Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset
 
-**Paper:** T. Appalla (independent researcher), "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: A Complete Operational History of the Equinor Volve Dataset", IPTC 2027, paper IPTC-25544-MS.
+**Paper:** T. Appalla (independent researcher), "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset", IPTC 2027, paper IPTC-25544-MS.
 
 This repository is the reproducible pipeline behind the paper. It parses the 1,759 WITSML Daily Drilling Reports (DDRs) of the Equinor Volve field from the raw XML, classifies each report into one of 13 construction phases with a frozen rule-based classifier (v3), audits what the classifier misses, validates total depth and spud date against the Norwegian Offshore Directorate (NOD) FactPages, recovers sidetrack kick-off depths, and computes durations to total depth. Every number in the manuscript is produced by code in `src/` and traced in `outputs/numbers_registry.json` (one entry per number, with the producing script and function, the SHA-256 of the input files and a timestamp).
 
@@ -77,15 +77,16 @@ The narrative of each stage (what ran, results, arithmetic, discrepancies) is in
 
 | Item | Source file | Script |
 |---|---|---|
-| Table 1, field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
-| Table 2, phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
+| Table 3, field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
+| Table 4, phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
 | Priority order and hole-size rules (Section 3.3) | `outputs/stage4_priority_rules.md` | `stage4_rules_table.py` |
-| Audit estimates (Section 5.2) | `outputs/audit_adjudications.csv` and registry entries `audit.*` | `stage6_estimates.py`, `stage11_registry.py` |
-| Timeline dataset (Section 5.3) | `outputs/timeline.csv` | `stage5_timeline.py` |
-| Table 3, total depth | `outputs/td_validation.csv` | `stage7_td.py` |
-| Table 4, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
-| Table 5, kick-off depths | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
-| Table 6, durations | `outputs/duration_table.csv` | `stage9_duration.py` |
+| Audit estimates (Section 5.2; the design-based estimate is the headline, the Wilson figures are in Appendix B) | `outputs/audit_adjudications.csv`, `outputs/audit_design_interval.json` and registry entries `audit.*` | `stage6_estimates.py`, `stage6_design_interval.py`, `stage11_registry.py` |
+| Phase label agreement (Section 5.3; the author's blind labels of 52 classified reports) | `outputs/classified_audit_agreement.csv`, `outputs/classified_audit_agreement_summary.json` (no narrative text; the labelled workbook holds narratives and is not published) | `stage6_classified_audit.py` (draw and workbook), `stage6_classified_agreement.py` (author side, needs the filled workbook) |
+| Timeline dataset (Section 5.4) | `outputs/timeline.csv` | `stage5_timeline.py` |
+| Table 5, total depth | `outputs/td_validation.csv`, `outputs/review_evidence.json` | `stage7_td.py`, `review_evidence.py` |
+| Table 6, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
+| Table 7, kick-off depths | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv`, `outputs/review_evidence.json` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
+| Table 8, durations | `outputs/duration_table.csv` | `stage9_duration.py` |
 | Fig. 1 | `outputs/figures/example_ddr_crop.png` (page of the original Daily Drilling Report PDF of the report of Table 1; the PDF is not in the repository) | `render_example_ddr.py` (author side, needs PyMuPDF and the PDF) |
 | Fig. 2 | `outputs/figures/figure1_depth_vs_time.png` | `figure1_depth_vs_time.py` |
 | Fig. 3 | `outputs/figures/figure2_days_vs_depth.png` | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |

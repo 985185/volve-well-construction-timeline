@@ -17,7 +17,7 @@ for p in HOLE:
 ax.invert_yaxis()
 ax.set_xlabel("Report number (1 = wellbore's first report)")
 ax.set_ylabel("Measured depth (m)")
-ax.legend(loc="upper right", fontsize=8, markerscale=1.5); ax.grid(alpha=0.2)
+ax.legend(loc="upper right", fontsize=8, markerscale=1.5, title="Counts are reports with a valid depth only", title_fontsize=8); ax.grid(alpha=0.2)
 fig.tight_layout()
 save(fig, "figure2_days_vs_depth.png")
 print({p: int((t.phase == p).sum()) for p in HOLE}, "background", len(bg), "wellbores", t.wellbore.nunique(), "max report number", int(t.report_number.max()))

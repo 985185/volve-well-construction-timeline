@@ -172,3 +172,15 @@
 - A5: headline recovery estimate is design-based, 85.3% (82.6 to 88.1%, normal approximation, 11 records in one stratum); Wilson figures go to Appendix B as a comparison.
 - A6: blind phase labelling by the author (my_phase, 52 records, seed 20261105); agreement computed by src/stage6_classified_agreement.py.
 - manuscript/bangkok#2.docx is the author's working file: gitignored, never touched.
+
+## 83. External review round, scope and Section B (2026-11-05)
+- The context audit (five reports around each sampled day) is cancelled for this paper and recorded in notes/classifier_gaps.md for the journal version. No context workbook is created.
+- The single-report blind audit (author labels, 52 classified reports, 4 per phase, seed 20261105) is registered as "single-report blind agreement": 30/52 = 57.7%, Wilson 44.2 to 70.1%, frequency-weighted 61.0%. The cause table (8 incidental keyword, 5 campaign context, 4 whipstock or window milling under Workover, 2 phase-scheme ambiguity, 1 mixed day, 2 unexplained) was assigned by the AI tool from the narratives and accepted by the author as indicative.
+- 74.1% is "coverage" everywhere. The design-based estimate (stratified proportion 51.8%, 95% interval 39.1 to 64.5%, normal approximation, 11 records in one group) gives an estimated recoverable coverage of 85.3% (82.6 to 88.1%), about 198 reports. It is no longer in the Abstract; the Wilson figures (85.4%, 82.5 to 88.3%) are in Appendix B as a comparison.
+- Depth validation: 19 of 21 name-matched wellbores within 0.5 m, plus 3 technical sidetracks matched by depth, reported separately. 15/9-F-15: the reports state 4,090 m, NOD 4,105 m, cause unresolved.
+- 15/9-19 S: "cut", not "backed off" (no backoff in the narratives); 15/9-19 B: backoff attempted too high, string cut at 3,164 m. 19 ST2 kick-off between 1,486 and 1,536 m, LOW; Table 7 shows the range, Table 8 uses 1,536 m.
+- Spud rules: R5 split into R5a (parent leg, definitional offset) and R5b (technical sidetrack, unresolved); F-11 final category Unresolved, the earlier inspection call of Exact not retained.
+- Kick-off: four-step order of preference (stated depth; milled-window top; event named, report MD; MD at transition) and definitions of HIGH, MEDIUM and LOW, which describe the grades already assigned. Parent in Table 7 follows the designation chain; F-1 B, F-1 C, F-15 C and F-15 D kick off shallower than their designated parent (computed).
+- Casing footnote: the earlier remark that the 10 3/4 in. mentions are "mostly the 9 5/8 x 10 3/4 in. tie-back" was too loose: 68 of the 104 DDRs mention a tie-back or the combined string. The paper says so.
+- Title: "... from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset", identical in the manuscript, the document properties, README.md, CITATION.cff and CLAUDE.md.
+- Open for the author: the AI disclosure paragraph still says "all 50 audit labels" and the Code and Data Availability statement does not list the phase-agreement labels (both protected from edits); the Abstract and the opening paragraph of the Conclusions carry the new results but remain marked for the author's rewrite.

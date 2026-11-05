@@ -16,6 +16,7 @@ fig, ax = plt.subplots(figsize=(10, 9))
 y = range(len(p))
 vals = p.w_minus_n_days.tolist()
 ax.barh(y, [max(min(v, CLIP), -CLIP) for v in vals], color=[CATEGORY_COLORS[c][0] for c in p.category], edgecolor="black", linewidth=0.3)
+ax.scatter([max(min(v, CLIP), -CLIP) for v in vals], list(y), c="black", s=14, marker="o", zorder=4)      # a marker at the end of every bar, so zero-length bars are visible
 ax.set_yticks(list(y)); ax.set_yticklabels(p.wellbore.str.replace("NO 15/9-", ""), fontsize=8)
 ax.axvline(0, color="black", linewidth=0.8); ax.grid(alpha=0.2, axis="x")
 for yi, v in zip(y, vals):          # value labels, so zero-day offsets stay visible

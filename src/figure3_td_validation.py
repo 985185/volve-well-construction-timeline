@@ -1,4 +1,4 @@
-"""Figure 3: WITSML maximum depth versus NOD total depth for all matched wellbores (24 of 26). Reads only outputs/td_validation.csv."""
+"""Figure 4 (file figure3_td_validation.png): WITSML maximum depth versus NOD total depth for all matched wellbores (24 of 26; 21 matched by name, circles; 3 technical sidetracks matched by depth, diamonds). Reads only outputs/td_validation.csv."""
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -9,9 +9,13 @@ v = pd.read_csv("outputs/td_validation.csv")
 m = v[v.outcome != "UNMATCHED"]; un = v[v.outcome == "UNMATCHED"]
 assert len(m) == 24 and len(un) == 2
 fig, ax = plt.subplots(figsize=(9, 9))
+dm = m.match_method.str.startswith("T2")                # technical sidetracks matched by depth, not by name
+LAB = {"EXACT": "Within 0.5 m", "CLOSE_NOT_EXACT": "Differs by more than 0.5 m"}
 for outcome, color in {"EXACT": "#2ca02c", "CLOSE_NOT_EXACT": "#ff7f0e"}.items():
-    s = m[m.outcome == outcome]
-    ax.scatter(s.witsml_max_md_m, s.nod_total_depth_m, c=color, s=45, label=f"{'Exact (within 0.5 m)' if outcome == 'EXACT' else 'Close, not exact'} (n={len(s)})", zorder=3, edgecolors="black", linewidths=0.3)
+    s_ = m[(m.outcome == outcome) & ~dm]
+    ax.scatter(s_.witsml_max_md_m, s_.nod_total_depth_m, c=color, s=45, marker="o", label=f"{LAB[outcome]}, matched by name (n={len(s_)})", zorder=3, edgecolors="black", linewidths=0.3)
+s_ = m[dm]
+ax.scatter(s_.witsml_max_md_m, s_.nod_total_depth_m, c="#2ca02c", s=90, marker="D", label=f"Technical sidetrack matched by depth, within 0.5 m (n={len(s_)})", zorder=4, edgecolors="black", linewidths=0.6)
 ax.plot([0, 5600], [0, 5600], "k--", linewidth=1, zorder=1, label="1:1 reference")
 for r in m.itertuples():
     short = r.witsml_wellbore.replace("NO 15/9-", "")

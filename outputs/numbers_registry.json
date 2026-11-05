@@ -10,7 +10,7 @@
   "inputs": {
    "data/raw/manifest.csv": "098b65964f9b4fddbf5aee70991ed82587ab1ff0ee9b65e0c702dd821a9ef351"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "note": null
@@ -26,7 +26,7 @@
   "inputs": {
    "data/raw/manifest.csv": "098b65964f9b4fddbf5aee70991ed82587ab1ff0ee9b65e0c702dd821a9ef351"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 21315879,
   "status_vs_v2": "SAME",
   "note": null
@@ -42,7 +42,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "note": null
@@ -58,7 +58,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 26,
   "status_vs_v2": "SAME",
   "note": null
@@ -74,7 +74,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -90,7 +90,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 11,
   "status_vs_v2": "SAME",
   "note": null
@@ -106,7 +106,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0,
   "status_vs_v2": "SAME",
   "note": null
@@ -122,7 +122,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "1.4.1.1",
   "status_vs_v2": "CHANGED",
   "note": "v2 manuscript says 1.4.1.1; the files say 1.4.0.0 (decision 15)"
@@ -138,7 +138,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -154,7 +154,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -170,7 +170,7 @@
   "inputs": {
    "data/nod/nod_snapshot_20261024_metadata.json": "bc0043e9f566367f77029ed131164313e2b7d5d80b68029d598f8f42a5a655c6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2026-09-08",
   "status_vs_v2": "CHANGED",
   "note": null
@@ -188,7 +188,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "data/nod/nod_snapshot_20261024_metadata.json": "bc0043e9f566367f77029ed131164313e2b7d5d80b68029d598f8f42a5a655c6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 27,
   "status_vs_v2": "SAME",
   "note": null
@@ -204,7 +204,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "note": null
@@ -220,7 +220,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 100.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -236,7 +236,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1759,
   "status_vs_v2": "SAME",
   "note": null
@@ -252,7 +252,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 100.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -268,7 +268,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1759,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -284,7 +284,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 100.0,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -300,7 +300,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1759,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -316,7 +316,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 100.0,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -332,7 +332,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1758,
   "status_vs_v2": "SAME",
   "note": null
@@ -348,7 +348,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 99.94,
   "status_vs_v2": "SAME",
   "note": null
@@ -364,7 +364,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1702,
   "status_vs_v2": "SAME",
   "note": null
@@ -380,7 +380,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 96.76,
   "status_vs_v2": "SAME",
   "note": null
@@ -396,7 +396,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1686,
   "status_vs_v2": "SAME",
   "note": null
@@ -412,7 +412,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 95.85,
   "status_vs_v2": "SAME",
   "note": null
@@ -428,7 +428,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1613,
   "status_vs_v2": "SAME",
   "note": null
@@ -444,7 +444,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 91.7,
   "status_vs_v2": "SAME",
   "note": null
@@ -460,7 +460,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1421,
   "status_vs_v2": "SAME",
   "note": null
@@ -476,7 +476,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 80.78,
   "status_vs_v2": "SAME",
   "note": null
@@ -492,7 +492,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 248,
   "status_vs_v2": "SAME",
   "note": null
@@ -508,7 +508,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 14.1,
   "status_vs_v2": "SAME",
   "note": null
@@ -524,7 +524,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 331,
   "status_vs_v2": "SAME",
   "note": null
@@ -540,7 +540,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 7,
   "status_vs_v2": "SAME",
   "note": null
@@ -556,7 +556,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 73,
   "status_vs_v2": "SAME",
   "note": null
@@ -572,7 +572,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -588,7 +588,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -604,7 +604,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 411,
   "status_vs_v2": "CHANGED",
   "note": "v2 total 411 = 331 + 7 + 73 (depth placeholders and None narratives only); TJ decision 19: register the full total"
@@ -620,7 +620,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 411,
   "status_vs_v2": "SAME",
   "note": null
@@ -636,7 +636,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -652,7 +652,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 61,
   "status_vs_v2": "SAME",
   "note": null
@@ -668,7 +668,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 82,
   "status_vs_v2": "SAME",
   "note": null
@@ -684,7 +684,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 10,
   "status_vs_v2": "SAME",
   "note": null
@@ -700,7 +700,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 14,
   "status_vs_v2": "SAME",
   "note": null
@@ -716,7 +716,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -732,7 +732,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -748,7 +748,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -764,7 +764,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -782,7 +782,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 256,
   "status_vs_v2": "SAME",
   "note": null
@@ -799,7 +799,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 14.6,
   "status_vs_v2": "SAME",
   "note": null
@@ -817,7 +817,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 228,
   "status_vs_v2": "SAME",
   "note": null
@@ -834,7 +834,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 13.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -852,7 +852,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 144,
   "status_vs_v2": "SAME",
   "note": null
@@ -869,7 +869,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 8.2,
   "status_vs_v2": "SAME",
   "note": null
@@ -887,7 +887,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 120,
   "status_vs_v2": "SAME",
   "note": null
@@ -904,7 +904,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 6.8,
   "status_vs_v2": "SAME",
   "note": null
@@ -922,7 +922,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 100,
   "status_vs_v2": "SAME",
   "note": null
@@ -939,7 +939,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 5.7,
   "status_vs_v2": "SAME",
   "note": null
@@ -957,7 +957,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 93,
   "status_vs_v2": "SAME",
   "note": null
@@ -974,7 +974,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 5.3,
   "status_vs_v2": "SAME",
   "note": null
@@ -992,7 +992,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 82,
   "status_vs_v2": "SAME",
   "note": null
@@ -1009,7 +1009,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4.7,
   "status_vs_v2": "SAME",
   "note": null
@@ -1027,7 +1027,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 77,
   "status_vs_v2": "SAME",
   "note": null
@@ -1044,7 +1044,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4.4,
   "status_vs_v2": "SAME",
   "note": null
@@ -1062,7 +1062,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 66,
   "status_vs_v2": "SAME",
   "note": null
@@ -1079,7 +1079,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3.8,
   "status_vs_v2": "SAME",
   "note": null
@@ -1097,7 +1097,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 52,
   "status_vs_v2": "SAME",
   "note": null
@@ -1114,7 +1114,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -1132,7 +1132,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 41,
   "status_vs_v2": "SAME",
   "note": null
@@ -1149,7 +1149,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2.3,
   "status_vs_v2": "SAME",
   "note": null
@@ -1167,7 +1167,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 38,
   "status_vs_v2": "SAME",
   "note": null
@@ -1184,7 +1184,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2.2,
   "status_vs_v2": "SAME",
   "note": null
@@ -1202,7 +1202,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 6,
   "status_vs_v2": "SAME",
   "note": null
@@ -1219,7 +1219,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.3,
   "status_vs_v2": "SAME",
   "note": null
@@ -1237,7 +1237,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 456,
   "status_vs_v2": "SAME",
   "note": null
@@ -1254,7 +1254,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 25.9,
   "status_vs_v2": "SAME",
   "note": null
@@ -1270,7 +1270,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1303,
   "status_vs_v2": "SAME",
   "note": null
@@ -1286,7 +1286,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 74.1,
   "status_vs_v2": "SAME",
   "note": null
@@ -1302,7 +1302,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 456,
   "status_vs_v2": "SAME",
   "note": null
@@ -1318,7 +1318,7 @@
   "inputs": {
    "outputs/stage4_faithfulness_summary.json": "2d61fed1c8fd28fa625c3961e97ead3da88c2fab24a141386c7aacdc2974a5ac"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1303,
   "status_vs_v2": "SAME",
   "note": "comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
@@ -1334,7 +1334,7 @@
   "inputs": {
    "outputs/stage4_faithfulness_phase_counts.csv": "e6466b27d853870ecd3a17f0c47bad6123d00bff6b2b372462a8011e2bf78650"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": true,
   "status_vs_v2": "SAME",
   "note": "comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
@@ -1350,7 +1350,7 @@
   "inputs": {
    "outputs/stage4_phase_changes_mojibake.csv": "997b2e958d3bb5bd2e6226069d9977c61fc007ca9d3714a4b277939ffdab5a0c"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
@@ -1372,7 +1372,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "values from the Stage 4 run, sum 1,759"
@@ -1402,7 +1402,7 @@
   "inputs": {
    "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -1420,7 +1420,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 147,
   "status_vs_v2": "SAME",
   "note": null
@@ -1438,7 +1438,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 63,
   "status_vs_v2": "SAME",
   "note": null
@@ -1456,7 +1456,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 61,
   "status_vs_v2": "SAME",
   "note": null
@@ -1474,7 +1474,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 35,
   "status_vs_v2": "SAME",
   "note": null
@@ -1492,7 +1492,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 34,
   "status_vs_v2": "SAME",
   "note": null
@@ -1510,7 +1510,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 30,
   "status_vs_v2": "SAME",
   "note": null
@@ -1528,7 +1528,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 8,
   "status_vs_v2": "SAME",
   "note": null
@@ -1546,7 +1546,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3,
   "status_vs_v2": "SAME",
   "note": null
@@ -1564,7 +1564,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "note": null
@@ -1582,7 +1582,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 73,
   "status_vs_v2": "SAME",
   "note": null
@@ -1600,7 +1600,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0,
   "status_vs_v2": "SAME",
   "note": null
@@ -1616,7 +1616,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 383,
   "status_vs_v2": "SAME",
   "note": null
@@ -1632,7 +1632,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 296,
   "status_vs_v2": "SAME",
   "note": null
@@ -1648,7 +1648,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 87,
   "status_vs_v2": "SAME",
   "note": null
@@ -1664,7 +1664,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 50,
   "status_vs_v2": "SAME",
   "note": null
@@ -1680,7 +1680,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 39,
   "status_vs_v2": "SAME",
   "note": null
@@ -1696,7 +1696,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 11,
   "status_vs_v2": "SAME",
   "note": null
@@ -1712,7 +1712,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 26,
   "status_vs_v2": "SAME",
   "note": null
@@ -1728,7 +1728,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 23,
   "status_vs_v2": "SAME",
   "note": null
@@ -1744,7 +1744,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3,
   "status_vs_v2": "SAME",
   "note": null
@@ -1760,7 +1760,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 9,
   "status_vs_v2": "SAME",
   "note": null
@@ -1776,7 +1776,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 10,
   "status_vs_v2": "SAME",
   "note": null
@@ -1792,7 +1792,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 7,
   "status_vs_v2": "SAME",
   "note": null
@@ -1808,7 +1808,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.52,
   "status_vs_v2": "SAME",
   "note": null
@@ -1824,7 +1824,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.385,
   "status_vs_v2": "SAME",
   "note": null
@@ -1840,7 +1840,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.652,
   "status_vs_v2": "SAME",
   "note": null
@@ -1856,7 +1856,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.2177,
   "status_vs_v2": "SAME",
   "note": null
@@ -1872,7 +1872,7 @@
   "inputs": {
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.7408,
   "status_vs_v2": "SAME",
   "note": null
@@ -1889,7 +1889,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.1132,
   "status_vs_v2": "SAME",
   "note": null
@@ -1906,7 +1906,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 199,
   "status_vs_v2": "SAME",
   "note": null
@@ -1924,7 +1924,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 85.4,
   "status_vs_v2": "SAME",
   "note": null
@@ -1942,7 +1942,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 82.5,
   "status_vs_v2": "SAME",
   "note": null
@@ -1960,7 +1960,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 88.3,
   "status_vs_v2": "SAME",
   "note": null
@@ -1977,7 +1977,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0.518,
   "status_vs_v2": "SAME",
   "note": null
@@ -1995,7 +1995,7 @@
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 85.3,
   "status_vs_v2": "SAME",
   "note": null
@@ -2011,7 +2011,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4.2,
   "status_vs_v2": "SAME",
   "note": null
@@ -2027,7 +2027,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1421,
   "status_vs_v2": "SAME",
   "note": null
@@ -2043,7 +2043,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 26,
   "status_vs_v2": "SAME",
   "note": null
@@ -2074,7 +2074,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -2090,7 +2090,7 @@
   "inputs": {
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -2109,7 +2109,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 22,
   "status_vs_v2": "SAME",
   "note": null
@@ -2128,7 +2128,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "note": null
@@ -2147,7 +2147,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "note": null
@@ -2166,7 +2166,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 24,
   "status_vs_v2": "SAME",
   "note": null
@@ -2182,7 +2182,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 15.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2198,7 +2198,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 227.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2215,7 +2215,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3272.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2232,7 +2232,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 347.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2249,7 +2249,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4250.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2266,7 +2266,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4641.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2283,7 +2283,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4562.1,
   "status_vs_v2": "SAME",
   "note": null
@@ -2300,7 +2300,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1085.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2317,7 +2317,7 @@
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1085.0,
   "status_vs_v2": "SAME",
   "note": null
@@ -2545,7 +2545,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -2565,7 +2565,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 7,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -2585,7 +2585,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 8,
   "status_vs_v2": "SAME",
   "note": null
@@ -2605,7 +2605,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4,
   "status_vs_v2": "SAME",
   "note": null
@@ -2625,7 +2625,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1,
   "status_vs_v2": "SAME",
   "note": null
@@ -2645,7 +2645,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2,
   "status_vs_v2": "SAME",
   "note": null
@@ -2665,7 +2665,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 4,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3023,7 +3023,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3046,7 +3046,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "decision 48"
@@ -3068,7 +3068,7 @@
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "decision 48"
@@ -3085,7 +3085,7 @@
    "outputs/spud_validation.csv": "876f2a8965558fcd97b71a03e70b23feade9bf5e79fc89de1c8fd54f1bb68d44",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2007-03-15",
   "status_vs_v2": "SAME",
   "note": null
@@ -3102,7 +3102,7 @@
    "outputs/spud_validation.csv": "876f2a8965558fcd97b71a03e70b23feade9bf5e79fc89de1c8fd54f1bb68d44",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2007-06-14",
   "status_vs_v2": "SAME",
   "note": null
@@ -3120,7 +3120,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2007-11-28",
   "status_vs_v2": "SAME",
   "note": null
@@ -3138,7 +3138,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2007-12-02",
   "status_vs_v2": "SAME",
   "note": null
@@ -3156,7 +3156,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2013-07-23",
   "status_vs_v2": "SAME",
   "note": null
@@ -3173,7 +3173,7 @@
    "outputs/spud_validation.csv": "876f2a8965558fcd97b71a03e70b23feade9bf5e79fc89de1c8fd54f1bb68d44",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2013-08-20",
   "status_vs_v2": "SAME",
   "note": null
@@ -3190,7 +3190,7 @@
    "outputs/spud_validation.csv": "876f2a8965558fcd97b71a03e70b23feade9bf5e79fc89de1c8fd54f1bb68d44",
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": "2013-08-23",
   "status_vs_v2": "SAME",
   "note": null
@@ -3208,7 +3208,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "current table 2178; proposed_approved Y; method depth in text"
@@ -3225,7 +3225,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3243,7 +3243,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2231,
   "status_vs_v2": "SAME",
   "note": "current table 2231; proposed_approved Y; method depth in text"
@@ -3260,7 +3260,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2231,
   "status_vs_v2": "SAME",
   "note": null
@@ -3278,7 +3278,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2911,
   "status_vs_v2": "SAME",
   "note": "current table 2911; proposed_approved Y; method depth in text"
@@ -3295,7 +3295,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2911,
   "status_vs_v2": "SAME",
   "note": null
@@ -3313,7 +3313,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1536,
   "status_vs_v2": "SAME",
   "note": "current table 1536; proposed_approved Y; method depth sequence (narrative empty)"
@@ -3330,7 +3330,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1536,
   "status_vs_v2": "SAME",
   "note": null
@@ -3348,7 +3348,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3004,
   "status_vs_v2": "CHANGED",
   "note": "current table 2620; proposed_approved Y; method event in text, depth from md"
@@ -3365,7 +3365,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3004,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3383,7 +3383,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3100,
   "status_vs_v2": "CHANGED",
   "note": "current table 2617; proposed_approved Y; method event in text, depth from md"
@@ -3400,7 +3400,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3100,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3418,7 +3418,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3059,
   "status_vs_v2": "CHANGED",
   "note": "current table 1364; proposed_approved Y; method depth in text"
@@ -3435,7 +3435,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3059,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3453,7 +3453,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 459,
   "status_vs_v2": "CHANGED",
   "note": "current table 421.5; proposed_approved Y; method depth in text"
@@ -3470,7 +3470,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 459,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3488,7 +3488,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 257,
   "status_vs_v2": "CHANGED",
   "note": "current table 246; proposed_approved Y; method depth in text"
@@ -3505,7 +3505,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 257,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3523,7 +3523,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2586,
   "status_vs_v2": "SAME",
   "note": "current table 2586; proposed_approved Y; method depth in text"
@@ -3540,7 +3540,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2586,
   "status_vs_v2": "SAME",
   "note": null
@@ -3558,7 +3558,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3271,
   "status_vs_v2": "CHANGED",
   "note": "current table 2589; proposed_approved Y; method depth in text"
@@ -3575,7 +3575,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3271,
   "status_vs_v2": "CHANGED",
   "note": null
@@ -3593,7 +3593,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1381,
   "status_vs_v2": "SAME",
   "note": "current table 1381; proposed_approved Y; method depth in text"
@@ -3610,7 +3610,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1381,
   "status_vs_v2": "SAME",
   "note": null
@@ -3628,7 +3628,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3185,
   "status_vs_v2": "SAME",
   "note": "current table 3185; proposed_approved Y; method depth in text"
@@ -3645,7 +3645,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3185,
   "status_vs_v2": "SAME",
   "note": null
@@ -3663,7 +3663,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2566,
   "status_vs_v2": "SAME",
   "note": "current table 2566; proposed_approved Y; method depth in text"
@@ -3680,7 +3680,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2566,
   "status_vs_v2": "SAME",
   "note": null
@@ -3698,7 +3698,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1380,
   "status_vs_v2": "SAME",
   "note": "current table 1380; proposed_approved Y; method event in text, depth from md"
@@ -3715,7 +3715,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1380,
   "status_vs_v2": "SAME",
   "note": null
@@ -3731,7 +3731,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 15,
   "status_vs_v2": "SAME",
   "note": "v2: 15 rows in the table, 14 outcomes reported, 19 S listed instead of 19 A"
@@ -3751,7 +3751,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": {
    "free text": 12,
    "depth sequence": 2
@@ -3770,7 +3770,7 @@
   "inputs": {
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3786,7 +3786,7 @@
   "inputs": {
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3802,7 +3802,7 @@
   "inputs": {
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "read by src/stage8d_apply_signoff.py from outputs/kickoff_signoff.xlsx"
@@ -3818,7 +3818,7 @@
   "inputs": {
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3834,7 +3834,7 @@
   "inputs": {
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3850,7 +3850,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -3867,7 +3867,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 1695.0,
   "status_vs_v2": "CHANGED",
   "note": "v2 compared 3,059 m with NOD 1,364 m (difference 1,695 m)"
@@ -3883,7 +3883,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3059,
   "status_vs_v2": "CHANGED",
   "note": "decision 34"
@@ -3902,7 +3902,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "decision 34"
@@ -4250,7 +4250,7 @@
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f",
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -4276,7 +4276,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -4293,7 +4293,7 @@
    "outputs/duration_table.csv": "9a8bde205d4f42211538a9d9d9d8fa458cde27664eaad651c99b7fb0f540963e",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5067,7 +5067,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "outputs/timeline.csv": "d028d4c872bd2fa0575e30ddeaae0cacc854fb5c29c7e1d50244ccaef0c6f7e6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5205,7 +5205,7 @@
    "outputs/duration_table.csv": "9a8bde205d4f42211538a9d9d9d8fa458cde27664eaad651c99b7fb0f540963e",
    "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5299,7 +5299,7 @@
   "inputs": {
    "outputs/duration_table.csv": "9a8bde205d4f42211538a9d9d9d8fa458cde27664eaad651c99b7fb0f540963e"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5544,7 +5544,7 @@
   "inputs": {
    "outputs/duration_family_summary.csv": "00cda462f7adfad5543e94b663a2b4f6bcbfd0cd4a47c74e542578f27c15ed24"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5565,7 +5565,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5587,7 +5587,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5607,7 +5607,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5623,7 +5623,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5639,7 +5639,7 @@
   "inputs": {
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5655,7 +5655,7 @@
   "inputs": {
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5679,7 +5679,7 @@
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5693,9 +5693,9 @@
    "function": "module level"
   },
   "inputs": {
-   "src/figure4_spud_offset.py": "b360a2d2f89480e13e614e57d742a6514bfc5f92bcf1e013149f19eb569cc41c"
+   "src/figure4_spud_offset.py": "7228b976a124ed5814bbdd1c6f9d73ebd573e4d187e8f9866bb8924d98a86465"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5715,7 +5715,7 @@
   "inputs": {
    "outputs/stage2_encoding_summary.json": "0c4a7046404c23bf016b057d58f18c5ca03f6b29e8c3aaec7c22776bc10e28c7"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
@@ -5766,7 +5766,7 @@
    "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33",
    "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "the registry (a data file) holds fragments of at most 15 words and the numbers of the full summary; the manuscript quotes the full summary (decision 67)"
@@ -5788,7 +5788,7 @@
    "function": "module level (author side)"
   },
   "inputs": {},
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "EXTERNAL: the PDF came from a local copy of the Volve files (F15D_DDR_PDFs); its size equals the catalog file_size_bytes; hash recorded in data/raw/manifest.csv on the author's machine"
@@ -5947,7 +5947,7 @@
    "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64",
    "src/classifier_v3.py": "472e9e5e37a6c97d20477376d6f2e516ecec084e201ad82dc1f16f6174b6feb0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -5965,7 +5965,7 @@
    "function": "not reproduced by code"
   },
   "inputs": {},
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "EXTERNAL, VERIFIED against the source PDF of SPE-228268-MS (author check, 26 October 2026): 701 DDRs, 10 wells, the two quotations of Section 2 and the 18.5% figure; not reproduced by code"
@@ -5984,7 +5984,7 @@
    "function": "not reproduced by code"
   },
   "inputs": {},
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "EXTERNAL, VERIFIED against the source PDF of SPE-208779-MS (author check, 28 October 2026); not reproduced by code"
@@ -6001,7 +6001,7 @@
    "function": "not reproduced by code"
   },
   "inputs": {},
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "EXTERNAL, VERIFIED against the source PDF of SPE-191505-MS (author check, 28 October 2026); not reproduced by code"
@@ -6015,7 +6015,7 @@
    "function": "not reproduced by code"
   },
   "inputs": {},
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "EXTERNAL: read from the PDF, not from the repository"
@@ -6031,7 +6031,7 @@
   "inputs": {
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 95,
   "status_vs_v2": "SAME",
   "note": null
@@ -6047,7 +6047,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 730,
   "status_vs_v2": "SAME",
   "note": null
@@ -6063,7 +6063,7 @@
   "inputs": {
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 32.2,
   "status_vs_v2": "SAME",
   "note": null
@@ -6080,7 +6080,7 @@
    "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
    "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 11.3,
   "status_vs_v2": "SAME",
   "note": null
@@ -6096,7 +6096,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 19,
   "status_vs_v2": "SAME",
   "note": null
@@ -6112,7 +6112,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 18,
   "status_vs_v2": "SAME",
   "note": null
@@ -6128,7 +6128,7 @@
   "inputs": {
    "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 94.7,
   "status_vs_v2": "SAME",
   "note": null
@@ -6144,7 +6144,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 17.5,
   "status_vs_v2": "CHANGED",
   "note": "TJ ruling 4: use 17.6 years; the computation gives 17.56 (v2 text said 17.5)"
@@ -6160,7 +6160,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2741,
   "status_vs_v2": "SAME",
   "note": "found in 2 DDRs"
@@ -6176,7 +6176,7 @@
   "inputs": {
    "data/nod/nod_snapshot_20261024_metadata.json": "bc0043e9f566367f77029ed131164313e2b7d5d80b68029d598f8f42a5a655c6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 3569.0,
   "status_vs_v2": "SAME",
   "note": "EXTERNAL: carried from the old registry entry manuscript_revision_part2_nod_wellbore_history_ground_truth; not reproducible from the snapshot"
@@ -6192,7 +6192,7 @@
   "inputs": {
    "data/nod/nod_snapshot_20261024_metadata.json": "bc0043e9f566367f77029ed131164313e2b7d5d80b68029d598f8f42a5a655c6"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 2394.0,
   "status_vs_v2": "SAME",
   "note": "EXTERNAL, see above"
@@ -6208,7 +6208,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6224,7 +6224,7 @@
   "inputs": {
    "outputs/stage2_encoding_summary.json": "0c4a7046404c23bf016b057d58f18c5ca03f6b29e8c3aaec7c22776bc10e28c7"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 103,
   "status_vs_v2": "SAME",
   "note": "comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
@@ -6240,7 +6240,7 @@
   "inputs": {
    "outputs/stage4_faithfulness_summary.json": "2d61fed1c8fd28fa625c3961e97ead3da88c2fab24a141386c7aacdc2974a5ac"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 0,
   "status_vs_v2": "SAME",
   "note": "comparison with the earlier extraction: read from the committed result of an optional verification step, not needed to reproduce any figure (decision 58)"
@@ -6263,7 +6263,7 @@
   "inputs": {
    "outputs/stage4_priority_rules.csv": "3fd60662b45b344ca44681cc25262bd43e7133bbd233b33b43ccf8bac1383d64"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6289,7 +6289,7 @@
   "inputs": {
    "src/stage7_spud.py": "563190b0e3fe96eda4e3b06cbbe181d847e022df14ff27222a4d9f07b86bdb37"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6305,7 +6305,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": "decision 42"
@@ -6329,7 +6329,7 @@
    "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a",
    "data/nod/wellbore_exploration_all_20261024.csv": "31244e9e917cd39db237072f9987bdb3004aadf2c1043dfc7dd0c95cc0fb84c0"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6349,7 +6349,7 @@
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6365,7 +6365,7 @@
   "inputs": {
    "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6381,7 +6381,7 @@
   "inputs": {
    "outputs/duration_table.csv": "9a8bde205d4f42211538a9d9d9d8fa458cde27664eaad651c99b7fb0f540963e"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6397,7 +6397,7 @@
   "inputs": {
    "outputs/duration_table.csv": "9a8bde205d4f42211538a9d9d9d8fa458cde27664eaad651c99b7fb0f540963e"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6416,7 +6416,1037 @@
   "inputs": {
    "outputs/duration_table.csv": "9a8bde205d4f42211538a9d9d9d8fa458cde27664eaad651c99b7fb0f540963e"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_proportion_pct",
+  "value": 51.8,
+  "description": "Design-based (stratum-weighted) proportion of construction among the 383 framed reports, percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": "NEW (external review): headline audit estimate; the Wilson figures remain as a comparison"
+ },
+ {
+  "id": "audit.design_proportion",
+  "value": 0.518,
+  "description": "Design-based proportion (fraction)",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_z",
+  "value": 1.96,
+  "description": "Normal quantile of the 95% interval",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_variance",
+  "value": 0.0042,
+  "description": "Design-based variance of the stratified proportion, sum of W^2 (1 - f) p (1 - p) / (n - 1)",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_se",
+  "value": 0.065,
+  "description": "Design-based standard error of the stratified proportion",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_ci_low_pct",
+  "value": 39.1,
+  "description": "Design-based 95% interval (normal approximation), lower bound of the proportion, percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_ci_high_pct",
+  "value": 64.5,
+  "description": "Design-based 95% interval (normal approximation), upper bound of the proportion, percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_weight_construction",
+  "value": 0.773,
+  "description": "Stratum weight, construction group (296/383)",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_weight_production",
+  "value": 0.227,
+  "description": "Stratum weight, production group (87/383)",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_p_construction_pct",
+  "value": 59.0,
+  "description": "Construction proportion in the construction group (23/39), percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_p_production_pct",
+  "value": 27.3,
+  "description": "Construction proportion in the production group (3/11), percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_sampling_fraction_construction_pct",
+  "value": 13.2,
+  "description": "Sampling fraction, construction group (39/296), percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_sampling_fraction_production_pct",
+  "value": 12.6,
+  "description": "Sampling fraction, production group (11/87), percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.design_arithmetic",
+  "value": {
+   "W_construction": 0.7728,
+   "W_production": 0.2272,
+   "p_construction": 0.5897,
+   "p_production": 0.2727,
+   "p_stratified": 0.5177,
+   "variance": 0.0042,
+   "se": 0.0648,
+   "ci_low": 0.391,
+   "ci_high": 0.645,
+   "residual": 0.1127,
+   "recovery_ci_low": 0.826,
+   "recovery_ci_high": 0.881
+  },
+  "description": "Values printed in the design-based arithmetic of Appendix B",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "audit.recoverable_coverage_pct",
+  "value": 85.3,
+  "description": "Estimated recoverable coverage, design-based: 1,303/1,759 + stratified proportion x 383/1,759, percent",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": 85.4,
+  "status_vs_v2": "CHANGED",
+  "note": "v2 headline was 85.4 (Wilson, unstratified); the design-based estimate is used from the external review"
+ },
+ {
+  "id": "audit.recoverable_coverage_ci_low_pct",
+  "value": 82.6,
+  "description": "Estimated recoverable coverage, lower 95% bound (design-based)",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": 82.5,
+  "status_vs_v2": "CHANGED",
+  "note": null
+ },
+ {
+  "id": "audit.recoverable_coverage_ci_high_pct",
+  "value": 88.1,
+  "description": "Estimated recoverable coverage, upper 95% bound (design-based)",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": 88.3,
+  "status_vs_v2": "CHANGED",
+  "note": null
+ },
+ {
+  "id": "audit.recoverable_residual_ddrs",
+  "value": 198,
+  "description": "Design-based estimate of construction reports among the 383 framed reports",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": 199,
+  "status_vs_v2": "CHANGED",
+  "note": null
+ },
+ {
+  "id": "audit.recoverable_residual_pp",
+  "value": 11.3,
+  "description": "Design-based residual in percentage points of 1,759",
+  "producer": {
+   "script": "src/stage6_design_interval.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/audit_adjudications.csv": "b52f206b48b4c3805fc7f9ee9ee59780f8e3e505a8d39347024a9bc66a98e0bd",
+   "data/interim/audit_frame.parquet": "59e871b6396329c7a2abbd2b4f4bf83c34ead93b3909a8d1ca631796bf290324"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": 11.3,
+  "status_vs_v2": "SAME",
+  "note": null
+ },
+ {
+  "id": "agreement.n",
+  "value": 52,
+  "description": "Classified reports labelled blind by the author (4 per phase, 13 phases)",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": "NEW (external review): single-report blind agreement, secondary result"
+ },
+ {
+  "id": "agreement.agree",
+  "value": 30,
+  "description": "Labels equal to the assigned phase",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "agreement.pct",
+  "value": 57.7,
+  "description": "Single-report blind agreement, percent (30/52)",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "agreement.wilson_low_pct",
+  "value": 44.2,
+  "description": "Wilson 95% lower bound, percent",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "wilson()"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "agreement.wilson_high_pct",
+  "value": 70.1,
+  "description": "Wilson 95% upper bound, percent",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "wilson()"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "agreement.weighted_pct",
+  "value": 61.0,
+  "description": "Frequency-weighted agreement: phase agreement rates weighted by the phase share of the 1,303 classified reports, percent",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659",
+   "data/interim/classified_new.parquet": "9dbf4e3286a5b561229a06fa10f07a873dbb078cfc57956539a2bec08fb5ff33"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "agreement.per_phase",
+  "value": {
+   "12¼ in. and smaller hole": [
+    3,
+    4
+   ],
+   "Cementing": [
+    0,
+    4
+   ],
+   "Completion": [
+    3,
+    4
+   ],
+   "Intermediate casing": [
+    2,
+    4
+   ],
+   "Intermediate drilling": [
+    3,
+    4
+   ],
+   "Liner/Casing run": [
+    2,
+    4
+   ],
+   "Logging/Testing": [
+    3,
+    4
+   ],
+   "P&A": [
+    4,
+    4
+   ],
+   "Rig move/Setup": [
+    2,
+    4
+   ],
+   "Spud/Conductor": [
+    4,
+    4
+   ],
+   "Surface hole and casing": [
+    3,
+    4
+   ],
+   "Waiting/Downtime": [
+    1,
+    4
+   ],
+   "Workover": [
+    0,
+    4
+   ]
+  },
+  "description": "Agreement per phase: [agreeing, sampled] (names as in the paper)",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "agreement.causes_proposed",
+  "value": {
+   "incidental keyword": 8,
+   "campaign context": 5,
+   "whipstock or window milling under Workover": 4,
+   "unclear from the text (author to say)": 2,
+   "phase-scheme ambiguity": 2,
+   "mixed day": 1
+  },
+  "description": "Causes of the 22 disagreements, proposed from the narratives (the author's note column was empty); two are unexplained",
+  "producer": {
+   "script": "src/stage6_classified_agreement.py",
+   "function": "CAUSE"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": "indicative: assigned by the AI tool from the narratives, not by the author; the author accepted the table as indicative"
+ },
+ {
+  "id": "agreement.seed",
+  "value": 20261105,
+  "description": "Random seed of the draw (random.Random(seed).sample, 4 per phase, pools sorted by filename)",
+  "producer": {
+   "script": "src/stage6_classified_audit.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/classified_audit_agreement.csv": "1d3df8b58a1ac287d137e6ce6c74513300743238792ca964c50bd7f15e578659"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.name_matched",
+  "value": 21,
+  "description": "Wellbores matched to NOD by name",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": "NEW (external review): 24 matched = 21 by name + 3 by depth"
+ },
+ {
+  "id": "td.name_matched_within_0p5",
+  "value": 19,
+  "description": "Name-matched wellbores within 0.5 m",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.name_matched_outside",
+  "value": [
+   "15/9-19 S",
+   "15/9-F-15"
+  ],
+  "description": "Name-matched wellbores that differ by more than 0.5 m",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.depth_matched",
+  "value": 3,
+  "description": "Technical sidetracks matched to NOD by depth",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.depth_matched_within_0p5",
+  "value": 3,
+  "description": "Depth-matched sidetracks within 0.5 m (by construction of the match)",
+  "producer": {
+   "script": "src/stage7_td.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/td_validation.csv": "e00e972f6174d956ea2624fde4d46e6f39e99bf6d512ffed2fedf210a15c24ba"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.f15_nod_td_m",
+  "value": 4105.0,
+  "description": "NOD total depth, 15/9-F-15 (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/nod/wellbore_development_all_20261024.csv": "7b569ad8dd68dc15c384d7261ac85401d3c28c535e13a9bd60ca92a24bc0083a"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.f15_reports_state_td_m",
+  "value": 4090,
+  "description": "Total depth stated in the narrative of the report of 2008-11-28, 15/9-F-15 (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.f15_report_drilled_from_m",
+  "value": 3889,
+  "description": "The F-15 report of 2008-11-28 states the 8 1/2 in. hole drilled from this depth to TD (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "td.f15_reports_mentioning_4105",
+  "value": 0,
+  "description": "F-15 reports (narrative or forecast) that mention 4,105 m",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "s19.packed_off_m",
+  "value": 2732,
+  "description": "15/9-19 S: hole packed off at this depth on 1992-12-10 (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "s19.cutter_detonated_m",
+  "value": 2658,
+  "description": "15/9-19 S: cutter detonated at this depth on 1992-12-12, pipe not free (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "s19.pipe_cut_m",
+  "value": 2516,
+  "description": "15/9-19 S: pipe cut at this depth on 1992-12-13 (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "s19.backoff_mentions",
+  "value": 0,
+  "description": "Mentions of a backoff in the 15/9-19 S and 15/9-19 ST2 narratives",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "b19.string_cut_m",
+  "value": 3164,
+  "description": "15/9-19 B: drill string cut at this depth on 1997-11-30, after a backoff attempt that released the string too high (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "b19.sidetrack_plug_m",
+  "value": [
+   2983,
+   2835
+  ],
+  "description": "15/9-19 B: sidetrack plug set between these depths on 1997-12-04 (m)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "kickoff.19ST2.range_m",
+  "value": [
+   1486,
+   1536
+  ],
+  "description": "15/9-19 ST2 kick-off lies between the depth to which cement was drilled out (1,486 m, 1992-12-18) and the MD at the transition (1,536 m, 1992-12-19)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": "LOW confidence; the table depth stays 1,536 m"
+ },
+ {
+  "id": "kickoff.19ST2.cement_plugs_m",
+  "value": [
+   [
+    2180,
+    1980
+   ],
+   [
+    1850,
+    1550
+   ],
+   [
+    1543,
+    1430
+   ]
+  ],
+  "description": "15/9-19 S: three cement plugs set before the sidetrack (m, top and bottom)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "casing.14in_ddrs",
+  "value": 31,
+  "description": "DDR narratives that mention 14 in. casing (any spelling)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "casing.14in_wellbores",
+  "value": [
+   "15/9-F-11 B",
+   "15/9-F-11 T2",
+   "15/9-F-12",
+   "15/9-F-14"
+  ],
+  "description": "Wellbores with 14 in. casing mentions",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "casing.10_3_4in_ddrs",
+  "value": 104,
+  "description": "DDR narratives that mention 10 3/4 in. casing (any spelling)",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "casing.10_3_4in_wellbores",
+  "value": [
+   "15/9-19 BT2",
+   "15/9-19 ST2",
+   "15/9-F-1 B",
+   "15/9-F-1 C",
+   "15/9-F-11 B",
+   "15/9-F-12",
+   "15/9-F-14",
+   "15/9-F-15 C",
+   "15/9-F-15 D",
+   "15/9-F-4",
+   "15/9-F-5"
+  ],
+  "description": "Wellbores with 10 3/4 in. casing mentions",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "casing.10_3_4in_tieback_or_combination_ddrs",
+  "value": 68,
+  "description": "10 3/4 in. mentions that also mention a tie-back or the 9 5/8 x 10 3/4 in. combination",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "module level"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "hugin.f4_pressure_point_md_m",
+  "value": 3417.5,
+  "description": "15/9-F-4: pressure samples taken in the Hugin Formation at this MD (m), 2008-02-27, in the 8 1/2 in. section",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "hugin.f4_12_25in_section_td_m",
+  "value": 2770,
+  "description": "15/9-F-4: the 12 1/4 in. section ended at this depth (m), 2007-10-29",
+  "producer": {
+   "script": "src/review_evidence.py",
+   "function": "has()"
+  },
+  "inputs": {
+   "outputs/review_evidence.json": "4e839cce97bb7539eb9c80124d7fba8fcf17291cb4d63ae5589c68d9d750b7db",
+   "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "kickoff.order_step_counts",
+  "value": {
+   "1 stated depth": 9,
+   "2 milled-window top": 2,
+   "3 event named, report MD": 3,
+   "4 MD at transition, narrative empty": 1
+  },
+  "description": "Kick-off depths by step of the order of preference",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
+  "v2_value": null,
+  "status_vs_v2": "NEW",
+  "note": null
+ },
+ {
+  "id": "kickoff.shallower_than_parent_kickoff",
+  "value": [
+   "15/9-F-1 B",
+   "15/9-F-1 C",
+   "15/9-F-15 C",
+   "15/9-F-15 D"
+  ],
+  "description": "Sidetracks whose kick-off is shallower than the kick-off of their designated parent (they leave the hole shared with earlier wellbores of the family)",
+  "producer": {
+   "script": "src/stage8b_kickoff_table.py",
+   "function": "SPEC"
+  },
+  "inputs": {
+   "outputs/kickoff_table.csv": "f939a76f0284754d662d4de66833757b6c3e5f45c2c4fe94fdfbae9a95833556",
+   "outputs/kickoff_proposal.csv": "7aa56f6ad8d6e77e1c350eccfca315288ac7759af0e50bfae5053bbf83034e6f"
+  },
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
@@ -6435,14 +7465,14 @@
   "inputs": {
    "data/raw/manifest.csv": "098b65964f9b4fddbf5aee70991ed82587ab1ff0ee9b65e0c702dd821a9ef351"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": null,
   "status_vs_v2": "NEW",
   "note": null
  },
  {
   "id": "registry.n_entries",
-  "value": 243,
+  "value": 297,
   "description": "Number of entries in this registry (including this one)",
   "producer": {
    "script": "src/stage11_registry.py",
@@ -6451,7 +7481,7 @@
   "inputs": {
    "data/interim/ddr.parquet": "f23d11aa41bf0d162b8c27aba689285ae2fd889de7a7150222da5d2b8c359161"
   },
-  "timestamp": "2026-11-02T10:46:08Z",
+  "timestamp": "2026-11-05T09:17:03Z",
   "v2_value": 59,
   "status_vs_v2": "CHANGED",
   "note": "v2 registry had 59 entries"

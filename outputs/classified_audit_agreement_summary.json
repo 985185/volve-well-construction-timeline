@@ -1,0 +1,92 @@
+{
+ "n": 52,
+ "agree": 30,
+ "agree_pct": 57.7,
+ "wilson_low_pct": 44.2,
+ "wilson_high_pct": 70.1,
+ "weighted_pct": 61.0,
+ "per_phase": {
+  "12\u00bc in. and smaller hole": [
+   3,
+   4
+  ],
+  "Cementing": [
+   0,
+   4
+  ],
+  "Completion": [
+   3,
+   4
+  ],
+  "Intermediate casing": [
+   2,
+   4
+  ],
+  "Intermediate drilling": [
+   3,
+   4
+  ],
+  "Liner/Casing run": [
+   2,
+   4
+  ],
+  "Logging/Testing": [
+   3,
+   4
+  ],
+  "P&A": [
+   4,
+   4
+  ],
+  "Rig move/Setup": [
+   2,
+   4
+  ],
+  "Spud/Conductor": [
+   4,
+   4
+  ],
+  "Surface hole and casing": [
+   3,
+   4
+  ],
+  "Waiting/Downtime": [
+   1,
+   4
+  ],
+  "Workover": [
+   0,
+   4
+  ]
+ },
+ "phase_population": {
+  "12\u00bc in. and smaller hole": 256,
+  "Completion": 228,
+  "Liner/Casing run": 144,
+  "Waiting/Downtime": 120,
+  "Cementing": 100,
+  "Logging/Testing": 93,
+  "Intermediate casing": 82,
+  "Intermediate drilling": 77,
+  "Surface hole and casing": 66,
+  "Spud/Conductor": 52,
+  "P&A": 41,
+  "Rig move/Setup": 38,
+  "Workover": 6
+ },
+ "categories": {
+  "EXACT": 30,
+  "DISAGREE": 22
+ },
+ "causes_proposed": {
+  "incidental keyword": 8,
+  "campaign context": 5,
+  "whipstock or window milling under Workover": 4,
+  "unclear from the text (author to say)": 2,
+  "phase-scheme ambiguity": 2,
+  "mixed day": 1
+ },
+ "seed": 20261105,
+ "per_phase_n": 4,
+ "note": "causes are proposed from the narratives (the author's note column was empty)"
+}

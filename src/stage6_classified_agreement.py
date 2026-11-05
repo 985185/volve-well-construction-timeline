@@ -47,3 +47,10 @@ DISP = {"Spud / Conductor": "Spud/Conductor", "Surface casing": "Surface hole an
 share = pop.phase.map(DISP).value_counts(); rate = m.groupby("assigned_phase_display").category.apply(lambda s: (s == "EXACT").mean())
 w = sum(share[ph] * rate[ph] for ph in share.index) / 1303
 print("frequency-weighted agreement = sum(phase count x phase agreement rate) / 1,303 = " + " + ".join(f"{share[ph]}x{rate[ph]:.2f}" for ph in share.index) + f" / 1303 = {w:.4f}")
+import collections
+cn = m[m.category != "EXACT"].cause_proposed.value_counts().to_dict()
+json.dump(dict(n=n, agree=k, agree_pct=round(100 * k / n, 1), wilson_low_pct=round(100 * lo, 1), wilson_high_pct=round(100 * hi, 1), weighted_pct=round(100 * w, 1),
+               per_phase={ph: [int((m[m.assigned_phase_display == ph].category == "EXACT").sum()), int((m.assigned_phase_display == ph).sum())] for ph in sorted(m.assigned_phase_display.unique())},
+               phase_population={ph: int(share[ph]) for ph in share.index}, categories=m.category.value_counts().to_dict(), causes_proposed=cn,
+               seed=20261105, per_phase_n=4, note="causes are proposed from the narratives (the author's note column was empty)"),
+          open("outputs/classified_audit_agreement_summary.json", "w", newline="\n"), indent=1)
