@@ -703,6 +703,13 @@ p81,"1,",1.0,in registry,"on-drilling days, gaps between reports and, for F-1, t
 p82,8,8.0,in registry,Table 8: Duration to total depth (TD)
 p82,26,26.0,in registry,"Duration to total depth (TD) and drilled length, 26 wellbores"
 p83,7,7.0,in registry,TD. Drilled length is total depth minus the Table 7 kick-off depth for sidetracks
+p83,15,15.0,in registry,the depth of an abandoned parent leg or stub. For 15/9-19 ST2 the kick-off used is
+p83,9,9.0,in registry,depth of an abandoned parent leg or stub. For 15/9-19 ST2 the kick-off used is 1
+p83,19,19.0,in registry,"epth of an abandoned parent leg or stub. For 15/9-19 ST2 the kick-off used is 1,53"
+p83,"1,536",1536.0,in registry,"leg or stub. For 15/9-19 ST2 the kick-off used is 1,536 m, the deeper end of the rang"
+p83,"1,486",1486.0,in registry,"f used is 1,536 m, the deeper end of the range of 1,486 to 1,536 m (Table 7), so its"
+p83,"1,536",1536.0,in registry,"1,536 m, the deeper end of the range of 1,486 to 1,536 m (Table 7), so its drilled l"
+p83,7,7.0,in registry,"eeper end of the range of 1,486 to 1,536 m (Table 7), so its drilled length is a"
 p84,6,6.0,in registry,6 Discussion
 p85,6.1,6.1,ignored: section number,6.1 What the Dataset Supports
 p86,"1,421",1421.0,in registry,"The 1,421-row depth-time-phase dataset"
@@ -865,7 +872,9 @@ p122,15,15.0,in registry,"s for three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9
 p122,9,9.0,in registry,"or three sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier"
 p122,11,11.0,in registry,"hree sidetracks (15/9-19 A, 15/9-F-9 A and 15/9-F-11 B) and kept the earlier value"
 p122,15,15.0,in registry,"B) and kept the earlier values, then reviewed all 15 depths and approved every one"
-p122,50,50.0,in registry,"ved every one without change. The author made all 50 audit labels, reviewed all AI"
+p122,50,50.0,in registry,without change. The author made all audit labels (50 in the audit of unclassified
+p122,52,52.0,in registry,bels (50 in the audit of unclassified reports and 52 phase labels in the agreement
+p122,22,22.0,in registry,l responsibility for the paper. The causes of the 22 disagreements in the agreemen
 p124,"1,421",1421.0,in registry,"classifier, the extraction and analysis code, the 1,421-row timeline dataset, the aud"
 p124,985185,985185.0,ignored: identifier,t produced it are available at https://github.com/985185/volve-well-construction-timel
 p124,15,15.0,in registry,"le names, dates, depths, categories and quotes of 15 words or fewer. The check aga"
