@@ -10,7 +10,7 @@ t = pd.read_csv("outputs/timeline.csv").merge(pd.read_csv("outputs/fig2_report_i
 HOLE = ["Spud / Conductor", "Surface casing", "Intermediate drilling", "Reservoir drilling"]
 fig, ax = plt.subplots(figsize=(11, 7))
 bg = t[~t.phase.isin(HOLE)]
-ax.scatter(bg.report_number, bg.md_m, c="#e8e8e8", s=6, label="Other phase (background)", zorder=1, edgecolors="none")
+ax.scatter(bg.report_number, bg.md_m, c="#e8e8e8", s=6, label="Other assigned phases and unclassified (background)", zorder=1, edgecolors="none")
 for p in HOLE:
     g = t[t.phase == p]
     ax.scatter(g.report_number, g.md_m, c=PHASE_COLORS[p], s=10, label=f"{label(p)} (n={len(g)})", zorder=2, edgecolors="none")

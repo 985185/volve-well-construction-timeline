@@ -13,10 +13,10 @@ p6,50,50.0,in registry,"DDRs, a coverage of 74.1%. A stratified audit of 50 reco
 p6,383,383.0,in registry,"A stratified audit of 50 records, drawn from the 383 unclassified DDRs that carry"
 p6,26,26.0,in registry,"sified DDRs that carry a genuine narrative, found 26 (52%) describing construction"
 p6,52%,52.0,in registry,"ed DDRs that carry a genuine narrative, found 26 (52%) describing construction oper"
-p6,52,52.0,in registry,"which no pattern exists. An engineer who labelled 52 of the classified reports, ea"
-p6,30,30.0,in registry,"lassifier reads it, agreed with the classifier on 30 of 52 (58%). Many days cannot"
-p6,52,52.0,in registry,"ier reads it, agreed with the classifier on 30 of 52 (58%). Many days cannot be as"
-p6,58%,58.0,in registry,"reads it, agreed with the classifier on 30 of 52 (58%). Many days cannot be assigne"
+p6,52,52.0,in registry,"etroleum engineer, labelled the main operation of 52 classified reports (four per"
+p6,61.0%,61.0,in registry,quency-weighted agreement with the classifier was 61.0% (30 of 52 reports unweighted)
+p6,30,30.0,in registry,"weighted agreement with the classifier was 61.0% (30 of 52 reports unweighted), wh"
+p6,52,52.0,in registry,"ed agreement with the classifier was 61.0% (30 of 52 reports unweighted), which is"
 p7,21,21.0,in registry,Of 21 wellbores matched to NOD by n
 p7,19,19.0,in registry,"Of 21 wellbores matched to NOD by name, 19 agree on total depth within 0"
 p7,0.5,0.5,in registry,"ed to NOD by name, 19 agree on total depth within 0.5 m, and the 3 technical sidetr"
@@ -40,12 +40,12 @@ p8,10,10.0,in registry,"int (12 of 15), the recovered depth agrees within 10 m f
 p8,10.,10.0,in registry,"f 15), the recovered depth agrees within 10 m for 10. The output is an open depth-t"
 p8,"1,421",1421.0,in registry,"The output is an open depth-time-phase dataset of 1,421 records (the DDRs with a vali"
 p8,"1,759",1759.0,in registry,"records (the DDRs with a valid measured depth, of 1,759 in all), with per-wellbore el"
-p8,1.4,1.4,in registry,"llbores, and the method transfers to other WITSML 1.4-series drillReport archives."
+p8,1.4,1.4,in registry,"es, and the method may be applied to other WITSML 1.4-series archives after adaptat"
 p9,1,1.0,in registry,1 Introduction
 p10,24,24.0,in registry,ether with a free-text narrative of the preceding 24 hours of operations. Turning
 p10,"1,759",1759.0,in registry,"ucts the timeline of the Equinor Volve field from 1,759 WITSML DDRs covering 26 wellb"
 p10,26,26.0,in registry,"uinor Volve field from 1,759 WITSML DDRs covering 26 wellbores. A deterministic, p"
-p10,2026,2026.0,in registry,"pendent national register, the NOD FactPages (NOD 2026a). The data-quality problems"
+p10,2026,2026.0,in registry,"pendent national register, the NOD FactPages (NOD 2026a), and the unmatched and unre"
 p10,2018,2018.0,in registry,"text, the openly available Volve dataset (Equinor 2018) and the accompanying reposit"
 p11,2,2.0,in registry,2 Background and Related Work
 p12,2015,2015.0,ignored: year,e free text of drilling reports. Sidahmed et al. (2015) built a dictionary of rig te
@@ -65,7 +65,6 @@ p14,2021,2021.0,ignored: year,benchmark for drilling analytics. Tunkiel et al. (
 p15,1,1.0,in registry,"ucing or extending its results. The present work (1) uses a deterministic, audita"
 p15,2,2.0,in registry,"phistication for transparency of every decision, (2) works exclusively with a rea"
 p15,3,3.0,in registry,"sively with a real, openly licensed archive, and (3) pairs classification with a"
-p15,1927,1927.0,ignored: year,"ampling frame and a Wilson-score interval (Wilson 1927), and with validation of tota"
 p15,2022,2022.0,in registry,"is paper measures the weakness that Zhang et al. (2022) report, the events a rule-ba"
 p16,3,3.0,in registry,3 Data and Methods
 p17,3.1,3.1,ignored: section number,3.1 Data Source and Extraction
@@ -334,14 +333,28 @@ p53,5.3,5.3,in registry,5.3 Phase Label Agreement
 p54,13,13.0,in registry,"our reports were drawn at random from each of the 13 phases, 52 of the 1,303 class"
 p54,52,52.0,in registry,"were drawn at random from each of the 13 phases, 52 of the 1,303 classified repor"
 p54,"1,303",1303.0,in registry,"n at random from each of the 13 phases, 52 of the 1,303 classified reports, with the"
-p55,30,30.0,in registry,same single reports agreed with the classifier on 30 of 52 (58%); many days cannot
-p55,52,52.0,in registry,ingle reports agreed with the classifier on 30 of 52 (58%); many days cannot be as
-p55,58%,58.0,in registry,e reports agreed with the classifier on 30 of 52 (58%); many days cannot be assigne
-p55,95%,95.0,in registry,"single-report classifier does not see. The Wilson 95% interval is 44.2 to 70.1%, an"
-p55,44.2,44.2,in registry,"assifier does not see. The Wilson 95% interval is 44.2 to 70.1%, and the agreement i"
-p55,70.1%,70.1,in registry,"does not see. The Wilson 95% interval is 44.2 to 70.1%, and the agreement is 61.0% w"
-p55,61.0%,61.0,in registry,"% interval is 44.2 to 70.1%, and the agreement is 61.0% when the rate of each phase i"
-p55,"1,303",1303.0,in registry,"ate of each phase is weighted by the share of the 1,303 classified reports that the p"
+p55,61.0%,61.0,in registry,The frequency-weighted agreement is 61.0%. It weights the agreement rat
+p55,"1,303",1303.0,in registry,"reports agreeing out of four) by the share of the 1,303 classified reports that the p"
+p55,13,13.0,in registry,"ed reports that the phase holds, the sum over the 13 phases of (N_h / 1,303) × (k_"
+p55,"1,303",1303.0,in registry,"phase holds, the sum over the 13 phases of (N_h / 1,303) × (k_h / 4), where N_h is th"
+p55,4,4.0,in registry,"sum over the 13 phases of (N_h / 1,303) × (k_h / 4), where N_h is the number of"
+p55,30,30.0,in registry,f classified reports in phase h. The raw count is 30 of 52 reports (58%). The stra
+p55,52,52.0,in registry,sified reports in phase h. The raw count is 30 of 52 reports (58%). The stratified
+p55,58%,58.0,in registry,ts in phase h. The raw count is 30 of 52 reports (58%). The stratified design-based
+p55,95%,95.0,in registry,of 52 reports (58%). The stratified design-based 95% interval of the weighted agre
+p55,44.9,44.9,in registry,n-based 95% interval of the weighted agreement is 44.9 to 77.2% (normal approximatio
+p55,77.2%,77.2,in registry,"95% interval of the weighted agreement is 44.9 to 77.2% (normal approximation, finite"
+p55,4,4.0,in registry,"ion correction). With four reports per phase, and 4 of the 13 phases at 0 of 4 or"
+p55,13,13.0,in registry,"ction). With four reports per phase, and 4 of the 13 phases at 0 of 4 or 4 of 4, t"
+p55,0,0.0,in registry,"four reports per phase, and 4 of the 13 phases at 0 of 4 or 4 of 4, the interval"
+p55,4,4.0,in registry,"reports per phase, and 4 of the 13 phases at 0 of 4 or 4 of 4, the interval is ap"
+p55,4,4.0,in registry,"ts per phase, and 4 of the 13 phases at 0 of 4 or 4 of 4, the interval is approxi"
+p55,"4,",4.0,in registry,"r phase, and 4 of the 13 phases at 0 of 4 or 4 of 4, the interval is approximate a"
+p55,30,30.0,in registry,"ile. For comparison only, the Wilson interval for 30 of 52, which treats the repor"
+p55,"52,",52.0,in registry,"or comparison only, the Wilson interval for 30 of 52, which treats the reports as o"
+p55,44.2,44.2,in registry,"reats the reports as one simple random sample, is 44.2 to 70.1% (Wilson 1927). Agree"
+p55,70.1%,70.1,in registry,"e reports as one simple random sample, is 44.2 to 70.1% (Wilson 1927). Agreement by p"
+p55,1927,1927.0,ignored: year,"ne simple random sample, is 44.2 to 70.1% (Wilson 1927). Agreement by phase, out of"
 p55,"4,",4.0,in registry,"ement by phase, out of four reports each, was P&A 4, Spud/Conductor 4, 12¼ in. and"
 p55,"4,",4.0,in registry,"t of four reports each, was P&A 4, Spud/Conductor 4, 12¼ in. and smaller hole 3, C"
 p55,12,12.0,in registry,"f four reports each, was P&A 4, Spud/Conductor 4, 12¼ in. and smaller hole 3, Comp"
@@ -356,15 +369,15 @@ p55,"2,",2.0,in registry,"iate casing 2, Liner/Casing run 2, Rig move/Setup 2, W
 p55,"1,",1.0,in registry,"/Casing run 2, Rig move/Setup 2, Waiting/Downtime 1, Cementing 0, Workover 0. All"
 p55,"0,",0.0,in registry,", Rig move/Setup 2, Waiting/Downtime 1, Cementing 0, Workover 0. All four sampled"
 p55,0.,0.0,in registry,"etup 2, Waiting/Downtime 1, Cementing 0, Workover 0. All four sampled Cementing re"
-p56,8,8.0,in registry,"Read against the report texts, 8 of the 22 disagreements invol"
-p56,22,22.0,in registry,"Read against the report texts, 8 of the 22 disagreements involve a keywo"
-p56,5,5.0,in registry,"incidentally while the main operation is another, 5 depend on campaign context (f"
-p56,4,4.0,in registry,"or waiting on weather before retrieving a riser), 4 are whipstock or window milli"
-p56,2,2.0,in registry,"er and the author labelled Intermediate drilling, 2 are casing runs that the size"
-p56,1,1.0,in registry,"casing and the author labelled Liner/Casing run, 1 is a day that mixes waiting a"
-p56,2,2.0,in registry,"1 is a day that mixes waiting and rigging up, and 2 are unexplained. The causes w"
-p56,5.1,5.1,ignored: section number,The author did not assign them. Coverage (Section 5.1) counts the reports that carr
-p56,4,4.0,in registry,e phase describes a report read on its own. Table 4 and the phase colours in Figs
+p56,22,22.0,in registry,ed. The AI tool assigned indicative causes to the 22 disagreements from the narrat
+p56,8,8.0,in registry,"uses to the 22 disagreements from the narratives: 8 an incidental keyword, 5 camp"
+p56,5,5.0,in registry,"nts from the narratives: 8 an incidental keyword, 5 campaign context (for example"
+p56,4,4.0,in registry,"or waiting on weather before retrieving a riser), 4 whipstock or window milling t"
+p56,2,2.0,in registry,"er and the author labelled Intermediate drilling, 2 casing runs that the size-bas"
+p56,1,1.0,in registry,"casing and the author labelled Liner/Casing run, 1 a day that mixes waiting and"
+p56,2,2.0,in registry,"n, 1 a day that mixes waiting and rigging up, and 2 unexplained. The author did n"
+p56,5.1,5.1,ignored: section number,thor did not assign the causes. Coverage (Section 5.1) counts the reports that carr
+p56,4,4.0,in registry,he author's reading of a report on its own. Table 4 and the phase colours in Figs
 p56,2,2.0,in registry,n its own. Table 4 and the phase colours in Figs. 2 and 3 should be read as singl
 p56,3,3.0,in registry,own. Table 4 and the phase colours in Figs. 2 and 3 should be read as single-repo
 p57,5.4,5.4,ignored: section number,5.4 Timeline Dataset
@@ -373,7 +386,7 @@ p58,"1,759",1759.0,in registry,"ne for each DDR with a genuine md_m value. Of th
 p58,331,331.0,in registry,"DDR with a genuine md_m value. Of the 1,759 DDRs, 331 carry the sentinel and 7 the"
 p58,7,7.0,in registry,"ue. Of the 1,759 DDRs, 331 carry the sentinel and 7 the zero value. Each row give"
 p58,3,3.0,in registry,st row with a usable depth in each wellbore. Fig. 3 plots report number against m
-p58,26,26.0,in registry,lots report number against measured depth for all 26 wellbores. The report number
+p58,26,26.0,in registry,"ber against measured depth for the reports of all 26 wellbores, pooled. The report"
 p58,1980,1980.0,in registry,"ts every DDR of a wellbore from its first report (1980 sentinel excluded), with or w"
 p58,8.,8.0,in registry,"depth, and so matches the reports to TD in Table 8. Only reports with a valid dep"
 p59,5.5,5.5,ignored: section number,5.5 Total Depth Validation
@@ -568,8 +581,13 @@ p75,15,15.0,in registry,e measured depth of the same report (step 3). For 15/9-1
 p75,9,9.0,in registry,easured depth of the same report (step 3). For 15/9-19 ST2 both reports at the tr
 p75,19,19.0,in registry,sured depth of the same report (step 3). For 15/9-19 ST2 both reports at the trans
 p75,4,4.0,in registry,T2 both reports at the transition are empty (step 4). The kick-off lies between 1
-p75,"1,486",1486.0,in registry,"ion are empty (step 4). The kick-off lies between 1,486 m, the depth to which the par"
-p75,"1,536",1536.0,in registry,"ich the parent drilled cement the day before, and 1,536 m, the measured depth at the"
+p75,"1,486",1486.0,in registry,"ion are empty (step 4). The kick-off lies between 1,486 m, the depth to which cement"
+p75,15,15.0,in registry,the depth to which cement was drilled out in the 15/9-19 S report of 18 December
+p75,9,9.0,in registry,e depth to which cement was drilled out in the 15/9-19 S report of 18 December 19
+p75,19,19.0,in registry,depth to which cement was drilled out in the 15/9-19 S report of 18 December 1992
+p75,18,18.0,in registry,cement was drilled out in the 15/9-19 S report of 18 December 1992 (the day before
+p75,1992,1992.0,in registry,rilled out in the 15/9-19 S report of 18 December 1992 (the day before the transitio
+p75,"1,536",1536.0,in registry,"ecember 1992 (the day before the transition), and 1,536 m, the measured depth at the"
 p75,"1,543",1543.0,in registry,"cement plugs had been set above it, the last from 1,543 to 1,430 m, and the confidenc"
 p75,"1,430",1430.0,in registry,"ugs had been set above it, the last from 1,543 to 1,430 m, and the confidence is LOW."
 p75,1,1.0,in registry,", and the confidence is LOW. The last report of F-1 B (22 February 2014) reads ""C"
@@ -670,7 +688,8 @@ p81,5.,5.0,in registry,"eached, which is the maximum valid depth of Table 5. It 
 p81,7,7.0,in registry,is total depth minus the kick-off depth of Table 7 for the 15 sidetracks and tot
 p81,15,15.0,in registry,depth minus the kick-off depth of Table 7 for the 15 sidetracks and total depth fo
 p81,"11,",11.0,in registry,"r the 15 sidetracks and total depth for the other 11, and metres per report divides"
-p81,26,26.0,in registry,"d differ where the archive has gaps. Seven of the 26 wellbores, whose elapsed days"
+p81,1,1.0,in registry,he number of reports equals the elapsed days plus 1 for a wellbore reported daily
+p81,26,26.0,in registry,"of that where the archive has gaps. Seven of the 26 wellbores, whose elapsed days"
 p81,15,15.0,in registry,"sed days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F"
 p81,9,9.0,in registry,"days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-1"
 p81,19,19.0,in registry,"ays exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 a"
@@ -710,13 +729,18 @@ p83,"1,536",1536.0,in registry,"leg or stub. For 15/9-19 ST2 the kick-off used i
 p83,"1,486",1486.0,in registry,"f used is 1,536 m, the deeper end of the range of 1,486 to 1,536 m (Table 7), so its"
 p83,"1,536",1536.0,in registry,"1,536 m, the deeper end of the range of 1,486 to 1,536 m (Table 7), so its drilled l"
 p83,7,7.0,in registry,"eeper end of the range of 1,486 to 1,536 m (Table 7), so its drilled length is a"
+p83,"3,105",3105.0,in registry,"m (Table 7), so its drilled length is a minimum (3,105 m, or 3,155 m at 1,486 m, whi"
+p83,"3,155",3155.0,in registry,", so its drilled length is a minimum (3,105 m, or 3,155 m at 1,486 m, which gives 45."
+p83,"1,486",1486.0,in registry,"illed length is a minimum (3,105 m, or 3,155 m at 1,486 m, which gives 45.7 to 46.4 m"
+p83,45.7,45.7,in registry,"imum (3,105 m, or 3,155 m at 1,486 m, which gives 45.7 to 46.4 m per report)."
+p83,46.4,46.4,in registry,"105 m, or 3,155 m at 1,486 m, which gives 45.7 to 46.4 m per report)."
 p84,6,6.0,in registry,6 Discussion
 p85,6.1,6.1,ignored: section number,6.1 What the Dataset Supports
 p86,"1,421",1421.0,in registry,"The 1,421-row depth-time-phase dataset"
 p86,3,3.0,in registry,directly. Depth-versus-report-count curves (Fig. 3) allow wellbores drilled from
-p86,58%,58.0,in registry,rt labels that agree with an engineer's labels on 58% of the sampled reports (Secti
-p86,5.3,5.3,in registry,r's labels on 58% of the sampled reports (Section 5.3) and the archive has gaps. Be
-p86,198,198.0,in registry,of any phase-based statistic is missing: roughly 198 reports with construction con
+p86,61.0%,61.0,in registry,rt labels that agree with the author's labels for 61.0% of reports weighted by phase
+p86,5.3,5.3,in registry,61.0% of reports weighted by phase size (Section 5.3) and the archive has gaps. Th
+p86,198,198.0,in registry,"ase counts and durations. The estimate is roughly 198 reports, mostly drilling prog"
 p86,8,8.0,in registry,"ling progress reported without a hole size. Table 8 gives elapsed days, reports a"
 p86,15,15.0,in registry,"non-drilling days, gaps between reports and, for 15/9-F-1, two campaigns. The gap"
 p86,9,9.0,in registry,"n-drilling days, gaps between reports and, for 15/9-F-1, two campaigns. The gap f"
@@ -765,13 +789,14 @@ p96,9,9.0,in registry,"m). The archive can also stop, as it does for 15/9-19 S, 
 p96,19,19.0,in registry,"). The archive can also stop, as it does for 15/9-19 S, which has no reports cover"
 p96,227,227.0,in registry,"5/9-19 S, which has no reports covering its final 227 m. A screening assessment sho"
 p97,6.4,6.4,ignored: section number,6.4 Transferability
-p98,1.4,1.4,in registry,llbore-matching logic transfer directly to WITSML 1.4-series drillReport archives (
-p98,1.4,1.4,in registry,L 1.4-series drillReport archives (tested here on 1.4.0.0). The pattern set is tune
+p98,1.4,1.4,in registry,wellbore-matching logic can be applied to WITSML 1.4-series drillReport archives a
+p98,1.4,1.4,in registry,s after adaptation and validation (tested here on 1.4.0.0). The pattern set is tune
 p99,7,7.0,in registry,7 Limitations
-p100,52,52.0,in registry,e state of the campaign. An engineer who labelled 52 classified reports on the sam
-p100,30,30.0,in registry,s on the same terms agreed with the classifier on 30 (58%; Section 5.3). The label
-p100,58%,58.0,in registry,the same terms agreed with the classifier on 30 (58%; Section 5.3). The labels cam
-p100,5.3,5.3,in registry,ms agreed with the classifier on 30 (58%; Section 5.3). The labels came from one pe
+p100,52,52.0,in registry,"the state of the campaign. The author's labels of 52 classified reports, made on t"
+p100,61.0%,61.0,in registry,"on the same terms, agreed with the classifier for 61.0% of reports weighted by phase"
+p100,30,30.0,in registry,fier for 61.0% of reports weighted by phase size (30 of 52; Section 5.3). This is
+p100,52,52.0,in registry,or 61.0% of reports weighted by phase size (30 of 52; Section 5.3). This is agreem
+p100,5.3,5.3,in registry,reports weighted by phase size (30 of 52; Section 5.3). This is agreement with the
 p101,50,50.0,in registry,rt would receive the correct phase. The sample of 50 was labelled by a single revi
 p101,82.6,82.6,in registry,eement was measured. The design-based interval of 82.6 to 88.1% reflects the modest
 p101,88.1%,88.1,in registry,as measured. The design-based interval of 82.6 to 88.1% reflects the modest sample si
@@ -833,10 +858,10 @@ p111,85.3%,85.3,in registry,which gives an estimated recoverable coverage of 85.
 p111,95%,95.0,in registry,gives an estimated recoverable coverage of 85.3% (95% CI 82.6 to 88.1%). The main g
 p111,82.6,82.6,in registry,n estimated recoverable coverage of 85.3% (95% CI 82.6 to 88.1%). The main gaps are
 p111,88.1%,88.1,in registry,ted recoverable coverage of 85.3% (95% CI 82.6 to 88.1%). The main gaps are drilling
-p112,52,52.0,in registry,An engineer labelling 52 classified reports one at a t
-p112,30,30.0,in registry,ports one at a time agreed with the classifier on 30 (58%; 61.0% when weighted by
-p112,58%,58.0,in registry,s one at a time agreed with the classifier on 30 (58%; 61.0% when weighted by phase
-p112,61.0%,61.0,in registry,at a time agreed with the classifier on 30 (58%; 61.0% when weighted by phase size).
+p112,52,52.0,in registry,"The author's labels of 52 classified reports, read one"
+p112,61.0%,61.0,in registry,"ead one at a time, agreed with the classifier for 61.0% of reports weighted by phase"
+p112,30,30.0,in registry,fier for 61.0% of reports weighted by phase size (30 of 52 unweighted). This is ag
+p112,52,52.0,in registry,or 61.0% of reports weighted by phase size (30 of 52 unweighted). This is agreemen
 p113,0.5,0.5,in registry,d total depth agrees with the NOD register within 0.5 m for 19 of 21 wellbores matc
 p113,19,19.0,in registry,pth agrees with the NOD register within 0.5 m for 19 of 21 wellbores matched by na
 p113,21,21.0,in registry,"rees with the NOD register within 0.5 m for 19 of 21 wellbores matched by name, an"
@@ -896,8 +921,8 @@ p164,9,9.0,in registry,"/9-19 S; 15/9-F-14; 15/9-F-1, F-1 B and F-1 C; 15/9-F-7)
 p164,7,7.0,in registry,"9 S; 15/9-F-14; 15/9-F-1, F-1 B and F-1 C; 15/9-F-7), coloured by the phase assig"
 p166,3,3.0,in registry,Fig. 3: Report number (1 = the wellb
 p166,1,1.0,in registry,Fig. 3: Report number (1 = the wellbore's first report
-p166,8,8.0,in registry,"the wellbore's first report, as counted in Table 8) versus measured depth for al"
-p166,26,26.0,in registry,"counted in Table 8) versus measured depth for all 26 wellbores, coloured by hole s"
+p166,8,8.0,in registry,"the wellbore's first report, as counted in Table 8) versus measured depth, with"
+p166,26,26.0,in registry,"8) versus measured depth, with the reports of all 26 wellbores pooled (individual"
 p168,4,4.0,in registry,Fig. 4: Reconstructed WITSML maximum
 p168,24,24.0,in registry,"WITSML maximum MD versus NOD total depth for the 24 matched wellbores, with 1:1 r"
 p168,1,1.0,in registry,"OD total depth for the 24 matched wellbores, with 1:1 reference line. The two unm"
@@ -923,7 +948,7 @@ p170,11,11.0,in registry,at -400 days and labelled with its value. 15/9-F-11 T2 
 p170,15,15.0,in registry,"every bar and makes zero-day offsets visible, and 15/9-F-11 is shown as Unresolved"
 p170,9,9.0,in registry,"ry bar and makes zero-day offsets visible, and 15/9-F-11 is shown as Unresolved."
 p170,11,11.0,in registry,"ar and makes zero-day offsets visible, and 15/9-F-11 is shown as Unresolved."
-p172,297,297.0,in registry,"the numbers registry published in the repository (297 entries, each with the produc"
+p172,305,305.0,in registry,"the numbers registry published in the repository (305 entries, each with the produc"
 p172,256,256.0,in registry,"h with the producing script and function, the SHA-256 of its input files and an exe"
 p172,5.2,5.2,ignored: section number,cution timestamp). The audit estimates in Section 5.2 are derived arithmetically fr
 p174,5.2,5.2,ignored: section number,ind the estimated recoverable coverage of Section 5.2.
@@ -990,10 +1015,11 @@ p175,88.1%,88.1,in registry,"0.645 × 0.2177 = 0.881, a 95% interval of 82.6 to 
 p176,26,26.0,in registry,"comparison, the unstratified sample proportion is 26/50 = 0.520 with a Wilson-scor"
 p176,50,50.0,in registry,"parison, the unstratified sample proportion is 26/50 = 0.520 with a Wilson-score 9"
 p176,0.520,0.52,in registry,"on, the unstratified sample proportion is 26/50 = 0.520 with a Wilson-score 95% inter"
-p176,95%,95.0,in registry,e proportion is 26/50 = 0.520 with a Wilson-score 95% interval of 0.385 to 0.652. S
-p176,0.385,0.385,in registry,26/50 = 0.520 with a Wilson-score 95% interval of 0.385 to 0.652. Scaling by 0.2177 g
-p176,0.652,0.652,in registry,.520 with a Wilson-score 95% interval of 0.385 to 0.652. Scaling by 0.2177 gives a re
-p176,0.2177,0.2177,in registry,-score 95% interval of 0.385 to 0.652. Scaling by 0.2177 gives a residual of 0.1132 (a
+p176,95%,95.0,in registry,e proportion is 26/50 = 0.520 with a Wilson-score 95% interval (Wilson 1927) of 0.3
+p176,1927,1927.0,ignored: year,= 0.520 with a Wilson-score 95% interval (Wilson 1927) of 0.385 to 0.652. Scaling b
+p176,0.385,0.385,in registry,with a Wilson-score 95% interval (Wilson 1927) of 0.385 to 0.652. Scaling by 0.2177 g
+p176,0.652,0.652,in registry,lson-score 95% interval (Wilson 1927) of 0.385 to 0.652. Scaling by 0.2177 gives a re
+p176,0.2177,0.2177,in registry,erval (Wilson 1927) of 0.385 to 0.652. Scaling by 0.2177 gives a residual of 0.1132 (a
 p176,0.1132,0.1132,in registry,5 to 0.652. Scaling by 0.2177 gives a residual of 0.1132 (approximately 199 DDRs) and
 p176,199,199.0,in registry,0.2177 gives a residual of 0.1132 (approximately 199 DDRs) and an estimated recove
 p176,85.4%,85.4,in registry,"99 DDRs) and an estimated recoverable coverage of 85.4%, with the interval 0.7408 + 0"

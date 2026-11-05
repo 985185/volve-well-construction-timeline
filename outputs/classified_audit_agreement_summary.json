@@ -5,6 +5,10 @@
  "wilson_low_pct": 44.2,
  "wilson_high_pct": 70.1,
  "weighted_pct": 61.0,
+ "weighted_se_pct": 8.2,
+ "weighted_ci_low_pct": 44.9,
+ "weighted_ci_high_pct": 77.2,
+ "phases_zero_variance": 4,
  "per_phase": {
   "12\u00bc in. and smaller hole": [
    3,

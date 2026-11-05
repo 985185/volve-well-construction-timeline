@@ -382,6 +382,15 @@ add("agreement.weighted_pct", cas["weighted_pct"], "Frequency-weighted agreement
 add("agreement.per_phase", cas["per_phase"], "Agreement per phase: [agreeing, sampled] (names as in the paper)", S6A, "module level", [CAG])
 add("agreement.causes_proposed", cas["causes_proposed"], "Causes of the 22 disagreements, proposed from the narratives (the author's note column was empty); two are unexplained", S6A, "CAUSE", [CAG], note="indicative: assigned by the AI tool from the narratives, not by the author; the author accepted the table as indicative")
 add("agreement.seed", cas["seed"], "Random seed of the draw (random.Random(seed).sample, 4 per phase, pools sorted by filename)", "src/stage6_classified_audit.py", "module level", [CAG])
+add("agreement.weighted_se_pct", cas["weighted_se_pct"], "Standard error of the frequency-weighted agreement, percentage points (stratified by phase, finite-population correction)", S6A, "module level", [CAG, CL])
+add("agreement.weighted_ci_low_pct", cas["weighted_ci_low_pct"], "Design-based 95% interval of the weighted agreement, lower bound (normal approximation; fragile with four reports per phase)", S6A, "module level", [CAG, CL])
+add("agreement.weighted_ci_high_pct", cas["weighted_ci_high_pct"], "Design-based 95% interval of the weighted agreement, upper bound", S6A, "module level", [CAG, CL])
+add("agreement.phases_zero_variance", cas["phases_zero_variance"], "Phases with 0 of 4 or 4 of 4 agreeing (zero sample variance, which makes the interval approximate)", S6A, "module level", [CAG])
+add("agreement.phase_population", cas["phase_population"], "Classified reports per phase (the weights of the weighted agreement are these counts over 1,303)", S6A, "module level", [CAG, CL])
+_st2 = dl[dl.wellbore == "15/9-19 ST2"].iloc[0]
+add("duration.19ST2_drilled_length_range_m", [float(_st2.td_md_m) - rev["st2_md_at_transition_m"], float(_st2.td_md_m) - rev["st2_cement_drilled_out_m"]], "15/9-19 ST2 drilled length from the kick-off range: TD minus 1,536 m (used in Table 8, a minimum) and TD minus 1,486 m (m)", S9, "module level", [DU, RE])
+add("duration.19ST2_m_per_report_range", [round((float(_st2.td_md_m) - rev["st2_md_at_transition_m"]) / float(_st2.ddrs_to_td), 1), round((float(_st2.td_md_m) - rev["st2_cement_drilled_out_m"]) / float(_st2.ddrs_to_td), 1)], "15/9-19 ST2 metres per report over the same range (68 reports to TD)", S9, "module level", [DU, RE])
+add("kickoff.19ST2.lower_bound_report", [rev["st2_lower_bound_report"], rev["st2_lower_bound_report_date"]], "Report that states cement drilled out to 1,486 m (15/9-19 S, the day before the transition)", SRE, "has()", [RE, DDR])
 # total depth: name-matched and depth-matched wellbores reported separately
 _nm = td[td.match_method == "name"]; _dm = td[td.match_method.str.startswith("T2")]
 add("td.name_matched", len(_nm), "Wellbores matched to NOD by name", S7T, "module level", [TD], note="NEW (external review): 24 matched = 21 by name + 3 by depth")

@@ -268,6 +268,14 @@ agreement.weighted_pct,61.0,null,NEW,
 agreement.per_phase,"{""12\u00bc in. and smaller hole"": [3, 4], ""Cementing"": [0, 4], ""Completion"": [3, 4], ""Intermediate casing"": [2, 4], ""Int",null,NEW,
 agreement.causes_proposed,"{""incidental keyword"": 8, ""campaign context"": 5, ""whipstock or window milling under Workover"": 4, ""unclear from the text",null,NEW,"indicative: assigned by the AI tool from the narratives, not by the author; the author accepted the table as indicative"
 agreement.seed,20261105,null,NEW,
+agreement.weighted_se_pct,8.2,null,NEW,
+agreement.weighted_ci_low_pct,44.9,null,NEW,
+agreement.weighted_ci_high_pct,77.2,null,NEW,
+agreement.phases_zero_variance,4,null,NEW,
+agreement.phase_population,"{""12\u00bc in. and smaller hole"": 256, ""Completion"": 228, ""Liner/Casing run"": 144, ""Waiting/Downtime"": 120, ""Cementing"":",null,NEW,
+duration.19ST2_drilled_length_range_m,"[3105.0, 3155.0]",null,NEW,
+duration.19ST2_m_per_report_range,"[45.7, 46.4]",null,NEW,
+kickoff.19ST2.lower_bound_report,"[""15_9_19_S_1992_12_18.xml"", ""1992-12-18""]",null,NEW,
 td.name_matched,21,null,NEW,NEW (external review): 24 matched = 21 by name + 3 by depth
 td.name_matched_within_0p5,19,null,NEW,
 td.name_matched_outside,"[""15/9-19 S"", ""15/9-F-15""]",null,NEW,
@@ -295,4 +303,4 @@ hugin.f4_12_25in_section_td_m,2770,null,NEW,
 kickoff.order_step_counts,"{""1 stated depth"": 9, ""2 milled-window top"": 2, ""3 event named, report MD"": 3, ""4 MD at transition, narrative empty"": 1}",null,NEW,
 kickoff.shallower_than_parent_kickoff,"[""15/9-F-1 B"", ""15/9-F-1 C"", ""15/9-F-15 C"", ""15/9-F-15 D""]",null,NEW,
 data.xml_declared_encoding,"{""none declared (ASCII only)"": 336, ""ISO-8859-1"": 1423}",null,NEW,
-registry.n_entries,297,59,CHANGED,v2 registry had 59 entries
+registry.n_entries,305,59,CHANGED,v2 registry had 59 entries

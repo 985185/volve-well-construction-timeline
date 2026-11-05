@@ -47,9 +47,16 @@ DISP = {"Spud / Conductor": "Spud/Conductor", "Surface casing": "Surface hole an
 share = pop.phase.map(DISP).value_counts(); rate = m.groupby("assigned_phase_display").category.apply(lambda s: (s == "EXACT").mean())
 w = sum(share[ph] * rate[ph] for ph in share.index) / 1303
 print("frequency-weighted agreement = sum(phase count x phase agreement rate) / 1,303 = " + " + ".join(f"{share[ph]}x{rate[ph]:.2f}" for ph in share.index) + f" / 1303 = {w:.4f}")
+# stratified (by phase) design-based interval for the frequency-weighted agreement: W_h = N_h / 1,303, p_h = k_h / 4, f_h = 4 / N_h, variance = sum W_h^2 (1 - f_h) p_h (1 - p_h) / (n_h - 1)
+_v = 0.0
+for ph in share.index:
+    _n = int((m.assigned_phase_display == ph).sum()); _p = rate[ph]; _W = share[ph] / 1303; _f = _n / share[ph]
+    _v += _W * _W * (1 - _f) * _p * (1 - _p) / (_n - 1)
+_se = _v ** 0.5; wlo, whi = w - 1.96 * _se, w + 1.96 * _se
+print(f"design-based: variance {_v:.6f}; SE {_se:.4f}; 95% {w:.4f} +/- 1.96 x {_se:.4f} = {wlo:.4f} to {whi:.4f}; phases with p = 0 or 1 (zero sample variance): {int(((rate == 0) | (rate == 1)).sum())} of {len(rate)}")
 import collections
 cn = m[m.category != "EXACT"].cause_proposed.value_counts().to_dict()
-json.dump(dict(n=n, agree=k, agree_pct=round(100 * k / n, 1), wilson_low_pct=round(100 * lo, 1), wilson_high_pct=round(100 * hi, 1), weighted_pct=round(100 * w, 1),
+json.dump(dict(n=n, agree=k, agree_pct=round(100 * k / n, 1), wilson_low_pct=round(100 * lo, 1), wilson_high_pct=round(100 * hi, 1), weighted_pct=round(100 * w, 1), weighted_se_pct=round(100 * _se, 1), weighted_ci_low_pct=round(100 * wlo, 1), weighted_ci_high_pct=round(100 * whi, 1), phases_zero_variance=int(((rate == 0) | (rate == 1)).sum()),
                per_phase={ph: [int((m[m.assigned_phase_display == ph].category == "EXACT").sum()), int((m.assigned_phase_display == ph).sum())] for ph in sorted(m.assigned_phase_display.unique())},
                phase_population={ph: int(share[ph]) for ph in share.index}, categories=m.category.value_counts().to_dict(), causes_proposed=cn,
                seed=20261105, per_phase_n=4, note="causes are proposed from the narratives (the author's note column was empty)"),

@@ -34,7 +34,7 @@ E["s19_pipe_cut_m"] = 2516; has(S, "1992-12-13", r"CUT PIPE AT 2516M")
 E["s19_backoff_mentions"] = int(d[d.wellbore.isin([S, "NO 15/9-19 ST2"])].t.str.contains(r"back(?:ed)?[\s-]?off|backoff", case=False, regex=True).sum()); assert E["s19_backoff_mentions"] == 0
 has(S, "1992-12-15", r"CEMENT PLUG FROM 2180 TO 1980 M AND FROM 1850 TO 1550M"); has(S, "1992-12-16", r"3\.RD CMT PLUG FROM 1543M TO 1430M")
 E["s19_cement_plugs_m"] = [[2180, 1980], [1850, 1550], [1543, 1430]]
-has(S, "1992-12-18", r"DRILLED CEMENT TO 1486M"); E["st2_cement_drilled_out_m"] = 1486
+E["st2_lower_bound_report"] = has(S, "1992-12-18", r"DRILLED CEMENT TO 1486M"); E["st2_lower_bound_report_date"] = "1992-12-18"; E["st2_cement_drilled_out_m"] = 1486
 for wb in (S, "NO 15/9-19 ST2"):
     r = rep(wb, "1992-12-19"); assert r.sum24Hr.strip() == "None" and float(r.md) == 1536
 E["st2_md_at_transition_m"] = 1536

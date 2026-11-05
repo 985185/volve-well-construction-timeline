@@ -46,7 +46,7 @@ From the repository root:
 .venv/Scripts/python -X utf8 src/run_pipeline.py
 ```
 
-This runs every stage in order (extract, data quality, classification, timeline, audit, NOD validation, kick-off, durations, figures, registry, manuscript draft) in about a minute on a laptop and stops at the first failure. It was tested from a fresh clone with only the DDR XML added: all 235 registry values, all tables and figures, and the manuscript text came out identical to the committed ones (only timestamps and the SHA-256 of generated files differ in `outputs/numbers_registry.json`).
+This runs every stage in order (extract, data quality, classification, timeline, audit, NOD validation, kick-off, durations, figures, registry, manuscript draft) in about a minute on a laptop and stops at the first failure. It was tested from a fresh clone with only the DDR XML added: all 305 registry values, all tables and figures, and the manuscript text came out identical to the committed ones (only timestamps and the SHA-256 of generated files differ in `outputs/numbers_registry.json`).
 
 | Stage | Script(s) | Writes |
 |---|---|---|
