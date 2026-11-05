@@ -22,4 +22,28 @@ tb = pd.crosstab(m.assigned_phase_display, m.category).reindex(columns=["EXACT",
 print("rows with a note:", int((m.my_note.astype(str).str.strip() != "").sum()))
 print("\nnon-exact rows (assigned | my_phase | note):")
 for r in m[m.category != "EXACT"].itertuples(): print(f"  {r.category:9s} {r.record_id} | {r.assigned_phase_display} | {r.my_phase} | {r.my_note}")
-m[["record_id", "wellbore", "date", "assigned_phase_display", "my_phase", "my_note", "category"]].rename(columns={"assigned_phase_display": "assigned_phase"}).sort_values("record_id").to_csv("outputs/classified_audit_agreement.csv", index=False, lineterminator="\n")
+# Causes of the 22 disagreements of the single-report blind audit: PROPOSED from reading each narrative (the author's note column was empty); to be confirmed by the author.
+CAUSE = {**{k: "incidental keyword" for k in ["15_9_19_S_1992_11_29", "15_9_F_15_D_2016_07_27", "15_9_F_10_2009_05_18", "15_9_F_4_2008_02_08", "15_9_F_14_2008_06_19", "15_9_F_1_C_2014_03_21", "15_9_F_15_D_2013_12_30", "15_9_F_15_A_2008_12_23"]},
+         **{k: "whipstock or window milling under Workover" for k in ["15_9_19_A_1997_07_25", "15_9_19_A_1997_07_26", "15_9_19_A_1997_07_29", "15_9_F_9_2009_07_02"]},
+         **{k: "campaign context" for k in ["15_9_F_15_C_2013_10_14", "15_9_F_15_C_2013_10_23", "15_9_F_1_C_2016_10_22", "15_9_F_4_2008_03_22", "15_9_F_5_2012_09_16"]},
+         **{k: "phase-scheme ambiguity" for k in ["15_9_F_12_2007_08_02", "15_9_F_1_B_2013_09_02"]},
+         "15_9_19_ST2_1993_02_23": "mixed day",
+         **{k: "unclear from the text (author to say)" for k in ["15_9_F_9_A_2009_07_08", "15_9_19_A_1997_10_21"]}}
+m["cause_proposed"] = m.record_id.str.replace(".xml", "", regex=False).map(CAUSE).where(m.category != "EXACT", "")
+assert (m.cause_proposed != "").sum() == (m.category != "EXACT").sum()
+print("causes (proposed):",m[m.category != "EXACT"].cause_proposed.value_counts().to_dict())
+m[["record_id", "wellbore", "date", "assigned_phase_display", "my_phase", "my_note", "category", "cause_proposed"]].rename(columns={"assigned_phase_display": "assigned_phase"}).sort_values("record_id").to_csv("outputs/classified_audit_agreement.csv", index=False, lineterminator="\n")
+
+# Wilson interval and frequency-weighted agreement (phase agreement rates weighted by the phase's share of the 1,303 classified reports)
+def wilson(k, n, z=1.96):
+    p = k / n; den = 1 + z * z / n; ctr = (p + z * z / (2 * n)) / den; h = z * (p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5 / den
+    return ctr - h, ctr + h
+k = int((m.category == "EXACT").sum()); lo, hi = wilson(k, n)
+print(f"\nsingle-report blind agreement {k}/{n} = {k / n:.4f}; Wilson 95% {lo:.4f} to {hi:.4f}")
+pop = pd.read_parquet("data/interim/classified_new.parquet"); pop = pop[pop.phase != "Unclassified"]; assert len(pop) == 1303
+DISP = {"Spud / Conductor": "Spud/Conductor", "Surface casing": "Surface hole and casing", "Intermediate drilling": "Intermediate drilling", "Intermediate casing": "Intermediate casing",
+        "Reservoir drilling": "12¼ in. and smaller hole", "Liner / Casing run": "Liner/Casing run", "Cementing": "Cementing", "Completion": "Completion", "P&A": "P&A",
+        "Logging / Testing": "Logging/Testing", "Workover": "Workover", "Waiting / Downtime": "Waiting/Downtime", "Rig move / Setup": "Rig move/Setup"}
+share = pop.phase.map(DISP).value_counts(); rate = m.groupby("assigned_phase_display").category.apply(lambda s: (s == "EXACT").mean())
+w = sum(share[ph] * rate[ph] for ph in share.index) / 1303
+print("frequency-weighted agreement = sum(phase count x phase agreement rate) / 1,303 = " + " + ".join(f"{share[ph]}x{rate[ph]:.2f}" for ph in share.index) + f" / 1303 = {w:.4f}")

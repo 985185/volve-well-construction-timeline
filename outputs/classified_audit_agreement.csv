@@ -1,0 +1,53 @@
+record_id,wellbore,date,assigned_phase,my_phase,my_note,category,cause_proposed
+15_9_19_A_1997_07_25.xml,NO 15/9-19 A,1997-07-25,Workover,Intermediate drilling,,DISAGREE,whipstock or window milling under Workover
+15_9_19_A_1997_07_26.xml,NO 15/9-19 A,1997-07-26,Workover,Intermediate drilling,,DISAGREE,whipstock or window milling under Workover
+15_9_19_A_1997_07_29.xml,NO 15/9-19 A,1997-07-29,Workover,Intermediate drilling,,DISAGREE,whipstock or window milling under Workover
+15_9_19_A_1997_10_21.xml,NO 15/9-19 A,1997-10-21,Logging/Testing,12¼ in. and smaller hole,,DISAGREE,unclear from the text (author to say)
+15_9_19_BT2_1997_12_10.xml,NO 15/9-19 BT2,1997-12-10,Liner/Casing run,Liner/Casing run,,EXACT,
+15_9_19_ST2_1993_02_23.xml,NO 15/9-19 ST2,1993-02-23,Waiting/Downtime,Rig move/Setup,,DISAGREE,mixed day
+15_9_19_ST2_1993_02_24.xml,NO 15/9-19 ST2,1993-02-24,Rig move/Setup,Rig move/Setup,,EXACT,
+15_9_19_ST2_1993_03_01.xml,NO 15/9-19 ST2,1993-03-01,12¼ in. and smaller hole,12¼ in. and smaller hole,,EXACT,
+15_9_19_ST2_1997_07_25.xml,NO 15/9-19 ST2,1997-07-25,P&A,P&A,,EXACT,
+15_9_19_S_1992_11_26.xml,NO 15/9-19 S,1992-11-26,Intermediate drilling,Intermediate drilling,,EXACT,
+15_9_19_S_1992_11_29.xml,NO 15/9-19 S,1992-11-29,Cementing,Logging/Testing,,DISAGREE,incidental keyword
+15_9_19_S_1992_12_16.xml,NO 15/9-19 S,1992-12-16,P&A,P&A,,EXACT,
+15_9_F_10_2009_04_15.xml,NO 15/9-F-10,2009-04-15,Surface hole and casing,Surface hole and casing,,EXACT,
+15_9_F_10_2009_05_18.xml,NO 15/9-F-10,2009-05-18,Cementing,Logging/Testing,,DISAGREE,incidental keyword
+15_9_F_11_B_2013_07_03.xml,NO 15/9-F-11 B,2013-07-03,Completion,Completion,,EXACT,
+15_9_F_12_2007_07_23.xml,NO 15/9-F-12,2007-07-23,Intermediate drilling,Intermediate drilling,,EXACT,
+15_9_F_12_2007_07_25.xml,NO 15/9-F-12,2007-07-25,Intermediate drilling,Intermediate drilling,,EXACT,
+15_9_F_12_2007_08_02.xml,NO 15/9-F-12,2007-08-02,Intermediate casing,Liner/Casing run,,DISAGREE,phase-scheme ambiguity
+15_9_F_12_2007_08_22.xml,NO 15/9-F-12,2007-08-22,12¼ in. and smaller hole,12¼ in. and smaller hole,,EXACT,
+15_9_F_14_2008_06_19.xml,NO 15/9-F-14,2008-06-19,Liner/Casing run,Logging/Testing,,DISAGREE,incidental keyword
+15_9_F_14_2010_09_16.xml,NO 15/9-F-14,2010-09-16,Logging/Testing,Logging/Testing,,EXACT,
+15_9_F_14_2010_09_17.xml,NO 15/9-F-14,2010-09-17,Logging/Testing,Logging/Testing,,EXACT,
+15_9_F_15_2007_11_20.xml,NO 15/9-F-15,2007-11-20,Spud/Conductor,Spud/Conductor,,EXACT,
+15_9_F_15_A_2008_12_23.xml,NO 15/9-F-15 A,2008-12-23,Intermediate drilling,12¼ in. and smaller hole,,DISAGREE,incidental keyword
+15_9_F_15_C_2009_01_26.xml,NO 15/9-F-15 C,2009-01-26,Intermediate casing,Intermediate casing,,EXACT,
+15_9_F_15_C_2013_10_14.xml,NO 15/9-F-15 C,2013-10-14,Completion,P&A,,DISAGREE,campaign context
+15_9_F_15_C_2013_10_19.xml,NO 15/9-F-15 C,2013-10-19,Liner/Casing run,Liner/Casing run,,EXACT,
+15_9_F_15_C_2013_10_20.xml,NO 15/9-F-15 C,2013-10-20,Waiting/Downtime,Waiting/Downtime,,EXACT,
+15_9_F_15_C_2013_10_23.xml,NO 15/9-F-15 C,2013-10-23,Waiting/Downtime,Workover,,DISAGREE,campaign context
+15_9_F_15_D_2013_11_30.xml,NO 15/9-F-15 D,2013-11-30,12¼ in. and smaller hole,12¼ in. and smaller hole,,EXACT,
+15_9_F_15_D_2013_12_30.xml,NO 15/9-F-15 D,2013-12-30,Liner/Casing run,Completion,,DISAGREE,incidental keyword
+15_9_F_15_D_2016_07_18.xml,NO 15/9-F-15 D,2016-07-18,P&A,P&A,,EXACT,
+15_9_F_15_D_2016_07_27.xml,NO 15/9-F-15 D,2016-07-27,Surface hole and casing,P&A,,DISAGREE,incidental keyword
+15_9_F_1_2013_07_25.xml,NO 15/9-F-1,2013-07-25,Surface hole and casing,Surface hole and casing,,EXACT,
+15_9_F_1_2013_07_30.xml,NO 15/9-F-1,2013-07-30,Surface hole and casing,Surface hole and casing,,EXACT,
+15_9_F_1_2013_08_19.xml,NO 15/9-F-1,2013-08-19,Logging/Testing,Logging/Testing,,EXACT,
+15_9_F_1_B_2013_09_02.xml,NO 15/9-F-1 B,2013-09-02,Intermediate casing,Liner/Casing run,,DISAGREE,phase-scheme ambiguity
+15_9_F_1_B_2014_02_16.xml,NO 15/9-F-1 B,2014-02-16,P&A,P&A,,EXACT,
+15_9_F_1_C_2014_03_02.xml,NO 15/9-F-1 C,2014-03-02,Intermediate casing,Intermediate casing,,EXACT,
+15_9_F_1_C_2014_03_21.xml,NO 15/9-F-1 C,2014-03-21,Cementing,Completion,,DISAGREE,incidental keyword
+15_9_F_1_C_2014_04_12.xml,NO 15/9-F-1 C,2014-04-12,Completion,Completion,,EXACT,
+15_9_F_1_C_2014_04_17.xml,NO 15/9-F-1 C,2014-04-17,Completion,Completion,,EXACT,
+15_9_F_1_C_2016_10_22.xml,NO 15/9-F-1 C,2016-10-22,Rig move/Setup,P&A,,DISAGREE,campaign context
+15_9_F_4_2007_06_10.xml,NO 15/9-F-4,2007-06-10,Spud/Conductor,Spud/Conductor,,EXACT,
+15_9_F_4_2008_02_08.xml,NO 15/9-F-4,2008-02-08,Cementing,Logging/Testing,,DISAGREE,incidental keyword
+15_9_F_4_2008_03_22.xml,NO 15/9-F-4,2008-03-22,Waiting/Downtime,P&A,,DISAGREE,campaign context
+15_9_F_5_2008_07_11.xml,NO 15/9-F-5,2008-07-11,Rig move/Setup,Rig move/Setup,,EXACT,
+15_9_F_5_2012_09_16.xml,NO 15/9-F-5,2012-09-16,Rig move/Setup,Workover,,DISAGREE,campaign context
+15_9_F_7_2007_09_18.xml,NO 15/9-F-7,2007-09-18,Spud/Conductor,Spud/Conductor,,EXACT,
+15_9_F_7_2007_09_19.xml,NO 15/9-F-7,2007-09-19,Spud/Conductor,Spud/Conductor,,EXACT,
+15_9_F_9_2009_07_02.xml,NO 15/9-F-9,2009-07-02,Workover,Intermediate drilling,,DISAGREE,whipstock or window milling under Workover
+15_9_F_9_A_2009_07_08.xml,NO 15/9-F-9 A,2009-07-08,12¼ in. and smaller hole,Completion,,DISAGREE,unclear from the text (author to say)
