@@ -1,6 +1,6 @@
-# Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset
+# Auditable Reconstruction of Field-Scale Well Construction Timelines from Daily Drilling Reports: The Volve Field Open Dataset
 
-**Paper:** T. Appalla (independent researcher), "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset", IPTC 2027, paper IPTC-25544-MS.
+**Paper:** T. Appalla (independent researcher), "Auditable Reconstruction of Field-Scale Well Construction Timelines from Daily Drilling Reports: The Volve Field Open Dataset", IPTC 2027, paper IPTC-25544-MS.
 
 This repository is the reproducible pipeline behind the paper. It parses the 1,759 WITSML Daily Drilling Reports (DDRs) of the Equinor Volve field from the raw XML, classifies each report into one of 13 construction phases with a frozen rule-based classifier (v3), audits what the classifier misses, validates total depth and spud date against the Norwegian Offshore Directorate (NOD) FactPages, recovers sidetrack kick-off depths, and computes durations to total depth. Every number in the manuscript is produced by code in `src/` and traced in `outputs/numbers_registry.json` (one entry per number, with the producing script and function, the SHA-256 of the input files and a timestamp).
 
@@ -61,7 +61,7 @@ This runs every stage in order (extract, data quality, classification, timeline,
 | 9 Duration | `stage9_duration.py` | `outputs/duration_table.csv`, `outputs/duration_family_summary.csv` |
 | 10 Figures | `stage10_fig2_index.py`, `figure1_depth_vs_time.py` to `figure4_spud_offset.py` | `outputs/figures/*.png` (300 dpi; read `outputs/` only) |
 | 11 Registry | `stage11_registry.py` | `outputs/numbers_registry.json` and comparison CSVs |
-| 12 Manuscript | `stage12_manuscript.py`, `stage12_changes.py`, `stage12_check.py` | `manuscript/paper2_draft.docx`, `manuscript/CHANGES.md`, `outputs/manuscript_registry_check.csv` |
+| 12 Manuscript | `stage12_iptc.py` (author side: needs the conference template `inputs/27IPTC_Manuscript_Template.docx`, which is not in the repository, and is skipped without it), `stage12_check.py` | `manuscript/paper2_iptc.docx` and `.pdf`, `manuscript/IPTC_CHANGES.md`, `outputs/manuscript_registry_check.csv` |
 
 **Optional verification steps** compare the rerun with the author's earlier Databricks tables or catalog. They print `SKIPPED` and exit normally when those files are absent, and **no reported number depends on running them**:
 
@@ -77,21 +77,22 @@ The narrative of each stage (what ran, results, arithmetic, discrepancies) is in
 
 | Item | Source file | Script |
 |---|---|---|
-| Table 3, field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
-| Table 4, phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
-| Priority order and hole-size rules (Section 3.3) | `outputs/stage4_priority_rules.md` | `stage4_rules_table.py` |
-| Audit estimates (Section 5.2; the design-based estimate is the headline, the Wilson figures are in Appendix B) | `outputs/audit_adjudications.csv`, `outputs/audit_design_interval.json` and registry entries `audit.*` | `stage6_estimates.py`, `stage6_design_interval.py`, `stage11_registry.py` |
+| (repository only) field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
+| (repository only) phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
+| Priority order and hole-size rules (Section 3.3; in the repository, not a table of the paper) | `outputs/stage4_priority_rules.md` | `stage4_rules_table.py` |
+| Audit estimates and their arithmetic (Section 5.2, `outputs/audit_arithmetic.md`; the design-based estimate is the headline, the Wilson figures are in Appendix B) | `outputs/audit_adjudications.csv`, `outputs/audit_design_interval.json` and registry entries `audit.*` | `stage6_estimates.py`, `stage6_design_interval.py`, `stage11_registry.py` |
 | Phase label agreement (Section 5.3; the author's blind labels of 52 classified reports) | `outputs/classified_audit_agreement.csv`, `outputs/classified_audit_agreement_summary.json` (no narrative text; the labelled workbook holds narratives and is not published) | `stage6_classified_audit.py` (draw and workbook), `stage6_classified_agreement.py` (author side, needs the filled workbook) |
 | Timeline dataset (Section 5.4) | `outputs/timeline.csv` | `stage5_timeline.py` |
-| Table 5, total depth | `outputs/td_validation.csv`, `outputs/review_evidence.json` | `stage7_td.py`, `review_evidence.py` |
-| Table 6, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
-| Table 7, kick-off depths | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv`, `outputs/review_evidence.json` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
-| Table 8, durations | `outputs/duration_table.csv` | `stage9_duration.py` |
+| Table 1, total depth, special cases (all 26 rows in the file) | `outputs/td_validation.csv`, `outputs/review_evidence.json` | `stage7_td.py`, `review_evidence.py` |
+| Table 2, spud validation (the rules are in `outputs/spud_rules.md`) | `outputs/spud_validation.csv` | `stage7_spud.py` |
+| Kick-off depths (Section 5.7; all 15 in the file, not a table of the paper) | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv`, `outputs/review_evidence.json` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
+| Table 3, durations, flagged wellbores (all 26 in the file) | `outputs/duration_table.csv` | `stage9_duration.py` |
 | Fig. 1 | `outputs/figures/example_ddr_crop.png` (page of the original Daily Drilling Report PDF of the report of Table 1; the PDF is not in the repository) | `render_example_ddr.py` (author side, needs PyMuPDF and the PDF) |
 | Fig. 2 | `outputs/figures/figure1_depth_vs_time.png` | `figure1_depth_vs_time.py` |
-| Fig. 3 | `outputs/figures/figure2_days_vs_depth.png` | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |
-| Fig. 4 | `outputs/figures/figure3_td_validation.png` | `figure3_td_validation.py` |
-| Fig. 5 | `outputs/figures/figure4_spud_offset.png` | `figure4_spud_offset.py` |
+| Fig. 3 | `outputs/figures/figure3_td_validation.png` | `figure3_td_validation.py` |
+| Fig. 4 | `outputs/figures/figure4_spud_offset.png` | `figure4_spud_offset.py` |
+| (not in the paper) | `outputs/figures/figure2_days_vs_depth.png`, report number against depth (the former Fig. 3, deleted for length) | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |
+| (not in the paper) | `outputs/figures/figure2_days_vs_depth.png`, report number against depth (the former Fig. 3, deleted for length) | `stage10_fig2_index.py`, `figure2_days_vs_depth.py` |
 | Every number in the text | `outputs/numbers_registry.json` | `stage11_registry.py`; checked by `stage12_check.py` |
 
 Phase labels: the classifier's internal names "Reservoir drilling" and "Surface casing" appear in the data files; the manuscript and figures display them as "12¼ in. and smaller hole" and "Surface hole and casing" (label-only change, patterns frozen; `notes/decisions.md`, item 49).
@@ -111,7 +112,7 @@ src/           one module per stage
 outputs/       timeline, tables, figures, audit and kick-off files, numbers_registry.json
 reports/       STAGE_<n>.md, one per stage
 notes/         decisions.md (log of author decisions), classifier_gaps.md
-manuscript/    updated manuscript draft and the number-by-number change log (CHANGES.md)
+manuscript/    the author's manuscript (paper2_author.docx), the IPTC-template version (paper2_iptc.docx, .pdf) with its edit log (IPTC_CHANGES.md); paper2_draft.docx, paper2_final_for_review.pdf, CHANGES.md and style_diff.md are the pre-template version of release v1.0
 ```
 
 ## How AI was used

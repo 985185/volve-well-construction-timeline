@@ -2,7 +2,7 @@
 15/9-F-11 T2 is excluded because NOD does not register it separately (25 wellbores plotted)."""
 import matplotlib
 matplotlib.use("Agg")
-import matplotlib.patches as mpatches
+from matplotlib.lines import Line2D
 import matplotlib.pyplot as plt
 import pandas as pd
 from figure_style import CATEGORY_COLORS, save
@@ -16,7 +16,10 @@ fig, ax = plt.subplots(figsize=(10, 9))
 y = range(len(p))
 vals = p.w_minus_n_days.tolist()
 ax.barh(y, [max(min(v, CLIP), -CLIP) for v in vals], color=[CATEGORY_COLORS[c][0] for c in p.category], edgecolor="black", linewidth=0.3)
-ax.scatter([max(min(v, CLIP), -CLIP) for v in vals], list(y), c=[CATEGORY_COLORS[c][0] for c in p.category], s=38, marker="o", edgecolors="black", linewidths=0.8, zorder=4)      # a marker at the end of every bar, coloured by category, so zero-length bars are visible
+MARK = {"EXACT": "o", "DEFINITIONAL_OFFSET": "s", "ERROR": "^", "INHERITED": "v", "IDENTITY": "D", "UNRESOLVED": "X"}          # one marker shape per category as well as one colour
+for cat in MARK:      # a marker at the end of every bar, so zero-length bars are visible
+    sel = [i for i, c in enumerate(p.category) if c == cat]
+    ax.scatter([max(min(vals[i], CLIP), -CLIP) for i in sel], sel, c=CATEGORY_COLORS[cat][0], s=46, marker=MARK[cat], edgecolors="black", linewidths=0.8, zorder=4)
 ax.set_yticks(list(y)); ax.set_yticklabels(p.wellbore.str.replace("NO 15/9-", ""), fontsize=8)
 ax.axvline(0, color="black", linewidth=0.8); ax.grid(alpha=0.2, axis="x")
 for yi, v in zip(y, vals):          # value labels, so zero-day offsets stay visible
@@ -28,7 +31,7 @@ for yi, v in zip(y, vals):          # value labels, so zero-day offsets stay vis
         ax.annotate(f"{v:+.0f}" if v else "0", (v, yi), xytext=(4 if v >= 0 else -4, 0), textcoords="offset points", ha="left" if v >= 0 else "right", va="center", fontsize=7)
 ax.set_xlim(-CLIP * 1.05, max(max(vals) * 1.25, 60))
 ax.set_xlabel("Offset, days (WITSML spud date minus NOD pre-drill entry date, else main entry date)")
-ax.legend(handles=[mpatches.Patch(color=c, label=l) for c, l in CATEGORY_COLORS.values()], loc="upper left", fontsize=7.5)
+ax.legend(handles=[Line2D([0], [0], marker=MARK[k], color="none", markerfacecolor=CATEGORY_COLORS[k][0], markeredgecolor="black", markersize=8, label=CATEGORY_COLORS[k][1]) for k in MARK], loc="upper left", fontsize=7.5)
 fig.tight_layout()
 save(fig, "figure4_spud_offset.png")
 print("plotted", len(p), "excluded", excl.wellbore.tolist(), p.category.value_counts().to_dict())
