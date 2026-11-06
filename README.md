@@ -4,7 +4,7 @@
 
 This repository is the reproducible pipeline behind the paper. It parses the 1,759 WITSML Daily Drilling Reports (DDRs) of the Equinor Volve field from the raw XML, classifies each report into one of 13 construction phases with a frozen rule-based classifier (v3), audits what the classifier misses, validates total depth and spud date against the Norwegian Offshore Directorate (NOD) FactPages, recovers sidetrack kick-off depths, and computes durations to total depth. Every number in the manuscript is produced by code in `src/` and traced in `outputs/numbers_registry.json` (one entry per number, with the producing script and function, the SHA-256 of the input files and a timestamp).
 
-This repository is a clean rerun from the raw data, released as v1.0 (https://github.com/985185/volve-well-construction-timeline/releases/tag/v1.0); the paper cites this release. The state before the rerun is kept under `inputs/` for comparison. To cite the software or the paper, see `CITATION.cff`.
+This repository is a clean rerun from the raw data, released as v1.1 (https://github.com/985185/volve-well-construction-timeline/releases/tag/v1.1), the version that accompanies the IPTC-template manuscript and that the paper cites. Release v1.0 (https://github.com/985185/volve-well-construction-timeline/releases/tag/v1.0) is kept unchanged. The state before the rerun is kept under `inputs/` for comparison. To cite the software or the paper, see `CITATION.cff`.
 
 ## Licences
 
@@ -46,7 +46,7 @@ From the repository root:
 .venv/Scripts/python -X utf8 src/run_pipeline.py
 ```
 
-This runs every stage in order (extract, data quality, classification, timeline, audit, NOD validation, kick-off, durations, figures, registry, manuscript draft) in about a minute on a laptop and stops at the first failure. It was tested from a fresh clone with only the DDR XML added: all 305 registry values, all tables and figures, and the manuscript text came out identical to the committed ones (only timestamps and the SHA-256 of generated files differ in `outputs/numbers_registry.json`).
+This runs every stage in order (extract, data quality, classification, timeline, audit, NOD validation, kick-off, durations, figures, registry, manuscript draft) in about a minute on a laptop and stops at the first failure. It was tested from a fresh clone with only the DDR XML added: all 307 registry values, all tables and figures, and the manuscript text came out identical to the committed ones (only timestamps and the SHA-256 of generated files differ in `outputs/numbers_registry.json`).
 
 | Stage | Script(s) | Writes |
 |---|---|---|
@@ -112,7 +112,7 @@ src/           one module per stage
 outputs/       timeline, tables, figures, audit and kick-off files, numbers_registry.json
 reports/       STAGE_<n>.md, one per stage
 notes/         decisions.md (log of author decisions), classifier_gaps.md
-manuscript/    the author's manuscript (paper2_author.docx), the IPTC-template version (paper2_iptc.docx, .pdf) with its edit log (IPTC_CHANGES.md); paper2_draft.docx, paper2_final_for_review.pdf, CHANGES.md and style_diff.md are the pre-template version of release v1.0
+manuscript/    the author's manuscript (paper2_author.docx), the IPTC-template version (paper2_iptc.docx, .pdf) with its edit log (IPTC_CHANGES.md); paper2_draft.docx, paper2_final_for_review.pdf, CHANGES.md and style_diff.md are the pre-template version of release v1.0 (retained, not part of the v1.1 manuscript)
 ```
 
 ## How AI was used
