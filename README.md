@@ -77,16 +77,16 @@ The narrative of each stage (what ran, results, arithmetic, discrepancies) is in
 
 | Item | Source file | Script |
 |---|---|---|
-| Table 3, field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
-| Table 4, phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
-| Priority order and hole-size rules (Section 3.3) | `outputs/stage4_priority_rules.md` | `stage4_rules_table.py` |
-| Audit estimates (Section 5.2; the design-based estimate is the headline, the Wilson figures are in Appendix B) | `outputs/audit_adjudications.csv`, `outputs/audit_design_interval.json` and registry entries `audit.*` | `stage6_estimates.py`, `stage6_design_interval.py`, `stage11_registry.py` |
+| (repository only) field population | `outputs/stage3_table1_field_population.csv` | `stage3_quality.py` |
+| (repository only) phase distribution | `outputs/table2_phase_distribution.csv` | `stage4_classify.py` |
+| Table 1, priority order and hole-size rules (Section 3.3) | `outputs/stage4_priority_rules.md` | `stage4_rules_table.py` |
+| Audit estimates and their arithmetic (Section 5.2, `outputs/audit_arithmetic.md`; the design-based estimate is the headline, the Wilson figures are in Appendix B) | `outputs/audit_adjudications.csv`, `outputs/audit_design_interval.json` and registry entries `audit.*` | `stage6_estimates.py`, `stage6_design_interval.py`, `stage11_registry.py` |
 | Phase label agreement (Section 5.3; the author's blind labels of 52 classified reports) | `outputs/classified_audit_agreement.csv`, `outputs/classified_audit_agreement_summary.json` (no narrative text; the labelled workbook holds narratives and is not published) | `stage6_classified_audit.py` (draw and workbook), `stage6_classified_agreement.py` (author side, needs the filled workbook) |
 | Timeline dataset (Section 5.4) | `outputs/timeline.csv` | `stage5_timeline.py` |
-| Table 5, total depth | `outputs/td_validation.csv`, `outputs/review_evidence.json` | `stage7_td.py`, `review_evidence.py` |
-| Table 6, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
-| Table 7, kick-off depths | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv`, `outputs/review_evidence.json` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
-| Table 8, durations | `outputs/duration_table.csv` | `stage9_duration.py` |
+| Table 2, total depth, special cases (all 26 rows in the file) | `outputs/td_validation.csv`, `outputs/review_evidence.json` | `stage7_td.py`, `review_evidence.py` |
+| Table 3, spud validation | `outputs/spud_validation.csv` | `stage7_spud.py` |
+| Table 4, kick-off depths, special cases (all 15 in the file) | `outputs/kickoff_table.csv`, `outputs/kickoff_proposal.csv`, `outputs/review_evidence.json` | `stage8b_kickoff_table.py`, `stage8d_apply_signoff.py` |
+| Table 5, durations, flagged wellbores (all 26 in the file) | `outputs/duration_table.csv` | `stage9_duration.py` |
 | Fig. 1 | `outputs/figures/example_ddr_crop.png` (page of the original Daily Drilling Report PDF of the report of Table 1; the PDF is not in the repository) | `render_example_ddr.py` (author side, needs PyMuPDF and the PDF) |
 | Fig. 2 | `outputs/figures/figure1_depth_vs_time.png` | `figure1_depth_vs_time.py` |
 | Fig. 3 | `outputs/figures/figure3_td_validation.png` | `figure3_td_validation.py` |

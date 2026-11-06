@@ -199,3 +199,8 @@
 - Trade names: EZSV, EVO plug and Halliburton removed (Table 2, Nomenclature); the AI product name removed from the disclosure; Rig Name and Drilling contractor masked in Fig. 1. Remaining names: Equinor (data owner), Statoil (operator, Fig. 1), Energistics (WITSML publisher, reference), FactPages (NOD database), GitHub (repository URL).
 - Template conflict: the template writes captions as "Fig. 1" followed by an em dash; the manuscript keeps a colon because of the no-em-dash rule.
 - Section C had already been carried out before this round (PR #1 merged, release v1.0 created on 2026-11-05); the template version goes on a new branch (iptc-author-kit) and needs a new release tag.
+
+## 86. IPTC cuts, second round (2026-11-06)
+- Applied: Table 1 (example report) removed, Tables 3 and 4 (field population, phase distribution) moved to the repository, Table 2 note shortened, 5.3 per-phase list to the repository, 5.5 to 5.8 shortened, Table 7 reduced to nine special cases, Table 8 reduced to the ten flagged, indicative and 19 ST2 wellbores, Appendix A (audit arithmetic) moved to outputs/audit_arithmetic.md. The remaining tables are renumbered 1 to 5 (phases, total depth, spud, kick-off, duration).
+- Word count 7,821 (including tables and captions, excluding references) against 7,000; 13 pages against 16. The Abstract and the Conclusions are unchanged.
+- The Table 7 note of the author's file had lost the sentence on Parent (designation chain) and the departures of F-1 B, F-1 C, F-15 C and F-15 D that the author required earlier; it is restored in the note.

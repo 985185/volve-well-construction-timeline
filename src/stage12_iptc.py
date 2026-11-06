@@ -197,8 +197,91 @@ for k, r in enumerate(refs):
     if r.startswith("Tunkiel"): refs[k] = r.replace("J Pet Sci Eng 196:", "J Pet Sci Eng **196**:"); assert "**196**" in refs[k]
     if r.startswith("Wilson"): refs[k] = r.replace("J Am Stat Assoc 22 (158)", "J Am Stat Assoc **22** (158)"); assert "**22**" in refs[k]
 
+# ------------------------------------------------------------------ second round of cuts (the author asked for all of them)
+shallow = REG["kickoff.shallower_than_parent_kickoff"]["value"]
+# Table 1 (the example report) goes: Fig. 1 shows the same report
+replace_par("Table 1 shows a real construction report as stored in the archive", "Fig. 1 shows a real construction report as a page of the original PDF version of the Daily Drilling Report: the structured fields that the pipeline uses and the free-text summary that the classifier reads. The same report is stored in the archive as file 15_9_F_15_D_2013_11_23.xml (Equinor Volve dataset, Equinor 2018); its summary has 51 words, and its kick-off field is empty, as in most reports.", "Table 1 removed")
+caps["F1"] = "Page of the original Daily Drilling Report for 15/9-F-15 D, 23 November 2013 (Equinor Volve dataset, PDF version)."
+for d_ in (caps, notes): d_.pop("T1", None)
+# 3.1 and Background: small trims
+edit("operational parameters and the free-text 24-hour narrative (sum24Hr)", "and the free-text 24-hour narrative (sum24Hr)", "3.1 trimmed")
+edit("the last casing depth (md_csg_last_m), and", "the last casing depth (md_csg_last_m), and", "") if False else None
+edit("the source XML filename,", "the source filename,", "3.1 trimmed")
+edit("built a dictionary of rig terms and acronyms with drilling experts and tracked weighted term frequencies over time in the reports of three wells to flag recurring operational concerns. Priyadarshy et al. (2017) presented", "built a dictionary of rig terms and tracked weighted term frequencies in the reports of three wells to flag recurring operational concerns, and Priyadarshy et al. (2017) presented", "Background trimmed")
+edit("classified each sentence as an event, a symptom or an action. They noted that", "classified each sentence as an event, a symptom or an action; they noted that", "Background trimmed")
+edit("and its accuracy fell to 65.18% on a larger test set. A hybrid that", "and its accuracy fell to 65.18% on a larger test set; a hybrid that", "Background trimmed")
+# 3.3: Table 2 text and note
+replace_par("Table 2 gives the 13 phases in priority order", "Table 2 gives the 13 phases in priority order with their hole and casing sizes and example trigger words from the pattern table in the repository (outputs/stage4_priority_rules.csv). Each phase has further patterns that the table does not show.", "3.3 trimmed")
+notes["T2"] = ("A report takes the highest-priority phase with a match, and a report with no match is Unclassified. The triggers shown are simplified: the actual expressions impose context and distance limits, and all of them are in src/classifier_v3.py. Both casing sizes in the table occur in the reports: 14 in. in %d DDRs (%s) and 10¾ in. in %d DDRs (%d wellbores), %d of which also mention a tie-back or the combined 9⅝ x 10¾ in. string."
+               % (REG["casing.14in_ddrs"]["value"], ", ".join(REG["casing.14in_wellbores"]["value"]), REG["casing.10_3_4in_ddrs"]["value"], len(REG["casing.10_3_4in_wellbores"]["value"]), REG["casing.10_3_4in_tieback_or_combination_ddrs"]["value"]))
+# Section 4 and 5.1: Tables 3 and 4 go to the repository
+edit("across all 1,759 DDRs (Table 3).", "across all 1,759 DDRs (outputs/stage3_table1_field_population.csv).", "Table 3 to the repository")
+edit("and leaves 456 unclassified (25.9%) (Table 4).", "and leaves 456 unclassified (25.9%). The largest phases are 12¼ in. and smaller hole (256 reports), Completion (228) and Liner/Casing run (144); all counts are in outputs/table2_phase_distribution.csv.", "Table 4 to the repository")
+edit("Table 4 and the phase colours in Fig. 2 should be read as single-report labels.", "The phase counts and the phase colours in Fig. 2 should be read as single-report labels.", "Table 4 to the repository")
+for d_ in (caps, notes):
+    d_.pop("T3", None); d_.pop("T4", None)
+# 5.3: the per-phase list goes to the repository
+hit = [k for k, (kind, tx) in enumerate(flow) if "Agreement by phase, out of four reports each, was" in tx]; assert len(hit) == 1
+flow[hit[0]] = ("p", re.sub(r"Agreement by phase, out of four reports each, was .*? Workover 0\. ", "Agreement by phase is in outputs/classified_audit_agreement_summary.json. ", flow[hit[0]][1])); assert "agreement_summary.json" in flow[hit[0]][1]
+# 5.5 total depth
+replace_par("Maximum reconstructed measured depth per wellbore", "Maximum reconstructed measured depth per wellbore was compared with NOD's total depth for all 26 wellbores. Table 5 lists the special cases and Fig. 3 shows the 24 matched wellbores; all 26 rows are in the repository (outputs/td_validation.csv).", "5.5 trimmed")
+replace_par("Within 0.5 m: difference of 0.5 m or less.", "Within 0.5 m: difference of 0.5 m or less. The three technical sidetracks (15/9-19 BT2, 19 ST2 and F-11 T2) have no NOD record of their own and are matched to the NOD record whose total depth agrees. Agreement within 0.5 m is therefore their matching condition.", "5.5 trimmed") if False else None
+edit(" Among the 19 F-series wellbores matched by literal name, 18 (94.7%) agree within 0.5 m, and 15/9-F-15 is again the exception.", "", "5.5 trimmed")
+edit(" 15/9-F-7 and 15/9-F-9 share a total depth of 1,085 m, and NOD independently records 1,085 m for each, which rules out a duplication in the extraction.", "", "5.5 trimmed")
+edit("and 2 parent legs are unmatched (below).", "and 2 parent legs are unmatched.", "5.5 trimmed")
+replace_par("One explanation covers the two unmatched wellbores", "One explanation covers the two unmatched wellbores and the three depth-based matches. Each WITSML technical sidetrack (19 BT2, 19 ST2, F-11 T2) has no separate NOD entry, and NOD records its final total depth against the parent designation (19 B, 19 SR, F-11). The WITSML parent records that end short of that depth, 15/9-19 B at 3,272 m and 15/9-F-11 at 347 m, are the legs abandoned when the sidetrack was drilled, and they have no NOD counterpart. The two registers differ by construction, and neither is in error.", "5.5 trimmed")
+replace_par("The WITSML series of 15/9-19 S ends at 3,353 m", "The WITSML series of 15/9-19 S ends at 3,353 m, 227 m short of NOD's structured total depth (3,580.0 m). NOD's wellbore history records the well as temporarily suspended at 3,569.0 m (NOD 2026d), 216 m deeper than the last WITSML depth. The archive holds no reports for the final drilling and suspension, and the 227 m gap reflects those missing records. The reports it does hold are incomplete throughout, 39 reports over 91 days (Section 5.8), and the records do not show why.", "5.5 trimmed")
+# 5.6 spud
+replace_par("Spud date was compared across three sources", "Spud date was compared across three sources for every wellbore: the WITSML spud_date field, free-text spud language in the earliest DDRs of the wellbore and the NOD entry date. The offset is the WITSML spud date minus the NOD pre-drill entry date where NOD records one, which marks the start of top-hole drilling, and otherwise the NOD main entry date. Table 6 summarises the outcome and Fig. 4 plots the offset by category. For the four wellbores whose archive contains the pre-drill entry (15/9-F-4, F-5, F-14 and F-15), the first report falls on that date, or one day later for F-4. The categories were first assigned by inspection, and the rules in Table 6 were formalised afterwards to describe those assignments. The final category of 15/9-F-11 is Unresolved: NOD records a pre-drill campaign (6 to 17 April 2012) that is absent from the DDR archive, and the archive's 2013 reports describe a fresh spud from seabed, including the 30-inch conductor. The records do not show how the two campaigns relate. The earlier call of Exact, made by inspection, was not retained.", "5.6 trimmed")
+replace_par("In the four error cases", "In the four error cases the structured spud_date differs from the first report and its narrative by 91 to 340 days, while the first report and the NOD date agree with each other (for 15/9-F-12, the first report is dated 14 June 2007 and the structured field 15 March 2007). Two sidetracks, 15/9-F-11 A and 15/9-F-11 T2, carry a spud_date identical to that of their parent, which is almost certainly an inherited field value. NOD does not register 15/9-F-11 T2 separately, and Fig. 4 excludes it.", "5.6 trimmed")
+replace_par("The spud date of 15/9-F-1 needed particular care.", "The structured spud_date of 15/9-F-1 (28 November 2007) falls four days before its first DDR (2 December 2007). The 2007 reports cover the top hole only (four reports, maximum depth 226 m), and the well reached its total depth of 3,632 m in the 2013 campaign, whose first report (22 July 2013) is one day before the NOD entry date (23 July 2013). NOD records no pre-drill date for the 2007 work, unlike F-4, F-5, F-14 and F-15. The NOD date therefore marks the later campaign, and the case is classified as \"NOD date marks later campaign\". The WITSML value is consistent with the chronology of the wellbore.", "5.6 trimmed")
+for r in tables[5][1:]:
+    if r[0] == "Definitional offset": r[3] = "15/9-19 B, F-1 A, F-1 B, F-1 C, F-5, F-9 A, F-11 B, F-14"
+# 5.7 kick-off: Table 7 reduced to the special cases
+kt_rows = tables[6]
+def _name(r): return r[0]
+keep7 = [r for r in kt_rows[1:] if r[6] != "HIGH" or (r[5] not in ("", "0") and abs(float(r[5].replace("+", "").replace(",", ""))) > 10) or r[0] in shallow]
+drop7 = [r[0] for r in kt_rows[1:] if r not in keep7]
+assert len(keep7) == 9 and len(drop7) == 6, (len(keep7), drop7)
+tables[6] = [kt_rows[0]] + keep7
+caps["T7"] = "Sidetrack kick-off depths, special cases (all 15 sidetracks are in outputs/kickoff_table.csv)"
+notes["T7"] += " Parent follows the designation chain, each sidetrack being listed under the wellbore designated before it. " + ", ".join(x.replace("15/9-", "") for x in shallow[:-1]) + " and " + shallow[-1].replace("15/9-", "") + " kick off at a depth shallower than the kick-off of that parent and leave the hole shared with earlier wellbores of their family (Section 6.3). For 15/9-19 ST2 the range runs from the depth to which cement was drilled out to the measured depth at the transition, and Table 8 uses 1,536 m. Table 7 lists the sidetracks whose confidence is below HIGH, whose NOD difference exceeds 10 m or whose kick-off is shallower than that of the designated parent; the other six (" + ", ".join(drop7) + ") are in the repository file."
+edit("A kick-off depth was recovered for all 15 sidetracks (Table 7).", "A kick-off depth was recovered for all 15 sidetracks (Table 7 and the repository file).", "Table 7 reduced")
+hit = [k for k, (kind, tx) in enumerate(flow) if tx.startswith("No kick-off depth exists for 15/9-19 S.")]; assert len(hit) == 1; del flow[hit[0]]
+replace_par("NOD's wlbKickOffPoint agrees with the recovered depth", "NOD's wlbKickOffPoint is available for 12 of the 15 sidetracks and agrees with the recovered depth to within 10 m for 10, and equals it for 6. The two larger differences are 15/9-19 B (31 m) and 15/9-F-1 B (13 m). The least certain depths are 15/9-19 ST2, which lies between 1,486 and 1,536 m and rests on the measured depth at the transition, and 15/9-F-11 B, where cement and new formation were drilled from 2,531 to 2,589 m and the end of the interval is taken as the departure.", "5.7 trimmed")
+# 5.8 duration: Table 8 reduced to the flagged and indicative wellbores and 15/9-19 ST2
+dur = tables[7]
+keep8 = [r for r in dur[1:] if r[4] == "yes" or "(indicative)" in r[0] or r[0] == "15/9-19 ST2"]
+assert len(keep8) == 10, len(keep8)
+tables[7] = [dur[0]] + keep8
+caps["T8"] = "Duration to total depth (TD) and drilled length, flagged and indicative wellbores and 15/9-19 ST2 (all 26 wellbores are in outputs/duration_table.csv)"
+replace_par("Table 8 gives the duration of each wellbore", "Table 8 gives the duration of the flagged and indicative wellbores and of 15/9-19 ST2; all 26 wellbores, with per-phase report counts, are in outputs/duration_table.csv. Duration runs from the first report (the 1980 date sentinel excluded) to the date total depth was first reached, which is the maximum valid depth. The table lists the elapsed calendar days, the number of reports in that span (inclusive), the drilled length (total depth minus the recovered kick-off depth for the 15 sidetracks, Section 5.7, and total depth for the other 11) and metres per report, which is the drilled length divided by the number of reports. With inclusive counting, the number of reports equals the elapsed days plus 1 for a wellbore reported daily, and falls short of that where the archive has gaps. Seven of the 26 wellbores, whose elapsed days exceed twice their reports, are flagged (15/9-19 S, F-1, F-4, F-5, F-9, F-14 and F-15). F-1 reaches its total depth of 3,632 m in 31 reports spread over 2,085 days, four of them from 2007. The totals of 15/9-19 B (3,272 m) and 15/9-F-11 (347 m) are the depths of an abandoned parent leg or stub (Section 5.5) and make their durations indicative only. Metres per report is not a rate of penetration. It includes non-drilling days, gaps between reports and, for F-1, two campaigns.", "5.8 trimmed")
+edit("Table 8 gives elapsed days, reports and metres per report to total depth for each wellbore.", "Table 8 gives elapsed days, reports and metres per report to total depth for the flagged and indicative wellbores.", "Table 8 reduced")
+notes["T8"] = notes["T8"].replace("minus the Table 7 kick-off depth for sidetracks", "minus the recovered kick-off depth for sidetracks").replace("(Table 7)", "(Section 5.7)")
+# Appendix A (audit arithmetic) moves to the repository
+ai = [k for k, (kind, tx) in enumerate(flow) if kind == "h1" and tx.startswith("Appendix A")]; assert len(ai) == 1
+app = flow[ai[0] + 1:]; del flow[ai[0]:]
+open("outputs/audit_arithmetic.md", "w", encoding="utf-8", newline=chr(10)).write("# Audit arithmetic (Section 5.2 of the paper)" + chr(10) + chr(10) + (chr(10) + chr(10)).join(tx for kind, tx in app) + chr(10))
+for (w, k) in list(_all()):
+    t = _get(w, k); n = t.replace("is in Appendix A.", "is in the repository (outputs/audit_arithmetic.md).").replace("is shown in Appendix A.", "is shown in outputs/audit_arithmetic.md.")
+    if n != t: _set(w, k, n)
+assert not [1 for (w, k) in _all() if "Appendix" in _get(w, k)], [_get(w, k)[:80] for (w, k) in _all() if "Appendix" in _get(w, k)]
+# renumber the remaining tables 2, 5, 6, 7, 8 as 1 to 5
+OLDN = [2, 5, 6, 7, 8]; MAPN = {o: i + 1 for i, o in enumerate(OLDN)}
+tables = [tables[o - 1] for o in OLDN]
+for o in OLDN: pass
+caps = {("T%d" % MAPN[int(k[1:])] if k[0] == "T" else k): v for k, v in caps.items() if k[0] != "T" or int(k[1:]) in MAPN}
+notes = {"T%d" % MAPN[int(k[1:])]: v for k, v in notes.items() if int(k[1:]) in MAPN}
+WIDTH = {"T1": [800, 2600, 2400, 5000], "T2": [1700, 1300, 1000, 900, 1800, 4100], "T3": [1800, 800, 4400, 3800], "T4": [1500, 1700, 1500, 2600, 1000, 1100, 1400], "T5": [2300, 1100, 1500, 1400, 1100, 1700, 1700]}
+RIGHT = {"T2": {1, 2, 3}, "T4": {2, 4, 5}, "T5": {1, 2, 3, 4, 5, 6}}
+def _renum(t):
+    def f(m):
+        n = int(m.group(1)); assert n in MAPN, ("reference to a removed table", n, t[:80]); return "Table %d" % MAPN[n]
+    return re.sub(r"\bTable (\d)\b", f, t)
+for (w, k) in list(_all()): _set(w, k, _renum(_get(w, k)))
+
 # ------------------------------------------------------------------ floats: place each directly after the paragraph that first cites it
-ITEMS = [("T%d" % k, re.compile(r"\bTable %d\b" % k)) for k in range(1, 9)] + [("F%d" % k, re.compile(r"\bFig\. %d\b" % k)) for k in range(1, 5)]
+ITEMS = [("T%d" % k, re.compile(r"\bTable %d\b" % k)) for k in range(1, 6)] + [("F%d" % k, re.compile(r"\bFig\. %d\b" % k)) for k in range(1, 5)]
 place = {}
 for key, rx in ITEMS:
     for k, (kind, tx) in enumerate(flow):
@@ -206,9 +289,6 @@ for key, rx in ITEMS:
             place.setdefault(k, []).append((rx.search(tx).start(), key)); break
     else: raise AssertionError("not cited: " + key)
 FIG = {"F1": ("outputs/figures/example_ddr_crop.png", 6.5), "F2": ("outputs/figures/figure1_depth_vs_time.png", 7.2), "F3": ("outputs/figures/figure3_td_validation.png", 4.6), "F4": ("outputs/figures/figure4_spud_offset.png", 4.8)}
-WIDTH = {"T1": [1700, 5300, 3800], "T2": [800, 2600, 2400, 5000], "T3": [2900, 1100, 1000, 5800], "T4": [3400, 1700, 1700], "T5": [1700, 1300, 1000, 900, 1800, 4100],
-         "T6": [1800, 800, 4400, 3800], "T7": [1500, 1700, 1500, 2600, 1000, 1100, 1400], "T8": [2300, 1100, 1500, 1400, 1100, 1700, 1700]}
-RIGHT = {"T3": {2}, "T4": {1, 2}, "T5": {1, 2, 3}, "T7": {2, 4, 5}, "T8": {1, 2, 3, 4, 5, 6}}
 
 # ------------------------------------------------------------------ the document from the template
 doc = docx.Document(TPL)
@@ -280,16 +360,15 @@ def emit(lo, hi):
         for _, key in sorted(place.get(k, [])): put_float(key)
 
 
-APP = [k for k, (kind, tx) in enumerate(flow) if kind == "h1" and tx.startswith("Appendix A")]; assert len(APP) == 1
-emit(0, APP[0])
+emit(0, len(flow))
 P("Head1", "Nomenclature")
+USED = " ".join([tx for kind, tx in flow] + list(caps.values()) + list(notes.values()) + [c for t in tables for r in t for c in r])
+noms = [n for n in noms if re.search(r"(?<![A-Za-z])" + re.escape(n.split(" = ")[0]) + r"(?![A-Za-z])", USED, re.I)]
 for n in noms:
     q = P("Body Text Paragraph (initial)", n); q.paragraph_format.space_after = Pt(0); q.alignment = WD_ALIGN_PARAGRAPH.LEFT
 P("Head1", "References")
 for r in refs:
     q = P("Body Text Paragraph (initial)", r); q.alignment = WD_ALIGN_PARAGRAPH.LEFT; q.paragraph_format.left_indent = Inches(0.25); q.paragraph_format.first_line_indent = Inches(-0.25); q.paragraph_format.space_after = Pt(2)
-prev_head = True
-emit(APP[0], len(flow))
 P("Head1", "SI Metric Conversion Factors")
 si = [["To convert", "Multiply by", "To obtain"], ["in.", "%s (exact)" % REG["units.inch_to_cm"]["value"], "cm"], ["sg (relative density, water = 1)", "{:,} (exact)".format(REG["units.sg_to_kg_m3"]["value"]), "kg/m3"]]
 bodyel.sectPr.addprevious(make_table(si, [3600, 2400, 2400]))
