@@ -27,7 +27,7 @@ STEPS = [
     (10, "stage10_fig2_index.py", False), (10, "figure1_depth_vs_time.py", False), (10, "figure2_days_vs_depth.py", False),
     (10, "figure3_td_validation.py", False), (10, "figure4_spud_offset.py", False),
     (11, "stage11_registry.py", False),
-    (12, "stage12_manuscript.py", False), (12, "stage12_changes.py", False), (12, "stage12_check.py", False),
+    (12, "stage12_iptc.py", True), (12, "stage12_check.py", False),
 ]
 through = int(sys.argv[sys.argv.index("--through") + 1]) if "--through" in sys.argv else 99
 for d in ("data/interim", "outputs/figures", "manuscript"):

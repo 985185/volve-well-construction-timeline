@@ -382,6 +382,8 @@ add("agreement.weighted_pct", cas["weighted_pct"], "Frequency-weighted agreement
 add("agreement.per_phase", cas["per_phase"], "Agreement per phase: [agreeing, sampled] (names as in the paper)", S6A, "module level", [CAG])
 add("agreement.causes_proposed", cas["causes_proposed"], "Causes of the 22 disagreements, proposed from the narratives (the author's note column was empty); two are unexplained", S6A, "CAUSE", [CAG], note="indicative: assigned by the AI tool from the narratives, not by the author; the author accepted the table as indicative")
 add("agreement.seed", cas["seed"], "Random seed of the draw (random.Random(seed).sample, 4 per phase, pools sorted by filename)", "src/stage6_classified_audit.py", "module level", [CAG])
+add("units.inch_to_cm", 2.54, "Centimetres per inch (exact, SI definition), for the conversion table of the IPTC manuscript", "none (SI definition)", "not reproduced by code", [], note="EXTERNAL: definition")
+add("units.sg_to_kg_m3", 1000, "Kilograms per cubic metre of a relative density of 1 (water = 1), for the conversion table", "none (SI definition)", "not reproduced by code", [], note="EXTERNAL: definition")
 add("agreement.weighted_se_pct", cas["weighted_se_pct"], "Standard error of the frequency-weighted agreement, percentage points (stratified by phase, finite-population correction)", S6A, "module level", [CAG, CL])
 add("agreement.weighted_ci_low_pct", cas["weighted_ci_low_pct"], "Design-based 95% interval of the weighted agreement, lower bound (normal approximation; fragile with four reports per phase)", S6A, "module level", [CAG, CL])
 add("agreement.weighted_ci_high_pct", cas["weighted_ci_high_pct"], "Design-based 95% interval of the weighted agreement, upper bound", S6A, "module level", [CAG, CL])

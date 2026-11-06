@@ -1,0 +1,22 @@
+{
+ "words_excluding_references": 8965,
+ "words_by_section": {
+  "front": 26,
+  "Abstract": 283,
+  "1 Introduction": 215,
+  "2 Background and Related Work": 415,
+  "3 Data and Methods": 1637,
+  "4 Data Quality": 363,
+  "5 Results": 3979,
+  "6 Discussion": 555,
+  "7 Limitations": 347,
+  "8 Conclusions": 284,
+  "Acknowledgements": 189,
+  "Code and Data Availability": 225,
+  "Nomenclature": 101,
+  "References": 1,
+  "Appendix A: Audit Arithmetic": 291,
+  "SI Metric Conversion Factors": 54
+ },
+ "edits": 24
+}

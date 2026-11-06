@@ -49,3 +49,7 @@ outputs/audit_workbook*.xlsx
 local_private/
 outputs/classified_audit_*.xlsx
 manuscript/bangkok#2.docx
+inputs/27IPTC_Manuscript_Template.docx
+inputs/IPTC-Copyright-Form*.pdf
+inputs/PaperInformationForm*.pdf
+inputs/paper2_2.docx

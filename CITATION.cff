@@ -17,7 +17,7 @@ keywords:
   - NOD FactPages
 preferred-citation:
   type: conference-paper
-  title: "Field-Scale Well Construction Timeline Reconstruction from WITSML Daily Drilling Reports: An Auditable Reconstruction of the Equinor Volve Dataset"
+  title: "Auditable Reconstruction of Field-Scale Well Construction Timelines from Daily Drilling Reports: The Volve Field Open Dataset"
   authors:
     - given-names: Tejaswy
       family-names: Appalla

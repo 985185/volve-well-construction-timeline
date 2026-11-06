@@ -1,4 +1,4 @@
-"""Stage 12 check: every number in manuscript/paper2_draft.docx must match a registry value (sign-insensitive, also as a proportion of a percentage), and no em dash may appear.
+"""Stage 12 check: every number in manuscript/paper2_iptc.docx must match a registry value (sign-insensitive, also as a proportion of a percentage), and no em dash may appear.
 Scope: all body paragraphs and tables, excluding the Abbreviations list and the References list. Writes outputs/manuscript_registry_check.csv and prints the mismatches."""
 import json
 import re
@@ -29,14 +29,14 @@ for e in E:
 vals |= {round(x / 100, 4) for x in list(vals) if 0 < x <= 100}
 vals |= {round(x * 100, 4) for x in list(vals) if 0 < x < 1}                 # proportions written as percentages
 
-path = sys.argv[1] if len(sys.argv) > 1 else "manuscript/paper2_draft.docx"
+path = sys.argv[1] if len(sys.argv) > 1 else "manuscript/paper2_iptc.docx"
 d = docx.Document(path)
 paras = d.paragraphs
-heads = {i: p.text.strip() for i, p in enumerate(paras) if p.style.name.startswith("Heading 1")}
+heads = {i: p.text.strip() for i, p in enumerate(paras) if p.style.name.startswith(("Heading 1", "Head1"))}
 skip = set()
 cur_skip = False
 for i, p in enumerate(paras):
-    if p.style.name.startswith("Heading 1"): cur_skip = p.text.strip() in ("Abbreviations", "References")
+    if p.style.name.startswith(("Heading 1", "Head1")): cur_skip = p.text.strip() in ("Abbreviations", "Nomenclature", "References", "SI Metric Conversion Factors")
     if cur_skip: skip.add(i)
 
 rows = []
