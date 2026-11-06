@@ -1,21 +1,21 @@
 {
- "words_excluding_references": 7821,
+ "words_excluding_references": 6946,
  "words_by_section": {
   "front": 26,
   "Abstract": 283,
   "1 Introduction": 215,
   "2 Background and Related Work": 409,
-  "3 Data and Methods": 1393,
+  "3 Data and Methods": 1150,
   "4 Data Quality": 267,
-  "5 Results": 3498,
-  "6 Discussion": 558,
-  "7 Limitations": 347,
+  "5 Results": 2996,
+  "6 Discussion": 495,
+  "7 Limitations": 300,
   "8 Conclusions": 284,
   "Acknowledgements": 189,
   "Code and Data Availability": 224,
-  "Nomenclature": 73,
+  "Nomenclature": 53,
   "References": 1,
   "SI Metric Conversion Factors": 54
  },
- "edits": 47
+ "edits": 66
 }

@@ -204,3 +204,8 @@
 - Applied: Table 1 (example report) removed, Tables 3 and 4 (field population, phase distribution) moved to the repository, Table 2 note shortened, 5.3 per-phase list to the repository, 5.5 to 5.8 shortened, Table 7 reduced to nine special cases, Table 8 reduced to the ten flagged, indicative and 19 ST2 wellbores, Appendix A (audit arithmetic) moved to outputs/audit_arithmetic.md. The remaining tables are renumbered 1 to 5 (phases, total depth, spud, kick-off, duration).
 - Word count 7,821 (including tables and captions, excluding references) against 7,000; 13 pages against 16. The Abstract and the Conclusions are unchanged.
 - The Table 7 note of the author's file had lost the sentence on Parent (designation chain) and the departures of F-1 B, F-1 C, F-15 C and F-15 D that the author required earlier; it is restored in the note.
+
+## 87. IPTC cuts, third round (2026-11-06)
+- Applied the whole second tier: the phase table (3.3), the kick-off table (5.7) and the Rule column of the spud table go to the repository (outputs/stage4_priority_rules.csv and .md, outputs/kickoff_table.csv, outputs/spud_rules.md); Sections 3.4, 3.5, 5.2, 5.3, Limitations and 6.3 trimmed. Three tables remain (total depth, spud, duration), numbered 1 to 3.
+- Word count 6,946 (Word: 7,294 in total, of which 346 are references) against 7,000; 12 pages against 16.
+- The Table 7 note of the author's file (19 A and the SR2 re-entry) is now part of the 5.7 paragraph; the designation-chain sentence and the four shallower departures are in the same paragraph.
