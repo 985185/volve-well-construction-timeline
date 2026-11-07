@@ -4,7 +4,7 @@
 
 This repository is the reproducible pipeline behind the paper. It parses the 1,759 WITSML Daily Drilling Reports (DDRs) of the Equinor Volve field from the raw XML, classifies each report into one of 13 construction phases with a frozen rule-based classifier (v3), audits what the classifier misses, validates total depth and spud date against the Norwegian Offshore Directorate (NOD) FactPages, recovers sidetrack kick-off depths, and computes durations to total depth. Every number in the manuscript is produced by code in `src/` and traced in `outputs/numbers_registry.json` (one entry per number, with the producing script and function, the SHA-256 of the input files and a timestamp).
 
-This repository is a clean rerun from the raw data, released as v1.1 (https://github.com/985185/volve-well-construction-timeline/releases/tag/v1.1), the version that accompanies the IPTC-template manuscript and that the paper cites. Release v1.0 (https://github.com/985185/volve-well-construction-timeline/releases/tag/v1.0) is kept unchanged. The state before the rerun is kept under `inputs/` for comparison. To cite the software or the paper, see `CITATION.cff`.
+This repository is a clean rerun from the raw data, released as v1.2 (https://github.com/985185/volve-well-construction-timeline/releases/tag/v1.2), the version that accompanies the IPTC-template manuscript and that the paper cites. Releases v1.0 and v1.1 are kept unchanged. The state before the rerun is kept under `inputs/` for comparison. To cite the software or the paper, see `CITATION.cff`.
 
 ## Licences
 

@@ -5,8 +5,8 @@ title: "volve-well-construction-timeline: reproducible pipeline for field-scale 
 authors:
   - given-names: Tejaswy
     family-names: Appalla
-version: "1.1"
-date-released: "2026-11-06"
+version: "1.2"
+date-released: "2026-11-07"
 license: Apache-2.0
 repository-code: "https://github.com/985185/volve-well-construction-timeline"
 keywords:
